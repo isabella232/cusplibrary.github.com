@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: Main Page</title>
+<title>CUSP: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,14 +18,14 @@
 <link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script type="text/javascript">
-     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-     try {
-       var pageTracker = _gat._getTracker("UA-34296872-1");
-       pageTracker._trackPageview();
-     } catch(err) {}
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38890655-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 </head>
 <body>
@@ -68,9 +68,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +90,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,51 +110,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>cusp</b></li><li class="navelem"><a class="el" href="classcusp_1_1not__implemented__exception.html">not_implemented_exception</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">CUSP Documentation</div>  </div>
+<div class="title">cusp::not_implemented_exception Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>What is CUSP?</h1>
-<blockquote class="doxtable">
-<p>Cusp is a library for sparse linear algebra and graph computations based on Thrust. Cusp provides a flexible, high-level interface for manipulating sparse matrices and solving sparse linear systems. </p>
-</blockquote>
-<h1>News</h1>
-<ul>
-<li>Cusp v0.4.0 has been released with support for CUDA 5.5. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L1">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.3.0 has been released with support for CUDA 4.1. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L41">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.2.0 has been released! See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L62">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.1.2 has been released! v0.1.2 contains compatibility fixes for Thrust v1.3.0.</li>
-<li>Cusp v0.1.1 has been released! v0.1.1 contains compatibility fixes for CUDA 3.1.</li>
-<li>Cusp v0.1.0 has been released!.</li>
-</ul>
-<h1>Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="hyb__matrix_8h.html">cusp/hyb_matrix.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="matrix__market_8h.html">cusp/io/matrix_market.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="cg_8h.html">cusp/krylov/cg.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// create an empty sparse matrix structure (HYB format)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// load a matrix stored in MatrixMarket format</span></div>
-<div class="line">    <a class="code" href="group__io.html#gac219de1afb433d207ddd0c0ba83e5850">cusp::io::read_matrix_market_file</a>(A, <span class="stringliteral">&quot;5pt_10x10.mtx&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// solve the linear system A * x = b with the Conjugate Gradient method</span></div>
-<div class="line">    <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cusp::krylov::cg</a>(A, x, b);</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="classcusp_1_1not__implemented__exception.html">cusp::not_implemented_exception</a>, including all inherited members.</p>
+<table class="directory">
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>exception</b>(const exception &amp;exception_) (defined in <a class="el" href="classcusp_1_1exception.html">cusp::exception</a>)</td><td class="entry"><a class="el" href="classcusp_1_1exception.html">cusp::exception</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>exception</b>(const std::string &amp;message_) (defined in <a class="el" href="classcusp_1_1exception.html">cusp::exception</a>)</td><td class="entry"><a class="el" href="classcusp_1_1exception.html">cusp::exception</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>message</b> (defined in <a class="el" href="classcusp_1_1exception.html">cusp::exception</a>)</td><td class="entry"><a class="el" href="classcusp_1_1exception.html">cusp::exception</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>not_implemented_exception</b>(const MessageType &amp;message) (defined in <a class="el" href="classcusp_1_1not__implemented__exception.html">cusp::not_implemented_exception</a>)</td><td class="entry"><a class="el" href="classcusp_1_1not__implemented__exception.html">cusp::not_implemented_exception</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>what</b>() const  (defined in <a class="el" href="classcusp_1_1exception.html">cusp::exception</a>)</td><td class="entry"><a class="el" href="classcusp_1_1exception.html">cusp::exception</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~exception</b>() (defined in <a class="el" href="classcusp_1_1exception.html">cusp::exception</a>)</td><td class="entry"><a class="el" href="classcusp_1_1exception.html">cusp::exception</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+</table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 00:22:38 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 28 2014 23:23:09 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>
