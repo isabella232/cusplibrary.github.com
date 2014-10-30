@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -98,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -195,7 +194,10 @@ The matrix should not contain duplicate entries.</dd></dl>
 <div class="line">   <span class="comment">// print the updated matrix view</span></div>
 <div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
 <div class="line"> }</div>
-</div><!-- fragment --> </div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="csr_raw_8cu-example.html#_a1">csr_raw.cu</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="csr__matrix_8h_source.html#l00033">33</a> of file <a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>.</p>
+</div>
 <p><code>#include &lt;<a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for cusp::csr_matrix_view&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;:</div>
@@ -261,6 +263,8 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </table>
 </div><div class="memdoc">
 <p>Construct an empty <code><a class="el" href="classcusp_1_1csr__matrix__view.html" title="View of a csr_matrix. ">csr_matrix_view</a></code>. </p>
+
+<p>Definition at line <a class="el" href="csr__matrix_8h_source.html#l00326">326</a> of file <a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -334,6 +338,8 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="csr__matrix_8h_source.html#l00340">340</a> of file <a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -394,6 +400,8 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>Storage for the column indices of the CSR data structure. </p>
 
+<p>Definition at line <a class="el" href="csr__matrix_8h_source.html#l00317">317</a> of file <a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aca2270f1e9b76f21a613a0790d063ff2"></a>
@@ -408,6 +416,8 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
       </table>
 </div><div class="memdoc">
 <p>Storage for the row offsets of the CSR data structure. Also called the "row pointer" array. </p>
+
+<p>Definition at line <a class="el" href="csr__matrix_8h_source.html#l00313">313</a> of file <a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -424,6 +434,8 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>Storage for the nonzero entries of the CSR data structure. </p>
 
+<p>Definition at line <a class="el" href="csr__matrix_8h_source.html#l00321">321</a> of file <a class="el" href="csr__matrix_8h_source.html">csr_matrix.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -433,7 +445,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:16 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

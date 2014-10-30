@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -98,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -153,6 +152,9 @@ class cusp::array1d&lt; T, MemorySpace &gt;</h3>
 <div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> b(a);</div>
 <div class="line">}</div>
 </div><!-- fragment --> </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="array1d_8cu-example.html#_a0">array1d.cu</a>, <a class="el" href="blas_8cu-example.html#_a0">blas.cu</a>, <a class="el" href="maximal_independent_set_8cu-example.html#_a2">maximal_independent_set.cu</a>, <a class="el" href="monitor_8cu-example.html#_a2">monitor.cu</a>, <a class="el" href="multiply_8cu-example.html#_a1">multiply.cu</a>, <a class="el" href="stencil_8cu-example.html#_a1">stencil.cu</a>, <a class="el" href="unordered_triplets_8cu-example.html#_a0">unordered_triplets.cu</a>, and <a class="el" href="verbose_monitor_8cu-example.html#_a2">verbose_monitor.cu</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00099">99</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="array1d_8h_source.html">array1d.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -237,6 +239,8 @@ template&lt;typename T, typename MemorySpace&gt; </div>
 </div><div class="memdoc">
 <p>This constructor creates an empty <code><a class="el" href="classcusp_1_1array1d.html" title="The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array1d</a></code> vector. </p>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00127">127</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a0de5a681631ecaddb5f72122cace589f"></a>
@@ -269,6 +273,8 @@ template&lt;typename T, typename MemorySpace&gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00134">134</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -314,6 +320,8 @@ template&lt;typename T, typename MemorySpace&gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00142">142</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a189f0b3ba5a7353e1e9b265690ffb37c"></a>
@@ -346,6 +354,8 @@ template&lt;typename T, typename MemorySpace&gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00148">148</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -389,6 +399,8 @@ template&lt;typename OtherT , typename OtherMem &gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00163">163</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2a0bbc06675145f11e9dba5c2c681598"></a>
@@ -430,6 +442,8 @@ template&lt;typename OtherT , typename OtherAlloc &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00181">181</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -473,6 +487,8 @@ template&lt;typename OtherT , typename OtherAlloc &gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00199">199</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a14dd5afd8d7a6f5aea6e6ef2a8cc0fac"></a>
@@ -514,6 +530,8 @@ template&lt;typename OtherT , typename OtherAlloc &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00217">217</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -567,6 +585,8 @@ template&lt;typename InputIterator &gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00235">235</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a8ce49f0b9c16f9c26bc88749b74f7b51"></a>
@@ -608,6 +628,8 @@ template&lt;typename InputIterator &gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00243">243</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -641,6 +663,8 @@ template&lt;typename T, typename MemorySpace&gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00154">154</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -684,6 +708,8 @@ template&lt;typename OtherT , typename OtherMem &gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00172">172</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7ed4429c6537a0bc07162e4e108dc4a5"></a>
@@ -725,6 +751,8 @@ template&lt;typename OtherT , typename OtherAlloc &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00190">190</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -768,6 +796,8 @@ template&lt;typename OtherT , typename OtherAlloc &gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00208">208</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a17385f038d0742b7a8497bae939f3b04"></a>
@@ -809,6 +839,8 @@ template&lt;typename OtherT , typename OtherAlloc &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00226">226</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -937,7 +969,7 @@ template&lt;typename T, typename MemorySpace&gt; </div>
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:15 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

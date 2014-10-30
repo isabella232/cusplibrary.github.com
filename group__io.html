@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -93,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -186,7 +185,8 @@ template&lt;typename Printable &gt; </div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --> 
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="array1d_8cu-example.html#a1">array1d.cu</a>, <a class="el" href="array2d_raw_8cu-example.html#a2">array2d_raw.cu</a>, <a class="el" href="blas_8cu-example.html#a1">blas.cu</a>, <a class="el" href="coo_8cu-example.html#a4">coo.cu</a>, <a class="el" href="csr_8cu-example.html#a4">csr.cu</a>, <a class="el" href="csr_raw_8cu-example.html#a2">csr_raw.cu</a>, <a class="el" href="dia_8cu-example.html#a3">dia.cu</a>, <a class="el" href="diffusion_8cu-example.html#a1">diffusion.cu</a>, <a class="el" href="ell_8cu-example.html#a3">ell.cu</a>, <a class="el" href="hyb_8cu-example.html#a4">hyb.cu</a>, <a class="el" href="matrix_market_8cu-example.html#a4">matrix_market.cu</a>, <a class="el" href="multiply_8cu-example.html#a3">multiply.cu</a>, <a class="el" href="poisson_8cu-example.html#a2">poisson.cu</a>, <a class="el" href="transpose_8cu-example.html#a1">transpose.cu</a>, and <a class="el" href="unordered_triplets_8cu-example.html#a2">unordered_triplets.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="ga872f7c570e3595bdf1f72dfd7a363836"></a>
@@ -310,7 +310,8 @@ template&lt;typename Matrix &gt; </div>
 <dl class="section see"><dt>See Also</dt><dd><code>write_matrix_market_file</code> </dd>
 <dd>
 <code>write_matrix_market_stream</code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="diagonal_8cu-example.html#a1">diagonal.cu</a>, and <a class="el" href="matrix_market_8cu-example.html#a3">matrix_market.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="ga183170009aac1c79c4d952889ee691aa"></a>
@@ -436,7 +437,8 @@ template&lt;typename Matrix &gt; </div>
 <dl class="section see"><dt>See Also</dt><dd><code>read_matrix_market_file</code> </dd>
 <dd>
 <code>read_matrix_market_stream</code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="matrix_market_8cu-example.html#a1">matrix_market.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="gac069c9e791c56709e6a2c99f11c81c40"></a>
@@ -507,7 +509,7 @@ read_matrix_market_stream </dd></dl>
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:15 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -93,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -365,7 +364,8 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="bicgstab_8cu-example.html#a5">bicgstab.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="gae9649279f0fb30cbc6a48c9f912a5f87"></a>
@@ -434,8 +434,8 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 </dl>
 <dl class="section user"><dt>Overview</dt><dd></dd></dl>
 <p>This routine solves systems of the type</p>
-<p>(A+ Id)x = b</p>
-<p>for a number of different , iteratively, for sparse A, without additional matrix-vector multiplication.</p>
+<p>(A+sigma Id)x = b</p>
+<p>for a number of different sigma, iteratively, for sparse A, without additional matrix-vector multiplication.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://arxiv.org/abs/hep-lat/9612014">http://arxiv.org/abs/hep-lat/9612014</a></dd></dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>The following code snippet demonstrates how to use <code>bicgstab</code> to solve a 10x10 Poisson problem.</p>
@@ -580,7 +580,8 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="ainv_8cu-example.html#a4">ainv.cu</a>, <a class="el" href="cg_8cu-example.html#a5">cg.cu</a>, <a class="el" href="cg_raw_8cu-example.html#a3">cg_raw.cu</a>, <a class="el" href="diagonal_8cu-example.html#a4">diagonal.cu</a>, <a class="el" href="monitor_8cu-example.html#a4">monitor.cu</a>, <a class="el" href="smoothed_aggregation_8cu-example.html#a4">smoothed_aggregation.cu</a>, <a class="el" href="stencil_8cu-example.html#a3">stencil.cu</a>, and <a class="el" href="verbose_monitor_8cu-example.html#a4">verbose_monitor.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="gae25c1e3e77e92709bfa9f3726328e421"></a>
@@ -639,7 +640,7 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
   </dd>
 </dl>
 <dl class="section user"><dt>Overview</dt><dd></dd></dl>
-<p>Solves the symmetric, positive-definited linear system (A+) x = b for some set of constant shifts <code>sigma</code> for the price of the smallest shift iteratively, for sparse A, without additional matrix-vector multiplication.</p>
+<p>Solves the symmetric, positive-definited linear system (A+sigma) x = b for some set of constant shifts <code>sigma</code> for the price of the smallest shift iteratively, for sparse A, without additional matrix-vector multiplication.</p>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://arxiv.org/abs/hep-lat/9612014">http://arxiv.org/abs/hep-lat/9612014</a></dd></dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>The following code snippet demonstrates how to use <code>bicgstab</code> to solve a 10x10 Poisson problem.</p>
@@ -681,7 +682,8 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cg_m_8cu-example.html#a4">cg_m.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="gae73aeb8fd04ee86a128240ac62c20e33"></a>
@@ -784,7 +786,8 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cr_8cu-example.html#a5">cr.cu</a>.</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="ga691b2d4d03fd7b23e674f9f046691b46"></a>
@@ -895,14 +898,15 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="gmres_8cu-example.html#a5">gmres.cu</a>.</dd>
+</dl>
 </div>
 </div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:15 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

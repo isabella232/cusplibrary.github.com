@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -98,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -173,22 +172,22 @@ The matrix should not contain duplicate entries.</dd></dl>
 <div class="line">   <span class="keyword">const</span> <span class="keywordtype">int</span> X = <a class="code" href="classcusp_1_1ell__matrix.html">cusp::ell_matrix&lt;int,float,cusp::host_memory&gt;::invalid_index</a>;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// first row</span></div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1ell__matrix.html#aa50aefbb8dcfe9b558afe77266a2c491">column_indices</a>(0,0) = 0; A.ell.values(0,0) = 10;</div>
-<div class="line">   A.ell.column_indices(0,1) = 1; A.ell.values(0,1) = 20;</div>
+<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(0,0) = 0; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(0,0) = 10;</div>
+<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(0,1) = 1; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(0,1) = 20;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// second row</span></div>
-<div class="line">   A.ell.column_indices(1,0) = 1; A.ell.values(1,0) = 50;  <span class="comment">// shifted to leftmost position</span></div>
-<div class="line">   A.ell.column_indices(1,1) = X; A.ell.values(1,1) =  0;  <span class="comment">// padding</span></div>
+<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(1,0) = 1; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(1,0) = 50;  <span class="comment">// shifted to leftmost position</span></div>
+<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(1,1) = X; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(1,1) =  0;  <span class="comment">// padding</span></div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// third row</span></div>
-<div class="line">   A.ell.column_indices(2,0) = 0; A.ell.values(2,0) = 60;</div>
-<div class="line">   A.ell.column_indices(2,1) = 2; A.ell.values(2,1) = 70;  <span class="comment">// shifted to leftmost position</span></div>
+<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(2,0) = 0; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(2,0) = 60;</div>
+<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(2,1) = 2; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(2,1) = 70;  <span class="comment">// shifted to leftmost position</span></div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Initialize COO part</span></div>
-<div class="line">   A.coo.row_indices[0] = 0;  A.coo.column_indices[0] = 2;  A.coo.values[0] = 30;</div>
-<div class="line">   A.coo.row_indices[1] = 0;  A.coo.column_indices[1] = 3;  A.coo.values[1] = 40;</div>
-<div class="line">   A.coo.row_indices[2] = 2;  A.coo.column_indices[2] = 3;  A.coo.values[2] = 80;</div>
+<div class="line">   A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[0] = 0;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[0] = 2;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[0] = 30;</div>
+<div class="line">   A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[1] = 0;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[1] = 3;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[1] = 40;</div>
+<div class="line">   A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[2] = 2;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[2] = 3;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[2] = 80;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// print the ELL portion</span></div>
 <div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A.ell);</div>
@@ -200,6 +199,9 @@ The matrix should not contain duplicate entries.</dd></dl>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1ell__matrix.html" title="Packed row (ELLPACK/ITPACK) representation of a sparse matrix. ">ell_matrix</a></code> </dd>
 <dd>
 <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code> </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="bicgstab_8cu-example.html#_a0">bicgstab.cu</a>, <a class="el" href="cg_8cu-example.html#_a0">cg.cu</a>, <a class="el" href="cg_m_8cu-example.html#_a0">cg_m.cu</a>, <a class="el" href="cr_8cu-example.html#_a0">cr.cu</a>, <a class="el" href="gmres_8cu-example.html#_a0">gmres.cu</a>, and <a class="el" href="hyb_8cu-example.html#_a0">hyb.cu</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00141">141</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -260,6 +262,8 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Construct an empty <code><a class="el" href="classcusp_1_1hyb__matrix.html" title="Hybrid (HYB) representation a sparse matrix. ">hyb_matrix</a></code>. </p>
+
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00180">180</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -332,6 +336,8 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00191">191</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -449,6 +455,8 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
 </div><div class="memdoc">
 <p>Resize matrix dimensions and underlying storage </p>
 
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00209">209</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a640d550f437cffaca8f87aa0c059a7bc"></a>
@@ -482,6 +490,8 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00222">222</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -498,6 +508,8 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
 </div><div class="memdoc">
 <p>Storage for the <code><a class="el" href="classcusp_1_1ell__matrix.html" title="Packed row (ELLPACK/ITPACK) representation of a sparse matrix. ">ell_matrix</a></code> portion. </p>
 
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00176">176</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4a2aaf6a2f757fb4325866ac504a9838"></a>
@@ -513,6 +525,8 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
 </div><div class="memdoc">
 <p>Storage for the <code><a class="el" href="classcusp_1_1ell__matrix.html" title="Packed row (ELLPACK/ITPACK) representation of a sparse matrix. ">ell_matrix</a></code> portion. </p>
 
+<p>Definition at line <a class="el" href="hyb__matrix_8h_source.html#l00172">172</a> of file <a class="el" href="hyb__matrix_8h_source.html">hyb_matrix.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -522,7 +536,7 @@ template&lt;typename IndexType, typename ValueType, class MemorySpace&gt; </div>
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:16 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

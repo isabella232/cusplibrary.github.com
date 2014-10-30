@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -98,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -211,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__monitors_html_gaca3aa91c824c9a757c316a15002b24ae"><div class="ttname"><a href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">cusp::monitor::absolute_tolerance</a></div><div class="ttdeci">Real absolute_tolerance(void) const </div><div class="ttdoc">Returns the absolute tolerance. </div></div>
 <div class="ttc" id="group__monitors_html_gaca241bd800a6208e733f91d84a280774"><div class="ttname"><a href="group__monitors.html#gaca241bd800a6208e733f91d84a280774">cusp::monitor::iteration_count</a></div><div class="ttdeci">size_t iteration_count(void) const </div><div class="ttdoc">Returns the number of iterations that the monitor has executed. </div></div>
 <div class="ttc" id="group__monitors_html_ga088a9e36c49ab23555ec59666efb916f"><div class="ttname"><a href="group__monitors.html#ga088a9e36c49ab23555ec59666efb916f">cusp::monitor::geometric_rate</a></div><div class="ttdeci">Real geometric_rate(void)</div><div class="ttdoc">Returns the geometric convergence rate. </div></div>
-<div class="ttc" id="classcusp_1_1monitor_html"><div class="ttname"><a href="classcusp_1_1monitor.html">cusp::monitor</a></div><div class="ttdoc">Implements standard convergence criteria and reporting for iterative solvers. </div><div class="ttdef"><b>Definition:</b> monitor.h:101</div></div>
+<div class="ttc" id="classcusp_1_1monitor_html"><div class="ttname"><a href="classcusp_1_1monitor.html">cusp::monitor</a></div><div class="ttdoc">Implements standard convergence criteria and reporting for iterative solvers. </div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00101">monitor.h:101</a></div></div>
 <div class="ttc" id="group__monitors_html_ga8916cde51847dbc04ac35cefdce9fedf"><div class="ttname"><a href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">cusp::monitor::iteration_limit</a></div><div class="ttdeci">size_t iteration_limit(void) const </div><div class="ttdoc">Returns the maximum number of iterations. </div></div>
 <div class="ttc" id="group__monitors_html_gadca75968e0b5c62b038b122bdc07b8e0"><div class="ttname"><a href="group__monitors.html#gadca75968e0b5c62b038b122bdc07b8e0">cusp::monitor::finished</a></div><div class="ttdeci">bool finished(const Vector &amp;r)</div><div class="ttdoc">Applies convergence criteria to determine whether iteration is finished. </div></div>
 <div class="ttc" id="group__monitors_html_gabbe5f3de5c002a5e723d8972040f71cb"><div class="ttname"><a href="group__monitors.html#gabbe5f3de5c002a5e723d8972040f71cb">cusp::monitor::tolerance</a></div><div class="ttdeci">Real tolerance(void) const </div><div class="ttdoc">Return the tolerance equal to absolute_tolerance() + relative_tolerance() * ||b||. </div></div>
@@ -228,7 +227,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:15 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

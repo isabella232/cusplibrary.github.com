@@ -45,11 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      </li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -98,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -148,11 +147,11 @@ class cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</h3>
 <div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A(3,3,5);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// initialize matrix entries on host</span></div>
-<div class="line">  A.row_indices[0] = 0; A.column_indices[0] = 0; A.values[0] = 10;</div>
-<div class="line">  A.row_indices[1] = 0; A.column_indices[1] = 2; A.values[1] = 20;</div>
-<div class="line">  A.row_indices[2] = 0; A.column_indices[2] = 0; A.values[2] = 30;</div>
-<div class="line">  A.row_indices[3] = 1; A.column_indices[3] = 1; A.values[3] = 40;</div>
-<div class="line">  A.row_indices[4] = 2; A.column_indices[4] = 2; A.values[4] = 50;</div>
+<div class="line">  A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[0] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[0] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[0] = 10;</div>
+<div class="line">  A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[1] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[1] = 2; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[1] = 20;</div>
+<div class="line">  A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[2] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[2] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[2] = 30;</div>
+<div class="line">  A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[3] = 1; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[3] = 1; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[3] = 40;</div>
+<div class="line">  A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[4] = 2; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[4] = 2; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[4] = 50;</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// A now represents the following matrix</span></div>
 <div class="line">  <span class="comment">//    [10  0 20]</span></div>
@@ -184,7 +183,9 @@ class cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</h3>
 <div class="line">  <span class="comment">// print the permuted matrix</span></div>
 <div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(PAP);</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="permutation__matrix_8h_source.html#l00112">112</a> of file <a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>.</p>
+</div>
 <p><code>#include &lt;<a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;:</div>
@@ -246,6 +247,8 @@ template&lt;typename ValueType, typename MemorySpace, typename IndexType = unsig
 </div><div class="memdoc">
 <p>Construct an empty <code><a class="el" href="classcusp_1_1permutation__matrix.html" title="Simple representation a permutation matrix. ">permutation_matrix</a></code>. </p>
 
+<p>Definition at line <a class="el" href="permutation__matrix_8h_source.html#l00149">149</a> of file <a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab5f7ff32229a1d414ca535aa09bdc19e"></a>
@@ -278,6 +281,8 @@ template&lt;typename ValueType, typename MemorySpace, typename IndexType = unsig
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="permutation__matrix_8h_source.html#l00155">155</a> of file <a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -313,6 +318,8 @@ template&lt;typename MemorySpace2 &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="permutation__matrix_8h_source.html#l00164">164</a> of file <a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -358,6 +365,8 @@ template&lt;typename ArrayType &gt; </div>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="permutation__matrix_8h_source.html#l00172">172</a> of file <a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -453,6 +462,8 @@ template&lt;typename ValueType, typename MemorySpace, typename IndexType = unsig
 </div><div class="memdoc">
 <p>Storage for the permutation indices </p>
 
+<p>Definition at line <a class="el" href="permutation__matrix_8h_source.html#l00145">145</a> of file <a class="el" href="permutation__matrix_8h_source.html">permutation_matrix.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -462,7 +473,7 @@ template&lt;typename ValueType, typename MemorySpace, typename IndexType = unsig
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 30 2014 11:59:00 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 30 2014 15:29:16 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>
