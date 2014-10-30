@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: Main Page</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/io/matrix_market.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -90,7 +90,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,47 +109,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bc161955dc3a3d2485839eba21420d01.html">io</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">CUSP Documentation</div>  </div>
+<div class="title">matrix_market.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>What is CUSP?</h1>
-<blockquote class="doxtable">
-<p>Cusp is a library for sparse linear algebra and graph computations based on Thrust. Cusp provides a flexible, high-level interface for manipulating sparse matrices and solving sparse linear systems. </p>
-</blockquote>
-<h1>News</h1>
-<ul>
-<li>Cusp v0.4.0 has been released with support for CUDA 5.5. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L1">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.3.0 has been released with support for CUDA 4.1. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L41">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.2.0 has been released! See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L62">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.1.2 has been released! v0.1.2 contains compatibility fixes for Thrust v1.3.0.</li>
-<li>Cusp v0.1.1 has been released! v0.1.1 contains compatibility fixes for CUDA 3.1.</li>
-<li>Cusp v0.1.0 has been released!.</li>
-</ul>
-<h1>Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="hyb__matrix_8h.html">cusp/hyb_matrix.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="matrix__market_8h.html">cusp/io/matrix_market.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="cg_8h.html">cusp/krylov/cg.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// create an empty sparse matrix structure (HYB format)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// load a matrix stored in MatrixMarket format</span></div>
-<div class="line">    <a class="code" href="group__io.html#gac219de1afb433d207ddd0c0ba83e5850">cusp::io::read_matrix_market_file</a>(A, <span class="stringliteral">&quot;5pt_10x10.mtx&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// solve the linear system A * x = b with the Conjugate Gradient method</span></div>
-<div class="line">    <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cusp::krylov::cg</a>(A, x, b);</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+
+<p>MatrixMarket file I/O.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;cusp/detail/config.h&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;cusp/io/detail/matrix_market.inl&gt;</code><br/>
+</div>
+<p><a href="matrix__market_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac219de1afb433d207ddd0c0ba83e5850"><td class="memTemplParams" colspan="2">template&lt;typename Matrix &gt; </td></tr>
+<tr class="memitem:gac219de1afb433d207ddd0c0ba83e5850"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__io.html#gac219de1afb433d207ddd0c0ba83e5850">cusp::io::read_matrix_market_file</a> (Matrix &amp;mtx, const std::string &amp;filename)</td></tr>
+<tr class="memdesc:gac219de1afb433d207ddd0c0ba83e5850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a MatrixMarket file.  <a href="group__io.html#gac219de1afb433d207ddd0c0ba83e5850">More...</a><br/></td></tr>
+<tr class="separator:gac219de1afb433d207ddd0c0ba83e5850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga183170009aac1c79c4d952889ee691aa"><td class="memTemplParams" colspan="2">template&lt;typename Matrix , typename Stream &gt; </td></tr>
+<tr class="memitem:ga183170009aac1c79c4d952889ee691aa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__io.html#ga183170009aac1c79c4d952889ee691aa">cusp::io::read_matrix_market_stream</a> (Matrix &amp;mtx, Stream &amp;input)</td></tr>
+<tr class="memdesc:ga183170009aac1c79c4d952889ee691aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read MatrixMarket data from a stream.  <a href="group__io.html#ga183170009aac1c79c4d952889ee691aa">More...</a><br/></td></tr>
+<tr class="separator:ga183170009aac1c79c4d952889ee691aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga876536769edb432ff40f8767a7934ee2"><td class="memTemplParams" colspan="2">template&lt;typename Matrix &gt; </td></tr>
+<tr class="memitem:ga876536769edb432ff40f8767a7934ee2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__io.html#ga876536769edb432ff40f8767a7934ee2">cusp::io::write_matrix_market_file</a> (const Matrix &amp;mtx, const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ga876536769edb432ff40f8767a7934ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a MatrixMarket file.  <a href="group__io.html#ga876536769edb432ff40f8767a7934ee2">More...</a><br/></td></tr>
+<tr class="separator:ga876536769edb432ff40f8767a7934ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac069c9e791c56709e6a2c99f11c81c40"><td class="memTemplParams" colspan="2">template&lt;typename Matrix , typename Stream &gt; </td></tr>
+<tr class="memitem:gac069c9e791c56709e6a2c99f11c81c40"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__io.html#gac069c9e791c56709e6a2c99f11c81c40">cusp::io::write_matrix_market_stream</a> (const Matrix &amp;mtx, Stream &amp;output)</td></tr>
+<tr class="memdesc:gac069c9e791c56709e6a2c99f11c81c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write MatrixMarket data to a stream.  <a href="group__io.html#gac069c9e791c56709e6a2c99f11c81c40">More...</a><br/></td></tr>
+<tr class="separator:gac069c9e791c56709e6a2c99f11c81c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>MatrixMarket file I/O. </p>
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
