@@ -109,7 +109,7 @@ div.title {
 
 .tablist li {
 		line-height: 30px;
-		background-image: url('tab_b_alt.png');
+		/* background-image: url('tab_b_alt.png'); */
 }
 
 .tablist a, .navpath li.navelem a, .tablist li.current a, .tablist a:hover {
@@ -142,7 +142,7 @@ li.navelem {
 		border-right: 1px solid #7092BE;
 		border-left: 1px solid #7092BE;
 		border-bottom: 1px solid #7092BE;
-		background-image: url('tab_b_alt.png');
+		/* background-image: url('tab_b_alt.png'); */
 }
 
 
