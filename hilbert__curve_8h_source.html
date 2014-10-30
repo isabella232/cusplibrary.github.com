@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: Main Page</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/graph/hilbert_curve.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -90,7 +90,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,47 +109,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_12552d7fa429bf94a2e32e5cf39f7e69.html">graph</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">CUSP Documentation</div>  </div>
+<div class="title">hilbert_curve.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>What is CUSP?</h1>
-<blockquote class="doxtable">
-<p>Cusp is a library for sparse linear algebra and graph computations based on Thrust. Cusp provides a flexible, high-level interface for manipulating sparse matrices and solving sparse linear systems. </p>
-</blockquote>
-<h1>News</h1>
-<ul>
-<li>Cusp v0.4.0 has been released with support for CUDA 5.5. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L1">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.3.0 has been released with support for CUDA 4.1. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L41">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.2.0 has been released! See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L62">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.1.2 has been released! v0.1.2 contains compatibility fixes for Thrust v1.3.0.</li>
-<li>Cusp v0.1.1 has been released! v0.1.1 contains compatibility fixes for CUDA 3.1.</li>
-<li>Cusp v0.1.0 has been released!.</li>
-</ul>
-<h1>Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="hyb__matrix_8h.html">cusp/hyb_matrix.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="matrix__market_8h.html">cusp/io/matrix_market.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="cg_8h.html">cusp/krylov/cg.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// create an empty sparse matrix structure (HYB format)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// load a matrix stored in MatrixMarket format</span></div>
-<div class="line">    <a class="code" href="group__io.html#gac219de1afb433d207ddd0c0ba83e5850">cusp::io::read_matrix_market_file</a>(A, <span class="stringliteral">&quot;5pt_10x10.mtx&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// solve the linear system A * x = b with the Conjugate Gradient method</span></div>
-<div class="line">    <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cusp::krylov::cg</a>(A, x, b);</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<a href="hilbert__curve_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  Copyright 2008-2014 NVIDIA Corporation</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  limitations under the License.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>graph</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Array2dType, <span class="keyword">class</span> ArrayType&gt;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga85e6198d5a0571ad1ff04fb761f1d2ef">hilbert_curve</a>(<span class="keyword">const</span> Array2dType&amp; coord, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_parts, ArrayType&amp; parts);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">// end namespace graph</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/hilbert_curve.inl&gt;</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="ttc" id="group__graph__algorithms_html_ga85e6198d5a0571ad1ff04fb761f1d2ef"><div class="ttname"><a href="group__graph__algorithms.html#ga85e6198d5a0571ad1ff04fb761f1d2ef">cusp::graph::hilbert_curve</a></div><div class="ttdeci">void hilbert_curve(const Array2dType &amp;coord, const size_t num_parts, ArrayType &amp;parts)</div><div class="ttdoc">Partition a graph using Hilbert curve. </div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

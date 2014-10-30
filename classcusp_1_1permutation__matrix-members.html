@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: Main Page</title>
+<title>CUSP: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,9 +68,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -90,7 +90,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -105,47 +110,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>cusp</b></li><li class="navelem"><a class="el" href="classcusp_1_1permutation__matrix.html">permutation_matrix</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">CUSP Documentation</div>  </div>
+<div class="title">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>What is CUSP?</h1>
-<blockquote class="doxtable">
-<p>Cusp is a library for sparse linear algebra and graph computations based on Thrust. Cusp provides a flexible, high-level interface for manipulating sparse matrices and solving sparse linear systems. </p>
-</blockquote>
-<h1>News</h1>
-<ul>
-<li>Cusp v0.4.0 has been released with support for CUDA 5.5. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L1">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.3.0 has been released with support for CUDA 4.1. See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L41">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.2.0 has been released! See <a href="https://github.com/cusplibrary/cusplibrary/blob/0.4.0/CHANGELOG#L62">CHANGELOG</a> for release information.</li>
-<li>Cusp v0.1.2 has been released! v0.1.2 contains compatibility fixes for Thrust v1.3.0.</li>
-<li>Cusp v0.1.1 has been released! v0.1.1 contains compatibility fixes for CUDA 3.1.</li>
-<li>Cusp v0.1.0 has been released!.</li>
-</ul>
-<h1>Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="hyb__matrix_8h.html">cusp/hyb_matrix.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="matrix__market_8h.html">cusp/io/matrix_market.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="cg_8h.html">cusp/krylov/cg.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// create an empty sparse matrix structure (HYB format)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// load a matrix stored in MatrixMarket format</span></div>
-<div class="line">    <a class="code" href="group__io.html#gac219de1afb433d207ddd0c0ba83e5850">cusp::io::read_matrix_market_file</a>(A, <span class="stringliteral">&quot;5pt_10x10.mtx&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// solve the linear system A * x = b with the Conjugate Gradient method</span></div>
-<div class="line">    <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cusp::krylov::cg</a>(A, x, b);</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#ae1c8d54f152af35a14f163b15a327351">permutation</a></td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#a935716dcdfd55b6f3d1b728d0d8197e7">permutation_matrix</a>(void)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#ab5f7ff32229a1d414ca535aa09bdc19e">permutation_matrix</a>(const size_t num_rows)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#a1de0bd7a82836bc6ee28f45041ea5cea">permutation_matrix</a>(const permutation_matrix&lt; ValueType, MemorySpace2 &gt; &amp;P)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#a23e06a7fea5aef49075773350023a46d">permutation_matrix</a>(const size_t num_rows, const ArrayType &amp;permutation)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#abb1c27a6176ce35e971a05c1055721e5">resize</a>(const size_t num_rows)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#a2c3faa7b6377d8a274370fe8629ab4cd">swap</a>(permutation_matrix &amp;matrix)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html#ad43fece9be9f4bdf76007cc71cc41a17">symmetric_permute</a>(MatrixType &amp;matrix)</td><td class="entry"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
