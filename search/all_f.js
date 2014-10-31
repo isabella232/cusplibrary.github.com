@@ -11,6 +11,7 @@ var searchData=
   ['poisson5pt',['poisson5pt',['../group__gallery.html#ga4369f22c9caff12729026e5ce79ef281',1,'cusp::gallery']]],
   ['polynomial',['polynomial',['../classcusp_1_1relaxation_1_1polynomial.html',1,'cusp::relaxation']]],
   ['polynomial_2eh',['polynomial.h',['../polynomial_8h.html',1,'']]],
+  ['preconditioners',['Preconditioners',['../group__preconditioners.html',1,'']]],
   ['print',['print',['../group__monitors.html#ga39b99bc28bae084e265265a9e43225ef',1,'cusp::monitor::print()'],['../group__io.html#gae830bdfc52775580d0cadee9ad8db187',1,'cusp::print(const Printable &amp;p)'],['../group__io.html#ga872f7c570e3595bdf1f72dfd7a363836',1,'cusp::print(const Printable &amp;p, Stream &amp;s)']]],
   ['print_2eh',['print.h',['../print_8h.html',1,'']]],
   ['pseudo_5fperipheral_2eh',['pseudo_peripheral.h',['../pseudo__peripheral_8h.html',1,'']]],

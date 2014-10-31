@@ -18,14 +18,14 @@
 <link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-38890655-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+     try {
+       var pageTracker = _gat._getTracker("UA-34296872-1");
+       pageTracker._trackPageview();
+     } catch(err) {}
 </script>
 </head>
 <body>
@@ -45,14 +45,10 @@
    </a>
 <ul id="menu">
       <li><a href="/"><img src="cusp_logo.png" alt="CUSP" height=80px title="CUSP"/></a></li>
-      <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li>
-      <li><a title="Examples" href="http://github.com/cusplibrary/cusplibrary/tree/master/examples" class="submenu_title">Examples</a>
-      </li>
-      <li><a title="Interact with the Cusp community" href="http://github.com/cusplibrary/cusplibrary/watchers" class="submenu_title">Community</a>
-        <ul class="submenu">
-            <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-        </ul>
-      </li>
+      <!-- <li><a title="Quick Start Guide" href="http://github.com/cusplibrary/cusplibrary/wiki/Quick-Start-Guide">Get Started</a></li> -->
+      <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
+      <li><a title="Examples" href="examples.html">Examples</a></li>
+      <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
       <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip">Get Cusp</a></li>
 </ul>
    </div>
@@ -101,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,18 +112,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Methods</a> &#124;
+<a href="#pub-attribs">Public Members</a> &#124;
+<a href="structcusp_1_1precond_1_1aggregation_1_1sa__level-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cusp::precond::aggregation::sa_level&lt; MatrixType &gt; Struct Template Reference</div>  </div>
+<div class="title">cusp::precond::aggregation::sa_level&lt; MatrixType &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__preconditioners.html">Preconditioners</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/sdalton/cusplibrary/cusp/relaxation/<a class="el" href="polynomial_8h_source.html">polynomial.h</a></li>
-</ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
+<div class="textblock"><h3>template&lt;typename MatrixType&gt;<br/>
+struct cusp::precond::aggregation::sa_level&lt; MatrixType &gt;</h3>
+
+
+<p>Definition at line <a class="el" href="smoothed__aggregation_8h_source.html#l00049">49</a> of file <a class="el" href="smoothed__aggregation_8h_source.html">smoothed_aggregation.h</a>.</p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1c52b2ba2ea963746b0fb79b00d3c749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c52b2ba2ea963746b0fb79b00d3c749"></a>
+typedef MatrixType::index_type&#160;</td><td class="memItemRight" valign="bottom"><b>IndexType</b></td></tr>
+<tr class="separator:a1c52b2ba2ea963746b0fb79b00d3c749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f232dbb2941fc161aefe161903c8bd1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f232dbb2941fc161aefe161903c8bd1"></a>
+typedef MatrixType::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>ValueType</b></td></tr>
+<tr class="separator:a1f232dbb2941fc161aefe161903c8bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27fab05c70df8cefbfdb8bf5f9d33dbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27fab05c70df8cefbfdb8bf5f9d33dbb"></a>
+typedef MatrixType::memory_space&#160;</td><td class="memItemRight" valign="bottom"><b>MemorySpace</b></td></tr>
+<tr class="separator:a27fab05c70df8cefbfdb8bf5f9d33dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Methods</h2></td></tr>
+<tr class="memitem:a5d9b686ce68037b04bd00532d7d9057f"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5d9b686ce68037b04bd00532d7d9057f"></a>
+template&lt;typename SA_Level_Type &gt; </td></tr>
+<tr class="memitem:a5d9b686ce68037b04bd00532d7d9057f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sa_level</b> (const SA_Level_Type &amp;<a class="el" href="structcusp_1_1precond_1_1aggregation_1_1sa__level.html">sa_level</a>)</td></tr>
+<tr class="separator:a5d9b686ce68037b04bd00532d7d9057f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Members</h2></td></tr>
+<tr class="memitem:aa41d95b0f4a7a2ae0177e8e34bb4468e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa41d95b0f4a7a2ae0177e8e34bb4468e"></a>
+MatrixType&#160;</td><td class="memItemRight" valign="bottom"><b>A_</b></td></tr>
+<tr class="separator:aa41d95b0f4a7a2ae0177e8e34bb4468e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99b1e0b6ce8003878b2dd7dfb993d90a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99b1e0b6ce8003878b2dd7dfb993d90a"></a>
+<a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt; IndexType, <br class="typebreak"/>
+MemorySpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>aggregates</b></td></tr>
+<tr class="separator:a99b1e0b6ce8003878b2dd7dfb993d90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4b73498bb73a02a539ed111102be43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c4b73498bb73a02a539ed111102be43"></a>
+<a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt; ValueType, <br class="typebreak"/>
+MemorySpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>B</b></td></tr>
+<tr class="separator:a1c4b73498bb73a02a539ed111102be43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d70c6d9c94bd8ee8ac905bfd20fe3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1d70c6d9c94bd8ee8ac905bfd20fe3e"></a>
+ValueType&#160;</td><td class="memItemRight" valign="bottom"><b>rho_DinvA</b></td></tr>
+<tr class="separator:af1d70c6d9c94bd8ee8ac905bfd20fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 29 2014 00:33:17 for CUSP by &#160;<a href="http://www.doxygen.org/index.html">
+<!-- Generated on Thu Oct 30 2014 22:27:35 for CUSP by &#38;#160;<a href="http://www.doxygen.org/index.html"> -->
+Generated for CUSP by <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 <br>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jacobi',['jacobi',['../classcusp_1_1relaxation_1_1jacobi.html',1,'cusp::relaxation']]]
+  ['identity_5foperator',['identity_operator',['../classcusp_1_1identity__operator.html',1,'cusp']]]
 ];

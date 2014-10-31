@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['norm_5ftype',['norm_type',['../structcusp_1_1norm__type.html',1,'cusp']]],
-  ['norm_5ftype_3c_20cusp_3a_3acomplex_3c_20t_20_3e_20_3e',['norm_type&lt; cusp::complex&lt; T &gt; &gt;',['../structcusp_1_1norm__type_3_01cusp_1_1complex_3_01T_01_4_01_4.html',1,'cusp']]],
-  ['norm_5ftype_3c_20valuetype_20_3e',['norm_type&lt; ValueType &gt;',['../structcusp_1_1norm__type.html',1,'cusp']]]
+  ['monitor',['monitor',['../classcusp_1_1monitor.html',1,'cusp']]],
+  ['multilevel',['multilevel',['../classcusp_1_1multilevel.html',1,'cusp']]],
+  ['multilevel_3c_20amg_5fcontainer_3c_20indextype_2c_20valuetype_2c_20memoryspace_20_3e_3a_3asolve_5ftype_2c_20smoothertype_2c_20solvertype_20_3e',['multilevel&lt; amg_container&lt; IndexType, ValueType, MemorySpace &gt;::solve_type, SmootherType, SolverType &gt;',['../classcusp_1_1multilevel.html',1,'cusp']]]
 ];

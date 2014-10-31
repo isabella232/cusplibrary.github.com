@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['stride_5ffunctor',['stride_functor',['../structcusp_1_1stride__functor.html',1,'cusp']]],
-  ['strided_5fiterator',['strided_iterator',['../classcusp_1_1strided__iterator.html',1,'cusp']]]
+  ['random_5farray',['random_array',['../classcusp_1_1random__array.html',1,'cusp']]],
+  ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html',1,'cusp']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['norm_5ftype',['norm_type',['../structcusp_1_1norm__type.html',1,'cusp']]],
-  ['norm_5ftype_3c_20cusp_3a_3acomplex_3c_20t_20_3e_20_3e',['norm_type&lt; cusp::complex&lt; T &gt; &gt;',['../structcusp_1_1norm__type_3_01cusp_1_1complex_3_01T_01_4_01_4.html',1,'cusp']]],
-  ['norm_5ftype_3c_20valuetype_20_3e',['norm_type&lt; ValueType &gt;',['../structcusp_1_1norm__type.html',1,'cusp']]]
+  ['nonsym_5fbridson_5fainv',['nonsym_bridson_ainv',['../classcusp_1_1precond_1_1nonsym__bridson__ainv.html',1,'cusp::precond']]],
+  ['nonsym_5fbridson_5fainv',['nonsym_bridson_ainv',['../classcusp_1_1precond_1_1nonsym__bridson__ainv.html#ace8c201f7c59a755b189b6accc2ff8c4',1,'cusp::precond::nonsym_bridson_ainv']]]
 ];

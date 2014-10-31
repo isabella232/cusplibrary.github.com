@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['ell_5fmatrix',['ell_matrix',['../classcusp_1_1ell__matrix.html',1,'cusp']]],
-  ['ell_5fmatrix_5fview',['ell_matrix_view',['../classcusp_1_1ell__matrix__view.html',1,'cusp']]]
+  ['dia_5fmatrix',['dia_matrix',['../classcusp_1_1dia__matrix.html',1,'cusp']]],
+  ['dia_5fmatrix_5fview',['dia_matrix_view',['../classcusp_1_1dia__matrix__view.html',1,'cusp']]],
+  ['diagonal',['diagonal',['../classcusp_1_1precond_1_1diagonal.html',1,'cusp::precond']]]
 ];

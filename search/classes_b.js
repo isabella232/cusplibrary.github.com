@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['random_5farray',['random_array',['../classcusp_1_1random__array.html',1,'cusp']]],
-  ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html',1,'cusp']]]
+  ['permutation_5fmatrix',['permutation_matrix',['../classcusp_1_1permutation__matrix.html',1,'cusp']]],
+  ['permutation_5fmatrix_5fview',['permutation_matrix_view',['../classcusp_1_1permutation__matrix__view.html',1,'cusp']]],
+  ['polynomial',['polynomial',['../classcusp_1_1relaxation_1_1polynomial.html',1,'cusp::relaxation']]]
 ];
