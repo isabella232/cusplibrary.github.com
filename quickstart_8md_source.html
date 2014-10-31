@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;## Prerequisites</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;[Cusp v0.4.0](https:<span class="comment">//github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip) requires [CUDA 6.5 (or newer)](http://www.nvidia.com/object/cuda_get.html).  You can confirm that CUDA 6.5 is installed by using nvcc on the command line as follows :</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;[Cusp v0.4.0](https:<span class="comment">//github.com/cusplibrary/cusplibrary/archive/v0.4.0.zip) requires [CUDA 5.5 (or newer)](http://www.nvidia.com/object/cuda_get.html).  You can check the CUDA installation by using nvcc on the command line as follows :</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;~~~{.shell}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;$ nvcc --version</div>
@@ -239,80 +239,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;Cusp provides a variety of [iterative methods](http:<span class="comment">//en.wikipedia.org/wiki/Iterative_method) for solving sparse linear systems.  Established [Krylov subspace](http://en.wikipedia.org/wiki/Krylov_subspace)</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;methods are available:</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  * [Conjugate-Gradient(CG)](group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  * [Biconjugate Gradient (BiCG)](group__krylov__methods.html#gad82e975fa15cb096d13507163325c2b5)</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  * [Biconjugate Gradient Stabilized (BiCGstab)](group__krylov__methods.html#ga23cfa8325966505d6580151f91525887)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  * [Generalized Minimum Residual (GMRES)](group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46)</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  * [Multi-mass Conjugate-Gradient (CG-M)](group__krylov__methods.html#gae25c1e3e77e92709bfa9f3726328e421)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  * [Multi-mass Biconjugate Gradient stabilized (BiCGstab-M)](group__krylov__methods.html#gae9649279f0fb30cbc6a48c9f912a5f87)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;More detailed examples are available [here](examples.html).</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  * [Conjugate-Residual(CR)](group__krylov__methods.html#gae73aeb8fd04ee86a128240ac62c20e33)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  * [Biconjugate Gradient (BiCG)](group__krylov__methods.html#gad82e975fa15cb096d13507163325c2b5)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  * [Biconjugate Gradient Stabilized (BiCGstab)](group__krylov__methods.html#ga23cfa8325966505d6580151f91525887)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  * [Generalized Minimum Residual (GMRES)](group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  * [Multi-mass Conjugate-Gradient (CG-M)](group__krylov__methods.html#gae25c1e3e77e92709bfa9f3726328e421)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  * [Multi-mass Biconjugate Gradient stabilized (BiCGstab-M)](group__krylov__methods.html#gae9649279f0fb30cbc6a48c9f912a5f87)</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;\include <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cg</a>.cu</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;More detailed examples are available [here](examples.html).</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">## Preconditioners</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;[Preconditioners](http:<span class="comment">//en.wikipedia.org/wiki/Preconditioner) are a way to improve the [rate of convergence](http://en.wikipedia.org/wiki/Rate_of_convergence) of iterative solvers.  The good preconditioner is fast to compute and approximates the inverse of the matrix in some sense. Cusp provides the following preconditioners:</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  * [Algebraic Multigrid (AMG) based on Smoothed Aggregation](classcusp_1_1precond_1_1smoothed__aggregation.html)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  * [Approximate Inverse (AINV)](ainv_8h.html)</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  * [Diagonal](classcusp_1_1precond_1_1diagonal.html)</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;\include smoothed_aggregation.cu</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;\include <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cg</a>.cu</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">## Preconditioners</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;[Preconditioners](http:<span class="comment">//en.wikipedia.org/wiki/Preconditioner) are a way to improve the [rate of convergence](http://en.wikipedia.org/wiki/Rate_of_convergence) of iterative solvers.  The good preconditioner is fast to compute and approximates the inverse of the matrix in some sense. Cusp provides the following preconditioners:</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  * [Algebraic Multigrid (AMG) based on Smoothed Aggregation](classcusp_1_1precond_1_1smoothed__aggregation.html)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  * [Approximate Inverse (AINV)](ainv_8h.html)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  * [Diagonal](classcusp_1_1precond_1_1diagonal.html)</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">## User-Defined Linear Operators</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;Sometimes it is useful to solve a linear system `A * x = b` without converting the matrix `A` into one of Cusp<span class="stringliteral">&#39;s formats.  For this reason Cusp supports user-defined [linear operators](classcusp_1_1linear__operator.html) that take in a vector `x` and compute the result `y = A * x`.  These black-box operators can be used to interface [matrix-free methods](http://en.wikipedia.org/wiki/Matrix-free_methods) with Cusp&#39;</span>s iterative solvers.</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;\include stencil.cu</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;\include smoothed_aggregation.cu</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">## User-Defined Linear Operators</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;Sometimes it is useful to solve a linear system `A * x = b` without converting the matrix `A` into one of Cusp<span class="stringliteral">&#39;s formats.  For this reason Cusp supports user-defined [linear operators](classcusp_1_1linear__operator.html) that take in a vector `x` and compute the result `y = A * x`.  These black-box operators can be used to interface [matrix-free methods](http://en.wikipedia.org/wiki/Matrix-free_methods) with Cusp&#39;</span>s iterative solvers.</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">## Additional Resources</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;This guide only scratches the surface of what you can <span class="keywordflow">do</span> with Cusp.  The following resources can help you learn to <span class="keywordflow">do</span> more with Thrust or provide assistance when problems arise.</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  * Comprehensive [Documentation](modules.html) of Cusp<span class="stringliteral">&#39;s API</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="stringliteral">  * A list of [Frequently Asked Questions](https://code.google.com/p/cusp-library/wiki/FrequentlyAskedQuestions)</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="stringliteral">  * Collection of [example](examples.html) programs</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="stringliteral">We strongly encourage users to subscribe to the [cusp-users](http://groups.google.com/group/cusp-users) mailing list.  The mailing list is a great place to seek out help from the Cusp developers and other Cusp users.</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;\include stencil.cu</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">## Additional Resources</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;This guide only scratches the surface of what you can <span class="keywordflow">do</span> with Cusp.  The following resources can help you learn to <span class="keywordflow">do</span> more with Thrust or provide assistance when problems arise.</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  * Comprehensive [Documentation](modules.html) of Cusp<span class="stringliteral">&#39;s API</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="stringliteral">  * A list of [Frequently Asked Questions](https://code.google.com/p/cusp-library/wiki/FrequentlyAskedQuestions)</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="stringliteral">  * Collection of [example](examples.html) programs</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="stringliteral"></span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="stringliteral">&lt;!-- include Algorithms examples  --&gt;</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="stringliteral">\example blas.cu</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="stringliteral">\example multiply.cu</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="stringliteral">\example maximal_independent_set.cu</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="stringliteral">\example transpose.cu</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="stringliteral">&lt;!-- include Gallery examples  --&gt;</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="stringliteral">\example diffusion.cu</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="stringliteral">\example poisson.cu</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="stringliteral">&lt;!-- include InputOutput examples  --&gt;</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="stringliteral">\example matrix_market.cu</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="stringliteral">&lt;!-- include LinearOperator examples  --&gt;</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="stringliteral">\example stencil.cu</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="stringliteral">&lt;!-- include MatrixAssembly examples  --&gt;</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="stringliteral">\example unordered_triplets.cu</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="stringliteral">&lt;!-- include MatrixFormats examples  --&gt;</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="stringliteral">\example coo.cu</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="stringliteral">\example csr.cu</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="stringliteral">\example dia.cu</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="stringliteral">\example ell.cu</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="stringliteral">\example hyb.cu</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="stringliteral">&lt;!-- include Monitor examples  --&gt;</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="stringliteral">\example monitor.cu</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="stringliteral">\example verbose_monitor.cu</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="stringliteral">&lt;!-- include Preconditioner examples  --&gt;</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="stringliteral">\example ainv.cu</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="stringliteral">\example diagonal.cu</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="stringliteral">\example smoothed_aggregation.cu</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="stringliteral">&lt;!-- include Solver examples  --&gt;</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="stringliteral">\example bicgstab.cu</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="stringliteral">\example cg.cu</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="stringliteral">\example cg_m.cu</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="stringliteral">\example cr.cu</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="stringliteral">\example gmres.cu</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="stringliteral">&lt;!-- include View examples  --&gt;</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="stringliteral">\example array1d.cu</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="stringliteral">\example array2d_raw.cu</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="stringliteral">\example cg_raw.cu</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="stringliteral">\example csr.cu</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="stringliteral">\example csr_raw.cu</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="stringliteral">We strongly encourage users to subscribe to the [cusp-users](http://groups.google.com/group/cusp-users) mailing list.  The mailing list is a great place to seek out help from the Cusp developers and other Cusp users.</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="stringliteral">&lt;!-- include Algorithms examples  --&gt;</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="stringliteral">\example blas.cu</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="stringliteral">\example multiply.cu</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="stringliteral">\example maximal_independent_set.cu</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="stringliteral">\example transpose.cu</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="stringliteral">&lt;!-- include Gallery examples  --&gt;</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="stringliteral">\example diffusion.cu</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="stringliteral">\example poisson.cu</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="stringliteral">&lt;!-- include InputOutput examples  --&gt;</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="stringliteral">\example matrix_market.cu</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="stringliteral">&lt;!-- include LinearOperator examples  --&gt;</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="stringliteral">\example stencil.cu</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="stringliteral">&lt;!-- include MatrixAssembly examples  --&gt;</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="stringliteral">\example unordered_triplets.cu</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="stringliteral">&lt;!-- include MatrixFormats examples  --&gt;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="stringliteral">\example coo.cu</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="stringliteral">\example csr.cu</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="stringliteral">\example dia.cu</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="stringliteral">\example ell.cu</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="stringliteral">\example hyb.cu</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="stringliteral">&lt;!-- include Monitor examples  --&gt;</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="stringliteral">\example monitor.cu</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="stringliteral">\example verbose_monitor.cu</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="stringliteral">&lt;!-- include Preconditioner examples  --&gt;</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="stringliteral">\example ainv.cu</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="stringliteral">\example diagonal.cu</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="stringliteral">\example smoothed_aggregation.cu</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="stringliteral">&lt;!-- include Solver examples  --&gt;</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="stringliteral">\example bicgstab.cu</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="stringliteral">\example cg.cu</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="stringliteral">\example cg_m.cu</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="stringliteral">\example cr.cu</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="stringliteral">\example gmres.cu</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="stringliteral">&lt;!-- include View examples  --&gt;</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="stringliteral">\example array1d.cu</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="stringliteral">\example array2d_raw.cu</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="stringliteral">\example cg_raw.cu</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="stringliteral">\example csr.cu</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="stringliteral">\example csr_raw.cu</span></div>
 <div class="ttc" id="classcusp_1_1hyb__matrix_html"><div class="ttname"><a href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix</a></div><div class="ttdoc">Hybrid (HYB) representation a sparse matrix. </div><div class="ttdef"><b>Definition:</b> <a href="hyb__matrix_8h_source.html#l00141">hyb_matrix.h:141</a></div></div>
 <div class="ttc" id="csr__matrix_8h_html"><div class="ttname"><a href="csr__matrix_8h.html">csr_matrix.h</a></div><div class="ttdoc">Compressed Sparse Row matrix format. </div></div>
 <div class="ttc" id="hyb__matrix_8h_html"><div class="ttname"><a href="hyb__matrix_8h.html">hyb_matrix.h</a></div><div class="ttdoc">Hybrid ELL/COO matrix format. </div></div>
@@ -323,7 +325,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-<!-- Generated on Thu Oct 30 2014 22:30:47 for CUSP by &#38;#160;<a href="http://www.doxygen.org/index.html"> -->
 Generated for CUSP by <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
