@@ -465,10 +465,10 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> stencil(G.num_rows);</div>
 <div class="line"></div>
-<div class="line">   <span class="comment">// Compute connected components on the device</span></div>
+<div class="line">   <span class="comment">// Compute MIS on the device</span></div>
 <div class="line">   <span class="keywordtype">size_t</span> num_mis = <a class="code" href="group__graph__algorithms.html#ga477bb37ee83cb121c5eb291a3004d847">cusp::graph::maximal_independent_set</a>(G, stencil);</div>
 <div class="line"></div>
-<div class="line">   <span class="comment">// Print the number of components and the per vertex membership</span></div>
+<div class="line">   <span class="comment">// Print the number of MIS vertices and membership stencil</span></div>
 <div class="line">   std::cout &lt;&lt; <span class="stringliteral">&quot;Computed &quot;</span> &lt;&lt; num_mis &lt;&lt; <span class="stringliteral">&quot; MIS(1) vertices in the graph.&quot;</span> &lt;&lt;</div>
 <div class="line">   std::endl;</div>
 <div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(stencil);</div>

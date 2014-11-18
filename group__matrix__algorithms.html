@@ -122,6 +122,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6af17222e6fc7946fb002741c223b04f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f">cusp::copy</a> (const SourceType &amp;src, DestinationType &amp;dst)</td></tr>
 <tr class="memdesc:ga6af17222e6fc7946fb002741c223b04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy one array or matrix to another.  <a href="#ga6af17222e6fc7946fb002741c223b04f">More...</a><br/></td></tr>
 <tr class="separator:ga6af17222e6fc7946fb002741c223b04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e4aa1d71fddbc22ec0d8791a4de83da"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 , typename MatrixType3 , typename BinaryFunction &gt; </td></tr>
+<tr class="memitem:ga8e4aa1d71fddbc22ec0d8791a4de83da"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">cusp::elementwise</a> (const MatrixType1 &amp;A, const MatrixType2 &amp;B, MatrixType3 &amp;C, BinaryFunction op)</td></tr>
+<tr class="memdesc:ga8e4aa1d71fddbc22ec0d8791a4de83da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform transform operation on two matrices.  <a href="#ga8e4aa1d71fddbc22ec0d8791a4de83da">More...</a><br/></td></tr>
+<tr class="separator:ga8e4aa1d71fddbc22ec0d8791a4de83da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab7946563b534d328fa38cf401b8e0779"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 , typename MatrixType3 &gt; </td></tr>
 <tr class="memitem:gab7946563b534d328fa38cf401b8e0779"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gab7946563b534d328fa38cf401b8e0779">cusp::add</a> (const MatrixType1 &amp;A, const MatrixType2 &amp;B, MatrixType3 &amp;C)</td></tr>
 <tr class="memdesc:gab7946563b534d328fa38cf401b8e0779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sum of two matrices.  <a href="#gab7946563b534d328fa38cf401b8e0779">More...</a><br/></td></tr>
@@ -130,10 +134,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5aab90bf43b7738069f461a99c369c16"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga5aab90bf43b7738069f461a99c369c16">cusp::subtract</a> (const MatrixType1 &amp;A, const MatrixType2 &amp;B, MatrixType3 &amp;C)</td></tr>
 <tr class="memdesc:ga5aab90bf43b7738069f461a99c369c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the difference of two matrices.  <a href="#ga5aab90bf43b7738069f461a99c369c16">More...</a><br/></td></tr>
 <tr class="separator:ga5aab90bf43b7738069f461a99c369c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gace6f25cf01d4bfd2304606f7a6a66eed"><td class="memTemplParams" colspan="2">template&lt;typename LinearOperator , typename MatrixOrVector1 , typename MatrixOrVector2 &gt; </td></tr>
-<tr class="memitem:gace6f25cf01d4bfd2304606f7a6a66eed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gace6f25cf01d4bfd2304606f7a6a66eed">cusp::multiply</a> (LinearOperator &amp;A, MatrixOrVector1 &amp;B, MatrixOrVector2 &amp;C)</td></tr>
-<tr class="memdesc:gace6f25cf01d4bfd2304606f7a6a66eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements matrix-matrix and matrix-vector multiplication.  <a href="#gace6f25cf01d4bfd2304606f7a6a66eed">More...</a><br/></td></tr>
-<tr class="separator:gace6f25cf01d4bfd2304606f7a6a66eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64aac53ca20d88d71aadc7e8b3317788"><td class="memTemplParams" colspan="2">template&lt;typename LinearOperator , typename MatrixOrVector1 , typename MatrixOrVector2 &gt; </td></tr>
+<tr class="memitem:ga64aac53ca20d88d71aadc7e8b3317788"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a> (const LinearOperator &amp;A, const MatrixOrVector1 &amp;B, MatrixOrVector2 &amp;C)</td></tr>
+<tr class="memdesc:ga64aac53ca20d88d71aadc7e8b3317788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements matrix-matrix and matrix-vector multiplication.  <a href="#ga64aac53ca20d88d71aadc7e8b3317788">More...</a><br/></td></tr>
+<tr class="separator:ga64aac53ca20d88d71aadc7e8b3317788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc02e0c155b7f639d8eba87b005858b9"><td class="memTemplParams" colspan="2">template&lt;typename LinearOperator , typename MatrixOrVector1 , typename MatrixOrVector2 , typename UnaryFunction , typename BinaryFunction1 , typename BinaryFunction2 &gt; </td></tr>
+<tr class="memitem:gafc02e0c155b7f639d8eba87b005858b9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gafc02e0c155b7f639d8eba87b005858b9">cusp::multiply</a> (const LinearOperator &amp;A, const MatrixOrVector1 &amp;B, MatrixOrVector2 &amp;C, UnaryFunction initialize, BinaryFunction1 combine, BinaryFunction2 reduce)</td></tr>
+<tr class="memdesc:gafc02e0c155b7f639d8eba87b005858b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements matrix-vector multiplication with custom combine and reduce functionality.  <a href="#gafc02e0c155b7f639d8eba87b005858b9">More...</a><br/></td></tr>
+<tr class="separator:gafc02e0c155b7f639d8eba87b005858b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="memTemplParams" colspan="2">template&lt;typename LinearOperator , typename Vector1 , typename Vector2 , typename Vector3 , typename BinaryFunction1 , typename BinaryFunction2 &gt; </td></tr>
+<tr class="memitem:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764">cusp::generalized_spmv</a> (const LinearOperator &amp;A, const Vector1 &amp;x, const Vector2 &amp;y, Vector3 &amp;z, BinaryFunction1 combine, BinaryFunction2 reduce)</td></tr>
+<tr class="memdesc:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements generalized matrix-vector multiplication.  <a href="#ga88ab6d9cbb477b68cf658cea5e27c764">More...</a><br/></td></tr>
+<tr class="separator:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadf8215f805071d510966a0181d7b4a8c"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 &gt; </td></tr>
 <tr class="memitem:gadf8215f805071d510966a0181d7b4a8c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">cusp::transpose</a> (const MatrixType1 &amp;A, MatrixType2 &amp;At)</td></tr>
 <tr class="memdesc:gadf8215f805071d510966a0181d7b4a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose a matrix.  <a href="#gadf8215f805071d510966a0181d7b4a8c">More...</a><br/></td></tr>
@@ -319,7 +331,208 @@ DestinationType will be resized as necessary</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="gace6f25cf01d4bfd2304606f7a6a66eed"></a>
+<a class="anchor" id="ga8e4aa1d71fddbc22ec0d8791a4de83da"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType1 , typename MatrixType2 , typename MatrixType3 , typename BinaryFunction &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::elementwise </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType1 &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MatrixType2 &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MatrixType3 &amp;&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryFunction&#160;</td>
+          <td class="paramname"><em>op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform transform operation on two matrices. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType1</td><td>Type of first matrix </td></tr>
+    <tr><td class="paramname">MatrixType2</td><td>Type of second matrix </td></tr>
+    <tr><td class="paramname">MatrixType3</td><td>Type of output matrix </td></tr>
+    <tr><td class="paramname">BinaryFunction</td><td>Type of binary transform to apply</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>first input matrix </td></tr>
+    <tr><td class="paramname">B</td><td>second input matrix </td></tr>
+    <tr><td class="paramname">C</td><td>output matrix </td></tr>
+    <tr><td class="paramname">op</td><td>binary transform to apply</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>elementwise</code>.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="elementwise_8h.html">cusp/elementwise.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array2d_8h.html">cusp/array2d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// initialize first 2x3 matrix</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> A(2,3);</div>
+<div class="line">    A(0,0) = 10;  A(0,1) = 20;  A(0,2) = 30;</div>
+<div class="line">    A(1,0) = 40;  A(1,1) = 50;  A(1,2) = 60;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print A</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize second 2x3 matrix</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> B(2,3);</div>
+<div class="line">    B(0,0) = 60;  B(0,1) = 50;  B(0,2) = 40;</div>
+<div class="line">    B(1,0) = 30;  B(1,1) = 20;  B(1,2) = 10;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print B</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(B);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute the sum</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> C;</div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">cusp::elementwise</a>(A, B, C, thrust::plus&lt;int&gt;());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print C</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(C);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga88ab6d9cbb477b68cf658cea5e27c764"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename LinearOperator , typename Vector1 , typename Vector2 , typename Vector3 , typename BinaryFunction1 , typename BinaryFunction2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::generalized_spmv </td>
+          <td>(</td>
+          <td class="paramtype">const LinearOperator &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vector1 &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vector2 &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3 &amp;&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryFunction1&#160;</td>
+          <td class="paramname"><em>combine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryFunction2&#160;</td>
+          <td class="paramname"><em>reduce</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements generalized matrix-vector multiplication. </p>
+<dl class="section user"><dt>Overview</dt><dd></dd></dl>
+<p><code>generalized</code> multiply can be used with dense and sparse matrices, and user-defined <code><a class="el" href="classcusp_1_1linear__operator.html" title="Abstract representation of a linear operator. ">linear_operator</a></code> objects.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">LinearOperator</td><td>Type of first matrix </td></tr>
+    <tr><td class="paramname">Vector1</td><td>Type of second input vector </td></tr>
+    <tr><td class="paramname">Vector2</td><td>Type of third input vector </td></tr>
+    <tr><td class="paramname">Vector3</td><td>Type of output vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>input matrix </td></tr>
+    <tr><td class="paramname">x</td><td>input vector </td></tr>
+    <tr><td class="paramname">y</td><td>input vector </td></tr>
+    <tr><td class="paramname">z</td><td>output vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example</dt><dd></dd></dl>
+<p>The following code snippet demonstrates how to use <code>multiply</code> to compute a matrix-vector product.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array2d_8h.html">cusp/array2d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="multiply_8h.html">cusp/multiply.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> A(2,2);</div>
+<div class="line">    A(0,0) = 10;  A(0,1) = 20;</div>
+<div class="line">    A(1,0) = 40;  A(1,1) = 50;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize input vector</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> x(2);</div>
+<div class="line">    x[0] = 1;</div>
+<div class="line">    x[1] = 2;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initial RHS filled with 2&#39;s</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1constant__array.html">cusp::constant_array&lt;float&gt;</a> y(2, 2);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// allocate output vector</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> z(2);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute z = y + (A * x)</span></div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764">cusp::generalized_spmv</a>(A, x, y, z,</div>
+<div class="line">    thrust::multiplies&lt;float&gt;(),</div>
+<div class="line">    thrust::plus&lt;float&gt;());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print z</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(z);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga64aac53ca20d88d71aadc7e8b3317788"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -328,13 +541,13 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
         <tr>
           <td class="memname">void cusp::multiply </td>
           <td>(</td>
-          <td class="paramtype">LinearOperator &amp;&#160;</td>
+          <td class="paramtype">const LinearOperator &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MatrixOrVector1 &amp;&#160;</td>
+          <td class="paramtype">const MatrixOrVector1 &amp;&#160;</td>
           <td class="paramname"><em>B</em>, </td>
         </tr>
         <tr>
@@ -353,7 +566,7 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 
 <p>Implements matrix-matrix and matrix-vector multiplication. </p>
 <dl class="section user"><dt>Overview</dt><dd></dd></dl>
-<p><code>multiply</code> can be used with dense matrices, sparse matrices, and user-defined <code><a class="el" href="classcusp_1_1linear__operator.html">linear_operator</a></code> objects.</p>
+<p><code>multiply</code> can be used with dense matrices, sparse matrices, and user-defined <code><a class="el" href="classcusp_1_1linear__operator.html" title="Abstract representation of a linear operator. ">linear_operator</a></code> objects.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">LinearOperator</td><td>Type of first matrix </td></tr>
@@ -372,8 +585,9 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 </dl>
 <dl class="section user"><dt>Example</dt><dd></dd></dl>
 <p>The following code snippet demonstrates how to use <code>multiply</code> to compute a matrix-vector product.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="multiply_8h.html">cusp/multiply.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array2d_8h.html">cusp/array2d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="multiply_8h.html">cusp/multiply.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
@@ -392,7 +606,7 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> y(2);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute y = A * x</span></div>
-<div class="line">    <a class="code" href="group__matrix__algorithms.html#gace6f25cf01d4bfd2304606f7a6a66eed">cusp::multiply</a>(A, x, y);</div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, y);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// print y</span></div>
 <div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
@@ -401,6 +615,115 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line">}</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="csr_raw_8cu-example.html#a3">csr_raw.cu</a>, <a class="el" href="gmres_8cu-example.html#a3">gmres.cu</a>, and <a class="el" href="multiply_8cu-example.html#a2">multiply.cu</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="gafc02e0c155b7f639d8eba87b005858b9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename LinearOperator , typename MatrixOrVector1 , typename MatrixOrVector2 , typename UnaryFunction , typename BinaryFunction1 , typename BinaryFunction2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::multiply </td>
+          <td>(</td>
+          <td class="paramtype">const LinearOperator &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MatrixOrVector1 &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MatrixOrVector2 &amp;&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnaryFunction&#160;</td>
+          <td class="paramname"><em>initialize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryFunction1&#160;</td>
+          <td class="paramname"><em>combine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryFunction2&#160;</td>
+          <td class="paramname"><em>reduce</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implements matrix-vector multiplication with custom combine and reduce functionality. </p>
+<dl class="section user"><dt>Overview</dt><dd></dd></dl>
+<p><code>multiply</code> can be used with dense matrices, sparse matrices, and user-defined <code><a class="el" href="classcusp_1_1linear__operator.html" title="Abstract representation of a linear operator. ">linear_operator</a></code> objects.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">LinearOperator</td><td>Type of matrix </td></tr>
+    <tr><td class="paramname">MatrixOrVector1</td><td>Type of second vector </td></tr>
+    <tr><td class="paramname">MatrixOrVector2</td><td>Type of output vector </td></tr>
+    <tr><td class="paramname">UnaryFunction</td><td>Type of unary function to initialize RHS </td></tr>
+    <tr><td class="paramname">BinaryFunction1</td><td>Type of binary function to combine entries </td></tr>
+    <tr><td class="paramname">BinaryFunction2</td><td>Type of binary function to reduce entries</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>input matrix </td></tr>
+    <tr><td class="paramname">B</td><td>input vector </td></tr>
+    <tr><td class="paramname">C</td><td>output vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example</dt><dd></dd></dl>
+<p>The following code snippet demonstrates how to use <code>multiply</code> to compute a matrix-vector product.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array2d_8h.html">cusp/array2d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="multiply_8h.html">cusp/multiply.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">typedef</span> cusp::detail::zero_function&lt;float&gt; initialize;</div>
+<div class="line">    <span class="keyword">typedef</span> thrust::multiplies&lt;float&gt;          combine;</div>
+<div class="line">    <span class="keyword">typedef</span> thrust::plus&lt;float&gt;                reduce;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> A(2,2);</div>
+<div class="line">    A(0,0) = 10;  A(0,1) = 20;</div>
+<div class="line">    A(1,0) = 40;  A(1,1) = 50;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize input vector</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> x(2);</div>
+<div class="line">    x[0] = 1;</div>
+<div class="line">    x[1] = 2;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// allocate output vector</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> y(2);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute y = A * x</span></div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, y, initialize, combine, reduce);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print y</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga5aab90bf43b7738069f461a99c369c16"></a>

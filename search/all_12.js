@@ -11,7 +11,7 @@ var searchData=
   ['sparse_20matrices',['Sparse Matrices',['../group__sparse__matrices.html',1,'']]],
   ['sparse_20matrix_20containers',['Sparse Matrix Containers',['../group__sparse__matrix__containers.html',1,'']]],
   ['sparse_20matrix_20views',['Sparse Matrix Views',['../group__sparse__matrix__views.html',1,'']]],
-  ['stride_5ffunctor',['stride_functor',['../structcusp_1_1stride__functor.html',1,'cusp']]],
+  ['strided_5fiterator',['strided_iterator',['../classcusp_1_1strided__iterator.html#abf8b0b5ca4a07a0b03878b662d3e9879',1,'cusp::strided_iterator::strided_iterator(void)'],['../classcusp_1_1strided__iterator.html#acca4f5f847dc1e80cbb2e242ef0c1a15',1,'cusp::strided_iterator::strided_iterator(RandomAccessIterator first, RandomAccessIterator last, difference_type stride)']]],
   ['strided_5fiterator',['strided_iterator',['../classcusp_1_1strided__iterator.html',1,'cusp']]],
   ['subarray',['subarray',['../classcusp_1_1array1d.html#a8e9cfee004f5d4bc85a8e614f2c4be63',1,'cusp::array1d::subarray(size_type start_index, size_type num_entries)'],['../classcusp_1_1array1d.html#ac39a7e865774c49759d3470fd43bf4c0',1,'cusp::array1d::subarray(size_type start_index, size_type num_entries) const '],['../classcusp_1_1array1d__view.html#a28576a3ca7d16fa7bad51a6739c1b4f6',1,'cusp::array1d_view::subarray()']]],
   ['subtract',['subtract',['../group__matrix__algorithms.html#ga5aab90bf43b7738069f461a99c369c16',1,'cusp']]],

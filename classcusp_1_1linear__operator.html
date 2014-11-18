@@ -123,16 +123,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename ValueType, typename MemorySpace, typename IndexType = int&gt;<br/>
 class cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;</h3>
 
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="stencil_8cu-example.html#_a0">stencil.cu</a>.</dd>
+<p>Abstract representation of a linear operator. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IndexType</td><td>Type used for operator indices (e.g. <code>int</code>). </td></tr>
+    <tr><td class="paramname">ValueType</td><td>Type used for operator values (e.g. <code>float</code>). </td></tr>
+    <tr><td class="paramname">MemorySpace</td><td>A memory space (e.g. <code>cusp::host_memory</code> or <code>cusp::device_memory</code>)</td></tr>
+  </table>
+  </dd>
 </dl>
-<p>Definition at line <a class="el" href="linear__operator_8h_source.html#l00034">34</a> of file <a class="el" href="linear__operator_8h_source.html">linear_operator.h</a>.</p>
-</div><div class="dynheader">
+<dl class="section user"><dt>Overview</dt><dd>A <code>linear</code> operator is a abstract container that supports encapsulates abstract linear operators for use with other routines. All linear operators should provide a implementation of the operator()(x,y) for interoperability with the <code>multiply</code> routine.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to create a custom linear operator.</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// include linear_operator header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="multiply_8h.html">cusp/multiply.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="diagonal_8h.html">cusp/precond/diagonal.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><span class="keyword">struct </span>Dinv_A : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">cusp::linear_operator</a>&lt;typename MatrixType::value_type, typename MatrixType::memory_space&gt;</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::value_type ValueType;</div>
+<div class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::memory_space MemorySpace;</div>
+<div class="line"></div>
+<div class="line">  <span class="keyword">const</span> MatrixType&amp; A;</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="classcusp_1_1precond_1_1diagonal.html">cusp::precond::diagonal&lt;ValueType,MemorySpace&gt;</a> Dinv;</div>
+<div class="line"></div>
+<div class="line">  Dinv_A(<span class="keyword">const</span> MatrixType&amp; A)</div>
+<div class="line">      : A(A), Dinv(A),</div>
+<div class="line">        cusp::linear_operator&lt;ValueType,MemorySpace&gt;(A.num_rows, A.num_cols, A.num_entries + A.num_rows)</div>
+<div class="line">  {}</div>
+<div class="line"></div>
+<div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1, <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line">  <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> Array1&amp; x, Array2&amp; y)<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">  </span>{</div>
+<div class="line">      <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A,x,y);</div>
+<div class="line">      <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(Dinv,y,y);</div>
+<div class="line">  }</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> CsrMatrix;</div>
+<div class="line"></div>
+<div class="line">  CsrMatrix A;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// construct Poisson example matrix</span></div>
+<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, N, N);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// number of entries</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> N = 4;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// construct instance of custom operator perform D^{-1}A</span></div>
+<div class="line">  Dinv_A&lt;CsrMatrix&gt; custom_op(A);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// initialize x and y vectors</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 1);</div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> y(A.num_rows, 0);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// call operator()(x,y) through multiply interface</span></div>
+<div class="line">  custom_op(x,y);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// print the transformed vector</span></div>
+<div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="stencil_8cu-example.html#_a0">stencil.cu</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="linear__operator_8h_source.html#l00111">111</a> of file <a class="el" href="linear__operator_8h_source.html">linear_operator.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="linear__operator_8h_source.html">linear_operator.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classcusp_1_1linear__operator.png" usemap="#cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;_map" alt=""/>
   <map id="cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;_map" name="cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;_map">
-<area href="classcusp_1_1identity__operator.html" alt="cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;" shape="rect" coords="0,112,525,136"/>
+<area href="classcusp_1_1identity__operator.html" title="Simple identity operator. " alt="cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;" shape="rect" coords="0,112,525,136"/>
 </map>
  </div></div>
 <table class="memberdecls">

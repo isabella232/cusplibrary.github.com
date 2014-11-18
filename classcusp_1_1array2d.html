@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
-<div class="textblock"><h3>template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt;<br/>
+<div class="textblock"><h3>template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt;<br/>
 class cusp::array2d&lt; ValueType, MemorySpace, Orientation &gt;</h3>
 
 <p>The <a class="el" href="classcusp_1_1array2d.html" title="The array2d class is a 2D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array2d</a> class is a 2D vector container that may contain elements stored in "host" or "device" memory space. </p>
@@ -213,17 +213,17 @@ Public Methods</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:ad94fcd77fa62d14b5874ea83b04ce3dc"><td class="memItemLeft" align="right" valign="top">values_array_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a></td></tr>
-<tr class="separator:ad94fcd77fa62d14b5874ea83b04ce3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b727dcacaccff383361db91491f05b9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1array2d.html#a2b727dcacaccff383361db91491f05b9">pitch</a></td></tr>
 <tr class="separator:a2b727dcacaccff383361db91491f05b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94fcd77fa62d14b5874ea83b04ce3dc"><td class="memItemLeft" align="right" valign="top">values_array_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a></td></tr>
+<tr class="separator:ad94fcd77fa62d14b5874ea83b04ce3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae61e46e19061991e2a85c077dae9ba70"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -252,7 +252,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -298,7 +298,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -351,7 +351,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::<a class="el" href="classcusp_1_1array2d.html">array2d</a> </td>
@@ -401,7 +401,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
       <table class="memname">
@@ -435,7 +435,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">column_view <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::column </td>
@@ -461,7 +461,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const_column_view <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::column </td>
@@ -487,7 +487,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">values_array_type::reference <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::operator() </td>
@@ -524,7 +524,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">values_array_type::const_reference <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::operator() </td>
@@ -561,7 +561,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classcusp_1_1array2d.html">array2d</a>&amp; <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::operator= </td>
@@ -587,7 +587,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
       <table class="memname">
@@ -621,7 +621,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::resize </td>
@@ -657,7 +657,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::resize </td>
@@ -700,7 +700,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">row_view <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::row </td>
@@ -726,7 +726,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const_row_view <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::row </td>
@@ -752,7 +752,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::swap </td>
@@ -778,7 +778,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">size_t <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::pitch</td>
@@ -787,7 +787,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 </div><div class="memdoc">
 <p>The stride between consecutive elements along the major dimension </p>
 
-<p>Definition at line <a class="el" href="array2d_8h_source.html#l00145">145</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
+<p>Definition at line <a class="el" href="array2d_8h_source.html#l00141">141</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
 
 </div>
 </div>
@@ -795,7 +795,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row_major&gt; </div>
+template&lt;typename ValueType, typename MemorySpace, typename Orientation = cusp::row_major&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">values_array_type <a class="el" href="classcusp_1_1array2d.html">cusp::array2d</a>&lt; ValueType, MemorySpace, Orientation &gt;::values</td>
@@ -804,7 +804,7 @@ template&lt;typename ValueType, class MemorySpace, class Orientation = cusp::row
 </div><div class="memdoc">
 <p>1D array of values </p>
 
-<p>Definition at line <a class="el" href="array2d_8h_source.html#l00141">141</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
+<p>Definition at line <a class="el" href="array2d_8h_source.html#l00145">145</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
 
 </div>
 </div>

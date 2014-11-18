@@ -124,11 +124,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
 class cusp::random_iterator&lt; T &gt;</h3>
 
-<dl class="section user"><dt>Overview</dt><dd><code><a class="el" href="classcusp_1_1random__iterator.html">random_iterator</a></code> is an iterator which represents a pointer into a range of constant values. This iterator is useful for creating a range filled with the same value without explicitly storing it in memory. Using <code><a class="el" href="classcusp_1_1random__iterator.html">random_iterator</a></code> saves both memory capacity and bandwidth.</dd></dl>
-<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to create a <code><a class="el" href="classcusp_1_1random__iterator.html">random_iterator</a></code> whose <code>value_type</code> is <code>int</code> and whose seed is <code>5</code>.</dd></dl>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cusp/iterator/random_iterator.h&gt;</span></div>
+<p>RandomAccessIterator for generating random values. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type used to encapsulate the underlying data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd><code><a class="el" href="classcusp_1_1random__iterator.html" title="RandomAccessIterator for generating random values. ">random_iterator</a></code> is an iterator which represents a pointer into a range of random values. This iterator is useful for creating a range filled with random values without explicitly storing it in memory. Using <code><a class="el" href="classcusp_1_1random__iterator.html" title="RandomAccessIterator for generating random values. ">random_iterator</a></code> saves both memory capacity and bandwidth.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to create a <code><a class="el" href="classcusp_1_1random__iterator.html" title="RandomAccessIterator for generating random values. ">random_iterator</a></code> whose <code>value_type</code> is <code>int</code> and whose seed is <code>5</code>.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cusp/iterator/random_iterator.h&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">  <a class="code" href="classcusp_1_1random__iterator.html">cusp::random_iterator&lt;int&gt;</a> iter(5);</div>
 <div class="line"></div>
@@ -137,18 +147,25 @@ class cusp::random_iterator&lt; T &gt;</h3>
 <div class="line">  std::cout &lt;&lt; iter[2] &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="random__iterator_8h_source.html#l00068">68</a> of file <a class="el" href="random__iterator_8h_source.html">random_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="random__iterator_8h_source.html#l00073">73</a> of file <a class="el" href="random__iterator_8h_source.html">random_iterator.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="random__iterator_8h_source.html">random_iterator.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:a5fb3993eec43cbc32b3b1be81056ef44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fb3993eec43cbc32b3b1be81056ef44"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>random_iterator</b> (size_t seed)</td></tr>
+<tr class="memitem:aa3fecfbb68599a3e5c41adbb7a77e3fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3fecfbb68599a3e5c41adbb7a77e3fc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__iterator.html#aa3fecfbb68599a3e5c41adbb7a77e3fc">random_iterator</a> (void)</td></tr>
+<tr class="memdesc:aa3fecfbb68599a3e5c41adbb7a77e3fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Null constructor initializes this <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a>'s</code> stride to zero. <br/></td></tr>
+<tr class="separator:aa3fecfbb68599a3e5c41adbb7a77e3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb3993eec43cbc32b3b1be81056ef44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__iterator.html#a5fb3993eec43cbc32b3b1be81056ef44">random_iterator</a> (size_t seed)</td></tr>
+<tr class="memdesc:a5fb3993eec43cbc32b3b1be81056ef44"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor builds a <code><a class="el" href="classcusp_1_1random__iterator.html" title="RandomAccessIterator for generating random values. ">random_iterator</a></code> using a specified seed.  <a href="#a5fb3993eec43cbc32b3b1be81056ef44">More...</a><br/></td></tr>
 <tr class="separator:a5fb3993eec43cbc32b3b1be81056ef44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06568cde3e05186f78e1a4c8183df988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06568cde3e05186f78e1a4c8183df988"></a>
-iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) const </td></tr>
+<tr class="memitem:a06568cde3e05186f78e1a4c8183df988"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__iterator.html#a06568cde3e05186f78e1a4c8183df988">begin</a> (void) const </td></tr>
+<tr class="memdesc:a06568cde3e05186f78e1a4c8183df988"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns an iterator pointing to the beginning of this random sequence of entries.  <a href="#a06568cde3e05186f78e1a4c8183df988">More...</a><br/></td></tr>
 <tr class="separator:a06568cde3e05186f78e1a4c8183df988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2b43a947bfc951d50bf7622034f357"><td class="memItemLeft" align="right" valign="top">reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__iterator.html#a7d2b43a947bfc951d50bf7622034f357">operator[]</a> (size_type n) const </td></tr>
+<tr class="memdesc:a7d2b43a947bfc951d50bf7622034f357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscript access to the data contained in this iterator.  <a href="#a7d2b43a947bfc951d50bf7622034f357">More...</a><br/></td></tr>
+<tr class="separator:a7d2b43a947bfc951d50bf7622034f357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
@@ -156,6 +173,113 @@ Public Members</h2></td></tr>
 IndexFunctor&#160;</td><td class="memItemRight" valign="bottom"><b>index_func</b></td></tr>
 <tr class="separator:a62c3dd1942bd5d06c1a2fb7676f8fbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a5fb3993eec43cbc32b3b1be81056ef44"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1random__iterator.html">cusp::random_iterator</a>&lt; T &gt;::<a class="el" href="classcusp_1_1random__iterator.html">random_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>seed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This constructor builds a <code><a class="el" href="classcusp_1_1random__iterator.html" title="RandomAccessIterator for generating random values. ">random_iterator</a></code> using a specified seed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seed</td><td>The seed initial value used to generate the random sequence. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="random__iterator_8h_source.html#l00104">104</a> of file <a class="el" href="random__iterator_8h_source.html">random_iterator.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a06568cde3e05186f78e1a4c8183df988"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">iterator <a class="el" href="classcusp_1_1random__iterator.html">cusp::random_iterator</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method returns an iterator pointing to the beginning of this random sequence of entries. </p>
+<dl class="section return"><dt>Returns</dt><dd>mStart </dd></dl>
+
+<p>Definition at line <a class="el" href="random__iterator_8h_source.html#l00111">111</a> of file <a class="el" href="random__iterator_8h_source.html">random_iterator.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d2b43a947bfc951d50bf7622034f357"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">reference <a class="el" href="classcusp_1_1random__iterator.html">cusp::random_iterator</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscript access to the data contained in this iterator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The index of the element for which data should be accessed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Read reference to data.</dd></dl>
+<p>This operator allows for easy, array-style, data access. </p>
+
+<p>Definition at line <a class="el" href="random__iterator_8h_source.html#l00122">122</a> of file <a class="el" href="random__iterator_8h_source.html">random_iterator.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

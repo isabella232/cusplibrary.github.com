@@ -123,16 +123,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename ValueType, typename MemorySpace, typename IndexType = int&gt;<br/>
 class cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;</h3>
 
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="bicgstab_8cu-example.html#_a4">bicgstab.cu</a>, <a class="el" href="cg_8cu-example.html#_a4">cg.cu</a>, and <a class="el" href="cr_8cu-example.html#_a4">cr.cu</a>.</dd>
+<p>Simple identity operator. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">IndexType</td><td>Type used for operator indices (e.g. <code>int</code>). </td></tr>
+    <tr><td class="paramname">ValueType</td><td>Type used for operator values (e.g. <code>float</code>). </td></tr>
+    <tr><td class="paramname">MemorySpace</td><td>A memory space (e.g. <code>cusp::host_memory</code> or <code>cusp::device_memory</code>)</td></tr>
+  </table>
+  </dd>
 </dl>
-<p>Definition at line <a class="el" href="linear__operator_8h_source.html#l00049">49</a> of file <a class="el" href="linear__operator_8h_source.html">linear_operator.h</a>.</p>
-</div><div class="dynheader">
+<dl class="section user"><dt>Overview</dt><dd>A <code>linear</code> operator that copies the input vector to the output vector unchanged. Corresponds to the identity matrix (I).</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates using the identity operator.</dd></dl>
+<div class="fragment"><div class="line"><span class="comment">// include linear_operator header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// number of entries</span></div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> N = 4;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// construct instance of identity operator</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1identity__operator.html">cusp::identity_operator</a> A(N);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// initialize x and y vectors</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 1);</div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> y(A.num_rows, 0);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// call operator()(x,y) through multiply interface</span></div>
+<div class="line">  A(x,y);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// print the transformed vector</span></div>
+<div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="bicgstab_8cu-example.html#_a4">bicgstab.cu</a>, <a class="el" href="cg_8cu-example.html#_a4">cg.cu</a>, and <a class="el" href="cr_8cu-example.html#_a4">cr.cu</a>.</dd>
+</dl>
+<p>Definition at line <a class="el" href="linear__operator_8h_source.html#l00165">165</a> of file <a class="el" href="linear__operator_8h_source.html">linear_operator.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="linear__operator_8h_source.html">linear_operator.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classcusp_1_1identity__operator.png" usemap="#cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;_map" alt=""/>
   <map id="cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;_map" name="cusp::identity_operator&lt; ValueType, MemorySpace, IndexType &gt;_map">
-<area href="classcusp_1_1linear__operator.html" alt="cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;" shape="rect" coords="0,56,525,80"/>
+<area href="classcusp_1_1linear__operator.html" title="Abstract representation of a linear operator. " alt="cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;" shape="rect" coords="0,56,525,80"/>
 </map>
  </div></div>
 <table class="memberdecls">

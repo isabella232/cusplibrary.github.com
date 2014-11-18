@@ -174,11 +174,11 @@ class cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</h3>
 <div class="line"></div>
 <div class="line">  <span class="comment">// permute the rows of A</span></div>
 <div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> PA;</div>
-<div class="line">  <a class="code" href="group__matrix__algorithms.html#gace6f25cf01d4bfd2304606f7a6a66eed">cusp::multiply</a>(P, A, PA);</div>
+<div class="line">  <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(P, A, PA);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// permute the column of PA</span></div>
 <div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> PAP;</div>
-<div class="line">  <a class="code" href="group__matrix__algorithms.html#gace6f25cf01d4bfd2304606f7a6a66eed">cusp::multiply</a>(PA, P, PAP);</div>
+<div class="line">  <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(PA, P, PAP);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// print the permuted matrix</span></div>
 <div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(PAP);</div>

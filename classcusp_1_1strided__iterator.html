@@ -113,7 +113,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pro-attribs">Protected Members</a> &#124;
 <a href="classcusp_1_1strided__iterator-members.html">List of all members</a>  </div>
@@ -125,75 +124,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename RandomAccessIterator&gt;<br/>
 class cusp::strided_iterator&lt; RandomAccessIterator &gt;</h3>
 
-
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00049">49</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:afc9bc5651ef8a48dec0c586ebf07b9f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc9bc5651ef8a48dec0c586ebf07b9f1"></a>
-typedef thrust::iterator_value<br class="typebreak"/>
-&lt; RandomAccessIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
-<tr class="separator:afc9bc5651ef8a48dec0c586ebf07b9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1885ceeef82ed170205b394d2a1f21e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1885ceeef82ed170205b394d2a1f21e"></a>
-typedef <br class="typebreak"/>
-thrust::iterator_system<br class="typebreak"/>
-&lt; RandomAccessIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>memory_space</b></td></tr>
-<tr class="separator:aa1885ceeef82ed170205b394d2a1f21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0cd7948efcfb5f5df366d963544f38b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0cd7948efcfb5f5df366d963544f38b"></a>
-typedef <br class="typebreak"/>
-thrust::iterator_pointer<br class="typebreak"/>
-&lt; RandomAccessIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b></td></tr>
-<tr class="separator:af0cd7948efcfb5f5df366d963544f38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2c601f02a5584fb1e52f7a926fd0fb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2c601f02a5584fb1e52f7a926fd0fb0"></a>
-typedef <br class="typebreak"/>
-thrust::iterator_reference<br class="typebreak"/>
-&lt; RandomAccessIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b></td></tr>
-<tr class="separator:ab2c601f02a5584fb1e52f7a926fd0fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae51e598dc09c6a3c12d2c2e3180ca82c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae51e598dc09c6a3c12d2c2e3180ca82c"></a>
-typedef <br class="typebreak"/>
-thrust::iterator_difference<br class="typebreak"/>
-&lt; RandomAccessIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b></td></tr>
-<tr class="separator:ae51e598dc09c6a3c12d2c2e3180ca82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4896ebb191813065d69d6e11861ff686"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4896ebb191813065d69d6e11861ff686"></a>
-typedef <br class="typebreak"/>
-thrust::iterator_difference<br class="typebreak"/>
-&lt; RandomAccessIterator &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b></td></tr>
-<tr class="separator:a4896ebb191813065d69d6e11861ff686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e6c7d973105bf81e2c167773a8e55f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6c7d973105bf81e2c167773a8e55f6"></a>
-typedef <a class="el" href="structcusp_1_1stride__functor.html">stride_functor</a><br class="typebreak"/>
-&lt; difference_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Functor</b></td></tr>
-<tr class="separator:a4e6c7d973105bf81e2c167773a8e55f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97419f0095eee71d460acb6987088fa4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97419f0095eee71d460acb6987088fa4"></a>
-typedef <br class="typebreak"/>
-thrust::counting_iterator<br class="typebreak"/>
-&lt; difference_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CountingIterator</b></td></tr>
-<tr class="separator:a97419f0095eee71d460acb6987088fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad291c5e9e56b00c15072b68b313de50a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad291c5e9e56b00c15072b68b313de50a"></a>
-typedef <br class="typebreak"/>
-thrust::transform_iterator<br class="typebreak"/>
-&lt; <a class="el" href="structcusp_1_1stride__functor.html">Functor</a>, CountingIterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TransformIterator</b></td></tr>
-<tr class="separator:ad291c5e9e56b00c15072b68b313de50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a63b663cfc30561eb5f3483e2b2357a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a63b663cfc30561eb5f3483e2b2357a"></a>
-typedef <br class="typebreak"/>
-thrust::permutation_iterator<br class="typebreak"/>
-&lt; RandomAccessIterator, <br class="typebreak"/>
-TransformIterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PermutationIterator</b></td></tr>
-<tr class="separator:a9a63b663cfc30561eb5f3483e2b2357a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d657496eb5198b9ee8f4ef64ccc010"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25d657496eb5198b9ee8f4ef64ccc010"></a>
-typedef PermutationIterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
-<tr class="separator:a25d657496eb5198b9ee8f4ef64ccc010"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<p>RandomAccessIterator for strided access to array entries. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">RandomAccessIterator</td><td>The iterator type used to encapsulate the underlying data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd><code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> is an iterator which represents a pointer into a strided range entries in a underlying array. This iterator is useful for creating a strided sublist of entries from a larger iterator.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to create a <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> whose <code>value_type</code> is <code>int</code> and whose values are gather from a <code><a class="el" href="classcusp_1_1counting__array.html" title="Specialized array1d_view wrapping thrust::counting_iterator. ">counting_array</a></code>.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cusp/iterator/strided_iterator.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1counting__array.html">cusp::counting_array&lt;int&gt;::iterator</a> Iterator;</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="classcusp_1_1counting__array.html">cusp::counting_array&lt;int&gt;</a> a(30);</div>
+<div class="line">  <a class="code" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator&lt;Iterator&gt;</a> iter(a.begin(), a.end(), 5);</div>
+<div class="line"></div>
+<div class="line">  std::cout &lt;&lt; iter[0] &lt;&lt; std::endl;   <span class="comment">// returns 0</span></div>
+<div class="line">  std::cout &lt;&lt; iter[1] &lt;&lt; std::endl;   <span class="comment">// returns 5</span></div>
+<div class="line">  std::cout &lt;&lt; iter[3] &lt;&lt; std::endl;   <span class="comment">// returns 15</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00070">70</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:acca4f5f847dc1e80cbb2e242ef0c1a15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acca4f5f847dc1e80cbb2e242ef0c1a15"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>strided_iterator</b> (RandomAccessIterator first, RandomAccessIterator last, difference_type stride)</td></tr>
+<tr class="memitem:abf8b0b5ca4a07a0b03878b662d3e9879"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf8b0b5ca4a07a0b03878b662d3e9879"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html#abf8b0b5ca4a07a0b03878b662d3e9879">strided_iterator</a> (void)</td></tr>
+<tr class="memdesc:abf8b0b5ca4a07a0b03878b662d3e9879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Null constructor initializes this <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a>'s</code> stride to zero. <br/></td></tr>
+<tr class="separator:abf8b0b5ca4a07a0b03878b662d3e9879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca4f5f847dc1e80cbb2e242ef0c1a15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html#acca4f5f847dc1e80cbb2e242ef0c1a15">strided_iterator</a> (RandomAccessIterator first, RandomAccessIterator last, difference_type stride)</td></tr>
+<tr class="memdesc:acca4f5f847dc1e80cbb2e242ef0c1a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor builds a <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> from a range.  <a href="#acca4f5f847dc1e80cbb2e242ef0c1a15">More...</a><br/></td></tr>
 <tr class="separator:acca4f5f847dc1e80cbb2e242ef0c1a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95bdb14bd9422c6c93405a02d808f91c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95bdb14bd9422c6c93405a02d808f91c"></a>
-iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> (void) const </td></tr>
+<tr class="memitem:a95bdb14bd9422c6c93405a02d808f91c"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html#a95bdb14bd9422c6c93405a02d808f91c">begin</a> (void) const </td></tr>
+<tr class="memdesc:a95bdb14bd9422c6c93405a02d808f91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns an iterator pointing to the beginning of this strided sequence of entries.  <a href="#a95bdb14bd9422c6c93405a02d808f91c">More...</a><br/></td></tr>
 <tr class="separator:a95bdb14bd9422c6c93405a02d808f91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a6fd892c2fcd6a10e27ee5c1896395c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a6fd892c2fcd6a10e27ee5c1896395c"></a>
-iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> (void) const </td></tr>
+<tr class="memitem:a8a6fd892c2fcd6a10e27ee5c1896395c"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html#a8a6fd892c2fcd6a10e27ee5c1896395c">end</a> (void) const </td></tr>
+<tr class="memdesc:a8a6fd892c2fcd6a10e27ee5c1896395c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns an iterator pointing to one element past the last of this strided sequence of entries.  <a href="#a8a6fd892c2fcd6a10e27ee5c1896395c">More...</a><br/></td></tr>
 <tr class="separator:a8a6fd892c2fcd6a10e27ee5c1896395c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e22585034960df97d428b958ddb6c3"><td class="memItemLeft" align="right" valign="top">reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html#ac5e22585034960df97d428b958ddb6c3">operator[]</a> (size_type n) const </td></tr>
+<tr class="memdesc:ac5e22585034960df97d428b958ddb6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscript access to the data contained in this iterator.  <a href="#ac5e22585034960df97d428b958ddb6c3">More...</a><br/></td></tr>
+<tr class="separator:ac5e22585034960df97d428b958ddb6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Members</h2></td></tr>
@@ -207,6 +187,162 @@ RandomAccessIterator&#160;</td><td class="memItemRight" valign="bottom"><b>last<
 difference_type&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
 <tr class="separator:a1da77a7099d3661ce2a6c730480b7802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acca4f5f847dc1e80cbb2e242ef0c1a15"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RandomAccessIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator</a>&lt; RandomAccessIterator &gt;::<a class="el" href="classcusp_1_1strided__iterator.html">strided_iterator</a> </td>
+          <td>(</td>
+          <td class="paramtype">RandomAccessIterator&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RandomAccessIterator&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">difference_type&#160;</td>
+          <td class="paramname"><em>stride</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This constructor builds a <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> from a range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>The beginning of the range. </td></tr>
+    <tr><td class="paramname">end</td><td>The end of the range. </td></tr>
+    <tr><td class="paramname">stride</td><td>The stride between consecutive entries in the iterator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00101">101</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a95bdb14bd9422c6c93405a02d808f91c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RandomAccessIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">iterator <a class="el" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator</a>&lt; RandomAccessIterator &gt;::begin </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method returns an iterator pointing to the beginning of this strided sequence of entries. </p>
+<dl class="section return"><dt>Returns</dt><dd>mStart </dd></dl>
+
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00108">108</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a6fd892c2fcd6a10e27ee5c1896395c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RandomAccessIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">iterator <a class="el" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator</a>&lt; RandomAccessIterator &gt;::end </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method returns an iterator pointing to one element past the last of this strided sequence of entries. </p>
+<dl class="section return"><dt>Returns</dt><dd>mEnd </dd></dl>
+
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00117">117</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5e22585034960df97d428b958ddb6c3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename RandomAccessIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">reference <a class="el" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator</a>&lt; RandomAccessIterator &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_type&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscript access to the data contained in this iterator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The index of the element for which data should be accessed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Read/write reference to data.</dd></dl>
+<p>This operator allows for easy, array-style, data access. Note that data access with this operator is unchecked and out_of_range lookups are not defined. </p>
+
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00130">130</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

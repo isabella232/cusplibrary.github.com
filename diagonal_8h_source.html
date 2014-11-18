@@ -142,29 +142,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>precond</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcusp_1_1precond_1_1diagonal.html">   78</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1precond_1_1diagonal.html">diagonal</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>&lt;ValueType, MemorySpace&gt;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{       </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator&lt;ValueType, MemorySpace&gt;</a> <a class="code" href="classcusp_1_1linear__operator.html">Parent</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> diagonal_reciprocals;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1diagonal.html#ad8dbabe36c68d52204407cb4199e2fff">diagonal</a>(<span class="keyword">const</span> MatrixType&amp; A);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1precond_1_1diagonal.html#a0a0d31f8c8e8f781509d0fd02f504e6c">operator()</a>(<span class="keyword">const</span> VectorType1&amp; x, VectorType2&amp; y) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;} <span class="comment">// end namespace precond</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#include &lt;cusp/precond/detail/diagonal.inl&gt;</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classcusp_1_1precond_1_1diagonal.html">   84</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1precond_1_1diagonal.html">diagonal</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>&lt;ValueType, MemorySpace&gt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator&lt;ValueType, MemorySpace&gt;</a> <a class="code" href="classcusp_1_1linear__operator.html">Parent</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> diagonal_reciprocals;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1diagonal.html#ad8dbabe36c68d52204407cb4199e2fff">diagonal</a>(<span class="keyword">const</span> MatrixType&amp; A);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1precond_1_1diagonal.html#a0a0d31f8c8e8f781509d0fd02f504e6c">operator()</a>(<span class="keyword">const</span> VectorType1&amp; x, VectorType2&amp; y) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} <span class="comment">// end namespace precond</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#include &lt;cusp/precond/detail/diagonal.inl&gt;</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d&lt; ValueType, MemorySpace &gt;</a></div></div>
-<div class="ttc" id="classcusp_1_1precond_1_1diagonal_html"><div class="ttname"><a href="classcusp_1_1precond_1_1diagonal.html">cusp::precond::diagonal</a></div><div class="ttdef"><b>Definition:</b> <a href="diagonal_8h_source.html#l00078">diagonal.h:78</a></div></div>
+<div class="ttc" id="classcusp_1_1precond_1_1diagonal_html"><div class="ttname"><a href="classcusp_1_1precond_1_1diagonal.html">cusp::precond::diagonal</a></div><div class="ttdoc">Diagonal preconditoner (aka Jacobi preconditioner) </div><div class="ttdef"><b>Definition:</b> <a href="diagonal_8h_source.html#l00084">diagonal.h:84</a></div></div>
 <div class="ttc" id="classcusp_1_1precond_1_1diagonal_html_ad8dbabe36c68d52204407cb4199e2fff"><div class="ttname"><a href="classcusp_1_1precond_1_1diagonal.html#ad8dbabe36c68d52204407cb4199e2fff">cusp::precond::diagonal::diagonal</a></div><div class="ttdeci">diagonal(const MatrixType &amp;A)</div></div>
 <div class="ttc" id="classcusp_1_1precond_1_1diagonal_html_a0a0d31f8c8e8f781509d0fd02f504e6c"><div class="ttname"><a href="classcusp_1_1precond_1_1diagonal.html#a0a0d31f8c8e8f781509d0fd02f504e6c">cusp::precond::diagonal::operator()</a></div><div class="ttdeci">void operator()(const VectorType1 &amp;x, VectorType2 &amp;y) const </div></div>
-<div class="ttc" id="classcusp_1_1linear__operator_html"><div class="ttname"><a href="classcusp_1_1linear__operator.html">cusp::linear_operator</a></div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00034">linear_operator.h:34</a></div></div>
+<div class="ttc" id="classcusp_1_1linear__operator_html"><div class="ttname"><a href="classcusp_1_1linear__operator.html">cusp::linear_operator</a></div><div class="ttdoc">Abstract representation of a linear operator. </div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00111">linear_operator.h:111</a></div></div>
 <div class="ttc" id="linear__operator_8h_html"><div class="ttname"><a href="linear__operator_8h.html">linear_operator.h</a></div><div class="ttdoc">Abstract interface for iterative solvers. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

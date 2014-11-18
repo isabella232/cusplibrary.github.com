@@ -125,7 +125,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized <a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a> wrapping thrust::constant_iterator.  <a href="classcusp_1_1constant__array.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__array.html">cusp::random_array&lt; ValueType &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized <a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a> wrapping <a class="el" href="classcusp_1_1random__iterator.html">cusp::random_iterator</a>.  <a href="classcusp_1_1random__array.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized <a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a> wrapping <a class="el" href="classcusp_1_1random__iterator.html" title="RandomAccessIterator for generating random values. ">cusp::random_iterator</a>.  <a href="classcusp_1_1random__array.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1array2d__view.html">cusp::array2d_view&lt; ArrayView, Orientation &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classcusp_1_1array2d__view.html" title="The array2d_view is a view of a array2d container. ">array2d_view</a> is a view of a <a class="el" href="classcusp_1_1array2d.html" title="The array2d class is a 2D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array2d</a> container.  <a href="classcusp_1_1array2d__view.html#details">More...</a><br/></td></tr>
@@ -142,6 +142,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf68ae21d7e5d4a7b268184a9f769cfaa"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
 <tr class="memitem:gaf68ae21d7e5d4a7b268184a9f769cfaa"><td class="memTemplItemLeft" align="right" valign="top">array1d_view&lt; Iterator &gt;::view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__array__views.html#gaf68ae21d7e5d4a7b268184a9f769cfaa">cusp::make_array1d_view</a> (array1d_view&lt; Iterator &gt; &amp;v)</td></tr>
 <tr class="separator:gaf68ae21d7e5d4a7b268184a9f769cfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad439867507906b8c80addabe5c0379eb"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad439867507906b8c80addabe5c0379eb"></a>
+template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:gad439867507906b8c80addabe5c0379eb"><td class="memTemplItemLeft" align="right" valign="top">array1d_view&lt; Iterator &gt;::view&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_array1d_view</b> (const array1d_view&lt; Iterator &gt; &amp;v)</td></tr>
+<tr class="separator:gad439867507906b8c80addabe5c0379eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab1202e949ef966c933bccd15c7937d40"><td class="memTemplParams" colspan="2">template&lt;typename T , typename MemorySpace &gt; </td></tr>
 <tr class="memitem:gab1202e949ef966c933bccd15c7937d40"><td class="memTemplItemLeft" align="right" valign="top">array1d&lt; T, MemorySpace &gt;<br class="typebreak"/>
 ::const_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">cusp::make_array1d_view</a> (const array1d&lt; T, MemorySpace &gt; &amp;v)</td></tr>
@@ -210,7 +214,7 @@ template&lt;typename Iterator &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a></code> constructed using Iterator </dd></dl>
 
-<p>Definition at line <a class="el" href="array1d_8h_source.html#l00681">681</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00694">694</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -245,7 +249,7 @@ template&lt;typename T , typename MemorySpace &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a></code> constructed using input <code><a class="el" href="classcusp_1_1array1d.html" title="The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array1d</a></code> </dd></dl>
 
-<p>Definition at line <a class="el" href="array1d_8h_source.html#l00695">695</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00708">708</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -280,7 +284,7 @@ template&lt;typename Iterator &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a> constructed using input <a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="array1d_8h_source.html#l00709">709</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00722">722</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -315,7 +319,7 @@ template&lt;typename T , typename MemorySpace &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>constant <code><a class="el" href="classcusp_1_1array1d__view.html" title="The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...">array1d_view</a></code> constructed using input <code><a class="el" href="classcusp_1_1array1d.html" title="The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array1d</a></code> </dd></dl>
 
-<p>Definition at line <a class="el" href="array1d_8h_source.html#l00723">723</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
+<p>Definition at line <a class="el" href="array1d_8h_source.html#l00742">742</a> of file <a class="el" href="array1d_8h_source.html">array1d.h</a>.</p>
 
 </div>
 </div>
@@ -380,7 +384,7 @@ template&lt;typename Iterator , typename Orientation &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="array2d_8h_source.html#l00452">452</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
+<p>Definition at line <a class="el" href="array2d_8h_source.html#l00458">458</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
 
 </div>
 </div>
@@ -415,7 +419,7 @@ template&lt;typename Array , typename Orientation &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classcusp_1_1array2d__view.html" title="The array2d_view is a view of a array2d container. ">array2d_view</a> constructed using input <a class="el" href="classcusp_1_1array2d__view.html" title="The array2d_view is a view of a array2d container. ">array2d_view</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="array2d_8h_source.html#l00467">467</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
+<p>Definition at line <a class="el" href="array2d_8h_source.html#l00473">473</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
 
 </div>
 </div>
@@ -451,7 +455,7 @@ template&lt;typename T , class MemorySpace , class Orientation &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classcusp_1_1array2d__view.html" title="The array2d_view is a view of a array2d container. ">array2d_view</a> constructed using input <a class="el" href="classcusp_1_1array2d.html" title="The array2d class is a 2D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array2d</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="array2d_8h_source.html#l00483">483</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
+<p>Definition at line <a class="el" href="array2d_8h_source.html#l00489">489</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
 
 </div>
 </div>
@@ -487,7 +491,7 @@ template&lt;typename T , class MemorySpace , class Orientation &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>constant <a class="el" href="classcusp_1_1array2d__view.html" title="The array2d_view is a view of a array2d container. ">array2d_view</a> constructed using input <a class="el" href="classcusp_1_1array2d.html" title="The array2d class is a 2D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...">array2d</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="array2d_8h_source.html#l00499">499</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
+<p>Definition at line <a class="el" href="array2d_8h_source.html#l00505">505</a> of file <a class="el" href="array2d_8h_source.html">array2d.h</a>.</p>
 
 </div>
 </div>

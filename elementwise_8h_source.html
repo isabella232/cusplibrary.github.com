@@ -134,33 +134,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//template &lt;typename Matrix1,</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">//          typename Matrix2,</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//          typename Matrix3,</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//          typename BinaryFunction&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//void transform_elementwise(const Matrix1&amp; A,</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//                           const Matrix2&amp; B,</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//                                 Matrix3&amp; C,</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//                                 BinaryFunction op);</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;         <span class="keyword">typename</span> MatrixType2,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;         <span class="keyword">typename</span> MatrixType3&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#gab7946563b534d328fa38cf401b8e0779">add</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;         <span class="keyword">const</span> MatrixType2&amp; B,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;         MatrixType3&amp; C);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;         <span class="keyword">typename</span> MatrixType2,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;         <span class="keyword">typename</span> MatrixType3&gt;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga5aab90bf43b7738069f461a99c369c16">subtract</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;              <span class="keyword">const</span> MatrixType2&amp; B,</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;              MatrixType3&amp; C);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/elementwise.inl&gt;</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2, <span class="keyword">typename</span> MatrixType3,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          <span class="keyword">typename</span> BinaryFunction&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">elementwise</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                 <span class="keyword">const</span> MatrixType2&amp; B,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                 MatrixType3&amp; C,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                 BinaryFunction op);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2, <span class="keyword">typename</span> MatrixType3,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keyword">typename</span> BinaryFunction&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">elementwise</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt;&amp; exec,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                 <span class="keyword">const</span> MatrixType1&amp; A,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                 <span class="keyword">const</span> MatrixType2&amp; B,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                 MatrixType3&amp; C,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                 BinaryFunction op);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1,</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;         <span class="keyword">typename</span> MatrixType2,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;         <span class="keyword">typename</span> MatrixType3&gt;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#gab7946563b534d328fa38cf401b8e0779">add</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;         <span class="keyword">const</span> MatrixType2&amp; B,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;         MatrixType3&amp; C);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;         <span class="keyword">typename</span> MatrixType2,</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;         <span class="keyword">typename</span> MatrixType3&gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga5aab90bf43b7738069f461a99c369c16">subtract</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;              <span class="keyword">const</span> MatrixType2&amp; B,</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;              MatrixType3&amp; C);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/elementwise.inl&gt;</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
 <div class="ttc" id="group__matrix__algorithms_html_ga5aab90bf43b7738069f461a99c369c16"><div class="ttname"><a href="group__matrix__algorithms.html#ga5aab90bf43b7738069f461a99c369c16">cusp::subtract</a></div><div class="ttdeci">void subtract(const MatrixType1 &amp;A, const MatrixType2 &amp;B, MatrixType3 &amp;C)</div><div class="ttdoc">Compute the difference of two matrices. </div></div>
+<div class="ttc" id="group__matrix__algorithms_html_ga8e4aa1d71fddbc22ec0d8791a4de83da"><div class="ttname"><a href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">cusp::elementwise</a></div><div class="ttdeci">void elementwise(const MatrixType1 &amp;A, const MatrixType2 &amp;B, MatrixType3 &amp;C, BinaryFunction op)</div><div class="ttdoc">Perform transform operation on two matrices. </div></div>
 <div class="ttc" id="group__matrix__algorithms_html_gab7946563b534d328fa38cf401b8e0779"><div class="ttname"><a href="group__matrix__algorithms.html#gab7946563b534d328fa38cf401b8e0779">cusp::add</a></div><div class="ttdeci">void add(const MatrixType1 &amp;A, const MatrixType2 &amp;B, MatrixType3 &amp;C)</div><div class="ttdoc">Compute the sum of two matrices. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

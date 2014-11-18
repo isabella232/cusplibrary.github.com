@@ -123,34 +123,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename ValueType, typename MemorySpace&gt;<br/>
 class cusp::precond::diagonal&lt; ValueType, MemorySpace &gt;</h3>
 
-<p><code>diagonal</code> : diagonal preconditoner (aka Jacobi preconditioner)</p>
-<p>Given a matrix <code>A</code> to precondition, the diagonal preconditioner simply extracts the main diagonal <code>D</code> of a <code>A</code> and implements <code>y = D^-1 x</code> when applied to a vector <code>x</code>.</p>
-<p>Diagonal preconditioning is very inexpensive to use, but has limited effectiveness. However, if the matrix <code>A</code> has poorly scaled rows then diagonal preconditioning can substantially reduce the number of solver iterations required to reach convergence.</p>
+<p>Diagonal preconditoner (aka Jacobi preconditioner) </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">ValueType</td><td>Type used for matrix values (e.g. <code>float</code> or <code>double</code>). </td></tr>
-    <tr><td class="paramname">MemorySpace</td><td>A memory space (e.g. <code>cusp::host_memory</code> or cusp::device_memory)</td></tr>
+    <tr><td class="paramname">MemorySpace</td><td>A memory space (e.g. <code>cusp::host_memory</code> or <code>cusp::device_memory</code>)</td></tr>
   </table>
   </dd>
 </dl>
-<p>The following code snippet demonstrates how to use a <code>diagonal</code> preconditioner to solve a linear system.</p>
+<dl class="section user"><dt>Overview</dt><dd>Given a matrix <code>A</code> to precondition, the diagonal preconditioner simply extracts the main diagonal <code>D</code> of a <code>A</code> and implements <code>y = D^-1 x</code> when applied to a vector <code>x</code>.</dd></dl>
+<p>Diagonal preconditioning is very inexpensive to use, but has limited effectiveness. However, if the matrix <code>A</code> has poorly scaled rows then diagonal preconditioning can substantially reduce the number of solver iterations required to reach convergence.</p>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use a <code>diagonal</code> preconditioner to solve a linear system.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="diagonal_8h.html">cusp/precond/diagonal.h</a>&gt;</span></div>
-<div class="line">...</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
-<div class="line">cusp::array1d&lt;float, cusp::device_memory&gt; x(A.num_rows, 0);</div>
-<div class="line"><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
 <div class="line"></div>
-<div class="line">cusp::default_monitor&lt;float&gt; monitor(b, 100, 1e-6);</div>
+<div class="line">  cusp::default_monitor&lt;float&gt; monitor(b, 100, 1e-6);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// setup preconditioner</span></div>
-<div class="line"><a class="code" href="classcusp_1_1precond_1_1diagonal.html">cusp::precond::diagonal&lt;float, cusp::device_memory&gt;</a> M(A);</div>
+<div class="line">  <span class="comment">// setup preconditioner</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1precond_1_1diagonal.html">cusp::precond::diagonal&lt;float, cusp::device_memory&gt;</a> M(A);</div>
 <div class="line"></div>
-<div class="line"><span class="comment">// solve</span></div>
-<div class="line"><a class="code" href="group__krylov__methods.html#ga23cfa8325966505d6580151f91525887">cusp::krylov::bicgstab</a>(A, x, b, monitor, M);</div>
+<div class="line">  <span class="comment">// solve</span></div>
+<div class="line">  <a class="code" href="group__krylov__methods.html#ga23cfa8325966505d6580151f91525887">cusp::krylov::bicgstab</a>(A, x, b, monitor, M);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="diagonal_8cu-example.html#_a6">diagonal.cu</a>.</dd>
 </dl>
-<p>Definition at line <a class="el" href="diagonal_8h_source.html#l00078">78</a> of file <a class="el" href="diagonal_8h_source.html">diagonal.h</a>.</p>
+<p>Definition at line <a class="el" href="diagonal_8h_source.html#l00084">84</a> of file <a class="el" href="diagonal_8h_source.html">diagonal.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="diagonal_8h_source.html">diagonal.h</a>&gt;</code></p>
 <div class="dynheader">
