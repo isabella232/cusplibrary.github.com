@@ -124,9 +124,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename ValueType, typename MemorySpace&gt;<br/>
 class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 
+<p>Represents a Polynomial relaxation scheme. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>value_type of the array </td></tr>
+    <tr><td class="paramname">MemorySpace</td><td>memory space of the array (<code>cusp::host_memory</code> or <code>cusp::device_memory</code>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd>Performs 3rd degree Polynomial relaxation</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;cusp/blas/blas.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// include cusp polynomial header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="polynomial_8h.html">cusp/relaxation/polynomial.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// Construct 5-pt Poisson example</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Initialize data</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Allocate temporaries</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> r(A.num_rows);</div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> coefficients;</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Compute spectral radius of A</span></div>
+<div class="line">   <span class="keywordtype">float</span> rho = cusp::detail::ritz_spectral_radius_symmetric(A, 8);</div>
+<div class="line">   <span class="comment">// Compute 3rd degree Chebyshev polynomial</span></div>
+<div class="line">   cusp::relaxation::detail::chebyshev_polynomial_coefficients(rho, coefficients);</div>
+<div class="line">   <span class="comment">// Construct polynomial relaxation class</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1relaxation_1_1polynomial.html">cusp::relaxation::polynomial&lt;float, cusp::device_memory&gt;</a> M(A, coefficients);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Compute initial residual</span></div>
+<div class="line">   <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
+<div class="line">   cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Construct monitor with stopping criteria of 100 iterations or 1e-4 residual error</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-4, 0, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Iteratively solve system</span></div>
+<div class="line">   <span class="keywordflow">while</span> (!monitor.finished(r))</div>
+<div class="line">   {</div>
+<div class="line">       M(A, b, x);</div>
+<div class="line">       <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
+<div class="line">       cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">       ++monitor;</div>
+<div class="line">   }</div>
+<div class="line"> }</div>
+</div><!-- fragment --> </dd></dl>
 
-<p>Definition at line <a class="el" href="polynomial_8h_source.html#l00044">44</a> of file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
-</div><div class="dynheader">
+<p>Definition at line <a class="el" href="polynomial_8h_source.html#l00105">105</a> of file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="polynomial_8h_source.html">polynomial.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;:</div>
 <div class="dyncontent">
  <div class="center">
@@ -158,14 +218,14 @@ template&lt;typename MatrixType , typename VectorType1 , typename VectorType2 &g
 template&lt;typename MatrixType , typename VectorType1 , typename VectorType2 &gt; </td></tr>
 <tr class="memitem:a325351e1865870b008cba93b744fcc55"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>postsmooth</b> (const MatrixType &amp;A, const VectorType1 &amp;b, VectorType2 &amp;x)</td></tr>
 <tr class="separator:a325351e1865870b008cba93b744fcc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10fe37b997b1f970355bbc813602f8f0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a10fe37b997b1f970355bbc813602f8f0"></a>
+<tr class="memitem:ab5b2a7293e7cb27c3792979c38a0205f"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab5b2a7293e7cb27c3792979c38a0205f"></a>
 template&lt;typename MatrixType , typename VectorType1 , typename VectorType2 &gt; </td></tr>
-<tr class="memitem:a10fe37b997b1f970355bbc813602f8f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const MatrixType &amp;A, const VectorType1 &amp;b, VectorType2 &amp;x) const </td></tr>
-<tr class="separator:a10fe37b997b1f970355bbc813602f8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95635a21616936bce0a7d22b7338566a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a95635a21616936bce0a7d22b7338566a"></a>
+<tr class="memitem:ab5b2a7293e7cb27c3792979c38a0205f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const MatrixType &amp;A, const VectorType1 &amp;b, VectorType2 &amp;x)</td></tr>
+<tr class="separator:ab5b2a7293e7cb27c3792979c38a0205f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d796bc9d2e71745e8d2bbd49b68dd8"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac7d796bc9d2e71745e8d2bbd49b68dd8"></a>
 template&lt;typename MatrixType , typename VectorType1 , typename VectorType2 , typename VectorType3 &gt; </td></tr>
-<tr class="memitem:a95635a21616936bce0a7d22b7338566a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const MatrixType &amp;A, const VectorType1 &amp;b, VectorType2 &amp;x, VectorType3 &amp;coeffients)</td></tr>
-<tr class="separator:a95635a21616936bce0a7d22b7338566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d796bc9d2e71745e8d2bbd49b68dd8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const MatrixType &amp;A, const VectorType1 &amp;b, VectorType2 &amp;x, const VectorType3 &amp;coeffients)</td></tr>
+<tr class="separator:ac7d796bc9d2e71745e8d2bbd49b68dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcusp_1_1linear__operator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcusp_1_1linear__operator')"><img src="closed.png" alt="-"/>&#160;Public Methods inherited from <a class="el" href="classcusp_1_1linear__operator.html">cusp::linear_operator&lt;ValueType, MemorySpace &gt;</a></td></tr>
 <tr class="memitem:a5e13d00cee7be33daacfb3ebd9cce28e inherit pub_methods_classcusp_1_1linear__operator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e13d00cee7be33daacfb3ebd9cce28e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>linear_operator</b> (intnum_rows, intnum_cols)</td></tr>

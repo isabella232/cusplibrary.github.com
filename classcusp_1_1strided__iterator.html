@@ -134,7 +134,7 @@ class cusp::strided_iterator&lt; RandomAccessIterator &gt;</h3>
 <dl class="section user"><dt>Overview</dt><dd><code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> is an iterator which represents a pointer into a strided range entries in a underlying array. This iterator is useful for creating a strided sublist of entries from a larger iterator.</dd></dl>
 <dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to create a <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> whose <code>value_type</code> is <code>int</code> and whose values are gather from a <code><a class="el" href="classcusp_1_1counting__array.html" title="Specialized array1d_view wrapping thrust::counting_iterator. ">counting_array</a></code>.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cusp/iterator/strided_iterator.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="strided__iterator_8h.html">cusp/iterator/strided_iterator.h</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"></div>
@@ -152,7 +152,7 @@ class cusp::strided_iterator&lt; RandomAccessIterator &gt;</h3>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00070">70</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00074">74</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -238,7 +238,7 @@ template&lt;typename RandomAccessIterator&gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00101">101</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00105">105</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -270,7 +270,7 @@ template&lt;typename RandomAccessIterator&gt; </div>
 <p>This method returns an iterator pointing to the beginning of this strided sequence of entries. </p>
 <dl class="section return"><dt>Returns</dt><dd>mStart </dd></dl>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00108">108</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00112">112</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +301,7 @@ template&lt;typename RandomAccessIterator&gt; </div>
 <p>This method returns an iterator pointing to one element past the last of this strided sequence of entries. </p>
 <dl class="section return"><dt>Returns</dt><dd>mEnd </dd></dl>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00117">117</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00121">121</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +339,7 @@ template&lt;typename RandomAccessIterator&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Read/write reference to data.</dd></dl>
 <p>This operator allows for easy, array-style, data access. Note that data access with this operator is unchecked and out_of_range lookups are not defined. </p>
 
-<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00130">130</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="strided__iterator_8h_source.html#l00134">134</a> of file <a class="el" href="strided__iterator_8h_source.html">strided_iterator.h</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: Iterators</title>
+<title>CUSP: cusp::relaxation Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,13 +86,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>Namespace&#160;List</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,27 +105,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>cusp</b></li><li class="navelem"><a class="el" href="namespacecusp_1_1relaxation.html">relaxation</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">Iterators</div>  </div>
+<div class="title">cusp::relaxation Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Various customized Thrust based iterators.  
+<p>Represents a Polynomial relaxation scheme.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__iterator.html">cusp::random_iterator&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator for generating random values.  <a href="classcusp_1_1random__iterator.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1jacobi.html">jacobi</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a Jacobi relaxation scheme.  <a href="classcusp_1_1relaxation_1_1jacobi.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator&lt; RandomAccessIterator &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RandomAccessIterator for strided access to array entries.  <a href="classcusp_1_1strided__iterator.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1polynomial.html">polynomial</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a Polynomial relaxation scheme. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>value_type of the array </td></tr>
+    <tr><td class="paramname">MemorySpace</td><td>memory space of the array (<code>cusp::host_memory</code> or <code>cusp::device_memory</code>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd>Performs 3rd degree Polynomial relaxation</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cusp/monitor/cg.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// include cusp polynomial header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="polynomial_8h.html">cusp/relaxation/polynomial.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">   <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">   <a class="code" href="classcusp_1_1relaxation_1_1polynomial.html">cusp::relaxation::polynomial&lt;float, cusp::device_memory&gt;</a> MA);</div>
+<div class="line"></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
+<div class="line"></div>
+<div class="line">   <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> M(b, 20, 1e-4, 0, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">   <a class="code" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cusp::krylov::cg</a>(A, x, b, monitor, M);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

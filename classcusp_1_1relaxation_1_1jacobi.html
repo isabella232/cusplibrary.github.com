@@ -124,9 +124,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename ValueType, typename MemorySpace&gt;<br/>
 class cusp::relaxation::jacobi&lt; ValueType, MemorySpace &gt;</h3>
 
+<p>Represents a Jacobi relaxation scheme. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>value_type of the array </td></tr>
+    <tr><td class="paramname">MemorySpace</td><td>memory space of the array (<code>cusp::host_memory</code> or <code>cusp::device_memory</code>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd>Extracts the matrix diagonal and performs weighted Jacobi relaxation</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;cusp/blas/blas.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// include cusp Jacobi header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="jacobi_8h.html">cusp/relaxation/jacobi.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// Construct 5-pt Poisson example</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Initialize data</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Allocate temporaries</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> r(A.num_rows);</div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> coefficients;</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Construct Jacobi relaxation class</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1relaxation_1_1jacobi.html">cusp::relaxation::jacobi&lt;float, cusp::device_memory&gt;</a> M(A);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Compute initial residual</span></div>
+<div class="line">   <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
+<div class="line">   cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Construct monitor with stopping criteria of 100 iterations or 1e-4 residual error</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-4, 0, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Iteratively solve system</span></div>
+<div class="line">   <span class="keywordflow">while</span> (!monitor.finished(r))</div>
+<div class="line">   {</div>
+<div class="line">       M(A, b, x);</div>
+<div class="line">       <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
+<div class="line">       cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">       ++monitor;</div>
+<div class="line">   }</div>
+<div class="line"> }</div>
+</div><!-- fragment --> </dd></dl>
 
-<p>Definition at line <a class="el" href="jacobi_8h_source.html#l00043">43</a> of file <a class="el" href="jacobi_8h_source.html">jacobi.h</a>.</p>
-</div><div class="dynheader">
+<p>Definition at line <a class="el" href="jacobi_8h_source.html#l00100">100</a> of file <a class="el" href="jacobi_8h_source.html">jacobi.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="jacobi_8h_source.html">jacobi.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for cusp::relaxation::jacobi&lt; ValueType, MemorySpace &gt;:</div>
 <div class="dyncontent">
  <div class="center">

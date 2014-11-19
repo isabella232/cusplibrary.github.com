@@ -113,14 +113,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">// where to perform the computation</span></div>
-<div class="line"><span class="keyword">typedef</span> cusp::device_memory MemorySpace;</div>
-<div class="line"></div>
-<div class="line"><span class="comment">// which floating point type to use</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keywordtype">float</span> ValueType;</div>
-<div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
+<div class="line">    <span class="comment">// where to perform the computation</span></div>
+<div class="line">    <span class="keyword">typedef</span> cusp::device_memory MemorySpace;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// which floating point type to use</span></div>
+<div class="line">    <span class="keyword">typedef</span> <span class="keywordtype">float</span> ValueType;</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// create an empty sparse matrix structure (HYB format)</span></div>
 <div class="line">    <a name="_a0"></a><a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, ValueType, MemorySpace&gt;</a> A;</div>
 <div class="line"></div>
@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    {</div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nSolving with no preconditioner&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
+<div class="line">        <span class="comment">// allocate storage for solution (x)</span></div>
 <div class="line">        <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(x0);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// solve</span></div>
@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    {</div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nSolving with diagonal preconditioner (M = D^-1)&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
+<div class="line">        <span class="comment">// allocate storage for solution (x)</span></div>
 <div class="line">        <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(x0);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// reset the monitor</span></div>

@@ -239,6 +239,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">// set stopping criteria:</span></div>
 <div class="line">    <span class="comment">//  iteration_limit    = 100</span></div>
 <div class="line">    <span class="comment">//  relative_tolerance = 1e-3</span></div>
+<div class="line">    <span class="comment">//  absolute_tolerance = 0</span></div>
+<div class="line">    <span class="comment">//  verbose            = true</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;ValueType&gt;</a> monitor(b, 100, 1e-3, 0, <span class="keyword">true</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set preconditioner (identity)</span></div>
@@ -301,7 +303,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    {</div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nSolving with no preconditioner...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
+<div class="line">        <span class="comment">// allocate storage for solution (x)</span></div>
 <div class="line">        <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(x0);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// solve</span></div>
@@ -315,7 +317,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    {</div>
 <div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nSolving with smoothed aggregation preconditioner...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
+<div class="line">        <span class="comment">// allocate storage for solution (x)</span></div>
 <div class="line">        <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(x0);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// reset the monitor</span></div>

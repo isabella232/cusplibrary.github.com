@@ -5,6 +5,7 @@ var searchData=
   ['random_5farray',['random_array',['../classcusp_1_1random__array.html',1,'cusp']]],
   ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html',1,'cusp']]],
   ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html#aa3fecfbb68599a3e5c41adbb7a77e3fc',1,'cusp::random_iterator::random_iterator(void)'],['../classcusp_1_1random__iterator.html#a5fb3993eec43cbc32b3b1be81056ef44',1,'cusp::random_iterator::random_iterator(size_t seed)']]],
+  ['random_5fiterator_2eh',['random_iterator.h',['../random__iterator_8h.html',1,'']]],
   ['read_5fmatrix_5fmarket_5ffile',['read_matrix_market_file',['../group__io.html#gac219de1afb433d207ddd0c0ba83e5850',1,'cusp::io']]],
   ['read_5fmatrix_5fmarket_5fstream',['read_matrix_market_stream',['../group__io.html#ga183170009aac1c79c4d952889ee691aa',1,'cusp::io']]],
   ['relative_5ftolerance',['relative_tolerance',['../group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf',1,'cusp::monitor']]],
