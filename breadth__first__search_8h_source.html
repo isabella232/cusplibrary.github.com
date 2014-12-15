@@ -135,19 +135,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>graph</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;thrust/execution_policy.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>cusp</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> MARK_PREDECESSORS, <span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga0454baa1d6668a3107c4bc52a103e574">breadth_first_search</a>(<span class="keyword">const</span> MatrixType&amp; G, <span class="keyword">const</span> <span class="keyword">typename</span> MatrixType::index_type src, ArrayType&amp; labels);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <span class="comment">// end namespace graph</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/breadth_first_search.inl&gt;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="ttc" id="group__graph__algorithms_html_ga0454baa1d6668a3107c4bc52a103e574"><div class="ttname"><a href="group__graph__algorithms.html#ga0454baa1d6668a3107c4bc52a103e574">cusp::graph::breadth_first_search</a></div><div class="ttdeci">void breadth_first_search(const MatrixType &amp;G, const typename MatrixType::index_type src, ArrayType &amp;labels)</div><div class="ttdoc">Performs a Breadth-first traversal of a graph starting from a given source vertex. </div></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>graph</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          <span class="keyword">typename</span> MatrixType,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga09d21dddcbeec0cebd3d3dde9360ccd5">breadth_first_search</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt;&amp; exec,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                          <span class="keyword">const</span> MatrixType&amp; G,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                          <span class="keyword">const</span> <span class="keyword">typename</span> MatrixType::index_type src,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                          ArrayType&amp; labels,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                          <span class="keyword">const</span> <span class="keywordtype">bool</span> mark_levels = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga09d21dddcbeec0cebd3d3dde9360ccd5">breadth_first_search</a>(<span class="keyword">const</span> MatrixType&amp; G,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                          <span class="keyword">const</span> <span class="keyword">typename</span> MatrixType::index_type src,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                          ArrayType&amp; labels,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                          <span class="keywordtype">bool</span> mark_levels = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// end namespace graph</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/breadth_first_search.inl&gt;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="ttc" id="group__graph__algorithms_html_ga09d21dddcbeec0cebd3d3dde9360ccd5"><div class="ttname"><a href="group__graph__algorithms.html#ga09d21dddcbeec0cebd3d3dde9360ccd5">cusp::graph::breadth_first_search</a></div><div class="ttdeci">void breadth_first_search(const MatrixType &amp;G, const typename MatrixType::index_type src, ArrayType &amp;labels, bool mark_levels=true)</div><div class="ttdoc">Performs a Breadth-first traversal of a graph starting from a given source vertex. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

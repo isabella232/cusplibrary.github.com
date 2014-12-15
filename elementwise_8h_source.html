@@ -134,21 +134,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2, <span class="keyword">typename</span> MatrixType3,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          <span class="keyword">typename</span> BinaryFunction&gt;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">elementwise</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                 <span class="keyword">const</span> MatrixType2&amp; B,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                 MatrixType3&amp; C,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                 BinaryFunction op);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2, <span class="keyword">typename</span> MatrixType3,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keyword">typename</span> BinaryFunction&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">elementwise</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt;&amp; exec,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                 <span class="keyword">const</span> MatrixType1&amp; A,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                 <span class="keyword">const</span> MatrixType2&amp; B,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                 MatrixType3&amp; C,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                 BinaryFunction op);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          <span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2, <span class="keyword">typename</span> MatrixType3,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keyword">typename</span> BinaryFunction&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">elementwise</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt;&amp; exec,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                 <span class="keyword">const</span> MatrixType1&amp; A,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                 <span class="keyword">const</span> MatrixType2&amp; B,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                 MatrixType3&amp; C,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                 BinaryFunction op);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2, <span class="keyword">typename</span> MatrixType3,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <span class="keyword">typename</span> BinaryFunction&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da">elementwise</a>(<span class="keyword">const</span> MatrixType1&amp; A,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                 <span class="keyword">const</span> MatrixType2&amp; B,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                 MatrixType3&amp; C,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                 BinaryFunction op);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1,</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;         <span class="keyword">typename</span> MatrixType2,</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;         <span class="keyword">typename</span> MatrixType3&gt;</div>

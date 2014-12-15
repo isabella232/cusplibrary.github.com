@@ -175,7 +175,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
 <div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classcusp_1_1random__iterator.html#a06568cde3e05186f78e1a4c8183df988">  115</a></span>&#160;    iterator <a class="code" href="classcusp_1_1random__iterator.html#a06568cde3e05186f78e1a4c8183df988">begin</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> RandomCountingIterator(0);<span class="comment">//RandomTransformIterator(RandomTransformIterator(RandomCountingIterator(0), index_func), index_func);</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> RandomTransformIterator(RandomTransformIterator(RandomCountingIterator(0), index_func), index_func);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classcusp_1_1random__iterator.html#a7d2b43a947bfc951d50bf7622034f357">  126</a></span>&#160;    reference <a class="code" href="classcusp_1_1random__iterator.html#a7d2b43a947bfc951d50bf7622034f357">operator[]</a>(size_type n)<span class="keyword"> const</span></div>

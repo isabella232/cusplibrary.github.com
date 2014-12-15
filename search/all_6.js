@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['gauss_5fseidel',['gauss_seidel',['../classcusp_1_1relaxation_1_1gauss__seidel.html',1,'cusp::relaxation']]],
+  ['gauss_5fseidel_2eh',['gauss_seidel.h',['../gauss__seidel_8h.html',1,'']]],
   ['generalized_5fspmv',['generalized_spmv',['../group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764',1,'cusp']]],
   ['geometric_5frate',['geometric_rate',['../group__monitors.html#ga088a9e36c49ab23555ec59666efb916f',1,'cusp::monitor']]],
   ['gmres',['gmres',['../group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46',1,'cusp::krylov']]],

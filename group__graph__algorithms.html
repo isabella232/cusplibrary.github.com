@@ -114,10 +114,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0454baa1d6668a3107c4bc52a103e574"><td class="memTemplParams" colspan="2">template&lt;bool MARK_PREDECESSORS, typename MatrixType , typename ArrayType &gt; </td></tr>
-<tr class="memitem:ga0454baa1d6668a3107c4bc52a103e574"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#ga0454baa1d6668a3107c4bc52a103e574">cusp::graph::breadth_first_search</a> (const MatrixType &amp;G, const typename MatrixType::index_type src, ArrayType &amp;labels)</td></tr>
-<tr class="memdesc:ga0454baa1d6668a3107c4bc52a103e574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a Breadth-first traversal of a graph starting from a given source vertex.  <a href="#ga0454baa1d6668a3107c4bc52a103e574">More...</a><br/></td></tr>
-<tr class="separator:ga0454baa1d6668a3107c4bc52a103e574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09d21dddcbeec0cebd3d3dde9360ccd5"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga09d21dddcbeec0cebd3d3dde9360ccd5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#ga09d21dddcbeec0cebd3d3dde9360ccd5">cusp::graph::breadth_first_search</a> (const MatrixType &amp;G, const typename MatrixType::index_type src, ArrayType &amp;labels, bool mark_levels=true)</td></tr>
+<tr class="memdesc:ga09d21dddcbeec0cebd3d3dde9360ccd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a Breadth-first traversal of a graph starting from a given source vertex.  <a href="#ga09d21dddcbeec0cebd3d3dde9360ccd5">More...</a><br/></td></tr>
+<tr class="separator:ga09d21dddcbeec0cebd3d3dde9360ccd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa1127c6867226f8ea2544b473323c86c"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
 <tr class="memitem:gaa1127c6867226f8ea2544b473323c86c"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#gaa1127c6867226f8ea2544b473323c86c">cusp::graph::connected_components</a> (const MatrixType &amp;G, ArrayType &amp;components)</td></tr>
 <tr class="memdesc:gaa1127c6867226f8ea2544b473323c86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the connected components of a graph.  <a href="#gaa1127c6867226f8ea2544b473323c86c">More...</a><br/></td></tr>
@@ -134,17 +134,21 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa44221c0efafa91ac2da1969a55986a1"><td class="memTemplItemLeft" align="right" valign="top">MatrixType::index_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">cusp::graph::pseudo_peripheral_vertex</a> (const MatrixType &amp;G, ArrayType &amp;levels)</td></tr>
 <tr class="memdesc:gaa44221c0efafa91ac2da1969a55986a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the pseudo-peripheral vertex of a graph.  <a href="#gaa44221c0efafa91ac2da1969a55986a1">More...</a><br/></td></tr>
 <tr class="separator:gaa44221c0efafa91ac2da1969a55986a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2bf7d0aa10c4db2b8bc2cad3c94e718e"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
-<tr class="memitem:ga2bf7d0aa10c4db2b8bc2cad3c94e718e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#ga2bf7d0aa10c4db2b8bc2cad3c94e718e">cusp::graph::symmetric_rcm</a> (const MatrixType &amp;G, ArrayType &amp;permutation)</td></tr>
-<tr class="memdesc:ga2bf7d0aa10c4db2b8bc2cad3c94e718e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute Reverse Cuthill-McKee reordering.  <a href="#ga2bf7d0aa10c4db2b8bc2cad3c94e718e">More...</a><br/></td></tr>
-<tr class="separator:ga2bf7d0aa10c4db2b8bc2cad3c94e718e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27dc1a148aa83b9752de8765ec934404"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename PermutationType &gt; </td></tr>
+<tr class="memitem:ga27dc1a148aa83b9752de8765ec934404"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#ga27dc1a148aa83b9752de8765ec934404">cusp::graph::symmetric_rcm</a> (const MatrixType &amp;G, PermutationType &amp;P)</td></tr>
+<tr class="memdesc:ga27dc1a148aa83b9752de8765ec934404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute Reverse Cuthill-McKee reordering.  <a href="#ga27dc1a148aa83b9752de8765ec934404">More...</a><br/></td></tr>
+<tr class="separator:ga27dc1a148aa83b9752de8765ec934404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c9b09c7956a70d85cc6e8831dc4aece"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga5c9b09c7956a70d85cc6e8831dc4aece"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__graph__algorithms.html#ga5c9b09c7956a70d85cc6e8831dc4aece">cusp::graph::vertex_coloring</a> (const MatrixType &amp;G, ArrayType &amp;colors)</td></tr>
+<tr class="memdesc:ga5c9b09c7956a70d85cc6e8831dc4aece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a vertex coloring a graph.  <a href="#ga5c9b09c7956a70d85cc6e8831dc4aece">More...</a><br/></td></tr>
+<tr class="separator:ga5c9b09c7956a70d85cc6e8831dc4aece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga0454baa1d6668a3107c4bc52a103e574"></a>
+<a class="anchor" id="ga09d21dddcbeec0cebd3d3dde9360ccd5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;bool MARK_PREDECESSORS, typename MatrixType , typename ArrayType &gt; </div>
+template&lt;typename MatrixType , typename ArrayType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void cusp::graph::breadth_first_search </td>
@@ -162,7 +166,13 @@ template&lt;bool MARK_PREDECESSORS, typename MatrixType , typename ArrayType &gt
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ArrayType &amp;&#160;</td>
-          <td class="paramname"><em>labels</em>&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>mark_levels</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -207,7 +217,7 @@ template&lt;bool MARK_PREDECESSORS, typename MatrixType , typename ArrayType &gt
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> labels(G.num_rows);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Execute a BFS traversal on the device</span></div>
-<div class="line">   cusp::graph::breadth_first_search&lt;false&gt;(G, 0, labels);</div>
+<div class="line">   <a class="code" href="group__graph__algorithms.html#ga09d21dddcbeec0cebd3d3dde9360ccd5">cusp::graph::breadth_first_search</a>(G, 0, labels);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Print the level set constructed from the source vertex</span></div>
 <div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(labels);</div>
@@ -555,11 +565,11 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga2bf7d0aa10c4db2b8bc2cad3c94e718e"></a>
+<a class="anchor" id="ga27dc1a148aa83b9752de8765ec934404"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename MatrixType , typename ArrayType &gt; </div>
+template&lt;typename MatrixType , typename PermutationType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void cusp::graph::symmetric_rcm </td>
@@ -570,8 +580,8 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ArrayType &amp;&#160;</td>
-          <td class="paramname"><em>permutation</em>&#160;</td>
+          <td class="paramtype">PermutationType &amp;&#160;</td>
+          <td class="paramname"><em>P</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -585,7 +595,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MatrixType</td><td>Type of input matrix </td></tr>
-    <tr><td class="paramname">ArrayType</td><td>Type of components array</td></tr>
+    <tr><td class="paramname">PermutationType</td><td>Type of permutation matrix</td></tr>
   </table>
   </dd>
 </dl>
@@ -621,13 +631,82 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">   <a class="code" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt;int,cusp::device_memory&gt;</a> P(G.num_rows);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Compute connected components on the device</span></div>
-<div class="line">   <a class="code" href="group__graph__algorithms.html#ga2bf7d0aa10c4db2b8bc2cad3c94e718e">cusp::graph::symmetric_rcm</a>(G, P);</div>
+<div class="line">   <a class="code" href="group__graph__algorithms.html#ga27dc1a148aa83b9752de8765ec934404">cusp::graph::symmetric_rcm</a>(G, P);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Convert permutation to dense matrix</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float,cusp::device_memory&gt;</a> P_dense(P);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Print the permutation matrix</span></div>
 <div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(P_dense);</div>
+<div class="line"></div>
+<div class="line">   <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5c9b09c7956a70d85cc6e8831dc4aece"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType , typename ArrayType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cusp::graph::vertex_coloring </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>G</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArrayType &amp;&#160;</td>
+          <td class="paramname"><em>colors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a vertex coloring a graph. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType</td><td>Type of input matrix </td></tr>
+    <tr><td class="paramname">ArrayType</td><td>Type of colors array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">G</td><td>A symmetric matrix that represents the graph </td></tr>
+    <tr><td class="paramname">colors</td><td>Contains to the color associated with each vertex computed during the coloring routine</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/Graph_coloring">http://en.wikipedia.org/wiki/Graph_coloring</a></dd></dl>
+<dl class="section user"><dt>Example</dt><dd></dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="grid_8h.html">cusp/gallery/grid.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//include coloring header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="vertex__coloring_8h.html">cusp/graph/vertex_coloring.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
+<div class="line"></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> colors(G.num_rows);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Execute a BFS traversal on the device</span></div>
+<div class="line">   <a class="code" href="group__graph__algorithms.html#ga5c9b09c7956a70d85cc6e8831dc4aece">cusp::graph::vertex_coloring</a>(G, colors);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// Print the vertex colors</span></div>
+<div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(colors);</div>
 <div class="line"></div>
 <div class="line">   <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

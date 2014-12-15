@@ -135,20 +135,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>graph</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;thrust/execution_policy.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>cusp</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">typename</span> MatrixType::index_type <a class="code" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">pseudo_peripheral_vertex</a>(<span class="keyword">const</span> MatrixType&amp; G);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">typename</span> MatrixType::index_type <a class="code" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">pseudo_peripheral_vertex</a>(<span class="keyword">const</span> MatrixType&amp; G, ArrayType&amp; levels);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">// end namespace graph</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/pseudo_peripheral.inl&gt;</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>graph</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typename</span> MatrixType::index_type <a class="code" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">pseudo_peripheral_vertex</a>(<span class="keyword">const</span> MatrixType&amp; G);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          <span class="keyword">typename</span> MatrixType,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">typename</span> MatrixType::index_type</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">pseudo_peripheral_vertex</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt;&amp; exec,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                         <span class="keyword">const</span> MatrixType&amp; G,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                         ArrayType&amp; levels);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">typename</span> MatrixType::index_type <a class="code" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">pseudo_peripheral_vertex</a>(<span class="keyword">const</span> MatrixType&amp; G, ArrayType&amp; levels);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <span class="comment">// end namespace graph</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/pseudo_peripheral.inl&gt;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
 <div class="ttc" id="group__graph__algorithms_html_gaa44221c0efafa91ac2da1969a55986a1"><div class="ttname"><a href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">cusp::graph::pseudo_peripheral_vertex</a></div><div class="ttdeci">MatrixType::index_type pseudo_peripheral_vertex(const MatrixType &amp;G, ArrayType &amp;levels)</div><div class="ttdoc">Compute the pseudo-peripheral vertex of a graph. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

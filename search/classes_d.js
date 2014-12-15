@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['scaled_5fbridson_5fainv',['scaled_bridson_ainv',['../classcusp_1_1precond_1_1scaled__bridson__ainv.html',1,'cusp::precond']]],
-  ['smoothed_5faggregation',['smoothed_aggregation',['../classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html',1,'cusp::precond::aggregation']]],
-  ['strided_5fiterator',['strided_iterator',['../classcusp_1_1strided__iterator.html',1,'cusp']]]
+  ['random_5farray',['random_array',['../classcusp_1_1random__array.html',1,'cusp']]],
+  ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html',1,'cusp']]]
 ];

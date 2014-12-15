@@ -136,16 +136,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>cusp</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">transpose</a>(<span class="keyword">const</span> MatrixType1&amp; A, MatrixType2&amp; At);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2&gt;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">transpose</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;               <span class="keyword">const</span> MatrixType1&amp; A, MatrixType2&amp; At);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/transpose.inl&gt;</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">transpose</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;               <span class="keyword">const</span> MatrixType1&amp; A, MatrixType2&amp; At);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType1, <span class="keyword">typename</span> MatrixType2&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">transpose</a>(<span class="keyword">const</span> MatrixType1&amp; A, MatrixType2&amp; At);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/transpose.inl&gt;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="ttc" id="group__matrix__algorithms_html_gadf8215f805071d510966a0181d7b4a8c"><div class="ttname"><a href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">cusp::transpose</a></div><div class="ttdeci">void transpose(const MatrixType1 &amp;A, MatrixType2 &amp;At)</div><div class="ttdoc">Transpose a matrix. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

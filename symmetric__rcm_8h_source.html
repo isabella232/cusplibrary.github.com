@@ -140,15 +140,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>graph</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga2bf7d0aa10c4db2b8bc2cad3c94e718e">symmetric_rcm</a>(<span class="keyword">const</span> MatrixType&amp; G, ArrayType&amp; permutation);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;} <span class="comment">// end namespace graph</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/symmetric_rcm.inl&gt;</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="ttc" id="group__graph__algorithms_html_ga2bf7d0aa10c4db2b8bc2cad3c94e718e"><div class="ttname"><a href="group__graph__algorithms.html#ga2bf7d0aa10c4db2b8bc2cad3c94e718e">cusp::graph::symmetric_rcm</a></div><div class="ttdeci">void symmetric_rcm(const MatrixType &amp;G, ArrayType &amp;permutation)</div><div class="ttdoc">Compute Reverse Cuthill-McKee reordering. </div></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keyword">typename</span> MatrixType,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keyword">typename</span> PermutationType&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga27dc1a148aa83b9752de8765ec934404">symmetric_rcm</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt;&amp; exec,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                   <span class="keyword">const</span> MatrixType&amp; G,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                   PermutationType&amp; P);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> PermutationType&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__graph__algorithms.html#ga27dc1a148aa83b9752de8765ec934404">symmetric_rcm</a>(<span class="keyword">const</span> MatrixType&amp; G, PermutationType&amp; P);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// end namespace graph</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#include &lt;cusp/graph/detail/symmetric_rcm.inl&gt;</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="ttc" id="group__graph__algorithms_html_ga27dc1a148aa83b9752de8765ec934404"><div class="ttname"><a href="group__graph__algorithms.html#ga27dc1a148aa83b9752de8765ec934404">cusp::graph::symmetric_rcm</a></div><div class="ttdeci">void symmetric_rcm(const MatrixType &amp;G, PermutationType &amp;P)</div><div class="ttdoc">Compute Reverse Cuthill-McKee reordering. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
