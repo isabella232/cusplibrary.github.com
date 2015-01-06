@@ -8,8 +8,6 @@ var searchData=
   ['column',['column',['../classcusp_1_1array2d.html#a6fa7ee134533fbc1b347043dc8544138',1,'cusp::array2d::column(const size_t i)'],['../classcusp_1_1array2d.html#ab23de6e58fb1f3bd9dece2a602aafa8f',1,'cusp::array2d::column(const size_t i) const '],['../classcusp_1_1array2d__view.html#ac45fa8be1e151de036049b82fc0330a3',1,'cusp::array2d_view::column(size_t i)'],['../classcusp_1_1array2d__view.html#aea8d39d1ba1f8f7952808e43dee7ac26',1,'cusp::array2d_view::column(size_t i) const ']]],
   ['column_5findices',['column_indices',['../classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405',1,'cusp::coo_matrix::column_indices()'],['../classcusp_1_1coo__matrix__view.html#ae81b639da005447415c9742d27a99fd3',1,'cusp::coo_matrix_view::column_indices()'],['../classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e',1,'cusp::csr_matrix::column_indices()'],['../classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65',1,'cusp::csr_matrix_view::column_indices()'],['../classcusp_1_1ell__matrix.html#aa50aefbb8dcfe9b558afe77266a2c491',1,'cusp::ell_matrix::column_indices()'],['../classcusp_1_1ell__matrix__view.html#ab9329f2cede5f8496471ca3ae93ebb56',1,'cusp::ell_matrix_view::column_indices()']]],
   ['complex_2eh',['complex.h',['../complex_8h.html',1,'']]],
-  ['compute_5fmax_5fentries_5fper_5frow',['compute_max_entries_per_row',['../group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a',1,'cusp']]],
-  ['compute_5foptimal_5fentries_5fper_5frow',['compute_optimal_entries_per_row',['../group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10',1,'cusp']]],
   ['connected_5fcomponents',['connected_components',['../group__graph__algorithms.html#gaa1127c6867226f8ea2544b473323c86c',1,'cusp::graph']]],
   ['connected_5fcomponents_2eh',['connected_components.h',['../connected__components_8h.html',1,'']]],
   ['constant_5farray',['constant_array',['../classcusp_1_1constant__array.html#ac3de525e86efcfc96db41c8ec80db16c',1,'cusp::constant_array']]],
@@ -25,14 +23,13 @@ var searchData=
   ['coo_5fmatrix_5fview',['coo_matrix_view',['../classcusp_1_1coo__matrix__view.html',1,'cusp']]],
   ['copy',['copy',['../group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f',1,'cusp']]],
   ['copy_2eh',['copy.h',['../copy_8h.html',1,'']]],
-  ['count_5fdiagonals',['count_diagonals',['../group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec',1,'cusp']]],
-  ['counting_5farray',['counting_array',['../classcusp_1_1counting__array.html#a1f18c7f9a19c92557857d825c449160d',1,'cusp::counting_array']]],
   ['counting_5farray',['counting_array',['../classcusp_1_1counting__array.html',1,'cusp']]],
+  ['counting_5farray',['counting_array',['../classcusp_1_1counting__array.html#a1f18c7f9a19c92557857d825c449160d',1,'cusp::counting_array']]],
   ['cr',['cr',['../group__krylov__methods.html#gae73aeb8fd04ee86a128240ac62c20e33',1,'cusp::krylov']]],
   ['cr_2eh',['cr.h',['../cr_8h.html',1,'']]],
-  ['csr_5fmatrix',['csr_matrix',['../classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1',1,'cusp::csr_matrix::csr_matrix(void)'],['../classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c',1,'cusp::csr_matrix::csr_matrix(size_t num_rows, size_t num_cols, size_t num_entries)'],['../classcusp_1_1csr__matrix.html#ac77e5e6d9218eb2d2e416602400851fb',1,'cusp::csr_matrix::csr_matrix(const MatrixType &amp;matrix)']]],
   ['csr_5fmatrix',['csr_matrix',['../classcusp_1_1csr__matrix.html',1,'cusp']]],
+  ['csr_5fmatrix',['csr_matrix',['../classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1',1,'cusp::csr_matrix::csr_matrix(void)'],['../classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c',1,'cusp::csr_matrix::csr_matrix(size_t num_rows, size_t num_cols, size_t num_entries)'],['../classcusp_1_1csr__matrix.html#ac77e5e6d9218eb2d2e416602400851fb',1,'cusp::csr_matrix::csr_matrix(const MatrixType &amp;matrix)']]],
   ['csr_5fmatrix_2eh',['csr_matrix.h',['../csr__matrix_8h.html',1,'']]],
-  ['csr_5fmatrix_5fview',['csr_matrix_view',['../classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6',1,'cusp::csr_matrix_view::csr_matrix_view(void)'],['../classcusp_1_1csr__matrix__view.html#a2a5a8f5d37b23c657002ad4c31509688',1,'cusp::csr_matrix_view::csr_matrix_view(const size_t num_rows, const size_t num_cols, const size_t num_entries, ArrayType1 row_offsets, ArrayType2 column_indices, ArrayType3 values)']]],
-  ['csr_5fmatrix_5fview',['csr_matrix_view',['../classcusp_1_1csr__matrix__view.html',1,'cusp']]]
+  ['csr_5fmatrix_5fview',['csr_matrix_view',['../classcusp_1_1csr__matrix__view.html',1,'cusp']]],
+  ['csr_5fmatrix_5fview',['csr_matrix_view',['../classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6',1,'cusp::csr_matrix_view::csr_matrix_view(void)'],['../classcusp_1_1csr__matrix__view.html#a2a5a8f5d37b23c657002ad4c31509688',1,'cusp::csr_matrix_view::csr_matrix_view(const size_t num_rows, const size_t num_cols, const size_t num_entries, ArrayType1 row_offsets, ArrayType2 column_indices, ArrayType3 values)']]]
 ];

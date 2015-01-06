@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/precond/aggregation/smoothed_aggregation.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/precond/aggregation/smoothed_aggregation.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -179,12 +179,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">typename</span> SmootherType = <a class="code" href="classcusp_1_1relaxation_1_1jacobi.html">cusp::relaxation::jacobi&lt;ValueType,MemorySpace&gt;</a>,</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keyword">typename</span> SolverType = cusp::detail::lu_solver&lt;ValueType,cusp::host_memory&gt; &gt;</div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">   78</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> :</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">public</span> <a class="code" href="classcusp_1_1multilevel.html">cusp::multilevel</a>&lt; typename amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type, SmootherType, SolverType&gt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">public</span> cusp::multilevel&lt; typename amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type, SmootherType, SolverType&gt;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> amg_container&lt;IndexType,ValueType,MemorySpace&gt;::setup_type SetupMatrixType;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type SolveMatrixType;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1multilevel.html">cusp::multilevel&lt;SolveMatrixType,SmootherType,SolverType&gt;</a> <a class="code" href="classcusp_1_1multilevel.html">Parent</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::multilevel&lt;SolveMatrixType,SmootherType,SolverType&gt; Parent;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> smoothed_aggregation_options&lt;IndexType,ValueType,MemorySpace&gt; default_sa_options;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">public</span>:</div>
@@ -233,7 +233,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classcusp_1_1relaxation_1_1jacobi_html"><div class="ttname"><a href="classcusp_1_1relaxation_1_1jacobi.html">cusp::relaxation::jacobi</a></div><div class="ttdoc">Represents a Jacobi relaxation scheme. </div><div class="ttdef"><b>Definition:</b> <a href="jacobi_8h_source.html#l00099">jacobi.h:99</a></div></div>
 <div class="ttc" id="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation_html"><div class="ttname"><a href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a></div><div class="ttdef"><b>Definition:</b> <a href="smoothed__aggregation_8h_source.html#l00078">smoothed_aggregation.h:78</a></div></div>
 <div class="ttc" id="linear__operator_8h_html"><div class="ttname"><a href="linear__operator_8h.html">linear_operator.h</a></div><div class="ttdoc">Abstract interface for iterative solvers. </div></div>
-<div class="ttc" id="classcusp_1_1multilevel_html"><div class="ttname"><a href="classcusp_1_1multilevel.html">cusp::multilevel</a></div><div class="ttdef"><b>Definition:</b> <a href="multilevel_8h_source.html#l00045">multilevel.h:45</a></div></div>
 <div class="ttc" id="multilevel_8h_html"><div class="ttname"><a href="multilevel_8h.html">multilevel.h</a></div><div class="ttdoc">Multilevel hierarchy. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

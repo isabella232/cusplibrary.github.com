@@ -14,9 +14,9 @@ var searchData=
   ['monitor',['monitor',['../group__monitors.html#ga08108ab7d3f4d1336cea4af0f7a12352',1,'cusp::monitor']]],
   ['monitor_2eh',['monitor.h',['../monitor_8h.html',1,'']]],
   ['monitors',['Monitors',['../group__monitors.html',1,'']]],
-  ['multilevel',['multilevel',['../classcusp_1_1multilevel.html',1,'cusp']]],
+  ['multilevel',['multilevel',['../classcusp_1_1detail_1_1multilevel.html',1,'cusp::detail']]],
   ['multilevel_2eh',['multilevel.h',['../multilevel_8h.html',1,'']]],
-  ['multilevel_3c_20amg_5fcontainer_3c_20indextype_2c_20valuetype_2c_20memoryspace_20_3e_3a_3asolve_5ftype_2c_20smoothertype_2c_20solvertype_20_3e',['multilevel&lt; amg_container&lt; IndexType, ValueType, MemorySpace &gt;::solve_type, SmootherType, SolverType &gt;',['../classcusp_1_1multilevel.html',1,'cusp']]],
+  ['multilevel_5fpolicy',['multilevel_policy',['../structcusp_1_1detail_1_1multilevel__policy.html',1,'cusp::detail']]],
   ['multiply',['multiply',['../group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788',1,'cusp::multiply(const LinearOperator &amp;A, const MatrixOrVector1 &amp;B, MatrixOrVector2 &amp;C)'],['../group__matrix__algorithms.html#gafc02e0c155b7f639d8eba87b005858b9',1,'cusp::multiply(const LinearOperator &amp;A, const MatrixOrVector1 &amp;B, MatrixOrVector2 &amp;C, UnaryFunction initialize, BinaryFunction1 combine, BinaryFunction2 reduce)']]],
   ['multiply_2eh',['multiply.h',['../multiply_8h.html',1,'']]]
 ];
