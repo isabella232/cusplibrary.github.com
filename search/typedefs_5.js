@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['values_5farray_5ftype',['values_array_type',['../classcusp_1_1csr__matrix.html#a7e73468e232ad290c813e2a816fa7ea8',1,'cusp::csr_matrix::values_array_type()'],['../classcusp_1_1dia__matrix__view.html#a4810d2fd914f7504d3892f2d1e785227',1,'cusp::dia_matrix_view::values_array_type()']]],
-  ['view',['view',['../classcusp_1_1csr__matrix.html#adedc150039e5f0f416ac364609481e7e',1,'cusp::csr_matrix::view()'],['../classcusp_1_1csr__matrix__view.html#a90a96314f69756f0bd1797cfcf260360',1,'cusp::csr_matrix_view::view()'],['../classcusp_1_1dia__matrix__view.html#a2ea247734c7c68bf9fc875679b56ca2b',1,'cusp::dia_matrix_view::view()'],['../classcusp_1_1hyb__matrix.html#a9c48738c62006fd889b439f9af8409a2',1,'cusp::hyb_matrix::view()'],['../classcusp_1_1hyb__matrix__view.html#a812f4c87f5a25d707865736461be2f37',1,'cusp::hyb_matrix_view::view()'],['../classcusp_1_1permutation__matrix.html#a2f3d668e6f5982f216617ede82528ba0',1,'cusp::permutation_matrix::view()'],['../classcusp_1_1permutation__matrix__view.html#ac422b4698fa59eace0d15e76b13e4c08',1,'cusp::permutation_matrix_view::view()']]]
-];

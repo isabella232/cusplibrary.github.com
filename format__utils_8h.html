@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/convert.h File Reference</title>
+<title>CUSP: /home/sdalton/test/cusplibrary/cusp/format_utils.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -110,26 +110,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">/home/sdalton/test/cusplibrary/cusp/convert.h File Reference</div>  </div>
+<div class="title">/home/sdalton/test/cusplibrary/cusp/format_utils.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Matrix format conversion.  
+<p>Various matrix utility functions.  
 <a href="#details">More...</a></p>
 
-<p><a href="convert_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="format__utils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gabb02a423ef30725e231bc05a52731629"><td class="memTemplParams" colspan="2">template&lt;typename SourceType , typename DestinationType &gt; </td></tr>
-<tr class="memitem:gabb02a423ef30725e231bc05a52731629"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gabb02a423ef30725e231bc05a52731629">cusp::convert</a> (const SourceType &amp;src, DestinationType &amp;dst)</td></tr>
-<tr class="memdesc:gabb02a423ef30725e231bc05a52731629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert between matrix formats.  <a href="group__matrix__algorithms.html#gabb02a423ef30725e231bc05a52731629">More...</a><br/></td></tr>
-<tr class="separator:gabb02a423ef30725e231bc05a52731629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31d6135026a0becf65e55446b18b96dc"><td class="memTemplParams" colspan="2">template&lt;typename OffsetArray , typename IndexArray &gt; </td></tr>
+<tr class="memitem:ga31d6135026a0becf65e55446b18b96dc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">cusp::offsets_to_indices</a> (const OffsetArray &amp;offsets, IndexArray &amp;indices)</td></tr>
+<tr class="memdesc:ga31d6135026a0becf65e55446b18b96dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand CSR row offsets to COO row indices.  <a href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">More...</a><br/></td></tr>
+<tr class="separator:ga31d6135026a0becf65e55446b18b96dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c86a6daa0aff822eb1a2dd6ee6245d7"><td class="memTemplParams" colspan="2">template&lt;typename IndexArray , typename OffsetArray &gt; </td></tr>
+<tr class="memitem:ga9c86a6daa0aff822eb1a2dd6ee6245d7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">cusp::indices_to_offsets</a> (const IndexArray &amp;indices, OffsetArray &amp;offsets)</td></tr>
+<tr class="memdesc:ga9c86a6daa0aff822eb1a2dd6ee6245d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compress COO row indices to CSR row offsets.  <a href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">More...</a><br/></td></tr>
+<tr class="separator:ga9c86a6daa0aff822eb1a2dd6ee6245d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661696898ff9b89e39fad8d3c1582ad9"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga661696898ff9b89e39fad8d3c1582ad9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">cusp::extract_diagonal</a> (const MatrixType &amp;A, ArrayType &amp;output)</td></tr>
+<tr class="memdesc:ga661696898ff9b89e39fad8d3c1582ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the main diagonal of a matrix.  <a href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">More...</a><br/></td></tr>
+<tr class="separator:ga661696898ff9b89e39fad8d3c1582ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84e80d469afffe98b1a22acfdcaa95ec"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 &gt; </td></tr>
+<tr class="memitem:ga84e80d469afffe98b1a22acfdcaa95ec"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">cusp::count_diagonals</a> (const size_t num_rows, const size_t num_cols, const ArrayType1 &amp;row_indices, const ArrayType2 &amp;column_indices)</td></tr>
+<tr class="memdesc:ga84e80d469afffe98b1a22acfdcaa95ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of occupied diagonals in the input matrix.  <a href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">More...</a><br/></td></tr>
+<tr class="separator:ga84e80d469afffe98b1a22acfdcaa95ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7f17e3d9f791368ec554e89cffc722a"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:gad7f17e3d9f791368ec554e89cffc722a"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">cusp::compute_max_entries_per_row</a> (const ArrayType &amp;row_offsets)</td></tr>
+<tr class="memdesc:gad7f17e3d9f791368ec554e89cffc722a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the maximum row length of a matrix.  <a href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">More...</a><br/></td></tr>
+<tr class="separator:gad7f17e3d9f791368ec554e89cffc722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab896b38fa3a8382f789042e8c326fc10"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:gab896b38fa3a8382f789042e8c326fc10"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">cusp::compute_optimal_entries_per_row</a> (const ArrayType &amp;row_offsets, float relative_speed=3.0f, size_t breakeven_threshold=4096)</td></tr>
+<tr class="memdesc:gab896b38fa3a8382f789042e8c326fc10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the optimal number of entries per row of HYB matrix.  <a href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">More...</a><br/></td></tr>
+<tr class="separator:gab896b38fa3a8382f789042e8c326fc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Matrix format conversion. </p>
+<div class="textblock"><p>Various matrix utility functions. </p>
 
-<p>Definition in file <a class="el" href="convert_8h_source.html">convert.h</a>.</p>
+<p>Definition in file <a class="el" href="format__utils_8h_source.html">format_utils.h</a>.</p>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
