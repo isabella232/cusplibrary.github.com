@@ -9,6 +9,7 @@ var searchData=
   ['pitch',['pitch',['../classcusp_1_1array2d.html#a2b727dcacaccff383361db91491f05b9',1,'cusp::array2d::pitch()'],['../classcusp_1_1array2d__view.html#a23730aa4b6a0fa169d30b32a152286ae',1,'cusp::array2d_view::pitch()']]],
   ['poisson_2eh',['poisson.h',['../poisson_8h.html',1,'']]],
   ['poisson5pt',['poisson5pt',['../group__gallery.html#ga4369f22c9caff12729026e5ce79ef281',1,'cusp::gallery']]],
+  ['polynomial',['polynomial',['../classcusp_1_1relaxation_1_1polynomial.html#abf3f695b20871f2effd20c012d7cf3ac',1,'cusp::relaxation::polynomial::polynomial(void)'],['../classcusp_1_1relaxation_1_1polynomial.html#a44134d22b2a826faedd4fc2b193aa995',1,'cusp::relaxation::polynomial::polynomial(const MatrixType &amp;A, const VectorType &amp;coefficients)'],['../classcusp_1_1relaxation_1_1polynomial.html#af7933f5f1dc14e156bdcc7e5c1f9e269',1,'cusp::relaxation::polynomial::polynomial(const polynomial&lt; ValueType, MemorySpace2 &gt; &amp;A)']]],
   ['polynomial',['polynomial',['../classcusp_1_1relaxation_1_1polynomial.html',1,'cusp::relaxation']]],
   ['polynomial_2eh',['polynomial.h',['../polynomial_8h.html',1,'']]],
   ['preconditioners',['Preconditioners',['../group__preconditioners.html',1,'']]],

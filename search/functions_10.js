@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vertex_5fcoloring',['vertex_coloring',['../group__graph__algorithms.html#ga5c9b09c7956a70d85cc6e8831dc4aece',1,'cusp::graph']]]
+  ['tolerance',['tolerance',['../group__monitors.html#gabbe5f3de5c002a5e723d8972040f71cb',1,'cusp::monitor']]],
+  ['transpose',['transpose',['../group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c',1,'cusp']]]
 ];

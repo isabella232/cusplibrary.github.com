@@ -6,6 +6,7 @@ var searchData=
   ['size',['size',['../classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b',1,'cusp::array1d_view']]],
   ['smoothed_5faggregation',['smoothed_aggregation',['../classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html',1,'cusp::precond::aggregation']]],
   ['smoothed_5faggregation_2eh',['smoothed_aggregation.h',['../smoothed__aggregation_8h.html',1,'']]],
+  ['sor',['sor',['../classcusp_1_1relaxation_1_1sor.html#aa8e3c81fb3f0a10bb2600be2fe4e576d',1,'cusp::relaxation::sor::sor(void)'],['../classcusp_1_1relaxation_1_1sor.html#a919b089eb798b596f91620e7ccabb480',1,'cusp::relaxation::sor::sor(const MatrixType &amp;A, const ValueType omega, sweep default_direction=SYMMETRIC)'],['../classcusp_1_1relaxation_1_1sor.html#a73a6096030a85d2810140adab59ced47',1,'cusp::relaxation::sor::sor(const sor&lt; ValueType, MemorySpace2 &gt; &amp;A)']]],
   ['sor',['sor',['../classcusp_1_1relaxation_1_1sor.html',1,'cusp::relaxation']]],
   ['sor_2eh',['sor.h',['../sor_8h.html',1,'']]],
   ['sort_2eh',['sort.h',['../sort_8h.html',1,'']]],
