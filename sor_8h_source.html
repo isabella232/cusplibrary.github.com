@@ -144,43 +144,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>relaxation</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcusp_1_1relaxation_1_1sor.html">   91</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">cusp::linear_operator</a>&lt;ValueType, MemorySpace&gt;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ValueType default_omega;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a> temp;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1gauss__seidel.html">gauss_seidel&lt;ValueType,MemorySpace&gt;</a> gs;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// constructor</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a>(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classcusp_1_1relaxation_1_1sor.html">   98</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">cusp::linear_operator</a>&lt;ValueType, MemorySpace&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    ValueType default_omega;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a>(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> ValueType omega, sweep default_direction=SYMMETRIC)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      : default_omega(omega), temp(A.num_cols), gs(A, default_direction) {}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a> temp;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1gauss__seidel.html">gauss_seidel&lt;ValueType,MemorySpace&gt;</a> gs;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor&lt;ValueType,MemorySpace2&gt;</a>&amp; A)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        : default_omega(A.default_omega), temp(A.temp), gs(A.gs) {}</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> VectorType1&amp; b, VectorType2&amp; x);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// constructor</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a>(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a>(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> ValueType omega, sweep default_direction=SYMMETRIC)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      : default_omega(omega), temp(A.num_cols), gs(A, default_direction) {}</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> VectorType1&amp; b, VectorType2&amp; x, <span class="keyword">const</span> ValueType omega, sweep direction);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1relaxation_1_1sor.html">sor&lt;ValueType,MemorySpace2&gt;</a>&amp; A)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        : default_omega(A.default_omega), temp(A.temp), gs(A.gs) {}</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;} <span class="comment">// end namespace relaxation</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> VectorType1&amp; b, VectorType2&amp; x);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#include &lt;cusp/relaxation/detail/sor.inl&gt;</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> VectorType1&amp; b, VectorType2&amp; x, <span class="keyword">const</span> ValueType omega, sweep direction);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// end namespace relaxation</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#include &lt;cusp/relaxation/detail/sor.inl&gt;</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d&lt; ValueType, MemorySpace &gt;</a></div></div>
-<div class="ttc" id="classcusp_1_1relaxation_1_1sor_html"><div class="ttname"><a href="classcusp_1_1relaxation_1_1sor.html">cusp::relaxation::sor</a></div><div class="ttdoc">Represents a Successive Over-Relaxation relaxation scheme. </div><div class="ttdef"><b>Definition:</b> <a href="sor_8h_source.html#l00091">sor.h:91</a></div></div>
-<div class="ttc" id="classcusp_1_1relaxation_1_1gauss__seidel_html"><div class="ttname"><a href="classcusp_1_1relaxation_1_1gauss__seidel.html">cusp::relaxation::gauss_seidel</a></div><div class="ttdoc">Represents a Gauss-Seidel relaxation scheme. </div><div class="ttdef"><b>Definition:</b> <a href="gauss__seidel_8h_source.html#l00097">gauss_seidel.h:97</a></div></div>
+<div class="ttc" id="classcusp_1_1relaxation_1_1sor_html"><div class="ttname"><a href="classcusp_1_1relaxation_1_1sor.html">cusp::relaxation::sor</a></div><div class="ttdoc">Represents a Successive Over-Relaxation relaxation scheme. </div><div class="ttdef"><b>Definition:</b> <a href="sor_8h_source.html#l00098">sor.h:98</a></div></div>
+<div class="ttc" id="classcusp_1_1relaxation_1_1gauss__seidel_html"><div class="ttname"><a href="classcusp_1_1relaxation_1_1gauss__seidel.html">cusp::relaxation::gauss_seidel</a></div><div class="ttdoc">Represents a Gauss-Seidel relaxation scheme. </div><div class="ttdef"><b>Definition:</b> <a href="gauss__seidel_8h_source.html#l00104">gauss_seidel.h:104</a></div></div>
 <div class="ttc" id="classcusp_1_1linear__operator_html"><div class="ttname"><a href="classcusp_1_1linear__operator.html">cusp::linear_operator</a></div><div class="ttdoc">Abstract representation of a linear operator. </div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00111">linear_operator.h:111</a></div></div>
 <div class="ttc" id="linear__operator_8h_html"><div class="ttname"><a href="linear__operator_8h.html">linear_operator.h</a></div><div class="ttdoc">Abstract interface for iterative solvers. </div></div>
 <div class="ttc" id="gauss__seidel_8h_html"><div class="ttname"><a href="gauss__seidel_8h.html">gauss_seidel.h</a></div><div class="ttdoc">Gauss-Seidel relaxation. </div></div>
