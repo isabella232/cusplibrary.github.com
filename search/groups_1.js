@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_20algorithms',['Graph Algorithms',['../group__graph__algorithms.html',1,'']]]
+  ['eigensolvers',['EigenSolvers',['../group__eigensolvers.html',1,'']]]
 ];

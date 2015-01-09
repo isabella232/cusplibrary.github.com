@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['eigensolvers',['EigenSolvers',['../group__eigensolvers.html',1,'']]],
   ['elementwise',['elementwise',['../group__matrix__algorithms.html#ga8e4aa1d71fddbc22ec0d8791a4de83da',1,'cusp']]],
   ['elementwise_2eh',['elementwise.h',['../elementwise_8h.html',1,'']]],
   ['ell',['ell',['../classcusp_1_1hyb__matrix.html#a4a2aaf6a2f757fb4325866ac504a9838',1,'cusp::hyb_matrix::ell()'],['../classcusp_1_1hyb__matrix__view.html#a1f650bfb2d491e76e40df25730ba1d9f',1,'cusp::hyb_matrix_view::ell()']]],
