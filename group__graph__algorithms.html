@@ -363,10 +363,10 @@ template&lt;class Array2dType , class ArrayType &gt; </div>
 </dl>
 <dl class="section user"><dt>Overview</dt><dd>Uses a Hilbert space filling curve to partition a set of points in 2 or 3 dimensional space.</dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a href="http://en.wikipedia.org/wiki/Hilbert_curve">http://en.wikipedia.org/wiki/Hilbert_curve</a></dd></dl>
-<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array2d_8h.html">cusp/array2d.h</a>&gt;</span></div>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array2d_8h.html">cusp/array2d.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cusp/detail/random.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="grid_8h.html">cusp/gallery/grid.h</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">//include Hilbert curve header file</span></div>
@@ -390,7 +390,7 @@ template&lt;class Array2dType , class ArrayType &gt; </div>
 <div class="line">   <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float,cusp::device_memory&gt;</a> coords(G.num_rows, 2);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Generate random coordinates</span></div>
-<div class="line">   <a class="code" href="group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f">cusp::copy</a>(cusp::detail::random_reals&lt;float&gt;(coords.num_entries, rand()), coords.values);</div>
+<div class="line">   <a class="code" href="group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f">cusp::copy</a>(<a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;float&gt;</a>(coords.num_entries, rand()), coords.values);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Compute the hilbert space filling curve partitioning the points</span></div>
 <div class="line">   <a class="code" href="group__graph__algorithms.html#ga85e6198d5a0571ad1ff04fb761f1d2ef">cusp::graph::hilbert_curve</a>(coords, num_parts, parts);</div>

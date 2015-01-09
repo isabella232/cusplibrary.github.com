@@ -134,104 +134,103 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/spectral_radius.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="multilevel_8h.html">cusp/detail/multilevel.h</a>&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="multilevel_8h.html">cusp/detail/multilevel.h</a>&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;cusp/precond/aggregation/smoothed_aggregation_options.h&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="jacobi_8h.html">cusp/relaxation/jacobi.h</a>&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span> <span class="comment">// TODO replace with host_vector</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>precond</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>aggregation</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">struct </span>sa_level</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::index_type IndexType;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::value_type ValueType;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::memory_space MemorySpace;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    MatrixType A_;                                                <span class="comment">// matrix</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;IndexType,MemorySpace&gt;</a> aggregates;      <span class="comment">// aggregates</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a> B;               <span class="comment">// near-nullspace candidates</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ValueType rho_DinvA;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    sa_level() : rho_DinvA(0) {}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> SA_Level_Type&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    sa_level(<span class="keyword">const</span> SA_Level_Type&amp; sa_level)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      : A_(sa_level.A_), aggregates(sa_level.aggregates), B(sa_level.B), rho_DinvA(sa_level.rho_DinvA) {}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;cusp/eigen/spectral_radius.h&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="jacobi_8h.html">cusp/relaxation/jacobi.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cusp/precond/aggregation/smoothed_aggregation_options.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span> <span class="comment">// TODO replace with host_vector</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>cusp</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>precond</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>aggregation</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">struct </span>sa_level</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::index_type IndexType;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::value_type ValueType;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::memory_space MemorySpace;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    MatrixType A_;                                                <span class="comment">// matrix</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;IndexType,MemorySpace&gt;</a> aggregates;      <span class="comment">// aggregates</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a> B;               <span class="comment">// near-nullspace candidates</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ValueType rho_DinvA;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    sa_level() : rho_DinvA(0) {}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> SA_Level_Type&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    sa_level(<span class="keyword">const</span> SA_Level_Type&amp; sa_level)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      : A_(sa_level.A_), aggregates(sa_level.aggregates), B(sa_level.B), rho_DinvA(sa_level.rho_DinvA) {}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">typename</span> SmootherType = <a class="code" href="classcusp_1_1relaxation_1_1jacobi.html">cusp::relaxation::jacobi&lt;ValueType,MemorySpace&gt;</a>,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keyword">typename</span> SolverType = cusp::detail::lu_solver&lt;ValueType,cusp::host_memory&gt; &gt;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">   78</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> :</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">public</span> <a class="code" href="classcusp_1_1multilevel.html">cusp::multilevel</a>&lt; typename amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type, SmootherType, SolverType&gt;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> amg_container&lt;IndexType,ValueType,MemorySpace&gt;::setup_type SetupMatrixType;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type SolveMatrixType;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1multilevel.html">cusp::multilevel&lt;SolveMatrixType,SmootherType,SolverType&gt;</a> <a class="code" href="classcusp_1_1multilevel.html">Parent</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> smoothed_aggregation_options&lt;IndexType,ValueType,MemorySpace&gt; default_sa_options;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> smoothed_aggregation_options&lt;IndexType,ValueType,MemorySpace&gt; &amp; sa_options;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::vector&lt; sa_level&lt;SetupMatrixType&gt; &gt; sa_levels;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      : sa_options(default_sa_options) {}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> Options&gt;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                         <span class="keyword">const</span> Options&amp; sa_options);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a>&amp; B);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> Options&gt;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a>&amp; B,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                         <span class="keyword">const</span> Options&amp; sa_options);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemorySpace2,<span class="keyword">typename</span> SmootherType2,<span class="keyword">typename</span> SolverType2&gt;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation&lt;IndexType,ValueType,MemorySpace2,SmootherType2,SolverType2&gt;</a>&amp; M);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> sa_initialize(<span class="keyword">const</span> MatrixType&amp; A);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> sa_initialize(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> ArrayType&amp; B);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> extend_hierarchy(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;};</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// end namespace aggregation</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;} <span class="comment">// end namespace precond</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#include &lt;cusp/precond/aggregation/detail/smoothed_aggregation.inl&gt;</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">typename</span> SmootherType = <a class="code" href="classcusp_1_1relaxation_1_1jacobi.html">cusp::relaxation::jacobi&lt;ValueType,MemorySpace&gt;</a>,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">typename</span> SolverType = cusp::detail::lu_solver&lt;ValueType,cusp::host_memory&gt; &gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> :</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">public</span> <a class="code" href="classcusp_1_1multilevel.html">cusp::multilevel</a>&lt; typename amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type, SmootherType, SolverType&gt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> amg_container&lt;IndexType,ValueType,MemorySpace&gt;::setup_type SetupMatrixType;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> amg_container&lt;IndexType,ValueType,MemorySpace&gt;::solve_type SolveMatrixType;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1multilevel.html">cusp::multilevel&lt;SolveMatrixType,SmootherType,SolverType&gt;</a> <a class="code" href="classcusp_1_1multilevel.html">Parent</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> smoothed_aggregation_options&lt;IndexType,ValueType,MemorySpace&gt; default_sa_options;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> smoothed_aggregation_options&lt;IndexType,ValueType,MemorySpace&gt; &amp; sa_options;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::vector&lt; sa_level&lt;SetupMatrixType&gt; &gt; sa_levels;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      : sa_options(default_sa_options) {}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> Options&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                         <span class="keyword">const</span> Options&amp; sa_options);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a>&amp; B);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> Options&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType,MemorySpace&gt;</a>&amp; B,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                         <span class="keyword">const</span> Options&amp; sa_options);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemorySpace2,<span class="keyword">typename</span> SmootherType2,<span class="keyword">typename</span> SolverType2&gt;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation&lt;IndexType,ValueType,MemorySpace2,SmootherType2,SolverType2&gt;</a>&amp; M);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> sa_initialize(<span class="keyword">const</span> MatrixType&amp; A);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> sa_initialize(<span class="keyword">const</span> MatrixType&amp; A, <span class="keyword">const</span> ArrayType&amp; B);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> extend_hierarchy(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// end namespace aggregation</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// end namespace precond</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#include &lt;cusp/precond/aggregation/detail/smoothed_aggregation.inl&gt;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d</a></div><div class="ttdoc">The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00099">array1d.h:99</a></div></div>
 <div class="ttc" id="jacobi_8h_html"><div class="ttname"><a href="jacobi_8h.html">jacobi.h</a></div><div class="ttdoc">Jacobi relaxation. </div></div>
 <div class="ttc" id="classcusp_1_1relaxation_1_1jacobi_html"><div class="ttname"><a href="classcusp_1_1relaxation_1_1jacobi.html">cusp::relaxation::jacobi</a></div><div class="ttdoc">Represents a Jacobi relaxation scheme. </div><div class="ttdef"><b>Definition:</b> <a href="jacobi_8h_source.html#l00106">jacobi.h:106</a></div></div>
-<div class="ttc" id="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation_html"><div class="ttname"><a href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a></div><div class="ttdef"><b>Definition:</b> <a href="smoothed__aggregation_8h_source.html#l00078">smoothed_aggregation.h:78</a></div></div>
+<div class="ttc" id="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation_html"><div class="ttname"><a href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a></div><div class="ttdef"><b>Definition:</b> <a href="smoothed__aggregation_8h_source.html#l00077">smoothed_aggregation.h:77</a></div></div>
 <div class="ttc" id="linear__operator_8h_html"><div class="ttname"><a href="linear__operator_8h.html">linear_operator.h</a></div><div class="ttdoc">Abstract interface for iterative solvers. </div></div>
 <div class="ttc" id="classcusp_1_1multilevel_html"><div class="ttname"><a href="classcusp_1_1multilevel.html">cusp::multilevel</a></div><div class="ttdef"><b>Definition:</b> <a href="multilevel_8h_source.html#l00045">multilevel.h:45</a></div></div>
 <div class="ttc" id="multilevel_8h_html"><div class="ttname"><a href="multilevel_8h.html">multilevel.h</a></div><div class="ttdoc">Multilevel hierarchy. </div></div>

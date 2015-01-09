@@ -11,7 +11,7 @@ var searchData=
   ['array1d_3c_20valuetype_2c_20memoryspace_20_3e',['array1d&lt; ValueType, MemorySpace &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_5fview',['array1d_view',['../classcusp_1_1array1d__view.html',1,'cusp']]],
   ['array1d_5fview',['array1d_view',['../classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c',1,'cusp::array1d_view::array1d_view(void)'],['../classcusp_1_1array1d__view.html#a94d4ae6f3604b61af94b23a7d9f42c07',1,'cusp::array1d_view::array1d_view(ArrayType &amp;v)'],['../classcusp_1_1array1d__view.html#a89c9def5fd264d34886e9656029a2e9a',1,'cusp::array1d_view::array1d_view(InputIterator begin, InputIterator end)']]],
-  ['array1d_5fview_3c_20cusp_3a_3arandom_5fiterator_3c_20valuetype_20_3e_20_3e',['array1d_view&lt; cusp::random_iterator&lt; ValueType &gt; &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
+  ['array1d_5fview_3c_20cusp_3a_3arandom_5fiterator_3c_20valuetype_20_3e_3a_3aiterator_20_3e',['array1d_view&lt; cusp::random_iterator&lt; ValueType &gt;::iterator &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
   ['array1d_5fview_3c_20thrust_3a_3aconstant_5fiterator_3c_20valuetype_20_3e_20_3e',['array1d_view&lt; thrust::constant_iterator&lt; ValueType &gt; &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
   ['array1d_5fview_3c_20thrust_3a_3acounting_5fiterator_3c_20valuetype_20_3e_20_3e',['array1d_view&lt; thrust::counting_iterator&lt; ValueType &gt; &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
   ['array2d',['array2d',['../classcusp_1_1array2d.html',1,'cusp']]],
