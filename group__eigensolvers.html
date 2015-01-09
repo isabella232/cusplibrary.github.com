@@ -122,6 +122,10 @@ template&lt;typename Matrix , typename Array2d &gt; </td></tr>
 template&lt;typename Matrix , typename Array2d &gt; </td></tr>
 <tr class="memitem:gaba6d0bc1073940fe65ce46d2be6959b1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::lanczos</b> (const Matrix &amp;A, Array2d &amp;H, size_t k=10)</td></tr>
 <tr class="separator:gaba6d0bc1073940fe65ce46d2be6959b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class Vector , class Monitor , class Preconditioner &gt; </td></tr>
+<tr class="memitem:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga1fa0efeaca1603b27f6f0f7dbf3de725">cusp::eigen::lobpcg</a> (LinearOperator &amp;A, Vector &amp;S, Vector &amp;X, Monitor &amp;monitor, Preconditioner &amp;M, bool largest=true)</td></tr>
+<tr class="memdesc:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOBPCG method.  <a href="#ga1fa0efeaca1603b27f6f0f7dbf3de725">More...</a><br/></td></tr>
+<tr class="separator:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga14abd6a5b891a6d13e7df67b19722857"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga14abd6a5b891a6d13e7df67b19722857"></a>
 template&lt;typename Matrix &gt; </td></tr>
 <tr class="memitem:ga14abd6a5b891a6d13e7df67b19722857"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::estimate_spectral_radius</b> (const Matrix &amp;A, size_t k=20)</td></tr>
@@ -143,6 +147,117 @@ template&lt;typename Matrix &gt; </td></tr>
 <tr class="memitem:gaffcd580d4693cde82f9743b1c29ed723"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::disks_spectral_radius</b> (const Matrix &amp;A)</td></tr>
 <tr class="separator:gaffcd580d4693cde82f9743b1c29ed723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga1fa0efeaca1603b27f6f0f7dbf3de725"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LinearOperator , class Vector , class Monitor , class Preconditioner &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::eigen::lobpcg </td>
+          <td>(</td>
+          <td class="paramtype">LinearOperator &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector &amp;&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector &amp;&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Monitor &amp;&#160;</td>
+          <td class="paramname"><em>monitor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Preconditioner &amp;&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>largest</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LOBPCG method. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">LinearOperator</td><td>is a matrix or subclass of <code><a class="el" href="classcusp_1_1linear__operator.html" title="Abstract representation of a linear operator. ">linear_operator</a></code> </td></tr>
+    <tr><td class="paramname">Vector</td><td>vector </td></tr>
+    <tr><td class="paramname">Monitor</td><td>is a <code>monitor</code> </td></tr>
+    <tr><td class="paramname">Preconditioner</td><td>is a matrix or subclass of <code><a class="el" href="classcusp_1_1linear__operator.html" title="Abstract representation of a linear operator. ">linear_operator</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix of the linear system </td></tr>
+    <tr><td class="paramname">S</td><td>eigenvalues </td></tr>
+    <tr><td class="paramname">X</td><td>eigenvectors </td></tr>
+    <tr><td class="paramname">monitor</td><td>monitors iteration and determines stopping conditions </td></tr>
+    <tr><td class="paramname">M</td><td>preconditioner for A</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd>Computes the extreme eigenpairs of hermitian linear systems A x = s x with preconditioner <code>M</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>A</code> and <code>M</code> must be symmetric.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>lobpcg</code> to solve a 10x10 Poisson problem.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cusp/eigen/lobpcg.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, double, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// allocate storage and initialize eigenpairs</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;double&gt;</a> randx(A.num_rows);</div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;double, cusp::device_memory&gt;</a> X(randx);</div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;double, cusp::device_memory&gt;</a> S(1,0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// set stopping criteria:</span></div>
+<div class="line">    <span class="comment">//  iteration_limit    = 100</span></div>
+<div class="line">    <span class="comment">//  relative_tolerance = 1e-6</span></div>
+<div class="line">    <span class="comment">//  absolute_tolerance = 0</span></div>
+<div class="line">    <span class="comment">//  verbose            = true</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;double&gt;</a> monitor(X, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// set preconditioner (identity)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1identity__operator.html">cusp::identity_operator&lt;double, cusp::device_memory&gt;</a> M(A.num_rows, A.num_rows);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Compute the largest eigenpair of A</span></div>
+<div class="line">    <a class="code" href="group__eigensolvers.html#ga1fa0efeaca1603b27f6f0f7dbf3de725">cusp::eigen::lobpcg</a>(A, S, X, monitor, M, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->
