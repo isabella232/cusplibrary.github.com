@@ -214,7 +214,8 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
     <tr><td class="paramname">S</td><td>eigenvalues </td></tr>
     <tr><td class="paramname">X</td><td>eigenvectors </td></tr>
     <tr><td class="paramname">monitor</td><td>monitors iteration and determines stopping conditions </td></tr>
-    <tr><td class="paramname">M</td><td>preconditioner for A</td></tr>
+    <tr><td class="paramname">M</td><td>preconditioner for A </td></tr>
+    <tr><td class="paramname">largest</td><td>If true compute the eigenpair corresponding to the largest eigenvalue otherwise compute the smallest.</td></tr>
   </table>
   </dd>
 </dl>
@@ -251,6 +252,8 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line"></div>
 <div class="line">    <span class="comment">// Compute the largest eigenpair of A</span></div>
 <div class="line">    <a class="code" href="group__eigensolvers.html#ga1fa0efeaca1603b27f6f0f7dbf3de725">cusp::eigen::lobpcg</a>(A, S, X, monitor, M, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Largest eigenvalue : &quot;</span> &lt;&lt; S[0] &lt;&lt; std::endl;</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
