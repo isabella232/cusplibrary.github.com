@@ -2,6 +2,10 @@ var searchData=
 [
   ['random_5farray',['random_array',['../classcusp_1_1random__array.html#ad0086a18942fbac929ef23b1686d517b',1,'cusp::random_array']]],
   ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html#aa3fecfbb68599a3e5c41adbb7a77e3fc',1,'cusp::random_iterator::random_iterator(void)'],['../classcusp_1_1random__iterator.html#a2c6b983a38a864fdb17ba909a723b719',1,'cusp::random_iterator::random_iterator(const size_t seed)']]],
+  ['read_5fbinary_5ffile',['read_binary_file',['../group__io.html#gabe6864c90c35bfed63dd06d69b9095c8',1,'cusp::io']]],
+  ['read_5fbinary_5fstream',['read_binary_stream',['../group__io.html#ga66c13702a34c8b7dbdeb25abe76536a7',1,'cusp::io']]],
+  ['read_5fdimacs_5ffile',['read_dimacs_file',['../group__io.html#ga4e3c54911ef466d5377b27127658e3e7',1,'cusp::io']]],
+  ['read_5fdimacs_5fstream',['read_dimacs_stream',['../group__io.html#gac0ff8a34583a7ebe177a73c09272c4f0',1,'cusp::io']]],
   ['read_5fmatrix_5fmarket_5ffile',['read_matrix_market_file',['../group__io.html#gac219de1afb433d207ddd0c0ba83e5850',1,'cusp::io']]],
   ['read_5fmatrix_5fmarket_5fstream',['read_matrix_market_stream',['../group__io.html#ga183170009aac1c79c4d952889ee691aa',1,'cusp::io']]],
   ['relative_5ftolerance',['relative_tolerance',['../group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf',1,'cusp::monitor']]],
