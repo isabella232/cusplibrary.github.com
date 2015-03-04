@@ -131,81 +131,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> OffsetArray, <span class="keyword">typename</span> IndexArray&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">offsets_to_indices</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        <span class="keyword">const</span> OffsetArray&amp; offsets,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        IndexArray&amp; indices);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/* \endcond */</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> OffsetArray, <span class="keyword">typename</span> IndexArray&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">offsets_to_indices</a>(<span class="keyword">const</span> OffsetArray&amp; offsets,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        IndexArray&amp; indices);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> IndexArray, <span class="keyword">typename</span> OffsetArray&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">indices_to_offsets</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        <span class="keyword">const</span> IndexArray&amp; indices,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        OffsetArray&amp; offsets);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/* \endcond */</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexArray, <span class="keyword">typename</span> OffsetArray&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">indices_to_offsets</a>(<span class="keyword">const</span> IndexArray&amp; indices,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        OffsetArray&amp; offsets);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">extract_diagonal</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                      <span class="keyword">const</span> MatrixType&amp; A,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                      ArrayType&amp; output);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">/* \endcond */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">extract_diagonal</a>(<span class="keyword">const</span> MatrixType&amp; A, ArrayType&amp; output);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> ArrayType1, <span class="keyword">typename</span> ArrayType2&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">count_diagonals</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                       <span class="keyword">const</span> ArrayType1&amp; row_indices,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                       <span class="keyword">const</span> ArrayType2&amp; column_indices );</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">/* \endcond */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1, <span class="keyword">typename</span> ArrayType2&gt;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">count_diagonals</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                       <span class="keyword">const</span> ArrayType1&amp; row_indices,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                       <span class="keyword">const</span> ArrayType2&amp; column_indices);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">compute_max_entries_per_row</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                   <span class="keyword">const</span> ArrayType&amp; row_offsets);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/* \endcond */</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">compute_max_entries_per_row</a>(<span class="keyword">const</span> ArrayType&amp; row_offsets);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">/* \cond */</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">compute_optimal_entries_per_row</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                       <span class="keyword">const</span> ArrayType&amp; row_offsets,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                       <span class="keywordtype">float</span> relative_speed = 3.0f,</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                       <span class="keywordtype">size_t</span> breakeven_threshold = 4096);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">/* \endcond */</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">compute_optimal_entries_per_row</a>(<span class="keyword">const</span> ArrayType&amp; row_offsets,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                       <span class="keywordtype">float</span> relative_speed = 3.0f,</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                       <span class="keywordtype">size_t</span> breakeven_threshold = 4096);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/format_utils.inl&gt;</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;thrust/execution_policy.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>cusp</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> OffsetArray, <span class="keyword">typename</span> IndexArray&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">offsets_to_indices</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <span class="keyword">const</span> OffsetArray&amp; offsets,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        IndexArray&amp; indices);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> OffsetArray, <span class="keyword">typename</span> IndexArray&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">offsets_to_indices</a>(<span class="keyword">const</span> OffsetArray&amp; offsets,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        IndexArray&amp; indices);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> IndexArray, <span class="keyword">typename</span> OffsetArray&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">indices_to_offsets</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        <span class="keyword">const</span> IndexArray&amp; indices,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        OffsetArray&amp; offsets);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexArray, <span class="keyword">typename</span> OffsetArray&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">indices_to_offsets</a>(<span class="keyword">const</span> IndexArray&amp; indices,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        OffsetArray&amp; offsets);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">extract_diagonal</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                      <span class="keyword">const</span> MatrixType&amp; A,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                      ArrayType&amp; output);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">extract_diagonal</a>(<span class="keyword">const</span> MatrixType&amp; A, ArrayType&amp; output);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> ArrayType1, <span class="keyword">typename</span> ArrayType2&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">count_diagonals</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                       <span class="keyword">const</span> ArrayType1&amp; row_indices,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                       <span class="keyword">const</span> ArrayType2&amp; column_indices );</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1, <span class="keyword">typename</span> ArrayType2&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">count_diagonals</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                       <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                       <span class="keyword">const</span> ArrayType1&amp; row_indices,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                       <span class="keyword">const</span> ArrayType2&amp; column_indices);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">compute_max_entries_per_row</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                                   <span class="keyword">const</span> ArrayType&amp; row_offsets);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">compute_max_entries_per_row</a>(<span class="keyword">const</span> ArrayType&amp; row_offsets);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy, <span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">compute_optimal_entries_per_row</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                       <span class="keyword">const</span> ArrayType&amp; row_offsets,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                       <span class="keywordtype">float</span> relative_speed = 3.0f,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                       <span class="keywordtype">size_t</span> breakeven_threshold = 4096);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">compute_optimal_entries_per_row</a>(<span class="keyword">const</span> ArrayType&amp; row_offsets,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                                       <span class="keywordtype">float</span> relative_speed = 3.0f,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                       <span class="keywordtype">size_t</span> breakeven_threshold = 4096);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/format_utils.inl&gt;</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
 <div class="ttc" id="group__matrix__algorithms_html_gab896b38fa3a8382f789042e8c326fc10"><div class="ttname"><a href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">cusp::compute_optimal_entries_per_row</a></div><div class="ttdeci">size_t compute_optimal_entries_per_row(const ArrayType &amp;row_offsets, float relative_speed=3.0f, size_t breakeven_threshold=4096)</div><div class="ttdoc">Compute the optimal number of entries per row of HYB matrix. </div></div>
 <div class="ttc" id="group__matrix__algorithms_html_ga31d6135026a0becf65e55446b18b96dc"><div class="ttname"><a href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">cusp::offsets_to_indices</a></div><div class="ttdeci">void offsets_to_indices(const OffsetArray &amp;offsets, IndexArray &amp;indices)</div><div class="ttdoc">Expand CSR row offsets to COO row indices. </div></div>
 <div class="ttc" id="group__matrix__algorithms_html_ga84e80d469afffe98b1a22acfdcaa95ec"><div class="ttname"><a href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">cusp::count_diagonals</a></div><div class="ttdeci">size_t count_diagonals(const size_t num_rows, const size_t num_cols, const ArrayType1 &amp;row_indices, const ArrayType2 &amp;column_indices)</div><div class="ttdoc">Count the number of occupied diagonals in the input matrix. </div></div>

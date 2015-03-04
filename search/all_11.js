@@ -4,7 +4,7 @@ var searchData=
   ['random_5farray',['random_array',['../classcusp_1_1random__array.html#ad0086a18942fbac929ef23b1686d517b',1,'cusp::random_array']]],
   ['random_5farray',['random_array',['../classcusp_1_1random__array.html',1,'cusp']]],
   ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html',1,'cusp']]],
-  ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html#aa3fecfbb68599a3e5c41adbb7a77e3fc',1,'cusp::random_iterator::random_iterator(void)'],['../classcusp_1_1random__iterator.html#a2c6b983a38a864fdb17ba909a723b719',1,'cusp::random_iterator::random_iterator(const size_t seed)']]],
+  ['random_5fiterator',['random_iterator',['../classcusp_1_1random__iterator.html#a3f13e1b82ee520e418b3e45aeffd45f1',1,'cusp::random_iterator']]],
   ['random_5fiterator_2eh',['random_iterator.h',['../random__iterator_8h.html',1,'']]],
   ['read_5fbinary_5ffile',['read_binary_file',['../group__io.html#gabe6864c90c35bfed63dd06d69b9095c8',1,'cusp::io']]],
   ['read_5fbinary_5fstream',['read_binary_stream',['../group__io.html#ga66c13702a34c8b7dbdeb25abe76536a7',1,'cusp::io']]],

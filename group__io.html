@@ -386,7 +386,7 @@ template&lt;typename Matrix , typename Stream &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mtx</td><td>a matrix container (e.g. <code><a class="el" href="classcusp_1_1csr__matrix.html" title="Compressed sparse row (CSR) representation a sparse matrix. ">csr_matrix</a></code> or <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code>) </td></tr>
-    <tr><td class="paramname">intput</td><td>stream from which to read the binary contents</td></tr>
+    <tr><td class="paramname">input</td><td>stream from which to read the binary contents</td></tr>
   </table>
   </dd>
 </dl>
@@ -508,7 +508,7 @@ template&lt;typename Matrix , typename Stream &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mtx</td><td>a matrix container (e.g. <code><a class="el" href="classcusp_1_1csr__matrix.html" title="Compressed sparse row (CSR) representation a sparse matrix. ">csr_matrix</a></code> or <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code>) </td></tr>
-    <tr><td class="paramname">intput</td><td>stream from which to read the Dimacs contents</td></tr>
+    <tr><td class="paramname">input</td><td>stream from which to read the Dimacs contents</td></tr>
   </table>
   </dd>
 </dl>
@@ -631,7 +631,7 @@ template&lt;typename Matrix , typename Stream &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mtx</td><td>a matrix container (e.g. <code><a class="el" href="classcusp_1_1csr__matrix.html" title="Compressed sparse row (CSR) representation a sparse matrix. ">csr_matrix</a></code> or <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code>) </td></tr>
-    <tr><td class="paramname">intput</td><td>stream from which to read the MatrixMarket contents</td></tr>
+    <tr><td class="paramname">input</td><td>stream from which to read the MatrixMarket contents</td></tr>
   </table>
   </dd>
 </dl>
@@ -826,6 +826,7 @@ template&lt;typename Matrix &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mtx</td><td>a matrix container (e.g. <code><a class="el" href="classcusp_1_1csr__matrix.html" title="Compressed sparse row (CSR) representation a sparse matrix. ">csr_matrix</a></code> or <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code>) </td></tr>
+    <tr><td class="paramname">t</td><td>a tuple of indices specifying the source and sink vertices </td></tr>
     <tr><td class="paramname">filename</td><td>file name of the Dimacs file</td></tr>
   </table>
   </dd>
@@ -900,6 +901,7 @@ template&lt;typename Matrix , typename Stream &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mtx</td><td>a matrix container (e.g. <code><a class="el" href="classcusp_1_1csr__matrix.html" title="Compressed sparse row (CSR) representation a sparse matrix. ">csr_matrix</a></code> or <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code>) </td></tr>
+    <tr><td class="paramname">t</td><td>a tuple of indices specifying the source and sink vertices </td></tr>
     <tr><td class="paramname">output</td><td>stream to which the Dimacs contents will be written</td></tr>
   </table>
   </dd>

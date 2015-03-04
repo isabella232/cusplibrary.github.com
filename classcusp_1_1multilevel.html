@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt; Class Template Reference</title>
+<title>CUSP: cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -116,59 +116,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pub-attribs">Public Members</a> &#124;
 <a href="#pro-methods">Proteced Methods</a> &#124;
+<a href="#pro-attribs">Protected Members</a> &#124;
 <a href="classcusp_1_1multilevel-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__preconditioners.html">Preconditioners</a></div></div>  </div>
+<div class="title">cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__preconditioners.html">Preconditioners</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
-<div class="textblock"><h3>template&lt;typename MatrixType, typename SmootherType, typename SolverType&gt;<br/>
-class cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt;</h3>
+<div class="textblock"><h3>template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename FormatType = thrust::use_default, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default&gt;<br/>
+class cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt;</h3>
 
 <p><code>multilevel</code> : multilevel hierarchy</p>
 <p>TODO </p>
 
-<p>Definition at line <a class="el" href="multilevel_8h_source.html#l00045">45</a> of file <a class="el" href="multilevel_8h_source.html">multilevel.h</a>.</p>
+<p>Definition at line <a class="el" href="multilevel_8h_source.html#l00097">97</a> of file <a class="el" href="multilevel_8h_source.html">multilevel.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="multilevel_8h_source.html">multilevel.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt;:</div>
+Inheritance diagram for cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt;:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classcusp_1_1multilevel.png" usemap="#cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt;_map" alt=""/>
-  <map id="cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt;_map" name="cusp::multilevel&lt; MatrixType, SmootherType, SolverType &gt;_map">
-<area href="classcusp_1_1linear__operator.html" alt="cusp::linear_operator&lt;MatrixType::value_type, MatrixType::memory_space &gt;" shape="rect" coords="0,56,622,80"/>
+  <img src="classcusp_1_1multilevel.png" usemap="#cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt;_map" alt=""/>
+  <map id="cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt;_map" name="cusp::multilevel&lt; IndexType, ValueType, MemorySpace, FormatType, SmootherType, SolverType &gt;_map">
+<area href="classcusp_1_1linear__operator.html" alt="cusp::linear_operator&lt;ValueType, MemorySpace &gt;" shape="rect" coords="0,56,580,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:ad24d45a8b5987bc680976b5a41a30a22"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad24d45a8b5987bc680976b5a41a30a22"></a>
-template&lt;typename MatrixType2 , typename SmootherType2 , typename SolverType2 &gt; </td></tr>
-<tr class="memitem:ad24d45a8b5987bc680976b5a41a30a22"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>multilevel</b> (const <a class="el" href="classcusp_1_1multilevel.html">multilevel</a>&lt; MatrixType2, SmootherType2, SolverType2 &gt; &amp;M)</td></tr>
-<tr class="separator:ad24d45a8b5987bc680976b5a41a30a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa65866ad298957779a00d9a4f4b2a77d"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa65866ad298957779a00d9a4f4b2a77d"></a>
+<tr class="memitem:a4da267cf20a7e23b872428911c75406a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4da267cf20a7e23b872428911c75406a"></a>
+template&lt;typename MemorySpace2 , typename Format2 , typename SmootherType2 , typename SolverType2 &gt; </td></tr>
+<tr class="memitem:a4da267cf20a7e23b872428911c75406a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>multilevel</b> (const <a class="el" href="classcusp_1_1multilevel.html">multilevel</a>&lt; IndexType, ValueType, MemorySpace2, Format2, SmootherType2, SolverType2 &gt; &amp;M)</td></tr>
+<tr class="separator:a4da267cf20a7e23b872428911c75406a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5048da7d39711659001885153080eb75"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5048da7d39711659001885153080eb75"></a>
 template&lt;typename Array1 , typename Array2 &gt; </td></tr>
-<tr class="memitem:aa65866ad298957779a00d9a4f4b2a77d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const Array1 &amp;x, Array2 &amp;y)</td></tr>
-<tr class="separator:aa65866ad298957779a00d9a4f4b2a77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f1f065b5dee794bf3819340fba408b6"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9f1f065b5dee794bf3819340fba408b6"></a>
+<tr class="memitem:a5048da7d39711659001885153080eb75"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const Array1 &amp;x, Array2 &amp;y)</td></tr>
+<tr class="separator:a5048da7d39711659001885153080eb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71810b4ef8fe28fc99a4b73e7a9be6e"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa71810b4ef8fe28fc99a4b73e7a9be6e"></a>
 template&lt;typename Array1 , typename Array2 &gt; </td></tr>
-<tr class="memitem:a9f1f065b5dee794bf3819340fba408b6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>solve</b> (const Array1 &amp;b, Array2 &amp;x)</td></tr>
-<tr class="separator:a9f1f065b5dee794bf3819340fba408b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1538acb440eb3e0dafcb5dc4fb91e418"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1538acb440eb3e0dafcb5dc4fb91e418"></a>
+<tr class="memitem:aa71810b4ef8fe28fc99a4b73e7a9be6e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>solve</b> (const Array1 &amp;b, Array2 &amp;x)</td></tr>
+<tr class="separator:aa71810b4ef8fe28fc99a4b73e7a9be6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf715898a323b3aed3fa3e55a289df2"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6bf715898a323b3aed3fa3e55a289df2"></a>
 template&lt;typename Array1 , typename Array2 , typename Monitor &gt; </td></tr>
-<tr class="memitem:a1538acb440eb3e0dafcb5dc4fb91e418"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>solve</b> (const Array1 &amp;b, Array2 &amp;x, Monitor &amp;<a class="el" href="classcusp_1_1monitor.html">monitor</a>)</td></tr>
-<tr class="separator:a1538acb440eb3e0dafcb5dc4fb91e418"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25e0e36016aaa1e84d908570a48fb538"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25e0e36016aaa1e84d908570a48fb538"></a>
+<tr class="memitem:a6bf715898a323b3aed3fa3e55a289df2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>solve</b> (const Array1 &amp;b, Array2 &amp;x, Monitor &amp;<a class="el" href="classcusp_1_1monitor.html">monitor</a>)</td></tr>
+<tr class="separator:a6bf715898a323b3aed3fa3e55a289df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1759f29c77dfc2270fc6848249a80c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add1759f29c77dfc2270fc6848249a80c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (void)</td></tr>
-<tr class="separator:a25e0e36016aaa1e84d908570a48fb538"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884bfdc9988655d1217051f44e9d65f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a884bfdc9988655d1217051f44e9d65f8"></a>
+<tr class="separator:add1759f29c77dfc2270fc6848249a80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd2548c9e83a500db63ad3da21098b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fd2548c9e83a500db63ad3da21098b6"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>operator_complexity</b> (void)</td></tr>
-<tr class="separator:a884bfdc9988655d1217051f44e9d65f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d15adc5800bfc99d916181efe23de7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d15adc5800bfc99d916181efe23de7c"></a>
+<tr class="separator:a9fd2548c9e83a500db63ad3da21098b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4660cec9b1ed358e858a7f6211e981ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4660cec9b1ed358e858a7f6211e981ea"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>grid_complexity</b> (void)</td></tr>
-<tr class="separator:a5d15adc5800bfc99d916181efe23de7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classcusp_1_1linear__operator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcusp_1_1linear__operator')"><img src="closed.png" alt="-"/>&#160;Public Methods inherited from <a class="el" href="classcusp_1_1linear__operator.html">cusp::linear_operator&lt;MatrixType::value_type, MatrixType::memory_space &gt;</a></td></tr>
+<tr class="separator:a4660cec9b1ed358e858a7f6211e981ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcusp_1_1linear__operator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcusp_1_1linear__operator')"><img src="closed.png" alt="-"/>&#160;Public Methods inherited from <a class="el" href="classcusp_1_1linear__operator.html">cusp::linear_operator&lt;ValueType, MemorySpace &gt;</a></td></tr>
 <tr class="memitem:a5e13d00cee7be33daacfb3ebd9cce28e inherit pub_methods_classcusp_1_1linear__operator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e13d00cee7be33daacfb3ebd9cce28e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>linear_operator</b> (intnum_rows, intnum_cols)</td></tr>
 <tr class="separator:a5e13d00cee7be33daacfb3ebd9cce28e inherit pub_methods_classcusp_1_1linear__operator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,19 +179,49 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>grid_complexity</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:a1ee85a65bffd4b55ef20429b5ac2d86f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ee85a65bffd4b55ef20429b5ac2d86f"></a>
-SolverType&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b></td></tr>
-<tr class="separator:a1ee85a65bffd4b55ef20429b5ac2d86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2afb3c879e4ab65e212db7df80cf4dd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2afb3c879e4ab65e212db7df80cf4dd2"></a>
+<tr class="memitem:a70ee8ab9c65269ae2632d0cdc53b9a13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70ee8ab9c65269ae2632d0cdc53b9a13"></a>
+MatrixType *&#160;</td><td class="memItemRight" valign="bottom"><b>A_ptr</b></td></tr>
+<tr class="separator:a70ee8ab9c65269ae2632d0cdc53b9a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbeba525372c25675a9f8cfc2556cff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdbeba525372c25675a9f8cfc2556cff"></a>
+Solver&#160;</td><td class="memItemRight" valign="bottom"><b>solver</b></td></tr>
+<tr class="separator:abdbeba525372c25675a9f8cfc2556cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae890b288e2407a706022c8d3678f6fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae890b288e2407a706022c8d3678f6fd"></a>
 std::vector&lt; level &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>levels</b></td></tr>
-<tr class="separator:a2afb3c879e4ab65e212db7df80cf4dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aae890b288e2407a706022c8d3678f6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Proteced Methods</h2></td></tr>
-<tr class="memitem:ad261e7e159351b0f47bf042f07b49483"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad261e7e159351b0f47bf042f07b49483"></a>
+<tr class="memitem:a66cb3a34d7a630c5b230a5967277f4c0"><td class="memTemplParams" colspan="2"><a class="anchor" id="a66cb3a34d7a630c5b230a5967277f4c0"></a>
 template&lt;typename Array1 , typename Array2 &gt; </td></tr>
-<tr class="memitem:ad261e7e159351b0f47bf042f07b49483"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_solve</b> (const Array1 &amp;b, Array2 &amp;x, const size_t i)</td></tr>
-<tr class="separator:ad261e7e159351b0f47bf042f07b49483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66cb3a34d7a630c5b230a5967277f4c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>_solve</b> (const Array1 &amp;b, Array2 &amp;x, const size_t i)</td></tr>
+<tr class="separator:a66cb3a34d7a630c5b230a5967277f4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fe3f9ab019a241d78cf527586117ba"><td class="memTemplParams" colspan="2"><a class="anchor" id="a00fe3f9ab019a241d78cf527586117ba"></a>
+template&lt;typename MatrixType2 , typename Level &gt; </td></tr>
+<tr class="memitem:a00fe3f9ab019a241d78cf527586117ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setup_level</b> (const size_t lvl, const MatrixType2 &amp;A, const Level &amp;L)</td></tr>
+<tr class="separator:a00fe3f9ab019a241d78cf527586117ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5eaadca00f7a346a508b7ef249002f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5eaadca00f7a346a508b7ef249002f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_multilevel_matrix</b> (const MatrixType &amp;A)</td></tr>
+<tr class="separator:ae5eaadca00f7a346a508b7ef249002f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0817bff6da475e42f276908c1db1d020"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0817bff6da475e42f276908c1db1d020"></a>
+template&lt;typename MatrixType2 &gt; </td></tr>
+<tr class="memitem:a0817bff6da475e42f276908c1db1d020"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set_multilevel_matrix</b> (const MatrixType2 &amp;A)</td></tr>
+<tr class="separator:a0817bff6da475e42f276908c1db1d020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbf6252bb0204d1654e34b536fc1d4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bbf6252bb0204d1654e34b536fc1d4e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>copy_or_swap_matrix</b> (MatrixType &amp;dst, MatrixType &amp;src)</td></tr>
+<tr class="separator:a9bbf6252bb0204d1654e34b536fc1d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f12e0d996de314c8fb174c4bbdf21e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae2f12e0d996de314c8fb174c4bbdf21e"></a>
+template&lt;typename MatrixType2 &gt; </td></tr>
+<tr class="memitem:ae2f12e0d996de314c8fb174c4bbdf21e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>copy_or_swap_matrix</b> (MatrixType &amp;dst, MatrixType2 &amp;src)</td></tr>
+<tr class="separator:ae2f12e0d996de314c8fb174c4bbdf21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf0e638ab9406500957592d120815a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cf0e638ab9406500957592d120815a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_coarse_solver</b> (void)</td></tr>
+<tr class="separator:a2cf0e638ab9406500957592d120815a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Members</h2></td></tr>
+<tr class="memitem:a26ae89d2c93afb0a41e4c437a31e3f84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26ae89d2c93afb0a41e4c437a31e3f84"></a>
+MatrixType&#160;</td><td class="memItemRight" valign="bottom"><b>A</b></td></tr>
+<tr class="separator:a26ae89d2c93afb0a41e4c437a31e3f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

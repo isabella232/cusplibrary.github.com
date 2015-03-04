@@ -1,6 +1,7 @@
 var searchData=
 [
   ['array1d',['array1d',['../classcusp_1_1array1d.html',1,'cusp']]],
+  ['array1d_3c_20indextype_2c_20memoryspace_20_3e',['array1d&lt; IndexType, MemorySpace &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_3c_20real_2c_20cusp_3a_3ahost_5fmemory_20_3e',['array1d&lt; Real, cusp::host_memory &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_3c_20valuetype_2c_20memoryspace_20_3e',['array1d&lt; ValueType, MemorySpace &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_5fview',['array1d_view',['../classcusp_1_1array1d__view.html',1,'cusp']]],

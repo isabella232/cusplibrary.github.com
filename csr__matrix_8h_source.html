@@ -134,213 +134,215 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/format.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/matrix_base.h&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// forward definition</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix__view.html">   33</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1, <span class="keyword">typename</span> ArrayType2, <span class="keyword">typename</span> ArrayType3, <span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt; <span class="keyword">class </span><a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">class</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html">  104</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix</a> : <span class="keyword">public</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">typedef</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt; Parent;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;IndexType, MemorySpace&gt;</a> row_offsets_array_type;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;IndexType, MemorySpace&gt;</a> column_indices_array_type;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> values_array_type;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;IndexType, ValueType, MemorySpace&gt;</a> container;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;<span class="keyword">typename</span> row_offsets_array_type::view,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">typename</span> column_indices_array_type::view,</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keyword">typename</span> values_array_type::view,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            IndexType, ValueType, MemorySpace&gt; view;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;<span class="keyword">typename</span> row_offsets_array_type::const_view,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keyword">typename</span> column_indices_array_type::const_view,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keyword">typename</span> values_array_type::const_view,</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            IndexType, ValueType, MemorySpace&gt; const_view;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">struct </span>rebind</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;IndexType, ValueType, MemorySpace2&gt;</a> type;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    };</div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">  138</a></span>&#160;    row_offsets_array_type <a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">  142</a></span>&#160;    column_indices_array_type <a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/type_traits.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>cusp</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// forward definition</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix__view.html">   34</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1, <span class="keyword">typename</span> ArrayType2, <span class="keyword">typename</span> ArrayType3, <span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt; <span class="keyword">class </span><a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">class</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html">  105</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix</a> : <span class="keyword">public</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt; Parent;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;IndexType, MemorySpace&gt;</a> row_offsets_array_type;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;IndexType, MemorySpace&gt;</a> column_indices_array_type;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> values_array_type;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;IndexType, ValueType, MemorySpace&gt;</a> container;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;<span class="keyword">typename</span> row_offsets_array_type::view,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keyword">typename</span> column_indices_array_type::view,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keyword">typename</span> values_array_type::view,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            IndexType, ValueType, MemorySpace&gt; view;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;<span class="keyword">typename</span> row_offsets_array_type::const_view,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keyword">typename</span> column_indices_array_type::const_view,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keyword">typename</span> values_array_type::const_view,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            IndexType, ValueType, MemorySpace&gt; const_view;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt;::view coo_view_type;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt;::view const_coo_view_type;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">struct </span>rebind</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;IndexType, ValueType, MemorySpace2&gt;</a> type;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    };</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">  142</a></span>&#160;    row_offsets_array_type <a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">  146</a></span>&#160;    values_array_type <a class="code" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">values</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">  146</a></span>&#160;    column_indices_array_type <a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">  150</a></span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">csr_matrix</a>(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">  150</a></span>&#160;    values_array_type <a class="code" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">values</a>;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c">  158</a></span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c">csr_matrix</a>(<span class="keywordtype">size_t</span> num_rows, <span class="keywordtype">size_t</span> num_cols, <span class="keywordtype">size_t</span> num_entries)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        : Parent(num_rows, num_cols, num_entries),</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>(num_rows + 1),</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>(num_entries),</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">values</a>(num_entries) {}</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">csr_matrix</a>(<span class="keyword">const</span> MatrixType&amp; matrix);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1csr__matrix.html#ae186d2ea46715e20257eeda9c7b46781">resize</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_entries);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1csr__matrix.html#a2f3e696fd9c2495148b47ba988a5dd84">swap</a>(<a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix</a>&amp; matrix);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix</a>&amp; <a class="code" href="classcusp_1_1csr__matrix.html#ae6c65288c842201faea775153d8ccd9d">operator=</a>(<span class="keyword">const</span> MatrixType&amp; matrix);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}; <span class="comment">// class csr_matrix</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1,</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          <span class="keyword">typename</span> ArrayType2,</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;          <span class="keyword">typename</span> ArrayType3,</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;          <span class="keyword">typename</span> IndexType   = <span class="keyword">typename</span> ArrayType1::value_type,</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;          <span class="keyword">typename</span> ValueType   = <span class="keyword">typename</span> ArrayType3::value_type,</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;          <span class="keyword">typename</span> MemorySpace = <span class="keyword">typename</span> cusp::minimum_space&lt;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                    <span class="keyword">typename</span> ArrayType1::memory_space,</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                    <span class="keyword">typename</span> ArrayType2::memory_space,</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                    <span class="keyword">typename</span> ArrayType3::memory_space&gt;::type &gt;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keyword">class </span>csr_matrix_view : <span class="keyword">public</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">typedef</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt; Parent;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">typedef</span> ArrayType1 row_offsets_array_type;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keyword">typedef</span> ArrayType2 column_indices_array_type;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">typedef</span> ArrayType3 values_array_type;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">  154</a></span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">csr_matrix</a>(<span class="keywordtype">void</span>) {}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c">  162</a></span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c">csr_matrix</a>(<span class="keywordtype">size_t</span> num_rows, <span class="keywordtype">size_t</span> num_cols, <span class="keywordtype">size_t</span> num_entries)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        : Parent(num_rows, num_cols, num_entries),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>(num_rows + 1),</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>(num_entries),</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">values</a>(num_entries) {}</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">csr_matrix</a>(<span class="keyword">const</span> MatrixType&amp; matrix);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1csr__matrix.html#ae186d2ea46715e20257eeda9c7b46781">resize</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_entries);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1csr__matrix.html#a2f3e696fd9c2495148b47ba988a5dd84">swap</a>(<a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix</a>&amp; matrix);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix</a>&amp; <a class="code" href="classcusp_1_1csr__matrix.html#ae6c65288c842201faea775153d8ccd9d">operator=</a>(<span class="keyword">const</span> MatrixType&amp; matrix);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}; <span class="comment">// class csr_matrix</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1,</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;          <span class="keyword">typename</span> ArrayType2,</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;          <span class="keyword">typename</span> ArrayType3,</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;          <span class="keyword">typename</span> IndexType   = <span class="keyword">typename</span> ArrayType1::value_type,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;          <span class="keyword">typename</span> ValueType   = <span class="keyword">typename</span> ArrayType3::value_type,</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;          <span class="keyword">typename</span> MemorySpace = <span class="keyword">typename</span> cusp::minimum_space&lt;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                                    <span class="keyword">typename</span> ArrayType1::memory_space,</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                                    <span class="keyword">typename</span> ArrayType2::memory_space,</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                    <span class="keyword">typename</span> ArrayType3::memory_space&gt;::type &gt;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">class </span>csr_matrix_view : <span class="keyword">public</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;{</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">typedef</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::csr_format&gt; Parent;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;IndexType, ValueType, MemorySpace&gt;</a> container;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view&lt;ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace&gt;</a> view;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    row_offsets_array_type <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    column_indices_array_type <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    values_array_type <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        : Parent() {}</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows,</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols,</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_entries,</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                    ArrayType1 <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>,</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    ArrayType2 <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>,</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    ArrayType3 <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>)</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        : Parent(num_rows, num_cols, num_entries),</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;          row_offsets(row_offsets),</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;          column_indices(column_indices),</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          values(values) {}</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="comment">// construct from existing CSR matrix or view</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;&amp; matrix)</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        : Parent(matrix),</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="comment">// construct from existing CSR matrix or view</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keyword">const</span> csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;&amp; matrix)</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        : Parent(matrix),</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="comment">// construct from existing CSR matrix or view</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>&amp; matrix)</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        : Parent(matrix),</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="comment">// construct from existing CSR matrix or view</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>&amp; matrix)</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">typedef</span> ArrayType1 row_offsets_array_type;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">typedef</span> ArrayType2 column_indices_array_type;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">typedef</span> ArrayType3 values_array_type;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;IndexType, ValueType, MemorySpace&gt;</a> container;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view&lt;ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace&gt;</a> view;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    row_offsets_array_type <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    column_indices_array_type <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    values_array_type <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        : Parent() {}</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows,</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols,</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_entries,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                    ArrayType1 <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                    ArrayType2 <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    ArrayType3 <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        : Parent(num_rows, num_cols, num_entries),</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;          row_offsets(row_offsets),</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;          column_indices(column_indices),</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;          values(values) {}</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;&amp; matrix)</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        : Parent(matrix),</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keyword">const</span> csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;&amp; matrix)</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        : Parent(matrix),</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1csr__matrix__view.html#ace8dd29c285e5d76136ef400ba9f447e">resize</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_entries);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;};</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment">/* Convenience functions */</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1,</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;         <span class="keyword">typename</span> ArrayType2,</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;         <span class="keyword">typename</span> ArrayType3&gt;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3&gt;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;make_csr_matrix_view(<span class="keywordtype">size_t</span> num_rows,</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                     <span class="keywordtype">size_t</span> num_cols,</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                     <span class="keywordtype">size_t</span> num_entries,</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                     ArrayType1 row_offsets,</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                     ArrayType2 column_indices,</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                     ArrayType3 values)</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">return</span> csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3&gt;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;           (num_rows, num_cols, num_entries,</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            row_offsets, column_indices, values);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;}</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1,</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;         <span class="keyword">typename</span> ArrayType2,</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;         <span class="keyword">typename</span> ArrayType3,</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;         <span class="keyword">typename</span> IndexType,</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;         <span class="keyword">typename</span> ValueType,</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;         <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3,IndexType,ValueType,MemorySpace&gt;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;make_csr_matrix_view(<span class="keyword">const</span> csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3,IndexType,ValueType,MemorySpace&gt;&amp; m)</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;{</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">return</span> csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3,IndexType,ValueType,MemorySpace&gt;(m);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;}</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">class</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keyword">typename</span> csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;::view</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;make_csr_matrix_view(csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;&amp; m)</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;{</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> make_csr_matrix_view</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;           (m.num_rows, m.num_cols, m.num_entries,</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.row_offsets),</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.column_indices),</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.values));</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">class</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keyword">typename</span> csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;::const_view</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;make_csr_matrix_view(<span class="keyword">const</span> csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;&amp; m)</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;{</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordflow">return</span> make_csr_matrix_view</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;           (m.num_rows, m.num_cols, m.num_entries,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.row_offsets),</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.column_indices),</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.values));</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/csr_matrix.inl&gt;</span></div>
-<div class="ttc" id="classcusp_1_1csr__matrix__view_html_aca2270f1e9b76f21a613a0790d063ff2"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">cusp::csr_matrix_view::row_offsets</a></div><div class="ttdeci">row_offsets_array_type row_offsets</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00313">csr_matrix.h:313</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d</a></div><div class="ttdoc">The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00099">array1d.h:99</a></div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix_html_a64338731c9ed4d716fcd541c4eeaa4ef"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">cusp::csr_matrix::values</a></div><div class="ttdeci">values_array_type values</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00146">csr_matrix.h:146</a></div></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>&amp; matrix)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        : Parent(matrix),</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">csr_matrix_view</a>&amp; matrix)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        : Parent(matrix),</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">row_offsets</a>),</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">column_indices</a>),</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;          <a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>(matrix.<a class="code" href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">values</a>) {}</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1csr__matrix__view.html#ace8dd29c285e5d76136ef400ba9f447e">resize</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> num_rows, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_cols, <span class="keyword">const</span> <span class="keywordtype">size_t</span> num_entries);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;};</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">/* Convenience functions */</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1,</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;         <span class="keyword">typename</span> ArrayType2,</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;         <span class="keyword">typename</span> ArrayType3&gt;</div>
+<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="group__sparse__matrix__views.html#gaf06cd3bc057bf430eb67b9fc7a3bf695">  430</a></span>&#160;<a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3&gt;</a></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<a class="code" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">make_csr_matrix_view</a>(<span class="keywordtype">size_t</span> num_rows,</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                     <span class="keywordtype">size_t</span> num_cols,</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                     <span class="keywordtype">size_t</span> num_entries,</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                     ArrayType1 row_offsets,</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                     ArrayType2 column_indices,</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                     ArrayType3 values)</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;{</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3&gt;</a></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;           (num_rows, num_cols, num_entries,</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            row_offsets, column_indices, values);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;}</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ArrayType1,</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;         <span class="keyword">typename</span> ArrayType2,</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;         <span class="keyword">typename</span> ArrayType3,</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;         <span class="keyword">typename</span> IndexType,</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;         <span class="keyword">typename</span> ValueType,</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;         <span class="keyword">typename</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00465"></a><span class="lineno"><a class="line" href="group__sparse__matrix__views.html#ga46256e5e9812fb614541cc2c90296c27">  465</a></span>&#160;<a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3,IndexType,ValueType,MemorySpace&gt;</a></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<a class="code" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">make_csr_matrix_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3,IndexType,ValueType,MemorySpace&gt;</a>&amp; m)</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;{</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">csr_matrix_view&lt;ArrayType1,ArrayType2,ArrayType3,IndexType,ValueType,MemorySpace&gt;</a>(m);</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;}</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">class</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00484"></a><span class="lineno"><a class="line" href="group__sparse__matrix__views.html#gabda55ed2930267c4d39ca591c5cd66c3">  484</a></span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;::view</a></div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<a class="code" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">make_csr_matrix_view</a>(<a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;</a>&amp; m)</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;{</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">make_csr_matrix_view</a></div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;           (m.num_rows, m.num_cols, m.num_entries,</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>),</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>),</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.<a class="code" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">values</a>));</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;}</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">class</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00507"></a><span class="lineno"><a class="line" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">  507</a></span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;::const_view</a></div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<a class="code" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">make_csr_matrix_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1csr__matrix.html">csr_matrix&lt;IndexType,ValueType,MemorySpace&gt;</a>&amp; m)</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;{</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">make_csr_matrix_view</a></div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;           (m.num_rows, m.num_cols, m.num_entries,</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>),</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>),</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;            <a class="code" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">make_array1d_view</a>(m.<a class="code" href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">values</a>));</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;}</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/csr_matrix.inl&gt;</span></div>
+<div class="ttc" id="classcusp_1_1csr__matrix__view_html_aca2270f1e9b76f21a613a0790d063ff2"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#aca2270f1e9b76f21a613a0790d063ff2">cusp::csr_matrix_view::row_offsets</a></div><div class="ttdeci">row_offsets_array_type row_offsets</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00319">csr_matrix.h:319</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d&lt; IndexType, MemorySpace &gt;</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix_html_a64338731c9ed4d716fcd541c4eeaa4ef"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#a64338731c9ed4d716fcd541c4eeaa4ef">cusp::csr_matrix::values</a></div><div class="ttdeci">values_array_type values</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00150">csr_matrix.h:150</a></div></div>
 <div class="ttc" id="classcusp_1_1csr__matrix_html_a2f3e696fd9c2495148b47ba988a5dd84"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#a2f3e696fd9c2495148b47ba988a5dd84">cusp::csr_matrix::swap</a></div><div class="ttdeci">void swap(csr_matrix &amp;matrix)</div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix_html_a72820b70eebac25516658f5e13ba8036"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">cusp::csr_matrix::row_offsets</a></div><div class="ttdeci">row_offsets_array_type row_offsets</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00138">csr_matrix.h:138</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix_html_a72820b70eebac25516658f5e13ba8036"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">cusp::csr_matrix::row_offsets</a></div><div class="ttdeci">row_offsets_array_type row_offsets</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00142">csr_matrix.h:142</a></div></div>
 <div class="ttc" id="classcusp_1_1csr__matrix__view_html_ace8dd29c285e5d76136ef400ba9f447e"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#ace8dd29c285e5d76136ef400ba9f447e">cusp::csr_matrix_view::resize</a></div><div class="ttdeci">void resize(const size_t num_rows, const size_t num_cols, const size_t num_entries)</div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix__view_html_a0c1aead492f65382b4feade4deea91b6"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">cusp::csr_matrix_view::csr_matrix_view</a></div><div class="ttdeci">csr_matrix_view(void)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00326">csr_matrix.h:326</a></div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix__view_html"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a></div><div class="ttdoc">View of a csr_matrix. </div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00033">csr_matrix.h:33</a></div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix_html"><div class="ttname"><a href="classcusp_1_1csr__matrix.html">cusp::csr_matrix</a></div><div class="ttdoc">Compressed sparse row (CSR) representation a sparse matrix. </div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00104">csr_matrix.h:104</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix__view_html_a0c1aead492f65382b4feade4deea91b6"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#a0c1aead492f65382b4feade4deea91b6">cusp::csr_matrix_view::csr_matrix_view</a></div><div class="ttdeci">csr_matrix_view(void)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00334">csr_matrix.h:334</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix__view_html"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a></div><div class="ttdoc">View of a csr_matrix. </div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00034">csr_matrix.h:34</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix_html"><div class="ttname"><a href="classcusp_1_1csr__matrix.html">cusp::csr_matrix</a></div><div class="ttdoc">Compressed sparse row (CSR) representation a sparse matrix. </div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00105">csr_matrix.h:105</a></div></div>
 <div class="ttc" id="group__array__views_html_ga78ca0eb27a0b8190613393634bfbfa12"><div class="ttname"><a href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">cusp::make_array1d_view</a></div><div class="ttdeci">array1d_view&lt; Iterator &gt; make_array1d_view(Iterator first, Iterator last)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00693">array1d.h:693</a></div></div>
+<div class="ttc" id="group__sparse__matrix__views_html_gaa613b8a5c6fb69716c690d837fb8de10"><div class="ttname"><a href="group__sparse__matrix__views.html#gaa613b8a5c6fb69716c690d837fb8de10">cusp::make_csr_matrix_view</a></div><div class="ttdeci">csr_matrix&lt; IndexType, ValueType, MemorySpace &gt;::const_view make_csr_matrix_view(const csr_matrix&lt; IndexType, ValueType, MemorySpace &gt; &amp;m)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00507">csr_matrix.h:507</a></div></div>
 <div class="ttc" id="classcusp_1_1csr__matrix_html_ae186d2ea46715e20257eeda9c7b46781"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#ae186d2ea46715e20257eeda9c7b46781">cusp::csr_matrix::resize</a></div><div class="ttdeci">void resize(const size_t num_rows, const size_t num_cols, const size_t num_entries)</div></div>
 <div class="ttc" id="classcusp_1_1csr__matrix_html_ae6c65288c842201faea775153d8ccd9d"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#ae6c65288c842201faea775153d8ccd9d">cusp::csr_matrix::operator=</a></div><div class="ttdeci">csr_matrix &amp; operator=(const MatrixType &amp;matrix)</div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix_html_ad995d914bd09807ca1d1ff2af06a14c1"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">cusp::csr_matrix::csr_matrix</a></div><div class="ttdeci">csr_matrix(void)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00150">csr_matrix.h:150</a></div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix__view_html_a96530e0c5faf0eb0a4b323438fd3ee13"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">cusp::csr_matrix_view::values</a></div><div class="ttdeci">values_array_type values</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00321">csr_matrix.h:321</a></div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix__view_html_ae4838b3023197f8a8f19c669d8c95c65"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">cusp::csr_matrix_view::column_indices</a></div><div class="ttdeci">column_indices_array_type column_indices</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00317">csr_matrix.h:317</a></div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix_html_ac268260e3d8daf356a0bb81c9a81b21c"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c">cusp::csr_matrix::csr_matrix</a></div><div class="ttdeci">csr_matrix(size_t num_rows, size_t num_cols, size_t num_entries)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00158">csr_matrix.h:158</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix_html_ad995d914bd09807ca1d1ff2af06a14c1"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#ad995d914bd09807ca1d1ff2af06a14c1">cusp::csr_matrix::csr_matrix</a></div><div class="ttdeci">csr_matrix(void)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00154">csr_matrix.h:154</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix__view_html_a96530e0c5faf0eb0a4b323438fd3ee13"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#a96530e0c5faf0eb0a4b323438fd3ee13">cusp::csr_matrix_view::values</a></div><div class="ttdeci">values_array_type values</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00329">csr_matrix.h:329</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix__view_html_ae4838b3023197f8a8f19c669d8c95c65"><div class="ttname"><a href="classcusp_1_1csr__matrix__view.html#ae4838b3023197f8a8f19c669d8c95c65">cusp::csr_matrix_view::column_indices</a></div><div class="ttdeci">column_indices_array_type column_indices</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00324">csr_matrix.h:324</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix_html_ac268260e3d8daf356a0bb81c9a81b21c"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#ac268260e3d8daf356a0bb81c9a81b21c">cusp::csr_matrix::csr_matrix</a></div><div class="ttdeci">csr_matrix(size_t num_rows, size_t num_cols, size_t num_entries)</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00162">csr_matrix.h:162</a></div></div>
 <div class="ttc" id="array1d_8h_html"><div class="ttname"><a href="array1d_8h.html">array1d.h</a></div><div class="ttdoc">1D array of elements that may reside in &quot;host&quot; or &quot;device&quot; memory space </div></div>
-<div class="ttc" id="classcusp_1_1csr__matrix_html_aa28f949aae582f3d471646c5aa2bcb7e"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">cusp::csr_matrix::column_indices</a></div><div class="ttdeci">column_indices_array_type column_indices</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00142">csr_matrix.h:142</a></div></div>
+<div class="ttc" id="classcusp_1_1csr__matrix_html_aa28f949aae582f3d471646c5aa2bcb7e"><div class="ttname"><a href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">cusp::csr_matrix::column_indices</a></div><div class="ttdeci">column_indices_array_type column_indices</div><div class="ttdef"><b>Definition:</b> <a href="csr__matrix_8h_source.html#l00146">csr_matrix.h:146</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

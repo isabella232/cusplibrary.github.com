@@ -135,18 +135,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>eigen</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;cusp/eigen/lanczos_options.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>cusp</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix, <span class="keyword">typename</span> Array2d&gt;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> lanczos(<span class="keyword">const</span> Matrix&amp; A, Array2d&amp; H, <span class="keywordtype">size_t</span> k = 10);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <span class="comment">// end namespace eigen</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;cusp/eigen/detail/lanczos.inl&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>eigen</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">/* \cond */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix, <span class="keyword">typename</span> Array1d&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__eigensolvers.html#ga9398de95b6bc3dd6db43c03c37d0baac">lanczos</a>(<span class="keyword">const</span> Matrix&amp; A, Array1d&amp; eigVals);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix, <span class="keyword">typename</span> Array1d, <span class="keyword">typename</span> Array2d&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__eigensolvers.html#ga9398de95b6bc3dd6db43c03c37d0baac">lanczos</a>(<span class="keyword">const</span> Matrix&amp; A, Array1d&amp; eigVals, Array2d&amp; eigVecs);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/* \endcond */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          <span class="keyword">typename</span> Array1d1,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          <span class="keyword">typename</span> Array2d1,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          <span class="keyword">typename</span> Array1d2,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;          <span class="keyword">typename</span> Array2d2,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;          <span class="keyword">typename</span> LanczosOptions&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__eigensolvers.html#ga9398de95b6bc3dd6db43c03c37d0baac">lanczos</a>(<span class="keyword">const</span> Matrix&amp; A,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;             Array1d1&amp; eigVals,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;             Array2d1&amp; eigVecs,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;             LanczosOptions&amp; options);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// end namespace eigen</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#include &lt;cusp/eigen/detail/lanczos.inl&gt;</span></div>
+<div class="ttc" id="group__eigensolvers_html_ga9398de95b6bc3dd6db43c03c37d0baac"><div class="ttname"><a href="group__eigensolvers.html#ga9398de95b6bc3dd6db43c03c37d0baac">cusp::eigen::lanczos</a></div><div class="ttdeci">void lanczos(const Matrix &amp;A, Array1d1 &amp;eigVals, Array2d1 &amp;eigVecs, LanczosOptions &amp;options)</div><div class="ttdoc">Lanczos method. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

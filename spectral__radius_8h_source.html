@@ -145,22 +145,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">double</span> estimate_spectral_radius(<span class="keyword">const</span> Matrix&amp; A, <span class="keywordtype">size_t</span> k = 20);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">double</span> ritz_spectral_radius(<span class="keyword">const</span> Matrix&amp; A, <span class="keywordtype">size_t</span> k = 10);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">double</span> ritz_spectral_radius(<span class="keyword">const</span> Matrix&amp; A, <span class="keywordtype">size_t</span> k = 10, <span class="keywordtype">bool</span> symmetric=<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix&gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">double</span> ritz_spectral_radius_symmetric(<span class="keyword">const</span> Matrix&amp; A, <span class="keywordtype">size_t</span> k = 10);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">double</span> disks_spectral_radius(<span class="keyword">const</span> Matrix&amp; A);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType, <span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">double</span> disks_spectral_radius(<span class="keyword">const</span> <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;IndexType,ValueType,MemorySpace&gt;</a>&amp; A);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Matrix&gt;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">double</span> disks_spectral_radius(<span class="keyword">const</span> Matrix&amp; A);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;} <span class="comment">// end namespace eigen</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// end namespace cusp</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;} <span class="comment">// end namespace eigen</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &lt;cusp/eigen/detail/spectral_radius.inl&gt;</span></div>
-<div class="ttc" id="classcusp_1_1coo__matrix_html"><div class="ttname"><a href="classcusp_1_1coo__matrix.html">cusp::coo_matrix</a></div><div class="ttdoc">Coordinate (COO) representation a sparse matrix. </div><div class="ttdef"><b>Definition:</b> <a href="coo__matrix_8h_source.html#l00106">coo_matrix.h:106</a></div></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;cusp/eigen/detail/spectral_radius.inl&gt;</span></div>
 <div class="ttc" id="coo__matrix_8h_html"><div class="ttname"><a href="coo__matrix_8h.html">coo_matrix.h</a></div><div class="ttdoc">Coordinate matrix format. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

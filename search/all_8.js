@@ -1,7 +1,9 @@
 var searchData=
 [
   ['identity_5foperator',['identity_operator',['../classcusp_1_1identity__operator.html',1,'cusp']]],
+  ['identity_5foperator',['identity_operator',['../classcusp_1_1identity__operator.html#a758d5db93bff8ef0e8d417e0c88fcaf4',1,'cusp::identity_operator::identity_operator(void)'],['../classcusp_1_1identity__operator.html#aef86713e5098f6fca1542b996a37d55b',1,'cusp::identity_operator::identity_operator(IndexType num_rows, IndexType num_cols)']]],
   ['immediate_5frate',['immediate_rate',['../group__monitors.html#ga504a3fbddba1266ce93d5aec6f8f9395',1,'cusp::monitor']]],
+  ['indices',['indices',['../classcusp_1_1coo__matrix__view.html#a982ecb91c2a9495e6b0a0cc37e5d9eb0',1,'cusp::coo_matrix_view']]],
   ['indices_5fto_5foffsets',['indices_to_offsets',['../group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7',1,'cusp']]],
   ['invalid_5findex',['invalid_index',['../classcusp_1_1ell__matrix.html#a069ae1f6d1929685331ac42d6100d842',1,'cusp::ell_matrix::invalid_index()'],['../classcusp_1_1ell__matrix__view.html#a7d3961aa458d7f73dd625798e39bf181',1,'cusp::ell_matrix_view::invalid_index()']]],
   ['input_2foutput',['Input/Output',['../group__io.html',1,'']]],

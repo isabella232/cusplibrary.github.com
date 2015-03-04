@@ -142,43 +142,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace, <span class="keyword">typename</span> IndexType=<span class="keywordtype">int</span>&gt;</div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classcusp_1_1linear__operator.html">  111</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a> : <span class="keyword">public</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::unknown_format&gt;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::unknown_format&gt; Parent;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>()</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        : Parent() {}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>(IndexType num_rows, IndexType num_cols)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        : Parent(num_rows, num_cols) {}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>(IndexType num_rows, IndexType num_cols, IndexType num_entries)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        : Parent(num_rows, num_cols, num_entries) {}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}; <span class="comment">// linear_operator</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace, <span class="keyword">typename</span> IndexType=<span class="keywordtype">int</span>&gt;</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classcusp_1_1identity__operator.html">  165</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1identity__operator.html">identity_operator</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>&lt;ValueType,MemorySpace,IndexType&gt;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator&lt;ValueType,MemorySpace&gt;</a> Parent;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="classcusp_1_1identity__operator.html">identity_operator</a>()</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        : Parent() {}</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classcusp_1_1identity__operator.html">identity_operator</a>(IndexType num_rows, IndexType num_cols)</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        : Parent(num_rows, num_cols) {}</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType1,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;             <span class="keyword">typename</span> VectorType2&gt;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> VectorType1&amp; x, VectorType2&amp; y)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f">cusp::blas::copy</a>(x, y);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}; <span class="comment">// identity_operator</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="ttc" id="classcusp_1_1identity__operator_html"><div class="ttname"><a href="classcusp_1_1identity__operator.html">cusp::identity_operator</a></div><div class="ttdoc">Simple identity operator. </div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00165">linear_operator.h:165</a></div></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> cusp::detail::matrix_base&lt;IndexType,ValueType,MemorySpace,cusp::unknown_format&gt; Parent;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classcusp_1_1linear__operator.html#a2fadbdca511f6794376e67590aa9feb6">  121</a></span>&#160;    <a class="code" href="classcusp_1_1linear__operator.html#a2fadbdca511f6794376e67590aa9feb6">linear_operator</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        : Parent() {}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classcusp_1_1linear__operator.html#a5e13d00cee7be33daacfb3ebd9cce28e">  129</a></span>&#160;    <a class="code" href="classcusp_1_1linear__operator.html#a5e13d00cee7be33daacfb3ebd9cce28e">linear_operator</a>(IndexType num_rows, IndexType num_cols)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        : Parent(num_rows, num_cols) {}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classcusp_1_1linear__operator.html#a321622eb3e7b0c0c16cde34ad2f83f26">  139</a></span>&#160;    <a class="code" href="classcusp_1_1linear__operator.html#a321622eb3e7b0c0c16cde34ad2f83f26">linear_operator</a>(IndexType num_rows, IndexType num_cols, IndexType num_entries)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        : Parent(num_rows, num_cols, num_entries) {}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}; <span class="comment">// linear_operator</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType, <span class="keyword">typename</span> MemorySpace, <span class="keyword">typename</span> IndexType=<span class="keywordtype">int</span>&gt;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classcusp_1_1identity__operator.html">  183</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1identity__operator.html">identity_operator</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator</a>&lt;ValueType,MemorySpace,IndexType&gt;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1linear__operator.html">linear_operator&lt;ValueType,MemorySpace&gt;</a> Parent;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classcusp_1_1identity__operator.html#a758d5db93bff8ef0e8d417e0c88fcaf4">  193</a></span>&#160;    <a class="code" href="classcusp_1_1identity__operator.html#a758d5db93bff8ef0e8d417e0c88fcaf4">identity_operator</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        : Parent() {}</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classcusp_1_1identity__operator.html#aef86713e5098f6fca1542b996a37d55b">  201</a></span>&#160;    <a class="code" href="classcusp_1_1identity__operator.html#aef86713e5098f6fca1542b996a37d55b">identity_operator</a>(IndexType num_rows, IndexType num_cols)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        : Parent(num_rows, num_cols) {}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType1, <span class="keyword">typename</span> VectorType2&gt;</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="classcusp_1_1identity__operator.html#a77ce241c016d8f0ee017d04df5d3d673">  213</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1identity__operator.html#a77ce241c016d8f0ee017d04df5d3d673">operator()</a>(<span class="keyword">const</span> VectorType1&amp; x, VectorType2&amp; y)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <a class="code" href="group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f">cusp::blas::copy</a>(x, y);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}; <span class="comment">// identity_operator</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="ttc" id="classcusp_1_1identity__operator_html_aef86713e5098f6fca1542b996a37d55b"><div class="ttname"><a href="classcusp_1_1identity__operator.html#aef86713e5098f6fca1542b996a37d55b">cusp::identity_operator::identity_operator</a></div><div class="ttdeci">identity_operator(IndexType num_rows, IndexType num_cols)</div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00201">linear_operator.h:201</a></div></div>
+<div class="ttc" id="classcusp_1_1linear__operator_html_a2fadbdca511f6794376e67590aa9feb6"><div class="ttname"><a href="classcusp_1_1linear__operator.html#a2fadbdca511f6794376e67590aa9feb6">cusp::linear_operator::linear_operator</a></div><div class="ttdeci">linear_operator(void)</div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00121">linear_operator.h:121</a></div></div>
+<div class="ttc" id="classcusp_1_1linear__operator_html_a321622eb3e7b0c0c16cde34ad2f83f26"><div class="ttname"><a href="classcusp_1_1linear__operator.html#a321622eb3e7b0c0c16cde34ad2f83f26">cusp::linear_operator::linear_operator</a></div><div class="ttdeci">linear_operator(IndexType num_rows, IndexType num_cols, IndexType num_entries)</div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00139">linear_operator.h:139</a></div></div>
+<div class="ttc" id="classcusp_1_1identity__operator_html"><div class="ttname"><a href="classcusp_1_1identity__operator.html">cusp::identity_operator</a></div><div class="ttdoc">Simple identity operator. </div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00183">linear_operator.h:183</a></div></div>
+<div class="ttc" id="classcusp_1_1identity__operator_html_a77ce241c016d8f0ee017d04df5d3d673"><div class="ttname"><a href="classcusp_1_1identity__operator.html#a77ce241c016d8f0ee017d04df5d3d673">cusp::identity_operator::operator()</a></div><div class="ttdeci">void operator()(const VectorType1 &amp;x, VectorType2 &amp;y) const </div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00213">linear_operator.h:213</a></div></div>
+<div class="ttc" id="classcusp_1_1linear__operator_html_a5e13d00cee7be33daacfb3ebd9cce28e"><div class="ttname"><a href="classcusp_1_1linear__operator.html#a5e13d00cee7be33daacfb3ebd9cce28e">cusp::linear_operator::linear_operator</a></div><div class="ttdeci">linear_operator(IndexType num_rows, IndexType num_cols)</div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00129">linear_operator.h:129</a></div></div>
 <div class="ttc" id="classcusp_1_1linear__operator_html"><div class="ttname"><a href="classcusp_1_1linear__operator.html">cusp::linear_operator</a></div><div class="ttdoc">Abstract representation of a linear operator. </div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00111">linear_operator.h:111</a></div></div>
 <div class="ttc" id="group__matrix__algorithms_html_ga6af17222e6fc7946fb002741c223b04f"><div class="ttname"><a href="group__matrix__algorithms.html#ga6af17222e6fc7946fb002741c223b04f">cusp::copy</a></div><div class="ttdeci">void copy(const SourceType &amp;src, DestinationType &amp;dst)</div><div class="ttdoc">Copy one array or matrix to another. </div></div>
+<div class="ttc" id="classcusp_1_1identity__operator_html_a758d5db93bff8ef0e8d417e0c88fcaf4"><div class="ttname"><a href="classcusp_1_1identity__operator.html#a758d5db93bff8ef0e8d417e0c88fcaf4">cusp::identity_operator::identity_operator</a></div><div class="ttdeci">identity_operator(void)</div><div class="ttdef"><b>Definition:</b> <a href="linear__operator_8h_source.html#l00193">linear_operator.h:193</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

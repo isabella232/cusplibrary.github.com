@@ -115,6 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pub-attribs">Public Members</a> &#124;
+<a href="#pro-methods">Proteced Methods</a> &#124;
 <a href="classcusp_1_1coo__matrix__view-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cusp::coo_matrix_view&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__sparse__matrix__views.html">Sparse Matrix Views</a></div></div>  </div>
@@ -190,7 +191,7 @@ The matrix should not contain duplicate entries.</dd></dl>
 <div class="line"> }</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="cg_raw_8cu-example.html#_a1">cg_raw.cu</a>.</dd>
 </dl>
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00301">301</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00304">304</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -212,10 +213,16 @@ Public Methods</h2></td></tr>
 <tr class="separator:aa81be7339046476866b645a48492b95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e226ecf6082097209e46617f5d28c64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a2e226ecf6082097209e46617f5d28c64">coo_matrix_view</a> (const <a class="el" href="classcusp_1_1coo__matrix.html">coo_matrix</a>&lt; IndexType, ValueType, MemorySpace &gt; &amp;matrix)</td></tr>
 <tr class="separator:a2e226ecf6082097209e46617f5d28c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a189e088b533afa38a8dfc376a22b934e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a189e088b533afa38a8dfc376a22b934e">coo_matrix_view</a> (<a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a>&lt; IndexType, ValueType, MemorySpace, ArrayType1, ArrayType2, ArrayType3 &gt; &amp;matrix)</td></tr>
-<tr class="separator:a189e088b533afa38a8dfc376a22b934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ba9abef0dad025b2e6e2bf7fab9128a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a0ba9abef0dad025b2e6e2bf7fab9128a">coo_matrix_view</a> (const <a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a>&lt; IndexType, ValueType, MemorySpace, ArrayType1, ArrayType2, ArrayType3 &gt; &amp;matrix)</td></tr>
-<tr class="separator:a0ba9abef0dad025b2e6e2bf7fab9128a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb5f9bd9c4d2cc22c4fe3d8dbeb878e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a1bb5f9bd9c4d2cc22c4fe3d8dbeb878e">coo_matrix_view</a> (view &amp;matrix)</td></tr>
+<tr class="separator:a1bb5f9bd9c4d2cc22c4fe3d8dbeb878e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233c6927577fcf81dea6bff59648f6d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a233c6927577fcf81dea6bff59648f6d0">coo_matrix_view</a> (const view &amp;matrix)</td></tr>
+<tr class="separator:a233c6927577fcf81dea6bff59648f6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ea0b2b43a9529bc57952d3895d6979"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:a14ea0b2b43a9529bc57952d3895d6979"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a14ea0b2b43a9529bc57952d3895d6979">coo_matrix_view</a> (MatrixType &amp;matrix)</td></tr>
+<tr class="separator:a14ea0b2b43a9529bc57952d3895d6979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af003001f1ce4c6954b37afe654a1df90"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:af003001f1ce4c6954b37afe654a1df90"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#af003001f1ce4c6954b37afe654a1df90">coo_matrix_view</a> (const MatrixType &amp;matrix)</td></tr>
+<tr class="separator:af003001f1ce4c6954b37afe654a1df90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a64882092076ad55969cdd1feac4a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#ac3a64882092076ad55969cdd1feac4a4">resize</a> (const size_t num_rows, const size_t num_cols, const size_t num_entries)</td></tr>
 <tr class="separator:ac3a64882092076ad55969cdd1feac4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed6195cf64af2cc9a61431e9d8f7d02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a1ed6195cf64af2cc9a61431e9d8f7d02">sort_by_row</a> (void)</td></tr>
@@ -235,6 +242,24 @@ Public Members</h2></td></tr>
 <tr class="separator:ae81b639da005447415c9742d27a99fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad728d4c15da6151d18bd08f2b869f3ef"><td class="memItemLeft" align="right" valign="top">values_array_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#ad728d4c15da6151d18bd08f2b869f3ef">values</a></td></tr>
 <tr class="separator:ad728d4c15da6151d18bd08f2b869f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982ecb91c2a9495e6b0a0cc37e5d9eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt; IndexType, <br class="typebreak"/>
+MemorySpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a982ecb91c2a9495e6b0a0cc37e5d9eb0">indices</a></td></tr>
+<tr class="separator:a982ecb91c2a9495e6b0a0cc37e5d9eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Proteced Methods</h2></td></tr>
+<tr class="memitem:acad9cc46ffb6c5d7477541295d4cc394"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:acad9cc46ffb6c5d7477541295d4cc394"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#acad9cc46ffb6c5d7477541295d4cc394">construct_from</a> (MatrixType &amp;matrix, csr_format)</td></tr>
+<tr class="separator:acad9cc46ffb6c5d7477541295d4cc394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec79078f289cc970b9e76d3d8d68c68"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:a0ec79078f289cc970b9e76d3d8d68c68"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a0ec79078f289cc970b9e76d3d8d68c68">construct_from</a> (MatrixType &amp;matrix, dia_format)</td></tr>
+<tr class="separator:a0ec79078f289cc970b9e76d3d8d68c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf373dd02eb67c2e27b2f97d207551d3"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:aaf373dd02eb67c2e27b2f97d207551d3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#aaf373dd02eb67c2e27b2f97d207551d3">construct_from</a> (MatrixType &amp;matrix, ell_format)</td></tr>
+<tr class="separator:aaf373dd02eb67c2e27b2f97d207551d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070a8bce3ee643afd1f74b3ffe13f6e3"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:a070a8bce3ee643afd1f74b3ffe13f6e3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a070a8bce3ee643afd1f74b3ffe13f6e3">construct_from</a> (MatrixType &amp;matrix, hyb_format)</td></tr>
+<tr class="separator:a070a8bce3ee643afd1f74b3ffe13f6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a899f1d0ac15157de1bc94dc0044f7fe5"></a>
@@ -262,7 +287,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>Construct an empty <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code>. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00336">336</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00344">344</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +361,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00350">350</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00358">358</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +396,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00365">365</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00373">373</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -406,11 +431,11 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00375">375</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00383">383</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a189e088b533afa38a8dfc376a22b934e"></a>
+<a class="anchor" id="a1bb5f9bd9c4d2cc22c4fe3d8dbeb878e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -422,7 +447,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
         <tr>
           <td class="memname"><a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::<a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a>&lt; IndexType, ValueType, MemorySpace, ArrayType1, ArrayType2, ArrayType3 &gt; &amp;&#160;</td>
+          <td class="paramtype">view &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -441,11 +466,11 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00385">385</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00393">393</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0ba9abef0dad025b2e6e2bf7fab9128a"></a>
+<a class="anchor" id="a233c6927577fcf81dea6bff59648f6d0"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -457,7 +482,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
         <tr>
           <td class="memname"><a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::<a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a>&lt; IndexType, ValueType, MemorySpace, ArrayType1, ArrayType2, ArrayType3 &gt; &amp;&#160;</td>
+          <td class="paramtype">const view &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
           <td></td>
         </tr>
@@ -476,11 +501,245 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00395">395</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00403">403</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a14ea0b2b43a9529bc57952d3895d6979"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::<a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a> </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code> from a existing matrix in another format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>used to create view. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af003001f1ce4c6954b37afe654a1df90"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::<a class="el" href="classcusp_1_1coo__matrix__view.html">coo_matrix_view</a> </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code> from a existing const matrix in another format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>used to create view. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="acad9cc46ffb6c5d7477541295d4cc394"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::construct_from </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">csr_format&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Initialize <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code> from <code><a class="el" href="classcusp_1_1csr__matrix.html" title="Compressed sparse row (CSR) representation a sparse matrix. ">csr_matrix</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Another matrix in csr_format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ec79078f289cc970b9e76d3d8d68c68"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::construct_from </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dia_format&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code> from <code><a class="el" href="classcusp_1_1dia__matrix.html" title="Diagonal (DIA) representation a sparse matrix. ">dia_matrix</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Another matrix in dia_format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aaf373dd02eb67c2e27b2f97d207551d3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::construct_from </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ell_format&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code> from <code><a class="el" href="classcusp_1_1ell__matrix.html" title="Packed row (ELLPACK/ITPACK) representation of a sparse matrix. ">ell_matrix</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Another matrix in ell_format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a070a8bce3ee643afd1f74b3ffe13f6e3"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::construct_from </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">hyb_format&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code> from <code><a class="el" href="classcusp_1_1hyb__matrix.html" title="Hybrid (HYB) representation a sparse matrix. ">hyb_matrix</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Another matrix in hyb_format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="afc689d6c529772dbcc58188d06aba3fe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -616,7 +875,24 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>View of the column indices of the COO data structure. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00326">326</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00329">329</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a982ecb91c2a9495e6b0a0cc37e5d9eb0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt;IndexType,MemorySpace&gt; <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::indices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Storage for indices used to generate COO view. </p>
+
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00339">339</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +909,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>View of the row indices of the COO data structure. Also called the "row pointer" array. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00321">321</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00324">324</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -650,7 +926,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>View for the nonzero entries of the COO data structure. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00331">331</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00334">334</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
