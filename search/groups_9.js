@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utilities',['Utilities',['../group__utilities.html',1,'']]]
+  ['relaxation_20methods',['Relaxation Methods',['../group__relaxation.html',1,'']]]
 ];

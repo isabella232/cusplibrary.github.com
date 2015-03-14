@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['preconditioners',['Preconditioners',['../group__preconditioners.html',1,'']]]
+  ['krylov_20methods',['Krylov Methods',['../group__krylov__methods.html',1,'']]]
 ];

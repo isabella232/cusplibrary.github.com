@@ -9,6 +9,8 @@ var searchData=
   ['bicgstab_5fm',['bicgstab_m',['../group__krylov__methods.html#gae9649279f0fb30cbc6a48c9f912a5f87',1,'cusp::krylov']]],
   ['bicgstab_5fm_2eh',['bicgstab_m.h',['../bicgstab__m_8h.html',1,'']]],
   ['binary_2eh',['binary.h',['../binary_8h.html',1,'']]],
+  ['blas',['BLAS',['../group__blas.html',1,'']]],
+  ['blas_2eh',['blas.h',['../blas_8h.html',1,'']]],
   ['breadth_5ffirst_5fsearch',['breadth_first_search',['../group__graph__algorithms.html#ga09d21dddcbeec0cebd3d3dde9360ccd5',1,'cusp::graph']]],
   ['breadth_5ffirst_5fsearch_2eh',['breadth_first_search.h',['../breadth__first__search_8h.html',1,'']]],
   ['bridson_5fainv',['bridson_ainv',['../classcusp_1_1precond_1_1bridson__ainv.html#a349fcc4909449cb308c9896bdab61d47',1,'cusp::precond::bridson_ainv']]],

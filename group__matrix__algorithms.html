@@ -170,14 +170,22 @@ Functions</h2></td></tr>
 <tr class="memitem:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764">cusp::generalized_spmv</a> (const LinearOperator &amp;A, const Vector1 &amp;x, const Vector2 &amp;y, Vector3 &amp;z, BinaryFunction1 combine, BinaryFunction2 reduce)</td></tr>
 <tr class="memdesc:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements generalized matrix-vector multiplication.  <a href="#ga88ab6d9cbb477b68cf658cea5e27c764">More...</a><br/></td></tr>
 <tr class="separator:ga88ab6d9cbb477b68cf658cea5e27c764"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
-<tr class="memitem:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga78a7c4d4cd0826229cc36c0c8deb5d19">cusp::sort_by_row</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values)</td></tr>
-<tr class="memdesc:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row.  <a href="#ga78a7c4d4cd0826229cc36c0c8deb5d19">More...</a><br/></td></tr>
-<tr class="separator:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
-<tr class="memitem:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga8585c51c2c0b8e6a60f3bb63d9c601a4">cusp::sort_by_row_and_column</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values)</td></tr>
-<tr class="memdesc:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row and column.  <a href="#ga8585c51c2c0b8e6a60f3bb63d9c601a4">More...</a><br/></td></tr>
-<tr class="separator:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39b4bb1298ee7bc612c899540f994d01"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga39b4bb1298ee7bc612c899540f994d01"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga39b4bb1298ee7bc612c899540f994d01">cusp::counting_sort</a> (ArrayType &amp;keys, typename ArrayType::value_type min, typename ArrayType::value_type max)</td></tr>
+<tr class="memdesc:ga39b4bb1298ee7bc612c899540f994d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use counting sort to order an array.  <a href="#ga39b4bb1298ee7bc612c899540f994d01">More...</a><br/></td></tr>
+<tr class="separator:ga39b4bb1298ee7bc612c899540f994d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 &gt; </td></tr>
+<tr class="memitem:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gae1658db9c10c9b0f5286a69d5cd0c0e4">cusp::counting_sort_by_key</a> (ArrayType1 &amp;keys, ArrayType2 &amp;vals, typename ArrayType1::value_type min, typename ArrayType1::value_type max)</td></tr>
+<tr class="memdesc:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use counting sort to order an array and permute an array of values.  <a href="#gae1658db9c10c9b0f5286a69d5cd0c0e4">More...</a><br/></td></tr>
+<tr class="separator:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga940b06f0267189507404c69d756a6c46"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
+<tr class="memitem:ga940b06f0267189507404c69d756a6c46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga940b06f0267189507404c69d756a6c46">cusp::sort_by_row</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values, const int min_row=-1, const int max_row=-1)</td></tr>
+<tr class="memdesc:ga940b06f0267189507404c69d756a6c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row.  <a href="#ga940b06f0267189507404c69d756a6c46">More...</a><br/></td></tr>
+<tr class="separator:ga940b06f0267189507404c69d756a6c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga471753f45a360ee9da50aeb1fa627f22"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
+<tr class="memitem:ga471753f45a360ee9da50aeb1fa627f22"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga471753f45a360ee9da50aeb1fa627f22">cusp::sort_by_row_and_column</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values, const int min_row=-1, const int max_row=-1, const int min_col=-1, const int max_col=-1)</td></tr>
+<tr class="memdesc:ga471753f45a360ee9da50aeb1fa627f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row and column.  <a href="#ga471753f45a360ee9da50aeb1fa627f22">More...</a><br/></td></tr>
+<tr class="separator:ga471753f45a360ee9da50aeb1fa627f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadf8215f805071d510966a0181d7b4a8c"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 &gt; </td></tr>
 <tr class="memitem:gadf8215f805071d510966a0181d7b4a8c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gadf8215f805071d510966a0181d7b4a8c">cusp::transpose</a> (const MatrixType1 &amp;A, MatrixType2 &amp;At)</td></tr>
 <tr class="memdesc:gadf8215f805071d510966a0181d7b4a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose a matrix.  <a href="#gadf8215f805071d510966a0181d7b4a8c">More...</a><br/></td></tr>
@@ -491,7 +499,7 @@ DestinationType will be resized as necessary</dd></dl>
 <div class="line">}</div>
 </div><!-- fragment --></dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><code>convert</code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="array1d_8cu-example.html#a2">array1d.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="array1d_8cu-example.html#a3">array1d.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -552,6 +560,184 @@ template&lt;typename ArrayType1 , typename ArrayType2 &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of occupied diagonals </dd></dl>
 
+</div>
+</div>
+<a class="anchor" id="ga39b4bb1298ee7bc612c899540f994d01"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::counting_sort </td>
+          <td>(</td>
+          <td class="paramtype">ArrayType &amp;&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename ArrayType::value_type&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename ArrayType::value_type&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use counting sort to order an array. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ArrayType</td><td>Type of input array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>input of keys to sort </td></tr>
+    <tr><td class="paramname">min</td><td>minimum key in input array </td></tr>
+    <tr><td class="paramname">max</td><td>maximum key in input array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>counting_sort</code>.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sort_8h.html">cusp/sort.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;thrust/transform.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>mod</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> operator()(<span class="keywordtype">int</span> i)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// transform i to range [0,5)</span></div>
+<div class="line">        <span class="keywordflow">return</span> (i &gt;= 0 ? i : -i) % 5;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create random array with 10 elements</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;int&gt;</a> rand(10);</div>
+<div class="line">    <span class="comment">// initialize v to random array</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> v(rand);</div>
+<div class="line">    <span class="comment">// transform entries to interval [0,5)</span></div>
+<div class="line">    thrust::transform(v.begin(), v.end(), v.begin(), mod());</div>
+<div class="line">    <span class="comment">// print array</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v);</div>
+<div class="line">    <span class="comment">// sort</span></div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga39b4bb1298ee7bc612c899540f994d01">cusp::counting_sort</a>(v, 0, 5);</div>
+<div class="line">    <span class="comment">// print the sorted array</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gae1658db9c10c9b0f5286a69d5cd0c0e4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArrayType1 , typename ArrayType2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::counting_sort_by_key </td>
+          <td>(</td>
+          <td class="paramtype">ArrayType1 &amp;&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArrayType2 &amp;&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename ArrayType1::value_type&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename ArrayType1::value_type&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use counting sort to order an array and permute an array of values. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ArrayType1</td><td>Type of keys array </td></tr>
+    <tr><td class="paramname">ArrayType2</td><td>Type of values array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>input array of keys to sort </td></tr>
+    <tr><td class="paramname">vals</td><td>input array of values to permute </td></tr>
+    <tr><td class="paramname">min</td><td>minimum key in keys array </td></tr>
+    <tr><td class="paramname">max</td><td>maximum key in keys array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>counting_sort_by_key</code>.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sort_8h.html">cusp/sort.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;thrust/transform.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>mod</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> operator()(<span class="keywordtype">int</span> i)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// transform i to range [0,5)</span></div>
+<div class="line">        <span class="keywordflow">return</span> (i &gt;= 0 ? i : -i) % 5;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create random array with 10 elements</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;int&gt;</a> rand1(10,0);</div>
+<div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;int&gt;</a> rand2(10,3);</div>
+<div class="line">    <span class="comment">// initialize v to random array</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> v1(rand1);</div>
+<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> v2(rand2);</div>
+<div class="line">    <span class="comment">// transform entries to interval [0,5)</span></div>
+<div class="line">    thrust::transform(v1.begin(), v1.end(), v1.begin(), mod());</div>
+<div class="line">    <span class="comment">// print array</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v1);</div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v2);</div>
+<div class="line">    <span class="comment">// sort</span></div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#gae1658db9c10c9b0f5286a69d5cd0c0e4">cusp::counting_sort_by_key</a>(v1, v2, 0, 5);</div>
+<div class="line">    <span class="comment">// print the sorted array</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v1);</div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v2);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga8e4aa1d71fddbc22ec0d8791a4de83da"></a>
@@ -1081,7 +1267,7 @@ template&lt;typename OffsetArray , typename IndexArray &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga78a7c4d4cd0826229cc36c0c8deb5d19"></a>
+<a class="anchor" id="ga940b06f0267189507404c69d756a6c46"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1103,7 +1289,19 @@ template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt;
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ArrayType3 &amp;&#160;</td>
-          <td class="paramname"><em>values</em>&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>min_row</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>max_row</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1149,14 +1347,17 @@ template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt;
 <div class="line">    A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[5] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[5] = 2; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[5] = 60;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// sort A by row</span></div>
-<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga78a7c4d4cd0826229cc36c0c8deb5d19">cusp::sort_by_row</a>(A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>);</div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga940b06f0267189507404c69d756a6c46">cusp::sort_by_row</a>(A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print the sorted matrix</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga8585c51c2c0b8e6a60f3bb63d9c601a4"></a>
+<a class="anchor" id="ga471753f45a360ee9da50aeb1fa627f22"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -1178,7 +1379,31 @@ template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt;
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">ArrayType3 &amp;&#160;</td>
-          <td class="paramname"><em>values</em>&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>min_row</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>max_row</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>min_col</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>max_col</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1224,7 +1449,10 @@ template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt;
 <div class="line">    A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[5] = 0; A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[5] = 1; A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[5] = 60;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// sort A by row</span></div>
-<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga8585c51c2c0b8e6a60f3bb63d9c601a4">cusp::sort_by_row_and_column</a>(A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>);</div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga471753f45a360ee9da50aeb1fa627f22">cusp::sort_by_row_and_column</a>(A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>, A.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// print the sorted matrix</span></div>
+<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

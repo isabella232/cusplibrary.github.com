@@ -121,14 +121,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
-<tr class="memitem:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga78a7c4d4cd0826229cc36c0c8deb5d19">cusp::sort_by_row</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values)</td></tr>
-<tr class="memdesc:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row.  <a href="group__matrix__algorithms.html#ga78a7c4d4cd0826229cc36c0c8deb5d19">More...</a><br/></td></tr>
-<tr class="separator:ga78a7c4d4cd0826229cc36c0c8deb5d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
-<tr class="memitem:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga8585c51c2c0b8e6a60f3bb63d9c601a4">cusp::sort_by_row_and_column</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values)</td></tr>
-<tr class="memdesc:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row and column.  <a href="group__matrix__algorithms.html#ga8585c51c2c0b8e6a60f3bb63d9c601a4">More...</a><br/></td></tr>
-<tr class="separator:ga8585c51c2c0b8e6a60f3bb63d9c601a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39b4bb1298ee7bc612c899540f994d01"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga39b4bb1298ee7bc612c899540f994d01"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga39b4bb1298ee7bc612c899540f994d01">cusp::counting_sort</a> (ArrayType &amp;keys, typename ArrayType::value_type min, typename ArrayType::value_type max)</td></tr>
+<tr class="memdesc:ga39b4bb1298ee7bc612c899540f994d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use counting sort to order an array.  <a href="group__matrix__algorithms.html#ga39b4bb1298ee7bc612c899540f994d01">More...</a><br/></td></tr>
+<tr class="separator:ga39b4bb1298ee7bc612c899540f994d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 &gt; </td></tr>
+<tr class="memitem:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#gae1658db9c10c9b0f5286a69d5cd0c0e4">cusp::counting_sort_by_key</a> (ArrayType1 &amp;keys, ArrayType2 &amp;vals, typename ArrayType1::value_type min, typename ArrayType1::value_type max)</td></tr>
+<tr class="memdesc:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use counting sort to order an array and permute an array of values.  <a href="group__matrix__algorithms.html#gae1658db9c10c9b0f5286a69d5cd0c0e4">More...</a><br/></td></tr>
+<tr class="separator:gae1658db9c10c9b0f5286a69d5cd0c0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga940b06f0267189507404c69d756a6c46"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
+<tr class="memitem:ga940b06f0267189507404c69d756a6c46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga940b06f0267189507404c69d756a6c46">cusp::sort_by_row</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values, const int min_row=-1, const int max_row=-1)</td></tr>
+<tr class="memdesc:ga940b06f0267189507404c69d756a6c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row.  <a href="group__matrix__algorithms.html#ga940b06f0267189507404c69d756a6c46">More...</a><br/></td></tr>
+<tr class="separator:ga940b06f0267189507404c69d756a6c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga471753f45a360ee9da50aeb1fa627f22"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ArrayType3 &gt; </td></tr>
+<tr class="memitem:ga471753f45a360ee9da50aeb1fa627f22"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__matrix__algorithms.html#ga471753f45a360ee9da50aeb1fa627f22">cusp::sort_by_row_and_column</a> (ArrayType1 &amp;row_indices, ArrayType2 &amp;column_indices, ArrayType3 &amp;values, const int min_row=-1, const int max_row=-1, const int min_col=-1, const int max_col=-1)</td></tr>
+<tr class="memdesc:ga471753f45a360ee9da50aeb1fa627f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort matrix indices by row and column.  <a href="group__matrix__algorithms.html#ga471753f45a360ee9da50aeb1fa627f22">More...</a><br/></td></tr>
+<tr class="separator:ga471753f45a360ee9da50aeb1fa627f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specialized sorting routines. </p>

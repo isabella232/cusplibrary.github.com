@@ -136,7 +136,7 @@ class cusp::relaxation::gauss_seidel&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &lt;cusp/blas/blas.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="blas_8h.html">cusp/blas/blas.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
 <div class="line"></div>
@@ -161,7 +161,7 @@ class cusp::relaxation::gauss_seidel&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Compute initial residual</span></div>
 <div class="line">   <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
-<div class="line">   cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">   <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Construct monitor with stopping criteria of 100 iterations or 1e-4 residual error</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-4, 0, <span class="keyword">true</span>);</div>
@@ -171,13 +171,13 @@ class cusp::relaxation::gauss_seidel&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line">   {</div>
 <div class="line">       M(A, b, x);</div>
 <div class="line">       <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
-<div class="line">       cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">       <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
 <div class="line">       ++monitor;</div>
 <div class="line">   }</div>
 <div class="line"> }</div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Definition at line <a class="el" href="gauss__seidel_8h_source.html#l00115">115</a> of file <a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>.</p>
+<p>Definition at line <a class="el" href="gauss__seidel_8h_source.html#l00104">104</a> of file <a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -194,9 +194,9 @@ Inheritance diagram for cusp::relaxation::gauss_seidel&lt; ValueType, MemorySpac
 Public Methods</h2></td></tr>
 <tr class="memitem:a9db23e1480f64859d4fbb11b43db0fd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1gauss__seidel.html#a9db23e1480f64859d4fbb11b43db0fd0">gauss_seidel</a> (void)</td></tr>
 <tr class="separator:a9db23e1480f64859d4fbb11b43db0fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac52b6b465e4a7c2b500cc01994726d10"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
-<tr class="memitem:ac52b6b465e4a7c2b500cc01994726d10"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1gauss__seidel.html#ac52b6b465e4a7c2b500cc01994726d10">gauss_seidel</a> (const MatrixType &amp;A, sweep default_direction=SYMMETRIC)</td></tr>
-<tr class="separator:ac52b6b465e4a7c2b500cc01994726d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac209317083f6f9585438db15be11c9"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:a9ac209317083f6f9585438db15be11c9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1gauss__seidel.html#a9ac209317083f6f9585438db15be11c9">gauss_seidel</a> (const MatrixType &amp;A, sweep default_direction=SYMMETRIC, typename thrust::detail::enable_if_convertible&lt; typename MatrixType::format, cusp::csr_format &gt;::type *=0)</td></tr>
+<tr class="separator:a9ac209317083f6f9585438db15be11c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d13af761b064e79d1a73712f21c40ca"><td class="memTemplParams" colspan="2">template&lt;typename MemorySpace2 &gt; </td></tr>
 <tr class="memitem:a5d13af761b064e79d1a73712f21c40ca"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1gauss__seidel.html#a5d13af761b064e79d1a73712f21c40ca">gauss_seidel</a> (const <a class="el" href="classcusp_1_1relaxation_1_1gauss__seidel.html">gauss_seidel</a>&lt; ValueType, MemorySpace2 &gt; &amp;A)</td></tr>
 <tr class="separator:a5d13af761b064e79d1a73712f21c40ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,11 +240,11 @@ template&lt;typename ValueType, typename MemorySpace&gt; </div>
 </div><div class="memdoc">
 <p>This constructor creates an empty <code><a class="el" href="classcusp_1_1relaxation_1_1gauss__seidel.html" title="Represents a Gauss-Seidel relaxation scheme. ">gauss_seidel</a></code> smoother. </p>
 
-<p>Definition at line <a class="el" href="gauss__seidel_8h_source.html#l00128">128</a> of file <a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>.</p>
+<p>Definition at line <a class="el" href="gauss__seidel_8h_source.html#l00117">117</a> of file <a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac52b6b465e4a7c2b500cc01994726d10"></a>
+<a class="anchor" id="a9ac209317083f6f9585438db15be11c9"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -262,7 +262,13 @@ template&lt;typename MatrixType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">sweep&#160;</td>
-          <td class="paramname"><em>default_direction</em> = <code>SYMMETRIC</code>&#160;</td>
+          <td class="paramname"><em>default_direction</em> = <code>SYMMETRIC</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename thrust::detail::enable_if_convertible&lt; typename MatrixType::format, cusp::csr_format &gt;::type *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -327,7 +333,7 @@ template&lt;typename MemorySpace2 &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="gauss__seidel_8h_source.html#l00150">150</a> of file <a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>.</p>
+<p>Definition at line <a class="el" href="gauss__seidel_8h_source.html#l00140">140</a> of file <a class="el" href="gauss__seidel_8h_source.html">gauss_seidel.h</a>.</p>
 
 </div>
 </div>

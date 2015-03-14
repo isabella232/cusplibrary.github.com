@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['krylov_20methods',['Krylov Methods',['../group__krylov__methods.html',1,'']]]
+  ['graph_20algorithms',['Graph Algorithms',['../group__graph__algorithms.html',1,'']]]
 ];

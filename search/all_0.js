@@ -16,13 +16,16 @@ var searchData=
   ['array1d_5fview_3c_20cusp_3a_3arandom_5fiterator_3c_20valuetype_20_3e_3a_3aiterator_20_3e',['array1d_view&lt; cusp::random_iterator&lt; ValueType &gt;::iterator &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
   ['array1d_5fview_3c_20thrust_3a_3aconstant_5fiterator_3c_20valuetype_20_3e_20_3e',['array1d_view&lt; thrust::constant_iterator&lt; ValueType &gt; &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
   ['array1d_5fview_3c_20thrust_3a_3acounting_5fiterator_3c_20valuetype_20_3e_20_3e',['array1d_view&lt; thrust::counting_iterator&lt; ValueType &gt; &gt;',['../classcusp_1_1array1d__view.html',1,'cusp']]],
-  ['array2d',['array2d',['../classcusp_1_1array2d.html#ae61e46e19061991e2a85c077dae9ba70',1,'cusp::array2d::array2d(void)'],['../classcusp_1_1array2d.html#af4b854c95a2d2de83f3eafc89b062210',1,'cusp::array2d::array2d(size_t num_rows, size_t num_cols)'],['../classcusp_1_1array2d.html#aab9dddf3a10ca26159d5587b946ffb51',1,'cusp::array2d::array2d(size_t num_rows, size_t num_cols, const ValueType &amp;value)'],['../classcusp_1_1array2d.html#a6b662b5b6e185da74b8585b8c918de4f',1,'cusp::array2d::array2d(const size_t num_rows, const size_t num_cols, const ValueType &amp;value, const size_t pitch)'],['../classcusp_1_1array2d.html#a9ba82fad6afb915a47c44c8899fd660c',1,'cusp::array2d::array2d(const MatrixType &amp;matrix)']]],
   ['array2d',['array2d',['../classcusp_1_1array2d.html',1,'cusp']]],
+  ['array2d',['array2d',['../classcusp_1_1array2d.html#ae61e46e19061991e2a85c077dae9ba70',1,'cusp::array2d::array2d(void)'],['../classcusp_1_1array2d.html#af4b854c95a2d2de83f3eafc89b062210',1,'cusp::array2d::array2d(size_t num_rows, size_t num_cols)'],['../classcusp_1_1array2d.html#aab9dddf3a10ca26159d5587b946ffb51',1,'cusp::array2d::array2d(size_t num_rows, size_t num_cols, const ValueType &amp;value)'],['../classcusp_1_1array2d.html#a6b662b5b6e185da74b8585b8c918de4f',1,'cusp::array2d::array2d(const size_t num_rows, const size_t num_cols, const ValueType &amp;value, const size_t pitch)'],['../classcusp_1_1array2d.html#a9ba82fad6afb915a47c44c8899fd660c',1,'cusp::array2d::array2d(const MatrixType &amp;matrix)']]],
   ['array2d_2eh',['array2d.h',['../array2d_8h.html',1,'']]],
   ['array2d_5fview',['array2d_view',['../classcusp_1_1array2d__view.html#a6558d807866b867cfc154d6e34e3ebf6',1,'cusp::array2d_view::array2d_view(void)'],['../classcusp_1_1array2d__view.html#a931376a30abe4a80afb3726b9ecdcf7a',1,'cusp::array2d_view::array2d_view(const array2d_view &amp;a)'],['../classcusp_1_1array2d__view.html#ac1a5b7f4fbdef5abb5c8a8e539a59608',1,'cusp::array2d_view::array2d_view(array2d&lt; typename Parent::value_type, typename Parent::memory_space, orientation &gt; &amp;a)'],['../classcusp_1_1array2d__view.html#a49f1d95d3e115645630eda1692b23f05',1,'cusp::array2d_view::array2d_view(size_t num_rows, size_t num_cols, size_t pitch, const Array2 &amp;values)']]],
   ['array2d_5fview',['array2d_view',['../classcusp_1_1array2d__view.html',1,'cusp']]],
   ['array_20containers',['Array Containers',['../group__array__containers.html',1,'']]],
   ['array_20views',['Array Views',['../group__array__views.html',1,'']]],
   ['arrays',['Arrays',['../group__arrays.html',1,'']]],
-  ['average_5frate',['average_rate',['../group__monitors.html#gae6c5cfcdad375e49e43dfc88156c6896',1,'cusp::monitor']]]
+  ['average_5frate',['average_rate',['../group__monitors.html#gae6c5cfcdad375e49e43dfc88156c6896',1,'cusp::monitor']]],
+  ['axpby',['axpby',['../group__blas.html#gac9ff94ad4317968a65775bc2911c456c',1,'cusp::blas']]],
+  ['axpbypcz',['axpbypcz',['../group__blas.html#ga047e4a02024cdffcaa4268324072a220',1,'cusp::blas']]],
+  ['axpy',['axpy',['../group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175',1,'cusp::blas']]]
 ];

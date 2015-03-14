@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['matrix_20gallery',['Matrix Gallery',['../group__gallery.html',1,'']]],
-  ['matrix_20algorithms',['Matrix Algorithms',['../group__matrix__algorithms.html',1,'']]],
-  ['monitors',['Monitors',['../group__monitors.html',1,'']]]
+  ['input_2foutput',['Input/Output',['../group__io.html',1,'']]],
+  ['iterative_20solvers',['Iterative Solvers',['../group__iterative__solvers.html',1,'']]],
+  ['iterators',['Iterators',['../group__iterators.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eigensolvers',['EigenSolvers',['../group__eigensolvers.html',1,'']]]
+  ['blas',['BLAS',['../group__blas.html',1,'']]]
 ];

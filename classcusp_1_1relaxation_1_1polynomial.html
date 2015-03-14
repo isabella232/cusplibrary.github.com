@@ -136,7 +136,7 @@ class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="preprocessor">#include &lt;cusp/blas/blas.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="blas_8h.html">cusp/blas/blas.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="linear__operator_8h.html">cusp/linear_operator.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
 <div class="line"></div>
@@ -166,7 +166,7 @@ class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Compute initial residual</span></div>
 <div class="line">   <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
-<div class="line">   cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">   <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Construct monitor with stopping criteria of 100 iterations or 1e-4 residual error</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-4, 0, <span class="keyword">true</span>);</div>
@@ -176,13 +176,13 @@ class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line">   {</div>
 <div class="line">       M(A, b, x);</div>
 <div class="line">       <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
-<div class="line">       cusp::blas::axpy(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">       <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
 <div class="line">       ++monitor;</div>
 <div class="line">   }</div>
 <div class="line"> }</div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Definition at line <a class="el" href="polynomial_8h_source.html#l00112">112</a> of file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
+<p>Definition at line <a class="el" href="polynomial_8h_source.html#l00101">101</a> of file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="polynomial_8h_source.html">polynomial.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -199,6 +199,9 @@ Inheritance diagram for cusp::relaxation::polynomial&lt; ValueType, MemorySpace 
 Public Methods</h2></td></tr>
 <tr class="memitem:abf3f695b20871f2effd20c012d7cf3ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1polynomial.html#abf3f695b20871f2effd20c012d7cf3ac">polynomial</a> (void)</td></tr>
 <tr class="separator:abf3f695b20871f2effd20c012d7cf3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da51bfdb82631d20d88c30c39ca1997"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:a5da51bfdb82631d20d88c30c39ca1997"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1polynomial.html#a5da51bfdb82631d20d88c30c39ca1997">polynomial</a> (const MatrixType &amp;A)</td></tr>
+<tr class="separator:a5da51bfdb82631d20d88c30c39ca1997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44134d22b2a826faedd4fc2b193aa995"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename VectorType &gt; </td></tr>
 <tr class="memitem:a44134d22b2a826faedd4fc2b193aa995"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1relaxation_1_1polynomial.html#a44134d22b2a826faedd4fc2b193aa995">polynomial</a> (const MatrixType &amp;A, const VectorType &amp;coefficients)</td></tr>
 <tr class="separator:a44134d22b2a826faedd4fc2b193aa995"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,7 +248,40 @@ template&lt;typename ValueType, typename MemorySpace&gt; </div>
 </div><div class="memdoc">
 <p>This constructor creates an empty <code>polynomial</code> smoother. </p>
 
-<p>Definition at line <a class="el" href="polynomial_8h_source.html#l00126">126</a> of file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
+<p>Definition at line <a class="el" href="polynomial_8h_source.html#l00115">115</a> of file <a class="el" href="polynomial_8h_source.html">polynomial.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5da51bfdb82631d20d88c30c39ca1997"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename MemorySpace&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1relaxation_1_1polynomial.html">cusp::relaxation::polynomial</a>&lt; ValueType, MemorySpace &gt;::<a class="el" href="classcusp_1_1relaxation_1_1polynomial.html">polynomial</a> </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This constructor creates a <code>polynomial</code> smoother using a given matrix.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType</td><td>Type of input matrix used to create this <code>polynomial</code> smoother.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Input matrix used to create smoother. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
