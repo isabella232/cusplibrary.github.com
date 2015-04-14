@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/precond/aggregation/smoothed_aggregation.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/precond/aggregation/smoothed_aggregation.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_a607db72fd86c93233ea3ac04b301b44.html">precond</a></li><li class="navelem"><a class="el" href="dir_ffa177f70062b2b961c2901ce4a03d25.html">aggregation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li><li class="navelem"><a class="el" href="dir_c42b036ea42c1a0ee98d4b5698273cd7.html">precond</a></li><li class="navelem"><a class="el" href="dir_aab5744327237537423ae44b92a99404.html">aggregation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -153,16 +153,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> IndexType,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          <span class="keyword">typename</span> ValueType,</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;          <span class="keyword">typename</span> MemorySpace,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keyword">typename</span> SmootherType = thrust::use_default,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keyword">typename</span> SolverType   = thrust::use_default,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;          <span class="keyword">typename</span> SmootherType = thrust::use_default,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;          <span class="keyword">typename</span> SolverType   = thrust::use_default,</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          <span class="keyword">typename</span> Format       = thrust::use_default&gt;</div>
 <div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">  126</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> :</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keyword">public</span> cusp::multilevel&lt;IndexType,ValueType,MemorySpace,Format,SmootherType,SolverType&gt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">public</span> cusp::multilevel&lt;IndexType,ValueType,MemorySpace,Format,SmootherType,SolverType&gt;::container</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> select_sa_matrix_type&lt;IndexType,ValueType,MemorySpace&gt;::type              SetupMatrixType;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">typedef</span> cusp::multilevel&lt;IndexType,ValueType,MemorySpace,Format,SmootherType,SolverType&gt;   Parent;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> select_sa_matrix_type&lt;IndexType,ValueType,MemorySpace&gt;::type                                 SetupMatrixType;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::multilevel&lt;IndexType,ValueType,MemorySpace,Format,SmootherType,SolverType&gt;::container  ML;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>

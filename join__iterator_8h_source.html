@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/iterator/join_iterator.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/iterator/join_iterator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bcba8b2b85a17845ee0d0f18b6a76e91.html">iterator</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li><li class="navelem"><a class="el" href="dir_f3bcd0d64a72c69088e77aa76969f8bb.html">iterator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator1, <span class="keyword">typename</span> Iterator2, <span class="keyword">typename</span> IndexIterator&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classcusp_1_1join__iterator.html">   91</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1join__iterator.html">join_iterator</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">class </span>join_iterator</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
@@ -174,44 +174,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// type of the join_iterator</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> TransformIterator iterator;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classcusp_1_1join__iterator.html#adbb609a29befcd36351d1adae6acb3a3">  137</a></span>&#160;    <a class="code" href="classcusp_1_1join__iterator.html#adbb609a29befcd36351d1adae6acb3a3">join_iterator</a>(Iterator1 first_begin, Iterator1 first_end,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    join_iterator(Iterator1 first_begin, Iterator1 first_end,</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                  Iterator2 second_begin, Iterator2 second_end,</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                  IndexIterator indices_begin)</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        : first_begin(first_begin), first_end(first_end),</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;          second_begin(second_begin), second_end(second_end),</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;          indices_begin(indices_begin) {}</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classcusp_1_1join__iterator.html#aa72cd065c9328437efc90b03460897a5">  148</a></span>&#160;    iterator <a class="code" href="classcusp_1_1join__iterator.html#aa72cd065c9328437efc90b03460897a5">begin</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    iterator begin(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> TransformIterator(indices_begin, join_select_functor(first_begin, second_begin, first_end-first_begin));</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classcusp_1_1join__iterator.html#aad0ed946109ed3d6a16f3ef8d25a90d6">  157</a></span>&#160;    iterator <a class="code" href="classcusp_1_1join__iterator.html#aad0ed946109ed3d6a16f3ef8d25a90d6">end</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    iterator end(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classcusp_1_1join__iterator.html#aa72cd065c9328437efc90b03460897a5">begin</a>() + (first_end-first_begin) + (second_end-second_begin);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span> begin() + (first_end-first_begin) + (second_end-second_begin);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classcusp_1_1join__iterator.html#aa074faab1f3fb7cb178646996b70b958">  170</a></span>&#160;    reference <a class="code" href="classcusp_1_1join__iterator.html#aa074faab1f3fb7cb178646996b70b958">operator[]</a>(size_type n)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    reference operator[](size_type n)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> *(<a class="code" href="classcusp_1_1join__iterator.html#aa72cd065c9328437efc90b03460897a5">begin</a>() + n);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> *(begin() + n);</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    IndexIterator indices_begin;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Iterator1 first_begin;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    Iterator1 first_end;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    Iterator2 second_begin;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    Iterator2 second_end;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="ttc" id="classcusp_1_1join__iterator_html_aa074faab1f3fb7cb178646996b70b958"><div class="ttname"><a href="classcusp_1_1join__iterator.html#aa074faab1f3fb7cb178646996b70b958">cusp::join_iterator::operator[]</a></div><div class="ttdeci">reference operator[](size_type n) const </div><div class="ttdoc">Subscript access to the data contained in this iterator. </div><div class="ttdef"><b>Definition:</b> <a href="join__iterator_8h_source.html#l00170">join_iterator.h:170</a></div></div>
-<div class="ttc" id="classcusp_1_1join__iterator_html_aad0ed946109ed3d6a16f3ef8d25a90d6"><div class="ttname"><a href="classcusp_1_1join__iterator.html#aad0ed946109ed3d6a16f3ef8d25a90d6">cusp::join_iterator::end</a></div><div class="ttdeci">iterator end(void) const </div><div class="ttdoc">This method returns an iterator pointing to one element past the last of this joined sequence of perm...</div><div class="ttdef"><b>Definition:</b> <a href="join__iterator_8h_source.html#l00157">join_iterator.h:157</a></div></div>
-<div class="ttc" id="classcusp_1_1join__iterator_html_aa72cd065c9328437efc90b03460897a5"><div class="ttname"><a href="classcusp_1_1join__iterator.html#aa72cd065c9328437efc90b03460897a5">cusp::join_iterator::begin</a></div><div class="ttdeci">iterator begin(void) const </div><div class="ttdoc">This method returns an iterator pointing to the beginning of this joined sequence of permuted entries...</div><div class="ttdef"><b>Definition:</b> <a href="join__iterator_8h_source.html#l00148">join_iterator.h:148</a></div></div>
-<div class="ttc" id="classcusp_1_1join__iterator_html_adbb609a29befcd36351d1adae6acb3a3"><div class="ttname"><a href="classcusp_1_1join__iterator.html#adbb609a29befcd36351d1adae6acb3a3">cusp::join_iterator::join_iterator</a></div><div class="ttdeci">join_iterator(Iterator1 first_begin, Iterator1 first_end, Iterator2 second_begin, Iterator2 second_end, IndexIterator indices_begin)</div><div class="ttdoc">This constructor builds a join_iterator from two iterators. </div><div class="ttdef"><b>Definition:</b> <a href="join__iterator_8h_source.html#l00137">join_iterator.h:137</a></div></div>
-<div class="ttc" id="classcusp_1_1join__iterator_html"><div class="ttname"><a href="classcusp_1_1join__iterator.html">cusp::join_iterator</a></div><div class="ttdoc">RandomAccessIterator for access to array entries from two concatenated iterators. ...</div><div class="ttdef"><b>Definition:</b> <a href="join__iterator_8h_source.html#l00091">join_iterator.h:91</a></div></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    IndexIterator indices_begin;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;};</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

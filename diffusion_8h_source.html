@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/gallery/diffusion.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/gallery/diffusion.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0c5c1cc12230d8d7bcbb99660798f5b2.html">gallery</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li><li class="navelem"><a class="el" href="dir_644e28f3a4fcf988ba15f56a6bcb80fa.html">gallery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -150,73 +150,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">struct </span>FD : <span class="keyword">public</span> disc_type {};</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">struct </span>FE : <span class="keyword">public</span> disc_type {};</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Method, <span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">   62</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">diffusion</a>( MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">diffusion</a>( MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1e-5,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">double</span> theta = M_PI/4.0)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::index_type IndexType;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> MatrixType::value_type ValueType;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">typedef</span> thrust::tuple&lt;IndexType,IndexType&gt;    StencilIndex;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">typedef</span> thrust::tuple&lt;StencilIndex,ValueType&gt; StencilPoint;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">double</span> theta = M_PI/4.0);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// end namespace gallery</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// end namespace cusp</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    ValueType C = cos(theta);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    ValueType S = sin(theta);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ValueType CC = C*C;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ValueType SS = S*S;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ValueType CS = C*S;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    ValueType a;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ValueType b;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ValueType c;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    ValueType d;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ValueType e;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span>( thrust::detail::is_same&lt;Method, FE&gt;::value )</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        a = (-1.0*eps - 1.0)*CC + (-1.0*eps - 1.0)*SS + ( 3.0*eps - 3.0)*CS;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        b = ( 2.0*eps - 4.0)*CC + (-4.0*eps + 2.0)*SS;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        c = (-1.0*eps - 1.0)*CC + (-1.0*eps - 1.0)*SS + (-3.0*eps + 3.0)*CS;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        d = (-4.0*eps + 2.0)*CC + ( 2.0*eps - 4.0)*SS;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        e = ( 8.0*eps + 8.0)*CC + ( 8.0*eps + 8.0)*SS;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        a /= 6.0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        b /= 6.0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        c /= 6.0;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        d /= 6.0;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        e /= 6.0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( thrust::detail::is_same&lt;Method, FD&gt;::value )</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        a = 0.5 * (eps-1.0) * CS;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        b = -(eps*SS + CC);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        c = -a;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        d = -(eps*CC + SS);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        e = 2.0 * (eps+1.0);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">throw</span> cusp::invalid_input_exception(<span class="stringliteral">&quot;unrecognized discretization method&quot;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;StencilPoint, cusp::host_memory&gt;</a> stencil;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    stencil.push_back(StencilPoint(StencilIndex( -1, -1), a));</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    stencil.push_back(StencilPoint(StencilIndex(  0, -1), b));</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    stencil.push_back(StencilPoint(StencilIndex(  1, -1), c));</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    stencil.push_back(StencilPoint(StencilIndex( -1,  0), d));</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    stencil.push_back(StencilPoint(StencilIndex(  0,  0), e));</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    stencil.push_back(StencilPoint(StencilIndex(  1,  0), d));</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    stencil.push_back(StencilPoint(StencilIndex( -1,  1), c));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    stencil.push_back(StencilPoint(StencilIndex(  0,  1), b));</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    stencil.push_back(StencilPoint(StencilIndex(  1,  1), a));</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    cusp::gallery::generate_matrix_from_stencil(matrix, stencil, StencilIndex(m,n));</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// end namespace gallery</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d</a></div><div class="ttdoc">The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00099">array1d.h:99</a></div></div>
-<div class="ttc" id="group__gallery_html_ga5e9190e0334f037611512c028e938b49"><div class="ttname"><a href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">cusp::gallery::diffusion</a></div><div class="ttdeci">void diffusion(MatrixType &amp;matrix, size_t m, size_t n, const double eps=1e-5, const double theta=M_PI/4.0)</div><div class="ttdef"><b>Definition:</b> <a href="diffusion_8h_source.html#l00062">diffusion.h:62</a></div></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &lt;cusp/gallery/detail/diffusion.inl&gt;</span></div>
+<div class="ttc" id="group__gallery_html_ga5e9190e0334f037611512c028e938b49"><div class="ttname"><a href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">cusp::gallery::diffusion</a></div><div class="ttdeci">void diffusion(MatrixType &amp;matrix, size_t m, size_t n, const double eps=1e-5, const double theta=M_PI/4.0)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/monitor.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/monitor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,7 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -106,9 +105,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/sdalton/test/cusplibrary/cusp/monitor.h</div>  </div>
+<div class="title">monitor.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="monitor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
@@ -193,19 +197,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">bool</span> verbose;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    Real b_norm;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    Real r_norm;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    Real b_norm;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    Real relative_tolerance_;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    Real absolute_tolerance_;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">size_t</span> iteration_limit_;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">size_t</span> iteration_count_;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;};</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/monitor.inl&gt;</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">size_t</span> iteration_limit_;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">size_t</span> iteration_count_;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    Real relative_tolerance_;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    Real absolute_tolerance_;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">bool</span> verbose;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;};</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/monitor.inl&gt;</span></div>
 <div class="ttc" id="group__monitors_html_gacdc4e1aa1342c847b3acea8384b49211"><div class="ttname"><a href="group__monitors.html#gacdc4e1aa1342c847b3acea8384b49211">cusp::monitor::set_verbose</a></div><div class="ttdeci">void set_verbose(bool verbose_=true)</div><div class="ttdoc">Sets the verbosity level of the monitor. </div></div>
 <div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d&lt; Real, cusp::host_memory &gt;</a></div></div>
 <div class="ttc" id="complex_8h_html"><div class="ttname"><a href="complex_8h.html">complex.h</a></div><div class="ttdoc">Complex numbers. </div></div>

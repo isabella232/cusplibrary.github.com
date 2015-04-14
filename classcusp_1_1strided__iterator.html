@@ -114,7 +114,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Methods</a> &#124;
-<a href="#pro-attribs">Protected Members</a> &#124;
 <a href="classcusp_1_1strided__iterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cusp::strided_iterator&lt; RandomAccessIterator &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__iterators.html">Iterators</a></div></div>  </div>
@@ -174,18 +173,6 @@ Public Methods</h2></td></tr>
 <tr class="memitem:ac5e22585034960df97d428b958ddb6c3"><td class="memItemLeft" align="right" valign="top">reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html#ac5e22585034960df97d428b958ddb6c3">operator[]</a> (size_type n) const </td></tr>
 <tr class="memdesc:ac5e22585034960df97d428b958ddb6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscript access to the data contained in this iterator.  <a href="#ac5e22585034960df97d428b958ddb6c3">More...</a><br/></td></tr>
 <tr class="separator:ac5e22585034960df97d428b958ddb6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Members</h2></td></tr>
-<tr class="memitem:a69c610b3170313e416efe8e3e64c9ec4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69c610b3170313e416efe8e3e64c9ec4"></a>
-RandomAccessIterator&#160;</td><td class="memItemRight" valign="bottom"><b>first</b></td></tr>
-<tr class="separator:a69c610b3170313e416efe8e3e64c9ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0710375aa7e81cf95941bb9f81cad761"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0710375aa7e81cf95941bb9f81cad761"></a>
-RandomAccessIterator&#160;</td><td class="memItemRight" valign="bottom"><b>last</b></td></tr>
-<tr class="separator:a0710375aa7e81cf95941bb9f81cad761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1da77a7099d3661ce2a6c730480b7802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1da77a7099d3661ce2a6c730480b7802"></a>
-difference_type&#160;</td><td class="memItemRight" valign="bottom"><b>stride</b></td></tr>
-<tr class="separator:a1da77a7099d3661ce2a6c730480b7802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acca4f5f847dc1e80cbb2e242ef0c1a15"></a>
@@ -231,8 +218,8 @@ template&lt;typename RandomAccessIterator&gt; </div>
 <p>This constructor builds a <code><a class="el" href="classcusp_1_1strided__iterator.html" title="RandomAccessIterator for strided access to array entries. ">strided_iterator</a></code> from a range. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin</td><td>The beginning of the range. </td></tr>
-    <tr><td class="paramname">end</td><td>The end of the range. </td></tr>
+    <tr><td class="paramname">first</td><td>The beginning of the range. </td></tr>
+    <tr><td class="paramname">last</td><td>The end of the range. </td></tr>
     <tr><td class="paramname">stride</td><td>The stride between consecutive entries in the iterator. </td></tr>
   </table>
   </dd>

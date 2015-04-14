@@ -551,7 +551,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> levels(G.num_rows);</div>
 <div class="line"></div>
-<div class="line">   <span class="comment">// Compute connected components on the device</span></div>
+<div class="line">   <span class="comment">// Compute pseudo peripheral vertex on the device</span></div>
 <div class="line">   <span class="keywordtype">int</span> pseudo_vertex = <a class="code" href="group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1">cusp::graph::pseudo_peripheral_vertex</a>(G, levels);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Print the pseudo-peripheral vertex and the level set</span></div>
@@ -630,7 +630,7 @@ template&lt;typename MatrixType , typename PermutationType &gt; </div>
 <div class="line">   <span class="comment">// Allocate permutation matrix P</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt;int,cusp::device_memory&gt;</a> P(G.num_rows);</div>
 <div class="line"></div>
-<div class="line">   <span class="comment">// Compute connected components on the device</span></div>
+<div class="line">   <span class="comment">// Construct symmetric RCM permutation matrix on the device</span></div>
 <div class="line">   <a class="code" href="group__graph__algorithms.html#ga27dc1a148aa83b9752de8765ec934404">cusp::graph::symmetric_rcm</a>(G, P);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Convert permutation to dense matrix</span></div>
@@ -702,7 +702,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> colors(G.num_rows);</div>
 <div class="line"></div>
-<div class="line">   <span class="comment">// Execute a BFS traversal on the device</span></div>
+<div class="line">   <span class="comment">// Execute vertex coloring on the device</span></div>
 <div class="line">   <a class="code" href="group__graph__algorithms.html#ga5c9b09c7956a70d85cc6e8831dc4aece">cusp::graph::vertex_coloring</a>(G, colors);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Print the vertex colors</span></div>

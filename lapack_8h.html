@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/lapack/lapack.h File Reference</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/lapack/lapack.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_391938a2f217c7e032c706da52a23b51.html">lapack</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li><li class="navelem"><a class="el" href="dir_47bc029033351df07d33db1ecbe55196.html">lapack</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -125,33 +125,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a628aa52dd71f7a54bbf66112abb9f1e8"><td class="memTemplParams" colspan="2"><a class="anchor" id="a628aa52dd71f7a54bbf66112abb9f1e8"></a>
-template&lt;typename Array2d &gt; </td></tr>
-<tr class="memitem:a628aa52dd71f7a54bbf66112abb9f1e8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::potrf</b> (Array2d &amp;A)</td></tr>
-<tr class="separator:a628aa52dd71f7a54bbf66112abb9f1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b212b8fe300075a476bf95c273853a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a64b212b8fe300075a476bf95c273853a"></a>
-template&lt;typename Array2d &gt; </td></tr>
-<tr class="memitem:a64b212b8fe300075a476bf95c273853a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::trtri</b> (Array2d &amp;A)</td></tr>
-<tr class="separator:a64b212b8fe300075a476bf95c273853a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fecdd839941de3ed76eab9138506140"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7fecdd839941de3ed76eab9138506140"></a>
-template&lt;typename Array2d , typename Array1d &gt; </td></tr>
-<tr class="memitem:a7fecdd839941de3ed76eab9138506140"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::syev</b> (const Array2d &amp;A, Array1d &amp;eigvals, Array2d &amp;eigvecs)</td></tr>
-<tr class="separator:a7fecdd839941de3ed76eab9138506140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613637514df4f3f605b1776c81606053"><td class="memTemplParams" colspan="2"><a class="anchor" id="a613637514df4f3f605b1776c81606053"></a>
-template&lt;typename Array1d1 , typename Array1d2 , typename Array1d3 , typename Array2d &gt; </td></tr>
-<tr class="memitem:a613637514df4f3f605b1776c81606053"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::stev</b> (const Array1d1 &amp;alphas, const Array1d2 &amp;betas, Array1d3 &amp;eigvals, Array2d &amp;eigvecs, char job=EvalsOrEvecs&lt; evecs &gt;::type)</td></tr>
-<tr class="separator:a613637514df4f3f605b1776c81606053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d1dc8138f61b2e6d5530073f820513d"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3d1dc8138f61b2e6d5530073f820513d"></a>
-template&lt;typename Array1d1 , typename Array1d2 , typename Array1d3 &gt; </td></tr>
-<tr class="memitem:a3d1dc8138f61b2e6d5530073f820513d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::stev</b> (const Array1d1 &amp;alphas, const Array1d2 &amp;betas, Array1d3 &amp;eigvals)</td></tr>
-<tr class="separator:a3d1dc8138f61b2e6d5530073f820513d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46d98b5c8f781720f912c119fe2b91f1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a46d98b5c8f781720f912c119fe2b91f1"></a>
-template&lt;typename Array2d1 , typename Array2d2 , typename Array1d , typename Array2d3 &gt; </td></tr>
+<tr class="memitem:adaf2a61fbc250c2f96cefdc406a2210b"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:adaf2a61fbc250c2f96cefdc406a2210b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::getrf</b> (Array2d &amp;A, Array1d &amp;piv)</td></tr>
+<tr class="memdesc:adaf2a61fbc250c2f96cefdc406a2210b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute LU factorization of matrix.  <a href="#adaf2a61fbc250c2f96cefdc406a2210b">More...</a><br/></td></tr>
+<tr class="separator:adaf2a61fbc250c2f96cefdc406a2210b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5980c34ea6b1e58e5544025286af59"><td class="memTemplParams" colspan="2">template&lt;typename Array2d &gt; </td></tr>
+<tr class="memitem:a0f5980c34ea6b1e58e5544025286af59"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::potrf</b> (Array2d &amp;A, char uplo= 'U')</td></tr>
+<tr class="memdesc:a0f5980c34ea6b1e58e5544025286af59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Cholesky factorization of a symmetric (Hermitian) positive-definite matrix.  <a href="#a0f5980c34ea6b1e58e5544025286af59">More...</a><br/></td></tr>
+<tr class="separator:a0f5980c34ea6b1e58e5544025286af59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dbc288d254ddfff4b62f74be9f95f0"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:aa4dbc288d254ddfff4b62f74be9f95f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::sytrf</b> (Array2d &amp;A, Array1d &amp;piv, char uplo= 'U')</td></tr>
+<tr class="memdesc:aa4dbc288d254ddfff4b62f74be9f95f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Bunch-Kaufman factorization of a symmetric matrix.  <a href="#aa4dbc288d254ddfff4b62f74be9f95f0">More...</a><br/></td></tr>
+<tr class="separator:aa4dbc288d254ddfff4b62f74be9f95f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11efae6fef75c3a42448e21c0b824305"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:a11efae6fef75c3a42448e21c0b824305"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::getrs</b> (const Array2d &amp;A, const Array1d &amp;piv, Array2d &amp;B, char trans= 'N')</td></tr>
+<tr class="memdesc:a11efae6fef75c3a42448e21c0b824305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with an LU-factored square matrix, with multiple right-hand sides.  <a href="#a11efae6fef75c3a42448e21c0b824305">More...</a><br/></td></tr>
+<tr class="separator:a11efae6fef75c3a42448e21c0b824305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f848cb0802ff5fcc4d9e93bc746bf9"><td class="memTemplParams" colspan="2">template&lt;typename Array2d &gt; </td></tr>
+<tr class="memitem:ac9f848cb0802ff5fcc4d9e93bc746bf9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::potrs</b> (const Array2d &amp;A, Array2d &amp;B, char uplo= 'U')</td></tr>
+<tr class="memdesc:ac9f848cb0802ff5fcc4d9e93bc746bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with a Cholesky-factored symmetric (Hermitian) positive-definite matrix.  <a href="#ac9f848cb0802ff5fcc4d9e93bc746bf9">More...</a><br/></td></tr>
+<tr class="separator:ac9f848cb0802ff5fcc4d9e93bc746bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa1b13d6c28f4007fd0018a53f1f15a"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:a0fa1b13d6c28f4007fd0018a53f1f15a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::sytrs</b> (const Array2d &amp;A, const Array1d &amp;piv, Array2d &amp;B, char uplo= 'U')</td></tr>
+<tr class="memdesc:a0fa1b13d6c28f4007fd0018a53f1f15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with a UDU- or LDL-factored symmetric matrix.  <a href="#a0fa1b13d6c28f4007fd0018a53f1f15a">More...</a><br/></td></tr>
+<tr class="separator:a0fa1b13d6c28f4007fd0018a53f1f15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3362ae6b3e5f330ce9a005a0aca33d1f"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:a3362ae6b3e5f330ce9a005a0aca33d1f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::trtrs</b> (const Array2d &amp;A, Array2d &amp;B, char uplo= 'U', char trans= 'N', char diag= 'N')</td></tr>
+<tr class="memdesc:a3362ae6b3e5f330ce9a005a0aca33d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with a triangular matrix, with multiple right-hand sides.  <a href="#a3362ae6b3e5f330ce9a005a0aca33d1f">More...</a><br/></td></tr>
+<tr class="separator:a3362ae6b3e5f330ce9a005a0aca33d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae879f3e0b76904152b3bb04dd76abbfa"><td class="memTemplParams" colspan="2">template&lt;typename Array2d &gt; </td></tr>
+<tr class="memitem:ae879f3e0b76904152b3bb04dd76abbfa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::trtri</b> (Array2d &amp;A, char uplo= 'U', char diag= 'N')</td></tr>
+<tr class="memdesc:ae879f3e0b76904152b3bb04dd76abbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This routine computes the inverse of a triangular matrix.  <a href="#ae879f3e0b76904152b3bb04dd76abbfa">More...</a><br/></td></tr>
+<tr class="separator:ae879f3e0b76904152b3bb04dd76abbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7917f401435df2ab5a2098125f0df6b"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:ae7917f401435df2ab5a2098125f0df6b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::syev</b> (const Array2d &amp;A, Array1d &amp;eigvals, Array2d &amp;eigvecs, char uplo= 'U')</td></tr>
+<tr class="memdesc:ae7917f401435df2ab5a2098125f0df6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes all eigenvalues and eigenvectors of a real symmetric matrix.  <a href="#ae7917f401435df2ab5a2098125f0df6b">More...</a><br/></td></tr>
+<tr class="separator:ae7917f401435df2ab5a2098125f0df6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c7b823092aee2c50ceda31c9be31a9"><td class="memTemplParams" colspan="2">template&lt;typename Array1d1 , typename Array1d2 , typename Array1d3 , typename Array2d &gt; </td></tr>
+<tr class="memitem:a16c7b823092aee2c50ceda31c9be31a9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::stev</b> (const Array1d1 &amp;alphas, const Array1d2 &amp;betas, Array1d3 &amp;eigvals, Array2d &amp;eigvecs, char job= 'V')</td></tr>
+<tr class="memdesc:a16c7b823092aee2c50ceda31c9be31a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes all eigenvalues and, optionally, eigenvectors of a real symmetric tridiagonal matrix.  <a href="#a16c7b823092aee2c50ceda31c9be31a9">More...</a><br/></td></tr>
+<tr class="separator:a16c7b823092aee2c50ceda31c9be31a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d98b5c8f781720f912c119fe2b91f1"><td class="memTemplParams" colspan="2">template&lt;typename Array2d1 , typename Array2d2 , typename Array1d , typename Array2d3 &gt; </td></tr>
 <tr class="memitem:a46d98b5c8f781720f912c119fe2b91f1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::sygv</b> (const Array2d1 &amp;A, const Array2d2 &amp;B, Array1d &amp;eigvals, Array2d3 &amp;eigvecs)</td></tr>
+<tr class="memdesc:a46d98b5c8f781720f912c119fe2b91f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes all eigenvalues and, optionally, eigenvectors of a real generalized symmetric definite eigenproblem.  <a href="#a46d98b5c8f781720f912c119fe2b91f1">More...</a><br/></td></tr>
 <tr class="separator:a46d98b5c8f781720f912c119fe2b91f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa558a7de463b491c8e5c432368bb6321"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa558a7de463b491c8e5c432368bb6321"></a>
-template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:aa558a7de463b491c8e5c432368bb6321"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
 <tr class="memitem:aa558a7de463b491c8e5c432368bb6321"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::lapack::gesv</b> (const Array2d &amp;A, Array2d &amp;B, Array1d &amp;pivots)</td></tr>
+<tr class="memdesc:aa558a7de463b491c8e5c432368bb6321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the solution of a system of linear equations with a square matrix A and multiple right-hand sides.  <a href="#aa558a7de463b491c8e5c432368bb6321">More...</a><br/></td></tr>
 <tr class="separator:aa558a7de463b491c8e5c432368bb6321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
