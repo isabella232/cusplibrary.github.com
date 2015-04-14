@@ -7,6 +7,8 @@ var searchData=
   ['poisson7pt',['poisson7pt',['../group__gallery.html#ga19c2f586db3dd723a2352719a3ad49b2',1,'cusp::gallery']]],
   ['poisson9pt',['poisson9pt',['../group__gallery.html#gac4e945500c1e5ce041a451024ddf1f2a',1,'cusp::gallery']]],
   ['polynomial',['polynomial',['../classcusp_1_1relaxation_1_1polynomial.html#abf3f695b20871f2effd20c012d7cf3ac',1,'cusp::relaxation::polynomial::polynomial(void)'],['../classcusp_1_1relaxation_1_1polynomial.html#a5da51bfdb82631d20d88c30c39ca1997',1,'cusp::relaxation::polynomial::polynomial(const MatrixType &amp;A)'],['../classcusp_1_1relaxation_1_1polynomial.html#a44134d22b2a826faedd4fc2b193aa995',1,'cusp::relaxation::polynomial::polynomial(const MatrixType &amp;A, const VectorType &amp;coefficients)'],['../classcusp_1_1relaxation_1_1polynomial.html#af7933f5f1dc14e156bdcc7e5c1f9e269',1,'cusp::relaxation::polynomial::polynomial(const polynomial&lt; ValueType, MemorySpace2 &gt; &amp;A)']]],
+  ['potrf',['potrf',['../group__lapack.html#ga0f5980c34ea6b1e58e5544025286af59',1,'cusp::lapack']]],
+  ['potrs',['potrs',['../group__lapack.html#gac9f848cb0802ff5fcc4d9e93bc746bf9',1,'cusp::lapack']]],
   ['print',['print',['../group__monitors.html#ga39b99bc28bae084e265265a9e43225ef',1,'cusp::monitor::print()'],['../group__io.html#gae830bdfc52775580d0cadee9ad8db187',1,'cusp::print(const Printable &amp;p)'],['../group__io.html#ga872f7c570e3595bdf1f72dfd7a363836',1,'cusp::print(const Printable &amp;p, Stream &amp;s)']]],
   ['pseudo_5fperipheral_5fvertex',['pseudo_peripheral_vertex',['../group__graph__algorithms.html#gaa44221c0efafa91ac2da1969a55986a1',1,'cusp::graph']]]
 ];

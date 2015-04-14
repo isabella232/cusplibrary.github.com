@@ -172,22 +172,22 @@ The matrix should not contain duplicate entries.</dd></dl>
 <div class="line">   <span class="keyword">const</span> <span class="keywordtype">int</span> X = <a class="code" href="classcusp_1_1ell__matrix.html">cusp::ell_matrix&lt;int,float,cusp::host_memory&gt;::invalid_index</a>;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// first row</span></div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(0,0) = 0; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(0,0) = 10;</div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(0,1) = 1; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(0,1) = 20;</div>
+<div class="line">   A.ell.column_indices(0,0) = 0; A.ell.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>(0,0) = 10;</div>
+<div class="line">   A.ell.column_indices(0,1) = 1; A.ell.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>(0,1) = 20;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// second row</span></div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(1,0) = 1; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(1,0) = 50;  <span class="comment">// shifted to leftmost position</span></div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(1,1) = X; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(1,1) =  0;  <span class="comment">// padding</span></div>
+<div class="line">   A.ell.column_indices(1,0) = 1; A.ell.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>(1,0) = 50;  <span class="comment">// shifted to leftmost position</span></div>
+<div class="line">   A.ell.column_indices(1,1) = X; A.ell.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>(1,1) =  0;  <span class="comment">// padding</span></div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// third row</span></div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(2,0) = 0; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(2,0) = 60;</div>
-<div class="line">   A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>(2,1) = 2; A.ell.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>(2,1) = 70;  <span class="comment">// shifted to leftmost position</span></div>
+<div class="line">   A.ell.column_indices(2,0) = 0; A.ell.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>(2,0) = 60;</div>
+<div class="line">   A.ell.column_indices(2,1) = 2; A.ell.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>(2,1) = 70;  <span class="comment">// shifted to leftmost position</span></div>
 <div class="line"></div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Initialize COO part</span></div>
-<div class="line">   A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[0] = 0;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[0] = 2;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[0] = 30;</div>
-<div class="line">   A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[1] = 0;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[1] = 3;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[1] = 40;</div>
-<div class="line">   A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>[2] = 2;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>[2] = 3;  A.coo.<a class="code" href="classcusp_1_1coo__matrix.html#a36ce643d7d936426277680964b279695">values</a>[2] = 80;</div>
+<div class="line">   A.coo.row_indices[0] = 0;  A.coo.column_indices[0] = 2;  A.coo.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>[0] = 30;</div>
+<div class="line">   A.coo.row_indices[1] = 0;  A.coo.column_indices[1] = 3;  A.coo.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>[1] = 40;</div>
+<div class="line">   A.coo.row_indices[2] = 2;  A.coo.column_indices[2] = 3;  A.coo.<a class="code" href="classcusp_1_1array2d.html#ad94fcd77fa62d14b5874ea83b04ce3dc">values</a>[2] = 80;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// print the ELL portion</span></div>
 <div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A.ell);</div>
