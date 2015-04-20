@@ -15,7 +15,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script type="text/javascript">
      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -49,7 +48,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -122,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
-<div class="textblock"><h3>template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt;<br/>
+<div class="textblock"><h3>template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt;<br/>
 class cusp::coo_matrix_view&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;</h3>
 
 <p>View of a <code><a class="el" href="classcusp_1_1coo__matrix.html" title="Coordinate (COO) representation a sparse matrix. ">coo_matrix</a></code>. </p>
@@ -191,7 +190,7 @@ The matrix should not contain duplicate entries.</dd></dl>
 <div class="line"> }</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="cg_raw_8cu-example.html#_a1">cg_raw.cu</a>.</dd>
 </dl>
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00304">304</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00306">306</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -242,9 +241,11 @@ Public Members</h2></td></tr>
 <tr class="separator:ae81b639da005447415c9742d27a99fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad728d4c15da6151d18bd08f2b869f3ef"><td class="memItemLeft" align="right" valign="top">values_array_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#ad728d4c15da6151d18bd08f2b869f3ef">values</a></td></tr>
 <tr class="separator:ad728d4c15da6151d18bd08f2b869f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a982ecb91c2a9495e6b0a0cc37e5d9eb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt; IndexType, <br class="typebreak"/>
-MemorySpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a982ecb91c2a9495e6b0a0cc37e5d9eb0">indices</a></td></tr>
-<tr class="separator:a982ecb91c2a9495e6b0a0cc37e5d9eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e90b6c84cedf2517604009223d5ba21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt; typename <br class="typebreak"/>
+thrust::detail::remove_const<br class="typebreak"/>
+&lt; IndexType &gt;::type, <br class="typebreak"/>
+MemorySpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1coo__matrix__view.html#a8e90b6c84cedf2517604009223d5ba21">indices</a></td></tr>
+<tr class="separator:a8e90b6c84cedf2517604009223d5ba21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Proteced Methods</h2></td></tr>
@@ -266,7 +267,7 @@ Proteced Methods</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -287,7 +288,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>Construct an empty <code><a class="el" href="classcusp_1_1coo__matrix__view.html" title="View of a coo_matrix. ">coo_matrix_view</a></code>. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00347">347</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00350">350</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -295,7 +296,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -361,7 +362,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00361">361</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00364">364</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -369,7 +370,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -396,7 +397,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00376">376</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00379">379</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -404,7 +405,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -431,7 +432,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00386">386</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00389">389</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -439,7 +440,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -466,7 +467,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00396">396</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00399">399</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -474,7 +475,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -501,7 +502,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00406">406</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00409">409</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +510,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
       <table class="memname">
@@ -536,7 +537,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
       <table class="memname">
@@ -564,7 +565,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
 <table class="mlabels">
@@ -609,7 +610,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
 <table class="mlabels">
@@ -654,7 +655,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
 <table class="mlabels">
@@ -699,7 +700,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
 <div class="memtemplate">
 template&lt;typename MatrixType &gt; </div>
 <table class="mlabels">
@@ -744,7 +745,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::is_sorted_by_row </td>
@@ -764,7 +765,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::is_sorted_by_row_and_column </td>
@@ -784,7 +785,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::resize </td>
@@ -827,7 +828,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::sort_by_row </td>
@@ -846,7 +847,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::sort_by_row_and_column </td>
@@ -866,7 +867,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">column_indices_array_type <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::column_indices</td>
@@ -875,24 +876,24 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>View of the column indices of the COO data structure. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00332">332</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00335">335</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a982ecb91c2a9495e6b0a0cc37e5d9eb0"></a>
+<a class="anchor" id="a8e90b6c84cedf2517604009223d5ba21"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt;IndexType,MemorySpace&gt; <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::indices</td>
+          <td class="memname"><a class="el" href="classcusp_1_1array1d.html">cusp::array1d</a>&lt;typename thrust::detail::remove_const&lt;IndexType&gt;::type,MemorySpace&gt; <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::indices</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Storage for indices used to generate COO view. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00342">342</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00345">345</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -900,7 +901,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">row_indices_array_type <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::row_indices</td>
@@ -909,7 +910,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>View of the row indices of the COO data structure. Also called the "row pointer" array. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00327">327</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00330">330</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>
@@ -917,7 +918,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType1::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
+template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typename IndexType = typename ArrayType2::value_type, typename ValueType = typename ArrayType3::value_type, typename MemorySpace = typename cusp::minimum_space&lt;                                    typename ArrayType1::memory_space,                                    typename ArrayType2::memory_space,                                    typename ArrayType3::memory_space&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">values_array_type <a class="el" href="classcusp_1_1coo__matrix__view.html">cusp::coo_matrix_view</a>&lt; ArrayType1, ArrayType2, ArrayType3, IndexType, ValueType, MemorySpace &gt;::values</td>
@@ -926,7 +927,7 @@ template&lt;typename ArrayType1, typename ArrayType2, typename ArrayType3, typen
 </div><div class="memdoc">
 <p>View for the nonzero entries of the COO data structure. </p>
 
-<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00337">337</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
+<p>Definition at line <a class="el" href="coo__matrix_8h_source.html#l00340">340</a> of file <a class="el" href="coo__matrix_8h_source.html">coo_matrix.h</a>.</p>
 
 </div>
 </div>

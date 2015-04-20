@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/cusplibrary/cusp/blas/blas.h Source File</title>
+<title>CUSP: /home/sdalton/test/cusplibrary/cusp/blas/blas.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -15,7 +15,6 @@
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="extra_stylesheet.css" rel="stylesheet" type="text/css"/>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <script type="text/javascript">
      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -49,7 +48,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -107,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li><li class="navelem"><a class="el" href="dir_cf84dad07f35100b727bfa86cdcff90f.html">blas</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_f4a616d34a7ac9b95bc3848507aa6046.html">cusp</a></li><li class="navelem"><a class="el" href="dir_8b8f994d1b2d96086c585eea78ec0e5e.html">blas</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -143,137 +142,138 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>blas</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">axpy</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;             <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                   Array2&amp; y,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;             ScalarType alpha);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">axpy</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                Array2&amp; y,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          ScalarType alpha);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <span class="keyword">typename</span> Array3,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          <span class="keyword">typename</span> ScalarType2&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gac9ff94ad4317968a65775bc2911c456c">axpby</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;           <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;           <span class="keyword">const</span> Array2&amp; y,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                 Array3&amp; output,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;           ScalarType1 alpha,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;           ScalarType2 beta);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keyword">typename</span> Array3,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          <span class="keyword">typename</span> ScalarType2&gt;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gac9ff94ad4317968a65775bc2911c456c">axpby</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;           <span class="keyword">const</span> Array2&amp; y,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                 Array3&amp; output,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;           ScalarType1 alpha,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;           ScalarType2 beta);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">typename</span> Array3,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keyword">typename</span> Array4,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <span class="keyword">typename</span> ScalarType2,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          <span class="keyword">typename</span> ScalarType3&gt;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga047e4a02024cdffcaa4268324072a220">axpbypcz</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;              <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;              <span class="keyword">const</span> Array2&amp; y,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;              <span class="keyword">const</span> Array3&amp; z,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    Array4&amp; output,</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;              ScalarType1 alpha,</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;              ScalarType2 beta,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;              ScalarType3 gamma);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          <span class="keyword">typename</span> Array3,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          <span class="keyword">typename</span> Array4,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          <span class="keyword">typename</span> ScalarType2,</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;          <span class="keyword">typename</span> ScalarType3&gt;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga047e4a02024cdffcaa4268324072a220">axpbypcz</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;              <span class="keyword">const</span> Array2&amp; y,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;              <span class="keyword">const</span> Array3&amp; z,</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    Array4&amp; output,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;              ScalarType1 alpha,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;              ScalarType2 beta,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;              ScalarType3 gamma);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;          <span class="keyword">typename</span> Array3&gt;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d">xmy</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;         <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;         <span class="keyword">const</span> Array2&amp; y,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;               Array3&amp; output);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;          <span class="keyword">typename</span> Array2,</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;          <span class="keyword">typename</span> Array3&gt;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d">xmy</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;         <span class="keyword">const</span> Array2&amp; y,</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;               Array3&amp; output);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga478cd4d44fa55ac30a454535f8216ec9">copy</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;          <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                Array2&amp; y);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga478cd4d44fa55ac30a454535f8216ec9">copy</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                Array2&amp; y);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="group__blas.html#ga0db31791561bd2fb20093cf5e63a1668">dot</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keyword">const</span> Array2&amp; y);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="group__blas.html#ga0db31791561bd2fb20093cf5e63a1668">dot</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">const</span> Array2&amp; y);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;          <span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6">dotc</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;         <span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;         <span class="keyword">const</span> Array2&amp; y);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6">dotc</a>(<span class="keyword">const</span> Array1&amp; x,</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;         <span class="keyword">const</span> Array2&amp; y);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          <span class="keyword">typename</span> Array,</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga47e816f52a6ec5f05e60a6b4f6c6ca1a">fill</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          Array&amp; array,</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;          ScalarType alpha);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga47e816f52a6ec5f05e60a6b4f6c6ca1a">fill</a>(Array&amp; array,</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;          ScalarType alpha);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">axpy</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;             <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                   Array2&amp; y,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;             ScalarType alpha);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">axpy</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                Array2&amp; y,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          ScalarType alpha);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">typename</span> Array3,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          <span class="keyword">typename</span> ScalarType2&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gac9ff94ad4317968a65775bc2911c456c">axpby</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;           <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;           <span class="keyword">const</span> Array2&amp; y,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                 Array3&amp; output,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;           ScalarType1 alpha,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;           ScalarType2 beta);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keyword">typename</span> Array3,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <span class="keyword">typename</span> ScalarType2&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gac9ff94ad4317968a65775bc2911c456c">axpby</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;           <span class="keyword">const</span> Array2&amp; y,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                 Array3&amp; output,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;           ScalarType1 alpha,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;           ScalarType2 beta);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keyword">typename</span> Array3,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">typename</span> Array4,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keyword">typename</span> ScalarType2,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <span class="keyword">typename</span> ScalarType3&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga047e4a02024cdffcaa4268324072a220">axpbypcz</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;              <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;              <span class="keyword">const</span> Array2&amp; y,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;              <span class="keyword">const</span> Array3&amp; z,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    Array4&amp; output,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;              ScalarType1 alpha,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;              ScalarType2 beta,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;              ScalarType3 gamma);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          <span class="keyword">typename</span> Array3,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          <span class="keyword">typename</span> Array4,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          <span class="keyword">typename</span> ScalarType1,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          <span class="keyword">typename</span> ScalarType2,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          <span class="keyword">typename</span> ScalarType3&gt;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga047e4a02024cdffcaa4268324072a220">axpbypcz</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;              <span class="keyword">const</span> Array2&amp; y,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;              <span class="keyword">const</span> Array3&amp; z,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    Array4&amp; output,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;              ScalarType1 alpha,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;              ScalarType2 beta,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;              ScalarType3 gamma);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          <span class="keyword">typename</span> Array3&gt;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d">xmy</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;         <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;         <span class="keyword">const</span> Array2&amp; y,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;               Array3&amp; output);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;          <span class="keyword">typename</span> Array2,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;          <span class="keyword">typename</span> Array3&gt;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d">xmy</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;         <span class="keyword">const</span> Array2&amp; y,</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;               Array3&amp; output);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga478cd4d44fa55ac30a454535f8216ec9">copy</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;          <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                Array2&amp; y);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga478cd4d44fa55ac30a454535f8216ec9">copy</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                Array2&amp; y);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="group__blas.html#ga0db31791561bd2fb20093cf5e63a1668">dot</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">const</span> Array2&amp; y);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="group__blas.html#ga0db31791561bd2fb20093cf5e63a1668">dot</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">const</span> Array2&amp; y);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;          <span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6">dotc</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;         <span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;         <span class="keyword">const</span> Array2&amp; y);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array1,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;          <span class="keyword">typename</span> Array2&gt;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keyword">typename</span> Array1::value_type</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6">dotc</a>(<span class="keyword">const</span> Array1&amp; x,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;         <span class="keyword">const</span> Array2&amp; y);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;          <span class="keyword">typename</span> Array,</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__blas.html#ga9c9598eeed4b41ce91040f8a13ae3bb9">fill</a>(<span class="keyword">const</span> thrust::detail::execution_policy_base&lt;DerivedPolicy&gt; &amp;exec,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;          Array&amp; array,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          ScalarType alpha);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Array,</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          <span class="keyword">typename</span> ScalarType&gt;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keyword">typename</span> thrust::detail::enable_if_convertible&lt;typename Array::format,cusp::array1d_format&gt;::type</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<a class="code" href="group__blas.html#ga9c9598eeed4b41ce91040f8a13ae3bb9">fill</a>(Array&amp; array,</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;     ScalarType alpha);</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> DerivedPolicy,</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;          <span class="keyword">typename</span> Array&gt;</div>
@@ -354,8 +354,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__blas_html_gae9ff482c86d4ce3cf70d0847c4c28175"><div class="ttname"><a href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a></div><div class="ttdeci">void axpy(const Array1 &amp;x, Array2 &amp;y, ScalarType alpha)</div></div>
 <div class="ttc" id="group__blas_html_ga12bd66a5917011a1e787f731c15343b7"><div class="ttname"><a href="group__blas.html#ga12bd66a5917011a1e787f731c15343b7">cusp::blas::nrmmax</a></div><div class="ttdeci">Array::value_type nrmmax(const Array &amp;array)</div></div>
 <div class="ttc" id="group__blas_html_ga047e4a02024cdffcaa4268324072a220"><div class="ttname"><a href="group__blas.html#ga047e4a02024cdffcaa4268324072a220">cusp::blas::axpbypcz</a></div><div class="ttdeci">void axpbypcz(const Array1 &amp;x, const Array2 &amp;y, const Array3 &amp;z, Array4 &amp;output, ScalarType1 alpha, ScalarType2 beta, ScalarType3 gamma)</div></div>
-<div class="ttc" id="group__blas_html_ga47e816f52a6ec5f05e60a6b4f6c6ca1a"><div class="ttname"><a href="group__blas.html#ga47e816f52a6ec5f05e60a6b4f6c6ca1a">cusp::blas::fill</a></div><div class="ttdeci">void fill(Array &amp;array, ScalarType alpha)</div></div>
 <div class="ttc" id="group__blas_html_ga0db31791561bd2fb20093cf5e63a1668"><div class="ttname"><a href="group__blas.html#ga0db31791561bd2fb20093cf5e63a1668">cusp::blas::dot</a></div><div class="ttdeci">Array1::value_type dot(const Array1 &amp;x, const Array2 &amp;y)</div></div>
+<div class="ttc" id="group__blas_html_ga9c9598eeed4b41ce91040f8a13ae3bb9"><div class="ttname"><a href="group__blas.html#ga9c9598eeed4b41ce91040f8a13ae3bb9">cusp::blas::fill</a></div><div class="ttdeci">thrust::detail::enable_if_convertible&lt; typename Array::format, cusp::array1d_format &gt;::type fill(Array &amp;array, ScalarType alpha)</div></div>
 <div class="ttc" id="group__blas_html_gab7c9f73e38c591dba1eb50ffb5d6a76d"><div class="ttname"><a href="group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d">cusp::blas::xmy</a></div><div class="ttdeci">void xmy(const Array1 &amp;x, const Array2 &amp;y, Array3 &amp;output)</div></div>
 <div class="ttc" id="group__blas_html_ga478cd4d44fa55ac30a454535f8216ec9"><div class="ttname"><a href="group__blas.html#ga478cd4d44fa55ac30a454535f8216ec9">cusp::blas::copy</a></div><div class="ttdeci">void copy(const Array1 &amp;x, Array2 &amp;y)</div></div>
 <div class="ttc" id="group__blas_html_ga43e0b5dbafde20633e1d64bec0e35456"><div class="ttname"><a href="group__blas.html#ga43e0b5dbafde20633e1d64bec0e35456">cusp::blas::nrm1</a></div><div class="ttdeci">cusp::detail::norm_type&lt; typename Array::value_type &gt;::type nrm1(const Array &amp;array)</div></div>
