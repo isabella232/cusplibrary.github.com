@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/lapack/lapack.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/lapack/lapack.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_f4a616d34a7ac9b95bc3848507aa6046.html">cusp</a></li><li class="navelem"><a class="el" href="dir_391938a2f217c7e032c706da52a23b51.html">lapack</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li><li class="navelem"><a class="el" href="dir_47bc029033351df07d33db1ecbe55196.html">lapack</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -160,8 +160,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Array2d, <span class="keyword">typename</span> Array1d&gt;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__lapack.html#ga0fa1b13d6c28f4007fd0018a53f1f15a">sytrs</a>( <span class="keyword">const</span> Array2d&amp; A, <span class="keyword">const</span> Array1d&amp; piv, Array2d&amp; B, <span class="keywordtype">char</span> uplo = <span class="charliteral">&#39;U&#39;</span> );</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Array2d, <span class="keyword">typename</span> Array1d&gt;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__lapack.html#ga3362ae6b3e5f330ce9a005a0aca33d1f">trtrs</a>( <span class="keyword">const</span> Array2d&amp; A, Array2d&amp; B, <span class="keywordtype">char</span> uplo = <span class="charliteral">&#39;U&#39;</span>, <span class="keywordtype">char</span> trans = <span class="charliteral">&#39;N&#39;</span>, <span class="keywordtype">char</span> diag = <span class="charliteral">&#39;N&#39;</span> );</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Array2d&gt;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__lapack.html#gad3fda9e39cd6472e953efddc19abaf2c">trtrs</a>( <span class="keyword">const</span> Array2d&amp; A, Array2d&amp; B, <span class="keywordtype">char</span> uplo = <span class="charliteral">&#39;U&#39;</span>, <span class="keywordtype">char</span> trans = <span class="charliteral">&#39;N&#39;</span>, <span class="keywordtype">char</span> diag = <span class="charliteral">&#39;N&#39;</span> );</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Array2d&gt;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__lapack.html#gae879f3e0b76904152b3bb04dd76abbfa">trtri</a>( Array2d&amp; A, <span class="keywordtype">char</span> uplo = <span class="charliteral">&#39;U&#39;</span>, <span class="keywordtype">char</span> diag = <span class="charliteral">&#39;N&#39;</span> );</div>
@@ -190,10 +190,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__lapack_html_ga0fa1b13d6c28f4007fd0018a53f1f15a"><div class="ttname"><a href="group__lapack.html#ga0fa1b13d6c28f4007fd0018a53f1f15a">cusp::lapack::sytrs</a></div><div class="ttdeci">void sytrs(const Array2d &amp;A, const Array1d &amp;piv, Array2d &amp;B, char uplo= 'U')</div><div class="ttdoc">Solves a system of linear equations with a UDU- or LDL-factored symmetric matrix. ...</div></div>
 <div class="ttc" id="group__lapack_html_gadaf2a61fbc250c2f96cefdc406a2210b"><div class="ttname"><a href="group__lapack.html#gadaf2a61fbc250c2f96cefdc406a2210b">cusp::lapack::getrf</a></div><div class="ttdeci">void getrf(Array2d &amp;A, Array1d &amp;piv)</div><div class="ttdoc">Compute LU factorization of matrix. </div></div>
 <div class="ttc" id="group__lapack_html_ga16c7b823092aee2c50ceda31c9be31a9"><div class="ttname"><a href="group__lapack.html#ga16c7b823092aee2c50ceda31c9be31a9">cusp::lapack::stev</a></div><div class="ttdeci">void stev(const Array1d1 &amp;alphas, const Array1d2 &amp;betas, Array1d3 &amp;eigvals, Array2d &amp;eigvecs, char job= 'V')</div><div class="ttdoc">Computes all eigenvalues and, optionally, eigenvectors of a real symmetric tridiagonal matrix...</div></div>
-<div class="ttc" id="group__lapack_html_ga3362ae6b3e5f330ce9a005a0aca33d1f"><div class="ttname"><a href="group__lapack.html#ga3362ae6b3e5f330ce9a005a0aca33d1f">cusp::lapack::trtrs</a></div><div class="ttdeci">void trtrs(const Array2d &amp;A, Array2d &amp;B, char uplo= 'U', char trans= 'N', char diag= 'N')</div><div class="ttdoc">Solves a system of linear equations with a triangular matrix, with multiple right-hand sides...</div></div>
 <div class="ttc" id="group__lapack_html_gae879f3e0b76904152b3bb04dd76abbfa"><div class="ttname"><a href="group__lapack.html#gae879f3e0b76904152b3bb04dd76abbfa">cusp::lapack::trtri</a></div><div class="ttdeci">void trtri(Array2d &amp;A, char uplo= 'U', char diag= 'N')</div><div class="ttdoc">This routine computes the inverse of a triangular matrix. </div></div>
 <div class="ttc" id="group__lapack_html_gaa4dbc288d254ddfff4b62f74be9f95f0"><div class="ttname"><a href="group__lapack.html#gaa4dbc288d254ddfff4b62f74be9f95f0">cusp::lapack::sytrf</a></div><div class="ttdeci">void sytrf(Array2d &amp;A, Array1d &amp;piv, char uplo= 'U')</div><div class="ttdoc">Computes the Bunch-Kaufman factorization of a symmetric matrix. </div></div>
 <div class="ttc" id="group__lapack_html_ga0f5980c34ea6b1e58e5544025286af59"><div class="ttname"><a href="group__lapack.html#ga0f5980c34ea6b1e58e5544025286af59">cusp::lapack::potrf</a></div><div class="ttdeci">void potrf(Array2d &amp;A, char uplo= 'U')</div><div class="ttdoc">Computes the Cholesky factorization of a symmetric (Hermitian) positive-definite matrix. </div></div>
+<div class="ttc" id="group__lapack_html_gad3fda9e39cd6472e953efddc19abaf2c"><div class="ttname"><a href="group__lapack.html#gad3fda9e39cd6472e953efddc19abaf2c">cusp::lapack::trtrs</a></div><div class="ttdeci">void trtrs(const Array2d &amp;A, Array2d &amp;B, char uplo= 'U', char trans= 'N', char diag= 'N')</div><div class="ttdoc">Solves a system of linear equations with a triangular matrix, with multiple right-hand sides...</div></div>
 <div class="ttc" id="group__lapack_html_ga11efae6fef75c3a42448e21c0b824305"><div class="ttname"><a href="group__lapack.html#ga11efae6fef75c3a42448e21c0b824305">cusp::lapack::getrs</a></div><div class="ttdeci">void getrs(const Array2d &amp;A, const Array1d &amp;piv, Array2d &amp;B, char trans= 'N')</div><div class="ttdoc">Solves a system of linear equations with an LU-factored square matrix, with multiple right-hand sides...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

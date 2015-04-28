@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quick_20start_20guide',['Quick Start Guide',['../md_quickstart.html',1,'']]]
+  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]]
 ];

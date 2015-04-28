@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/hyb_matrix.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/hyb_matrix.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_f4a616d34a7ac9b95bc3848507aa6046.html">cusp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -171,8 +171,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keyword">typename</span> <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;IndexType,ValueType,MemorySpace&gt;::const_view</a>,</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            IndexType, ValueType, MemorySpace&gt; const_view;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;container&gt;::view        coo_view_type;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;container const&gt;::view  const_coo_view_type;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;container,cusp::hyb_format&gt;::view        coo_view_type;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;container const,cusp::hyb_format&gt;::view  const_coo_view_type;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">struct </span>rebind</div>
@@ -237,8 +237,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1hyb__matrix__view.html">cusp::hyb_matrix_view&lt;MatrixType1, MatrixType2, IndexType, ValueType, MemorySpace&gt;</a> view;</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1hyb__matrix__view.html">cusp::hyb_matrix_view&lt;MatrixType1, MatrixType2, IndexType, ValueType, MemorySpace&gt;</a> const_view;</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;view&gt;::view       coo_view_type;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;view const&gt;::view const_coo_view_type;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;view,cusp::hyb_format&gt;::view       coo_view_type;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::detail::coo_view_type&lt;view const,cusp::hyb_format&gt;::view const_coo_view_type;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    ell_matrix_type <a class="code" href="classcusp_1_1hyb__matrix__view.html#a1f650bfb2d491e76e40df25730ba1d9f">ell</a>;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    coo_matrix_type <a class="code" href="classcusp_1_1hyb__matrix__view.html#ae3b26b8b9d7b6a71e9dd453f5357c913">coo</a>;</div>

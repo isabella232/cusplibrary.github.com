@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/array1d.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/array1d.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_f4a616d34a7ac9b95bc3848507aa6046.html">cusp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -133,310 +133,311 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;typeinfo&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;cusp/memory.h&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/format.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;cusp/exception.h&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="random__iterator_8h.html">cusp/iterator/random_iterator.h</a>&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;thrust/copy.h&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;thrust/host_vector.h&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;thrust/device_vector.h&gt;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;thrust/detail/vector_base.h&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;thrust/iterator/constant_iterator.h&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;thrust/iterator/counting_iterator.h&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>cusp</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// forward declaration of array1d_view</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d__view.html">   44</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> RandomAccessIterator&gt; <span class="keyword">class </span><a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html">   99</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1array1d.html">array1d</a> : <span class="keyword">public</span> thrust::detail::vector_base&lt;T, typename cusp::default_memory_allocator&lt;T, MemorySpace&gt;::type&gt;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::default_memory_allocator&lt;T, MemorySpace&gt;::type Alloc;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::detail::vector_base&lt;T,Alloc&gt;                 Parent;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">typedef</span> MemorySpace                                 memory_space;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">typedef</span> cusp::array1d_format                        format;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::iterator                   iterator;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::const_iterator             const_iterator;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::value_type                 value_type;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type                  size_type;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;T,MemorySpace&gt;</a>                container;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;iterator&gt;</a>       view;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;const_iterator&gt;</a> const_view;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">struct </span>rebind {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;T, MemorySpace2&gt;</a> type;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    };</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db">  127</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db">array1d</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      : Parent() {}</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f">  134</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f">array1d</a>(size_type n)</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        : Parent(n) {}</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779">  142</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779">array1d</a>(size_type n, <span class="keyword">const</span> value_type &amp;value)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        : Parent(n, value) {}</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c">  148</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c">array1d</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;v)</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        : Parent(v) {}</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a451e08b31ad07158f94509a0707f6455">  154</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a451e08b31ad07158f94509a0707f6455">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;v)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherMem&gt;</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4">  163</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4">array1d</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;OtherT, OtherMem&gt;</a> &amp;v)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        : Parent(v) {}</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherMem&gt;</div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a5d9d6acf54c395731bd80123e8b6c583">  172</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a5d9d6acf54c395731bd80123e8b6c583">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;OtherT, OtherMem&gt;</a> &amp;v)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
-<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598">  181</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598">array1d</a>(<span class="keyword">const</span> std::vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        : Parent(v) {}</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
-<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a7ed4429c6537a0bc07162e4e108dc4a5">  190</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a7ed4429c6537a0bc07162e4e108dc4a5">operator=</a>(<span class="keyword">const</span> std::vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f">  199</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f">array1d</a>(<span class="keyword">const</span> thrust::host_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        : Parent(v) {}</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
-<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a332d6831247cc095d6847255e76dff5e">  208</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a332d6831247cc095d6847255e76dff5e">operator=</a>(<span class="keyword">const</span> thrust::host_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
-<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac">  217</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac">array1d</a>(<span class="keyword">const</span> thrust::device_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        : Parent(v) {}</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
-<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a17385f038d0742b7a8497bae939f3b04">  226</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a17385f038d0742b7a8497bae939f3b04">operator=</a>(<span class="keyword">const</span> thrust::device_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InputIterator&gt;</div>
-<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841">  235</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841">array1d</a>(InputIterator first, InputIterator last)</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        : Parent(first, last) {}</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InputIterator&gt;</div>
-<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51">  243</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51">array1d</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;InputIterator&gt;</a> &amp;v)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        : Parent(v.begin(), v.end()) {}</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    view <a class="code" href="classcusp_1_1array1d.html#a8e9cfee004f5d4bc85a8e614f2c4be63">subarray</a>(size_type start_index, size_type num_entries);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    const_view <a class="code" href="classcusp_1_1array1d.html#a8e9cfee004f5d4bc85a8e614f2c4be63">subarray</a>(size_type start_index, size_type num_entries) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}; <span class="comment">// end class array1d</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> RandomAccessIterator&gt;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keyword">class </span>array1d_view : <span class="keyword">public</span> thrust::iterator_adaptor&lt;array1d_view&lt;RandomAccessIterator&gt;, RandomAccessIterator&gt;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;{</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="keyword">private</span> :</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keyword">typedef</span> thrust::iterator_adaptor&lt;array1d_view&lt;RandomAccessIterator&gt;, RandomAccessIterator&gt; Parent;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>thrust::iterator_core_access;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="keyword">public</span> :</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">typedef</span> RandomAccessIterator                                                iterator;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">typedef</span> cusp::array1d_format                                                format;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_value&lt;RandomAccessIterator&gt;::type         value_type;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_system&lt;RandomAccessIterator&gt;::type        memory_space;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_pointer&lt;RandomAccessIterator&gt;::type       pointer;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_reference&lt;RandomAccessIterator&gt;::type     reference;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_difference&lt;RandomAccessIterator&gt;::type    difference_type;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">// typedef typename thrust::iterator_difference&lt;RandomAccessIterator&gt;::type    size_type;</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">size_t</span>                                                              size_type;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;value_type,memory_space&gt;</a>                     container;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">// TODO: Fixed view types, view == const_view???</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;RandomAccessIterator&gt;</a>                   view;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keyword">typedef</span> RandomAccessIterator                                                const_iterator;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;const_iterator&gt;</a>                         const_view;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">array1d_view</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>(0), <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>(0) {}</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d__view.html#a94d4ae6f3604b61af94b23a7d9f42c07">  401</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ArrayType&gt;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">array1d_view</a>(ArrayType &amp;v)</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        : Parent(v.<a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>()), <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>(v.<a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>()), <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>(v.<a class="code" href="classcusp_1_1array1d__view.html#a13f66871fef63482c307de977fbbdc87">capacity</a>()) {}</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d__view.html#a89c9def5fd264d34886e9656029a2e9a">  409</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InputIterator&gt;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">array1d_view</a>(InputIterator <a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>, InputIterator <a class="code" href="classcusp_1_1array1d__view.html#abc9556ea6274d254cb732e0bcc5d1804">end</a>)</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        : Parent(begin), <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>(end-begin), <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>(end-begin) {}</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a> &amp;<a class="code" href="classcusp_1_1array1d__view.html#acf841c93a922e79724e17f067c793215">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a>&amp; v);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    reference <a class="code" href="classcusp_1_1array1d__view.html#a6c9352efdf45e36ecec6113e306a814f">front</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    reference <a class="code" href="classcusp_1_1array1d__view.html#ac29be29da5eebec990499dc84b446c17">back</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    reference <a class="code" href="classcusp_1_1array1d__view.html#af74c473848370e9216990554eb48e51f">operator[]</a>(size_type n) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    iterator <a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    iterator <a class="code" href="classcusp_1_1array1d__view.html#abc9556ea6274d254cb732e0bcc5d1804">end</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#a13f66871fef63482c307de977fbbdc87">capacity</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">// Thrust does not export iterator pointer types so data is not valid</span></div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="comment">// see http://thrust.github.io/doc/classthrust_1_1iterator__facade.html</span></div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="comment">// pointer data(void)</span></div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="comment">// {</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="comment">//     return &amp;front();</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    <span class="comment">// }</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1array1d__view.html#afff0e3ee46a329808523fefc236371ad">resize</a>(size_type new_size);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    view <a class="code" href="classcusp_1_1array1d__view.html#a28576a3ca7d16fa7bad51a6739c1b4f6">subarray</a>(size_type start_index, size_type num_entries);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/config.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;cusp/memory.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/format.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cusp/exception.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="random__iterator_8h.html">cusp/iterator/random_iterator.h</a>&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;thrust/copy.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;thrust/host_vector.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;thrust/device_vector.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;thrust/detail/vector_base.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;thrust/iterator/constant_iterator.h&gt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;thrust/iterator/counting_iterator.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>cusp</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// forward declaration of array1d_view</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d__view.html">   43</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> RandomAccessIterator&gt; <span class="keyword">class </span><a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html">   98</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1array1d.html">array1d</a> : <span class="keyword">public</span> thrust::detail::vector_base&lt;T, typename cusp::default_memory_allocator&lt;T, MemorySpace&gt;::type&gt;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> cusp::default_memory_allocator&lt;T, MemorySpace&gt;::type Alloc;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::detail::vector_base&lt;T,Alloc&gt;                 Parent;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">typedef</span> MemorySpace                                 memory_space;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">typedef</span> cusp::array1d_format                        format;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::iterator                   iterator;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::const_iterator             const_iterator;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::value_type                 value_type;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type                  size_type;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;T,MemorySpace&gt;</a>                container;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;iterator&gt;</a>       view;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;const_iterator&gt;</a> const_view;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemorySpace2&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">struct </span>rebind {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;T, MemorySpace2&gt;</a> type;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    };</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db">  126</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db">array1d</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      : Parent() {}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f">  133</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f">array1d</a>(size_type n)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        : Parent(n) {}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779">  141</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779">array1d</a>(size_type n, <span class="keyword">const</span> value_type &amp;value)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        : Parent(n, value) {}</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c">  147</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c">array1d</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;v)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        : Parent(v) {}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a451e08b31ad07158f94509a0707f6455">  153</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a451e08b31ad07158f94509a0707f6455">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;v)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherMem&gt;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4">  162</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4">array1d</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;OtherT, OtherMem&gt;</a> &amp;v)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        : Parent(v) {}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherMem&gt;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a5d9d6acf54c395731bd80123e8b6c583">  171</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a5d9d6acf54c395731bd80123e8b6c583">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;OtherT, OtherMem&gt;</a> &amp;v)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598">  180</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598">array1d</a>(<span class="keyword">const</span> std::vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        : Parent(v) {}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a7ed4429c6537a0bc07162e4e108dc4a5">  189</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a7ed4429c6537a0bc07162e4e108dc4a5">operator=</a>(<span class="keyword">const</span> std::vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f">  198</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f">array1d</a>(<span class="keyword">const</span> thrust::host_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        : Parent(v) {}</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a332d6831247cc095d6847255e76dff5e">  207</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a332d6831247cc095d6847255e76dff5e">operator=</a>(<span class="keyword">const</span> thrust::host_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
+<div class="line"><a name="l00216"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac">  216</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac">array1d</a>(<span class="keyword">const</span> thrust::device_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        : Parent(v) {}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherT, <span class="keyword">typename</span> OtherAlloc&gt;</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a17385f038d0742b7a8497bae939f3b04">  225</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html">array1d</a> &amp;<a class="code" href="classcusp_1_1array1d.html#a17385f038d0742b7a8497bae939f3b04">operator=</a>(<span class="keyword">const</span> thrust::device_vector&lt;OtherT, OtherAlloc&gt; &amp;v)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    { Parent::operator=(v); <span class="keywordflow">return</span> *<span class="keyword">this</span>; }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InputIterator&gt;</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841">  234</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841">array1d</a>(InputIterator first, InputIterator last)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        : Parent(first, last) {}</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InputIterator&gt;</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51">  242</a></span>&#160;    <a class="code" href="classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51">array1d</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;InputIterator&gt;</a> &amp;v)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        : Parent(v.begin(), v.end()) {}</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    view <a class="code" href="classcusp_1_1array1d.html#a8e9cfee004f5d4bc85a8e614f2c4be63">subarray</a>(size_type start_index, size_type num_entries);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    const_view <a class="code" href="classcusp_1_1array1d.html#a8e9cfee004f5d4bc85a8e614f2c4be63">subarray</a>(size_type start_index, size_type num_entries) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}; <span class="comment">// end class array1d</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> RandomAccessIterator&gt;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">class </span>array1d_view : <span class="keyword">public</span> thrust::iterator_adaptor&lt;array1d_view&lt;RandomAccessIterator&gt;, RandomAccessIterator&gt;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;{</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="keyword">private</span> :</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">typedef</span> thrust::iterator_adaptor&lt;array1d_view&lt;RandomAccessIterator&gt;, RandomAccessIterator&gt; Parent;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>thrust::iterator_core_access;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">public</span> :</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keyword">typedef</span> RandomAccessIterator                                                iterator;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">typedef</span> cusp::array1d_format                                                format;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_value&lt;RandomAccessIterator&gt;::type         value_type;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_system&lt;RandomAccessIterator&gt;::type        memory_space;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_pointer&lt;RandomAccessIterator&gt;::type       pointer;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_reference&lt;RandomAccessIterator&gt;::type     reference;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> thrust::iterator_difference&lt;RandomAccessIterator&gt;::type    difference_type;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">// typedef typename thrust::iterator_difference&lt;RandomAccessIterator&gt;::type    size_type;</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">size_t</span>                                                              size_type;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;value_type,memory_space&gt;</a>                     container;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="comment">// TODO: Fixed view types, view == const_view???</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;RandomAccessIterator&gt;</a>                   view;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keyword">typedef</span> RandomAccessIterator                                                const_iterator;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;const_iterator&gt;</a>                         const_view;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">array1d_view</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>(0), <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>(0) {}</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d__view.html#a94d4ae6f3604b61af94b23a7d9f42c07">  400</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ArrayType&gt;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">array1d_view</a>(ArrayType &amp;v)</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        : Parent(v.<a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>()), <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>(v.<a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>()), <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>(v.<a class="code" href="classcusp_1_1array1d__view.html#a13f66871fef63482c307de977fbbdc87">capacity</a>()) {}</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="classcusp_1_1array1d__view.html#a89c9def5fd264d34886e9656029a2e9a">  408</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> InputIterator&gt;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">array1d_view</a>(InputIterator <a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>, InputIterator <a class="code" href="classcusp_1_1array1d__view.html#abc9556ea6274d254cb732e0bcc5d1804">end</a>)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        : Parent(begin), <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>(end-begin), <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>(end-begin) {}</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a> &amp;<a class="code" href="classcusp_1_1array1d__view.html#acf841c93a922e79724e17f067c793215">operator=</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a>&amp; v);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    reference <a class="code" href="classcusp_1_1array1d__view.html#a6c9352efdf45e36ecec6113e306a814f">front</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    reference <a class="code" href="classcusp_1_1array1d__view.html#ac29be29da5eebec990499dc84b446c17">back</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    reference <a class="code" href="classcusp_1_1array1d__view.html#af74c473848370e9216990554eb48e51f">operator[]</a>(size_type n) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    iterator <a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    iterator <a class="code" href="classcusp_1_1array1d__view.html#abc9556ea6274d254cb732e0bcc5d1804">end</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#a13f66871fef63482c307de977fbbdc87">capacity</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="comment">// Thrust does not export iterator pointer types so data is not valid</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="comment">// see http://thrust.github.io/doc/classthrust_1_1iterator__facade.html</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="comment">// pointer data(void)</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="comment">// {</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="comment">//     return &amp;front();</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1array1d__view.html#afff0e3ee46a329808523fefc236371ad">resize</a>(size_type new_size);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    view <a class="code" href="classcusp_1_1array1d__view.html#a28576a3ca7d16fa7bad51a6739c1b4f6">subarray</a>(size_type start_index, size_type num_entries);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1array1d__view.html#a141dc3c392aab49642509820faef5536">swap</a>(<a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a> &amp;v);</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;};</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00563"></a><span class="lineno"><a class="line" href="classcusp_1_1counting__array.html">  563</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1counting__array.html">counting_array</a></div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    : <span class="keyword">public</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view</a>&lt; thrust::counting_iterator&lt;ValueType&gt; &gt;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;{</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::counting_iterator&lt;ValueType&gt;</a> &gt; <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::iterator  iterator;</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type size_type;</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <a class="code" href="classcusp_1_1counting__array.html#a1f18c7f9a19c92557857d825c449160d">counting_array</a>(size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>, ValueType init = ValueType(0))</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>(iterator(init), iterator(init) + size) {}</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;};</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;</div>
-<div class="line"><a name="l00613"></a><span class="lineno"><a class="line" href="classcusp_1_1constant__array.html">  613</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1constant__array.html">constant_array</a></div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    : <span class="keyword">public</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view</a>&lt; thrust::constant_iterator&lt;ValueType&gt; &gt;</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;{</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::constant_iterator&lt;ValueType&gt;</a> &gt; <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>;</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::iterator iterator;</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type size_type;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <a class="code" href="classcusp_1_1constant__array.html#ac3de525e86efcfc96db41c8ec80db16c">constant_array</a>(size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>, ValueType value)</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>(iterator(value), iterator(value) + size) {}</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;};</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
-<div class="line"><a name="l00661"></a><span class="lineno"><a class="line" href="classcusp_1_1random__array.html">  661</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1random__array.html">random_array</a> :</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;  <span class="keyword">public</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view</a>&lt; typename cusp::random_iterator&lt;ValueType&gt;::iterator &gt;</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;{</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; typename cusp::random_iterator&lt;ValueType&gt;::iterator</a> &gt; <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>;</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1random__iterator.html">cusp::random_iterator&lt;ValueType&gt;</a> rand;</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type size_type;</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <a class="code" href="classcusp_1_1random__array.html#ad0086a18942fbac929ef23b1686d517b">random_array</a>(size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>, size_type seed = 0)</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>(rand(seed).<a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>(), rand(seed).<a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>() + size) {}</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;};</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcusp_1_1array1d__view.html#a141dc3c392aab49642509820faef5536">swap</a>(<a class="code" href="classcusp_1_1array1d__view.html">array1d_view</a> &amp;v);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">m_size</a>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    size_type <a class="code" href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">m_capacity</a>;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;};</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;</div>
+<div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="classcusp_1_1counting__array.html">  562</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1counting__array.html">counting_array</a></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    : <span class="keyword">public</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view</a>&lt; thrust::counting_iterator&lt;ValueType&gt; &gt;</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;{</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::counting_iterator&lt;ValueType&gt;</a> &gt; <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::iterator  iterator;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type size_type;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <a class="code" href="classcusp_1_1counting__array.html#a1f18c7f9a19c92557857d825c449160d">counting_array</a>(size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>, ValueType init = ValueType(0))</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>(iterator(init), iterator(init) + size) {}</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;};</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;</div>
+<div class="line"><a name="l00612"></a><span class="lineno"><a class="line" href="classcusp_1_1constant__array.html">  612</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1constant__array.html">constant_array</a></div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    : <span class="keyword">public</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view</a>&lt; thrust::constant_iterator&lt;ValueType&gt; &gt;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;{</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::constant_iterator&lt;ValueType&gt;</a> &gt; <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>;</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::iterator iterator;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type size_type;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <a class="code" href="classcusp_1_1constant__array.html#ac3de525e86efcfc96db41c8ec80db16c">constant_array</a>(size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>, ValueType value)</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>(iterator(value), iterator(value) + size) {}</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;};</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;</div>
+<div class="line"><a name="l00660"></a><span class="lineno"><a class="line" href="classcusp_1_1random__array.html">  660</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1random__array.html">random_array</a> :</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="keyword">public</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view</a>&lt; typename cusp::random_iterator&lt;ValueType&gt;::iterator &gt;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;{</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; typename cusp::random_iterator&lt;ValueType&gt;::iterator</a> &gt; <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1random__iterator.html">cusp::random_iterator&lt;ValueType&gt;</a> rand;</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::size_type size_type;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    <a class="code" href="classcusp_1_1random__array.html#ad0086a18942fbac929ef23b1686d517b">random_array</a>(size_type <a class="code" href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">size</a>, size_type seed = 0)</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        : <a class="code" href="classcusp_1_1array1d__view.html">Parent</a>(rand(seed).<a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>(), rand(seed).<a class="code" href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">begin</a>() + size) {}</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;};</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;</div>
-<div class="line"><a name="l00694"></a><span class="lineno"><a class="line" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">  694</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(Iterator first, Iterator last)</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;{</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a>(first, last);</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;}</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;</div>
-<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="group__array__views.html#ga0f608c549666895b298fd74e3726fe79">  708</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;::view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;</a>&amp; v)</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;{</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;}</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;</div>
-<div class="line"><a name="l00721"></a><span class="lineno"><a class="line" href="group__array__views.html#gaf68ae21d7e5d4a7b268184a9f769cfaa">  721</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;::view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a>&amp; v)</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;{</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;}</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;</div>
-<div class="line"><a name="l00734"></a><span class="lineno"><a class="line" href="group__array__views.html#gad439867507906b8c80addabe5c0379eb">  734</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;::view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a>&amp; v)</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;{</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;}</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;</div>
-<div class="line"><a name="l00748"></a><span class="lineno"><a class="line" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">  748</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;::const_view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;</a>&amp; v)</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;{</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;}</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/array1d.inl&gt;</span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;</div>
+<div class="line"><a name="l00693"></a><span class="lineno"><a class="line" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">  693</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(Iterator first, Iterator last)</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;{</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a> ret(first, last);</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;}</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
+<div class="line"><a name="l00709"></a><span class="lineno"><a class="line" href="group__array__views.html#ga0f608c549666895b298fd74e3726fe79">  709</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;::view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;</a>&amp; v)</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;{</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;}</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;</div>
+<div class="line"><a name="l00722"></a><span class="lineno"><a class="line" href="group__array__views.html#gaf68ae21d7e5d4a7b268184a9f769cfaa">  722</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;::view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a>&amp; v)</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;{</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;}</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;</div>
+<div class="line"><a name="l00735"></a><span class="lineno"><a class="line" href="group__array__views.html#gad439867507906b8c80addabe5c0379eb">  735</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;::view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a>&amp; v)</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;{</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;}</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00749"></a><span class="lineno"><a class="line" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">  749</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;::const_view</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(<span class="keyword">const</span> <a class="code" href="classcusp_1_1array1d.html">array1d&lt;T,MemorySpace&gt;</a>&amp; v)</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;{</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(v.begin(), v.end());</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;}</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/array1d.inl&gt;</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;</div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_a6c9352efdf45e36ecec6113e306a814f"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a6c9352efdf45e36ecec6113e306a814f">cusp::array1d_view::front</a></div><div class="ttdeci">reference front(void) const </div></div>
-<div class="ttc" id="classcusp_1_1array1d__view_html_a86141bfb518e6878ec4e22debcdaad1c"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">cusp::array1d_view::array1d_view</a></div><div class="ttdeci">array1d_view(void)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00393">array1d.h:393</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d</a></div><div class="ttdoc">The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00099">array1d.h:99</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d__view_html_a86141bfb518e6878ec4e22debcdaad1c"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a86141bfb518e6878ec4e22debcdaad1c">cusp::array1d_view::array1d_view</a></div><div class="ttdeci">array1d_view(void)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00392">array1d.h:392</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d</a></div><div class="ttdoc">The array1d class is a 1D vector container that may contain elements stored in &quot;host&quot; or &quot;device&quot; mem...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00098">array1d.h:98</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_abc9556ea6274d254cb732e0bcc5d1804"><div class="ttname"><a href="classcusp_1_1array1d__view.html#abc9556ea6274d254cb732e0bcc5d1804">cusp::array1d_view::end</a></div><div class="ttdeci">iterator end(void) const </div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_a28576a3ca7d16fa7bad51a6739c1b4f6"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a28576a3ca7d16fa7bad51a6739c1b4f6">cusp::array1d_view::subarray</a></div><div class="ttdeci">view subarray(size_type start_index, size_type num_entries)</div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a17385f038d0742b7a8497bae939f3b04"><div class="ttname"><a href="classcusp_1_1array1d.html#a17385f038d0742b7a8497bae939f3b04">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const thrust::device_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00226">array1d.h:226</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a189f0b3ba5a7353e1e9b265690ffb37c"><div class="ttname"><a href="classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const array1d &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00148">array1d.h:148</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_ac7a570b6a4260056e036701c9bb86779"><div class="ttname"><a href="classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(size_type n, const value_type &amp;value)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00142">array1d.h:142</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d__view_html"><div class="ttname"><a href="classcusp_1_1array1d__view.html">cusp::array1d_view</a></div><div class="ttdoc">The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00044">array1d.h:44</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a8ce49f0b9c16f9c26bc88749b74f7b51"><div class="ttname"><a href="classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const array1d_view&lt; InputIterator &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00243">array1d.h:243</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a17385f038d0742b7a8497bae939f3b04"><div class="ttname"><a href="classcusp_1_1array1d.html#a17385f038d0742b7a8497bae939f3b04">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const thrust::device_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00225">array1d.h:225</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a189f0b3ba5a7353e1e9b265690ffb37c"><div class="ttname"><a href="classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const array1d &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00147">array1d.h:147</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_ac7a570b6a4260056e036701c9bb86779"><div class="ttname"><a href="classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(size_type n, const value_type &amp;value)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00141">array1d.h:141</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d__view_html"><div class="ttname"><a href="classcusp_1_1array1d__view.html">cusp::array1d_view</a></div><div class="ttdoc">The array1d_view class is a 1D vector container that wraps data from various iterators in a array1d d...</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00043">array1d.h:43</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a8ce49f0b9c16f9c26bc88749b74f7b51"><div class="ttname"><a href="classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const array1d_view&lt; InputIterator &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00242">array1d.h:242</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_acf841c93a922e79724e17f067c793215"><div class="ttname"><a href="classcusp_1_1array1d__view.html#acf841c93a922e79724e17f067c793215">cusp::array1d_view::operator=</a></div><div class="ttdeci">array1d_view &amp; operator=(const array1d_view &amp;v)</div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_af514581069c6b261512c395fb455f63b"><div class="ttname"><a href="classcusp_1_1array1d__view.html#af514581069c6b261512c395fb455f63b">cusp::array1d_view::size</a></div><div class="ttdeci">size_type size(void) const </div></div>
-<div class="ttc" id="classcusp_1_1array1d__view_html_a41a9a0d77790862913a5f861d3c15b22"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">cusp::array1d_view::m_capacity</a></div><div class="ttdeci">size_type m_capacity</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00527">array1d.h:527</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_aa52b2970fffa0003e6bd98077b36f2db"><div class="ttname"><a href="classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(void)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00127">array1d.h:127</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a2a0bbc06675145f11e9dba5c2c681598"><div class="ttname"><a href="classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const std::vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00181">array1d.h:181</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d__view_html_a41a9a0d77790862913a5f861d3c15b22"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22">cusp::array1d_view::m_capacity</a></div><div class="ttdeci">size_type m_capacity</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00526">array1d.h:526</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_aa52b2970fffa0003e6bd98077b36f2db"><div class="ttname"><a href="classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(void)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00126">array1d.h:126</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a2a0bbc06675145f11e9dba5c2c681598"><div class="ttname"><a href="classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const std::vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00180">array1d.h:180</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_a141dc3c392aab49642509820faef5536"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a141dc3c392aab49642509820faef5536">cusp::array1d_view::swap</a></div><div class="ttdeci">void swap(array1d_view &amp;v)</div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a0de5a681631ecaddb5f72122cace589f"><div class="ttname"><a href="classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(size_type n)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00134">array1d.h:134</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a0de5a681631ecaddb5f72122cace589f"><div class="ttname"><a href="classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(size_type n)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00133">array1d.h:133</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_af74c473848370e9216990554eb48e51f"><div class="ttname"><a href="classcusp_1_1array1d__view.html#af74c473848370e9216990554eb48e51f">cusp::array1d_view::operator[]</a></div><div class="ttdeci">reference operator[](size_type n) const </div><div class="ttdoc">Subscript access to the data contained in this array1d_view. </div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a14dd5afd8d7a6f5aea6e6ef2a8cc0fac"><div class="ttname"><a href="classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const thrust::device_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00217">array1d.h:217</a></div></div>
-<div class="ttc" id="classcusp_1_1counting__array_html_a1f18c7f9a19c92557857d825c449160d"><div class="ttname"><a href="classcusp_1_1counting__array.html#a1f18c7f9a19c92557857d825c449160d">cusp::counting_array::counting_array</a></div><div class="ttdeci">counting_array(size_type size, ValueType init=ValueType(0))</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00582">array1d.h:582</a></div></div>
-<div class="ttc" id="classcusp_1_1constant__array_html_ac3de525e86efcfc96db41c8ec80db16c"><div class="ttname"><a href="classcusp_1_1constant__array.html#ac3de525e86efcfc96db41c8ec80db16c">cusp::constant_array::constant_array</a></div><div class="ttdeci">constant_array(size_type size, ValueType value)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00632">array1d.h:632</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a332d6831247cc095d6847255e76dff5e"><div class="ttname"><a href="classcusp_1_1array1d.html#a332d6831247cc095d6847255e76dff5e">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const thrust::host_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00208">array1d.h:208</a></div></div>
-<div class="ttc" id="classcusp_1_1random__iterator_html"><div class="ttname"><a href="classcusp_1_1random__iterator.html">cusp::random_iterator</a></div><div class="ttdoc">Iterator for generating random values. </div><div class="ttdef"><b>Definition:</b> <a href="random__iterator_8h_source.html#l00079">random_iterator.h:79</a></div></div>
-<div class="ttc" id="group__array__views_html_gab1202e949ef966c933bccd15c7937d40"><div class="ttname"><a href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">cusp::make_array1d_view</a></div><div class="ttdeci">array1d&lt; T, MemorySpace &gt;::const_view make_array1d_view(const array1d&lt; T, MemorySpace &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00748">array1d.h:748</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a70842a5e865cdd5477eb9fe9603b6841"><div class="ttname"><a href="classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(InputIterator first, InputIterator last)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00235">array1d.h:235</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a14dd5afd8d7a6f5aea6e6ef2a8cc0fac"><div class="ttname"><a href="classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const thrust::device_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00216">array1d.h:216</a></div></div>
+<div class="ttc" id="classcusp_1_1counting__array_html_a1f18c7f9a19c92557857d825c449160d"><div class="ttname"><a href="classcusp_1_1counting__array.html#a1f18c7f9a19c92557857d825c449160d">cusp::counting_array::counting_array</a></div><div class="ttdeci">counting_array(size_type size, ValueType init=ValueType(0))</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00581">array1d.h:581</a></div></div>
+<div class="ttc" id="classcusp_1_1constant__array_html_ac3de525e86efcfc96db41c8ec80db16c"><div class="ttname"><a href="classcusp_1_1constant__array.html#ac3de525e86efcfc96db41c8ec80db16c">cusp::constant_array::constant_array</a></div><div class="ttdeci">constant_array(size_type size, ValueType value)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00631">array1d.h:631</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a332d6831247cc095d6847255e76dff5e"><div class="ttname"><a href="classcusp_1_1array1d.html#a332d6831247cc095d6847255e76dff5e">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const thrust::host_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00207">array1d.h:207</a></div></div>
+<div class="ttc" id="classcusp_1_1random__iterator_html"><div class="ttname"><a href="classcusp_1_1random__iterator.html">cusp::random_iterator</a></div><div class="ttdoc">Iterator for generating random values. </div><div class="ttdef"><b>Definition:</b> <a href="random__iterator_8h_source.html#l00081">random_iterator.h:81</a></div></div>
+<div class="ttc" id="group__array__views_html_gab1202e949ef966c933bccd15c7937d40"><div class="ttname"><a href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">cusp::make_array1d_view</a></div><div class="ttdeci">array1d&lt; T, MemorySpace &gt;::const_view make_array1d_view(const array1d&lt; T, MemorySpace &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00749">array1d.h:749</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a70842a5e865cdd5477eb9fe9603b6841"><div class="ttname"><a href="classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(InputIterator first, InputIterator last)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00234">array1d.h:234</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_a13f66871fef63482c307de977fbbdc87"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a13f66871fef63482c307de977fbbdc87">cusp::array1d_view::capacity</a></div><div class="ttdeci">size_type capacity(void) const </div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_ac29be29da5eebec990499dc84b446c17"><div class="ttname"><a href="classcusp_1_1array1d__view.html#ac29be29da5eebec990499dc84b446c17">cusp::array1d_view::back</a></div><div class="ttdeci">reference back(void) const </div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_acb9b42afbafeab44031e6d45b55cec5f"><div class="ttname"><a href="classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const thrust::host_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00199">array1d.h:199</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a451e08b31ad07158f94509a0707f6455"><div class="ttname"><a href="classcusp_1_1array1d.html#a451e08b31ad07158f94509a0707f6455">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const array1d &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00154">array1d.h:154</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_acb9b42afbafeab44031e6d45b55cec5f"><div class="ttname"><a href="classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const thrust::host_vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00198">array1d.h:198</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a451e08b31ad07158f94509a0707f6455"><div class="ttname"><a href="classcusp_1_1array1d.html#a451e08b31ad07158f94509a0707f6455">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const array1d &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00153">array1d.h:153</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_ab8fb0d597491bd8a7bdf83381b9ef057"><div class="ttname"><a href="classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057">cusp::array1d_view::begin</a></div><div class="ttdeci">iterator begin(void) const </div></div>
 <div class="ttc" id="random__iterator_8h_html"><div class="ttname"><a href="random__iterator_8h.html">random_iterator.h</a></div><div class="ttdoc">An iterator which generates random entries. </div></div>
 <div class="ttc" id="classcusp_1_1array1d__view_html_afff0e3ee46a329808523fefc236371ad"><div class="ttname"><a href="classcusp_1_1array1d__view.html#afff0e3ee46a329808523fefc236371ad">cusp::array1d_view::resize</a></div><div class="ttdeci">void resize(size_type new_size)</div><div class="ttdoc">Resizes this array1d_view to the specified number of elements. </div></div>
-<div class="ttc" id="classcusp_1_1constant__array_html"><div class="ttname"><a href="classcusp_1_1constant__array.html">cusp::constant_array</a></div><div class="ttdoc">Specialized array1d_view wrapping thrust::constant_iterator. </div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00613">array1d.h:613</a></div></div>
-<div class="ttc" id="classcusp_1_1random__array_html_ad0086a18942fbac929ef23b1686d517b"><div class="ttname"><a href="classcusp_1_1random__array.html#ad0086a18942fbac929ef23b1686d517b">cusp::random_array::random_array</a></div><div class="ttdeci">random_array(size_type size, size_type seed=0)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00680">array1d.h:680</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_ac7b42e39a96b135ef884586c56cdf4c4"><div class="ttname"><a href="classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const array1d&lt; OtherT, OtherMem &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00163">array1d.h:163</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a5d9d6acf54c395731bd80123e8b6c583"><div class="ttname"><a href="classcusp_1_1array1d.html#a5d9d6acf54c395731bd80123e8b6c583">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const array1d&lt; OtherT, OtherMem &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00172">array1d.h:172</a></div></div>
+<div class="ttc" id="classcusp_1_1constant__array_html"><div class="ttname"><a href="classcusp_1_1constant__array.html">cusp::constant_array</a></div><div class="ttdoc">Specialized array1d_view wrapping thrust::constant_iterator. </div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00612">array1d.h:612</a></div></div>
+<div class="ttc" id="classcusp_1_1random__array_html_ad0086a18942fbac929ef23b1686d517b"><div class="ttname"><a href="classcusp_1_1random__array.html#ad0086a18942fbac929ef23b1686d517b">cusp::random_array::random_array</a></div><div class="ttdeci">random_array(size_type size, size_type seed=0)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00679">array1d.h:679</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_ac7b42e39a96b135ef884586c56cdf4c4"><div class="ttname"><a href="classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4">cusp::array1d::array1d</a></div><div class="ttdeci">array1d(const array1d&lt; OtherT, OtherMem &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00162">array1d.h:162</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a5d9d6acf54c395731bd80123e8b6c583"><div class="ttname"><a href="classcusp_1_1array1d.html#a5d9d6acf54c395731bd80123e8b6c583">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const array1d&lt; OtherT, OtherMem &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00171">array1d.h:171</a></div></div>
 <div class="ttc" id="classcusp_1_1array1d_html_a8e9cfee004f5d4bc85a8e614f2c4be63"><div class="ttname"><a href="classcusp_1_1array1d.html#a8e9cfee004f5d4bc85a8e614f2c4be63">cusp::array1d::subarray</a></div><div class="ttdeci">view subarray(size_type start_index, size_type num_entries)</div></div>
-<div class="ttc" id="classcusp_1_1array1d_html_a7ed4429c6537a0bc07162e4e108dc4a5"><div class="ttname"><a href="classcusp_1_1array1d.html#a7ed4429c6537a0bc07162e4e108dc4a5">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const std::vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00190">array1d.h:190</a></div></div>
-<div class="ttc" id="classcusp_1_1array1d__view_html_a2ecf5481bdae0d1525644d5dff11741c"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">cusp::array1d_view::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00522">array1d.h:522</a></div></div>
-<div class="ttc" id="classcusp_1_1counting__array_html"><div class="ttname"><a href="classcusp_1_1counting__array.html">cusp::counting_array</a></div><div class="ttdoc">Specialized array1d_view wrapping thrust::counting_iterator. </div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00563">array1d.h:563</a></div></div>
-<div class="ttc" id="classcusp_1_1random__array_html"><div class="ttname"><a href="classcusp_1_1random__array.html">cusp::random_array</a></div><div class="ttdoc">Specialized array1d_view wrapping cusp::random_iterator. </div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00661">array1d.h:661</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d_html_a7ed4429c6537a0bc07162e4e108dc4a5"><div class="ttname"><a href="classcusp_1_1array1d.html#a7ed4429c6537a0bc07162e4e108dc4a5">cusp::array1d::operator=</a></div><div class="ttdeci">array1d &amp; operator=(const std::vector&lt; OtherT, OtherAlloc &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00189">array1d.h:189</a></div></div>
+<div class="ttc" id="classcusp_1_1array1d__view_html_a2ecf5481bdae0d1525644d5dff11741c"><div class="ttname"><a href="classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c">cusp::array1d_view::m_size</a></div><div class="ttdeci">size_type m_size</div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00521">array1d.h:521</a></div></div>
+<div class="ttc" id="classcusp_1_1counting__array_html"><div class="ttname"><a href="classcusp_1_1counting__array.html">cusp::counting_array</a></div><div class="ttdoc">Specialized array1d_view wrapping thrust::counting_iterator. </div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00562">array1d.h:562</a></div></div>
+<div class="ttc" id="classcusp_1_1random__array_html"><div class="ttname"><a href="classcusp_1_1random__array.html">cusp::random_array</a></div><div class="ttdoc">Specialized array1d_view wrapping cusp::random_iterator. </div><div class="ttdef"><b>Definition:</b> <a href="array1d_8h_source.html#l00660">array1d.h:660</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

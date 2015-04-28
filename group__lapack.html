@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -138,10 +138,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0fa1b13d6c28f4007fd0018a53f1f15a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__lapack.html#ga0fa1b13d6c28f4007fd0018a53f1f15a">cusp::lapack::sytrs</a> (const Array2d &amp;A, const Array1d &amp;piv, Array2d &amp;B, char uplo= 'U')</td></tr>
 <tr class="memdesc:ga0fa1b13d6c28f4007fd0018a53f1f15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with a UDU- or LDL-factored symmetric matrix.  <a href="#ga0fa1b13d6c28f4007fd0018a53f1f15a">More...</a><br/></td></tr>
 <tr class="separator:ga0fa1b13d6c28f4007fd0018a53f1f15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3362ae6b3e5f330ce9a005a0aca33d1f"><td class="memTemplParams" colspan="2">template&lt;typename Array2d , typename Array1d &gt; </td></tr>
-<tr class="memitem:ga3362ae6b3e5f330ce9a005a0aca33d1f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__lapack.html#ga3362ae6b3e5f330ce9a005a0aca33d1f">cusp::lapack::trtrs</a> (const Array2d &amp;A, Array2d &amp;B, char uplo= 'U', char trans= 'N', char diag= 'N')</td></tr>
-<tr class="memdesc:ga3362ae6b3e5f330ce9a005a0aca33d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with a triangular matrix, with multiple right-hand sides.  <a href="#ga3362ae6b3e5f330ce9a005a0aca33d1f">More...</a><br/></td></tr>
-<tr class="separator:ga3362ae6b3e5f330ce9a005a0aca33d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3fda9e39cd6472e953efddc19abaf2c"><td class="memTemplParams" colspan="2">template&lt;typename Array2d &gt; </td></tr>
+<tr class="memitem:gad3fda9e39cd6472e953efddc19abaf2c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__lapack.html#gad3fda9e39cd6472e953efddc19abaf2c">cusp::lapack::trtrs</a> (const Array2d &amp;A, Array2d &amp;B, char uplo= 'U', char trans= 'N', char diag= 'N')</td></tr>
+<tr class="memdesc:gad3fda9e39cd6472e953efddc19abaf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations with a triangular matrix, with multiple right-hand sides.  <a href="#gad3fda9e39cd6472e953efddc19abaf2c">More...</a><br/></td></tr>
+<tr class="separator:gad3fda9e39cd6472e953efddc19abaf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae879f3e0b76904152b3bb04dd76abbfa"><td class="memTemplParams" colspan="2">template&lt;typename Array2d &gt; </td></tr>
 <tr class="memitem:gae879f3e0b76904152b3bb04dd76abbfa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__lapack.html#gae879f3e0b76904152b3bb04dd76abbfa">cusp::lapack::trtri</a> (Array2d &amp;A, char uplo= 'U', char diag= 'N')</td></tr>
 <tr class="memdesc:gae879f3e0b76904152b3bb04dd76abbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This routine computes the inverse of a triangular matrix.  <a href="#gae879f3e0b76904152b3bb04dd76abbfa">More...</a><br/></td></tr>
@@ -1062,11 +1062,11 @@ template&lt;typename Array2d &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ga3362ae6b3e5f330ce9a005a0aca33d1f"></a>
+<a class="anchor" id="gad3fda9e39cd6472e953efddc19abaf2c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Array2d , typename Array1d &gt; </div>
+template&lt;typename Array2d &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void cusp::lapack::trtrs </td>
@@ -1146,7 +1146,7 @@ template&lt;typename Array2d , typename Array1d &gt; </div>
 <div class="line">  B.values = <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;float&gt;</a>(B.values.size());</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// solve multiple RHS vectors</span></div>
-<div class="line">  <a class="code" href="group__lapack.html#ga3362ae6b3e5f330ce9a005a0aca33d1f">cusp::lapack::trtrs</a>(A, B);</div>
+<div class="line">  <a class="code" href="group__lapack.html#gad3fda9e39cd6472e953efddc19abaf2c">cusp::lapack::trtrs</a>(A, B);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// print the contents of B</span></div>
 <div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(B);</div>

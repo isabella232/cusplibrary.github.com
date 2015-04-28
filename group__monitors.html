@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -120,6 +120,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1monitor.html">cusp::monitor&lt; ValueType &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements standard convergence criteria and reporting for iterative solvers.  <a href="classcusp_1_1monitor.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1convergence__monitor.html">cusp::convergence_monitor&lt; ValueType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1default__monitor.html">cusp::default_monitor&lt; ValueType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1verbose__monitor.html">cusp::verbose_monitor&lt; ValueType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -128,6 +134,15 @@ typedef <br class="typebreak"/>
 cusp::detail::norm_type<br class="typebreak"/>
 &lt; ValueType &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>cusp::monitor&lt; ValueType &gt;::Real</b></td></tr>
 <tr class="separator:gabf78b8a277b4893331f484b22c843756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbf689f1e6e4e2ccda1f7721f615dc23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gadbf689f1e6e4e2ccda1f7721f615dc23"></a>
+typedef Parent::Real&#160;</td><td class="memItemRight" valign="bottom"><b>cusp::convergence_monitor&lt; ValueType &gt;::Real</b></td></tr>
+<tr class="separator:gadbf689f1e6e4e2ccda1f7721f615dc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf19dca7fe931144f2c33c6e76d1fe041"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf19dca7fe931144f2c33c6e76d1fe041"></a>
+typedef Parent::Real&#160;</td><td class="memItemRight" valign="bottom"><b>cusp::default_monitor&lt; ValueType &gt;::Real</b></td></tr>
+<tr class="separator:gaf19dca7fe931144f2c33c6e76d1fe041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24c45376533db739152cb24dfae49d88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga24c45376533db739152cb24dfae49d88"></a>
+typedef Parent::Real&#160;</td><td class="memItemRight" valign="bottom"><b>cusp::verbose_monitor&lt; ValueType &gt;::Real</b></td></tr>
+<tr class="separator:ga24c45376533db739152cb24dfae49d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -187,6 +202,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memitem:gae6c5cfcdad375e49e43dfc88156c6896"><td class="memItemLeft" align="right" valign="top">Real&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__monitors.html#gae6c5cfcdad375e49e43dfc88156c6896">cusp::monitor&lt; ValueType &gt;::average_rate</a> (void)</td></tr>
 <tr class="memdesc:gae6c5cfcdad375e49e43dfc88156c6896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the average convergence rate.  <a href="#gae6c5cfcdad375e49e43dfc88156c6896">More...</a><br/></td></tr>
 <tr class="separator:gae6c5cfcdad375e49e43dfc88156c6896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15419168169c0505b86e92c847418904"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
+<tr class="memitem:ga15419168169c0505b86e92c847418904"><td class="memTemplItemLeft" align="right" valign="top">CUSP_DEPRECATED&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__monitors.html#ga15419168169c0505b86e92c847418904">cusp::convergence_monitor&lt; ValueType &gt;::convergence_monitor</a> (const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0)</td></tr>
+<tr class="memdesc:ga15419168169c0505b86e92c847418904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="classcusp_1_1convergence__monitor.html">convergence_monitor</a></code> for a given right-hand-side <code>b</code>.  <a href="#ga15419168169c0505b86e92c847418904">More...</a><br/></td></tr>
+<tr class="separator:ga15419168169c0505b86e92c847418904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf34c058255229cabc579ad5ee449d520"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
+<tr class="memitem:gaf34c058255229cabc579ad5ee449d520"><td class="memTemplItemLeft" align="right" valign="top">CUSP_DEPRECATED&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__monitors.html#gaf34c058255229cabc579ad5ee449d520">cusp::default_monitor&lt; ValueType &gt;::default_monitor</a> (const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0)</td></tr>
+<tr class="memdesc:gaf34c058255229cabc579ad5ee449d520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="classcusp_1_1default__monitor.html">default_monitor</a></code> for a given right-hand-side <code>b</code>.  <a href="#gaf34c058255229cabc579ad5ee449d520">More...</a><br/></td></tr>
+<tr class="separator:gaf34c058255229cabc579ad5ee449d520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5024bd7ea502b46267553e6a3ad8685c"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
+<tr class="memitem:ga5024bd7ea502b46267553e6a3ad8685c"><td class="memTemplItemLeft" align="right" valign="top">CUSP_DEPRECATED&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__monitors.html#ga5024bd7ea502b46267553e6a3ad8685c">cusp::verbose_monitor&lt; ValueType &gt;::verbose_monitor</a> (const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0)</td></tr>
+<tr class="memdesc:ga5024bd7ea502b46267553e6a3ad8685c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <code><a class="el" href="classcusp_1_1verbose__monitor.html">verbose_monitor</a></code> for a given right-hand-side <code>b</code>.  <a href="#ga5024bd7ea502b46267553e6a3ad8685c">More...</a><br/></td></tr>
+<tr class="separator:ga5024bd7ea502b46267553e6a3ad8685c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -256,6 +283,148 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Indicates whether the last tested residual satisfies the convergence tolerance. </p>
 <dl class="section return"><dt>Returns</dt><dd>Boolean convergence indicator </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga15419168169c0505b86e92c847418904"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType &gt; </div>
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CUSP_DEPRECATED <a class="el" href="classcusp_1_1convergence__monitor.html">cusp::convergence_monitor</a>&lt; ValueType &gt;::convergence_monitor </td>
+          <td>(</td>
+          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>iteration_limit</em> = <code>500</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Real&#160;</td>
+          <td class="paramname"><em>relative_tolerance</em> = <code>1e-5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Real&#160;</td>
+          <td class="paramname"><em>absolute_tolerance</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <code><a class="el" href="classcusp_1_1convergence__monitor.html">convergence_monitor</a></code> for a given right-hand-side <code>b</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">VectorType</td><td>Type of initial vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>right-hand-side of the linear system A x = b </td></tr>
+    <tr><td class="paramname">iteration_limit</td><td>maximum number of solver iterations to allow </td></tr>
+    <tr><td class="paramname">relative_tolerance</td><td>determines convergence criteria </td></tr>
+    <tr><td class="paramname">absolute_tolerance</td><td>determines convergence criteria </td></tr>
+    <tr><td class="paramname">verbose</td><td>Controls printing status updates during execution</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>As of v0.4.0 monitors have been unified. Use monitor instead. </dd></dl>
+
+<p>Definition at line <a class="el" href="monitor_8h_source.html#l00283">283</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaf34c058255229cabc579ad5ee449d520"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType &gt; </div>
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CUSP_DEPRECATED <a class="el" href="classcusp_1_1default__monitor.html">cusp::default_monitor</a>&lt; ValueType &gt;::default_monitor </td>
+          <td>(</td>
+          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>iteration_limit</em> = <code>500</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Real&#160;</td>
+          <td class="paramname"><em>relative_tolerance</em> = <code>1e-5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Real&#160;</td>
+          <td class="paramname"><em>absolute_tolerance</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <code><a class="el" href="classcusp_1_1default__monitor.html">default_monitor</a></code> for a given right-hand-side <code>b</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">VectorType</td><td>Type of initial vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>right-hand-side of the linear system A x = b </td></tr>
+    <tr><td class="paramname">iteration_limit</td><td>maximum number of solver iterations to allow </td></tr>
+    <tr><td class="paramname">relative_tolerance</td><td>determines convergence criteria </td></tr>
+    <tr><td class="paramname">absolute_tolerance</td><td>determines convergence criteria </td></tr>
+    <tr><td class="paramname">verbose</td><td>Controls printing status updates during execution</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>As of v0.4.0 monitors have been unified. Use monitor instead. </dd></dl>
+
+<p>Definition at line <a class="el" href="monitor_8h_source.html#l00317">317</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>
@@ -584,6 +753,77 @@ template&lt;typename ValueType&gt; </div>
 
 <p>Return the tolerance equal to <a class="el" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae" title="Returns the absolute tolerance. ">absolute_tolerance()</a> + <a class="el" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf" title="Returns the relative tolerance. ">relative_tolerance()</a> * ||b||. </p>
 <dl class="section return"><dt>Returns</dt><dd>tolerance set for monitor </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5024bd7ea502b46267553e6a3ad8685c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType &gt; </div>
+<div class="memtemplate">
+template&lt;typename VectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CUSP_DEPRECATED <a class="el" href="classcusp_1_1verbose__monitor.html">cusp::verbose_monitor</a>&lt; ValueType &gt;::verbose_monitor </td>
+          <td>(</td>
+          <td class="paramtype">const VectorType &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>iteration_limit</em> = <code>500</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Real&#160;</td>
+          <td class="paramname"><em>relative_tolerance</em> = <code>1e-5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Real&#160;</td>
+          <td class="paramname"><em>absolute_tolerance</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <code><a class="el" href="classcusp_1_1verbose__monitor.html">verbose_monitor</a></code> for a given right-hand-side <code>b</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">VectorType</td><td>Type of initial vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>right-hand-side of the linear system A x = b </td></tr>
+    <tr><td class="paramname">iteration_limit</td><td>maximum number of solver iterations to allow </td></tr>
+    <tr><td class="paramname">relative_tolerance</td><td>determines convergence criteria </td></tr>
+    <tr><td class="paramname">absolute_tolerance</td><td>determines convergence criteria </td></tr>
+    <tr><td class="paramname">verbose</td><td>Controls printing status updates during execution</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>As of v0.4.0 monitors have been unified. Use monitor instead. </dd></dl>
+
+<p>Definition at line <a class="el" href="monitor_8h_source.html#l00351">351</a> of file <a class="el" href="monitor_8h_source.html">monitor.h</a>.</p>
 
 </div>
 </div>

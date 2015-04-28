@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: /home/sdalton/test/cusplibrary/cusp/monitor.h Source File</title>
+<title>CUSP: /home/sdalton/cusplibrary/cusp/monitor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_f4a616d34a7ac9b95bc3848507aa6046.html">cusp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_95d769fab63bdc4943effba0400e7377.html">cusp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -197,18 +197,81 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    Real b_norm;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    Real r_norm;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">size_t</span> iteration_limit_;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">size_t</span> iteration_count_;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    Real relative_tolerance_;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    Real absolute_tolerance_;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">bool</span> verbose;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;};</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    Real b_norm;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    Real r_norm;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">size_t</span> iteration_limit_;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">size_t</span> iteration_count_;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    Real relative_tolerance_;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    Real absolute_tolerance_;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordtype">bool</span> verbose;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;};</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/monitor.inl&gt;</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment">// TODO : Remove convergence, default, and verbose monitors in v0.6.0</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="classcusp_1_1convergence__monitor.html">  257</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1convergence__monitor.html">convergence_monitor</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1monitor.html">monitor</a>&lt;ValueType&gt;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1monitor.html">monitor&lt;ValueType&gt;</a> <a class="code" href="classcusp_1_1monitor.html">Parent</a>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::Real Real;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType&gt;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    CUSP_DEPRECATED</div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="group__monitors.html#ga15419168169c0505b86e92c847418904">  283</a></span>&#160;    <a class="code" href="group__monitors.html#ga15419168169c0505b86e92c847418904">convergence_monitor</a>(<span class="keyword">const</span> VectorType&amp; b,</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">iteration_limit</a> = 500,</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                        <span class="keyword">const</span> Real <a class="code" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">relative_tolerance</a> = 1e-5,</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                        <span class="keyword">const</span> Real <a class="code" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">absolute_tolerance</a> = 0)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    : <a class="code" href="classcusp_1_1monitor.html">Parent</a>(b, <a class="code" href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">iteration_limit</a>, <a class="code" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">relative_tolerance</a>, <a class="code" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">absolute_tolerance</a>, false) {}</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;};</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="classcusp_1_1default__monitor.html">  291</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1default__monitor.html">default_monitor</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1monitor.html">monitor</a>&lt;ValueType&gt;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;{</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1monitor.html">monitor&lt;ValueType&gt;</a> <a class="code" href="classcusp_1_1monitor.html">Parent</a>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::Real Real;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType&gt;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    CUSP_DEPRECATED</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="group__monitors.html#gaf34c058255229cabc579ad5ee449d520">  317</a></span>&#160;    <a class="code" href="group__monitors.html#gaf34c058255229cabc579ad5ee449d520">default_monitor</a>(<span class="keyword">const</span> VectorType&amp; b,</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">iteration_limit</a> = 500,</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    <span class="keyword">const</span> Real <a class="code" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">relative_tolerance</a> = 1e-5,</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    <span class="keyword">const</span> Real <a class="code" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">absolute_tolerance</a> = 0)</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    : <a class="code" href="classcusp_1_1monitor.html">Parent</a>(b, <a class="code" href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">iteration_limit</a>, <a class="code" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">relative_tolerance</a>, <a class="code" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">absolute_tolerance</a>, false) {}</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;};</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValueType&gt;</div>
+<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="classcusp_1_1verbose__monitor.html">  325</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcusp_1_1verbose__monitor.html">verbose_monitor</a> : <span class="keyword">public</span> <a class="code" href="classcusp_1_1monitor.html">monitor</a>&lt;ValueType&gt;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1monitor.html">monitor&lt;ValueType&gt;</a> <a class="code" href="classcusp_1_1monitor.html">Parent</a>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> Parent::Real Real;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType&gt;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    CUSP_DEPRECATED</div>
+<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="group__monitors.html#ga5024bd7ea502b46267553e6a3ad8685c">  351</a></span>&#160;    <a class="code" href="group__monitors.html#ga5024bd7ea502b46267553e6a3ad8685c">verbose_monitor</a>(<span class="keyword">const</span> VectorType&amp; b,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">iteration_limit</a> = 500,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                    <span class="keyword">const</span> Real <a class="code" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">relative_tolerance</a> = 1e-5,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    <span class="keyword">const</span> Real <a class="code" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">absolute_tolerance</a> = 0)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    : <a class="code" href="classcusp_1_1monitor.html">Parent</a>(b, <a class="code" href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">iteration_limit</a>, <a class="code" href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">relative_tolerance</a>, <a class="code" href="group__monitors.html#gaca3aa91c824c9a757c316a15002b24ae">absolute_tolerance</a>, true) {}</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;};</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="preprocessor">#include &lt;cusp/detail/monitor.inl&gt;</span></div>
+<div class="ttc" id="group__monitors_html_gaf34c058255229cabc579ad5ee449d520"><div class="ttname"><a href="group__monitors.html#gaf34c058255229cabc579ad5ee449d520">cusp::default_monitor::default_monitor</a></div><div class="ttdeci">CUSP_DEPRECATED default_monitor(const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0)</div><div class="ttdoc">Constructs a default_monitor for a given right-hand-side b. </div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00317">monitor.h:317</a></div></div>
+<div class="ttc" id="classcusp_1_1convergence__monitor_html"><div class="ttname"><a href="classcusp_1_1convergence__monitor.html">cusp::convergence_monitor</a></div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00257">monitor.h:257</a></div></div>
 <div class="ttc" id="group__monitors_html_gacdc4e1aa1342c847b3acea8384b49211"><div class="ttname"><a href="group__monitors.html#gacdc4e1aa1342c847b3acea8384b49211">cusp::monitor::set_verbose</a></div><div class="ttdeci">void set_verbose(bool verbose_=true)</div><div class="ttdoc">Sets the verbosity level of the monitor. </div></div>
 <div class="ttc" id="classcusp_1_1array1d_html"><div class="ttname"><a href="classcusp_1_1array1d.html">cusp::array1d&lt; Real, cusp::host_memory &gt;</a></div></div>
 <div class="ttc" id="complex_8h_html"><div class="ttname"><a href="complex_8h.html">complex.h</a></div><div class="ttdoc">Complex numbers. </div></div>
@@ -217,14 +280,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="group__monitors_html_gaca241bd800a6208e733f91d84a280774"><div class="ttname"><a href="group__monitors.html#gaca241bd800a6208e733f91d84a280774">cusp::monitor::iteration_count</a></div><div class="ttdeci">size_t iteration_count(void) const </div><div class="ttdoc">Returns the number of iterations that the monitor has executed. </div></div>
 <div class="ttc" id="group__monitors_html_ga088a9e36c49ab23555ec59666efb916f"><div class="ttname"><a href="group__monitors.html#ga088a9e36c49ab23555ec59666efb916f">cusp::monitor::geometric_rate</a></div><div class="ttdeci">Real geometric_rate(void)</div><div class="ttdoc">Returns the geometric convergence rate. </div></div>
 <div class="ttc" id="classcusp_1_1monitor_html"><div class="ttname"><a href="classcusp_1_1monitor.html">cusp::monitor</a></div><div class="ttdoc">Implements standard convergence criteria and reporting for iterative solvers. </div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00101">monitor.h:101</a></div></div>
+<div class="ttc" id="classcusp_1_1default__monitor_html"><div class="ttname"><a href="classcusp_1_1default__monitor.html">cusp::default_monitor</a></div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00291">monitor.h:291</a></div></div>
+<div class="ttc" id="group__monitors_html_ga5024bd7ea502b46267553e6a3ad8685c"><div class="ttname"><a href="group__monitors.html#ga5024bd7ea502b46267553e6a3ad8685c">cusp::verbose_monitor::verbose_monitor</a></div><div class="ttdeci">CUSP_DEPRECATED verbose_monitor(const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0)</div><div class="ttdoc">Constructs a verbose_monitor for a given right-hand-side b. </div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00351">monitor.h:351</a></div></div>
 <div class="ttc" id="group__monitors_html_ga8916cde51847dbc04ac35cefdce9fedf"><div class="ttname"><a href="group__monitors.html#ga8916cde51847dbc04ac35cefdce9fedf">cusp::monitor::iteration_limit</a></div><div class="ttdeci">size_t iteration_limit(void) const </div><div class="ttdoc">Returns the maximum number of iterations. </div></div>
 <div class="ttc" id="group__monitors_html_gadca75968e0b5c62b038b122bdc07b8e0"><div class="ttname"><a href="group__monitors.html#gadca75968e0b5c62b038b122bdc07b8e0">cusp::monitor::finished</a></div><div class="ttdeci">bool finished(const Vector &amp;r)</div><div class="ttdoc">Applies convergence criteria to determine whether iteration is finished. </div></div>
 <div class="ttc" id="group__monitors_html_gabbe5f3de5c002a5e723d8972040f71cb"><div class="ttname"><a href="group__monitors.html#gabbe5f3de5c002a5e723d8972040f71cb">cusp::monitor::tolerance</a></div><div class="ttdeci">Real tolerance(void) const </div><div class="ttdoc">Return the tolerance equal to absolute_tolerance() + relative_tolerance() * ||b||. </div></div>
 <div class="ttc" id="group__monitors_html_ga55a79add816b0e62283e76062f443fd3"><div class="ttname"><a href="group__monitors.html#ga55a79add816b0e62283e76062f443fd3">cusp::monitor::reset</a></div><div class="ttdeci">void reset(const Vector &amp;b)</div><div class="ttdoc">Resets the monitor using same convergence criteria. </div></div>
 <div class="ttc" id="group__monitors_html_ga504a3fbddba1266ce93d5aec6f8f9395"><div class="ttname"><a href="group__monitors.html#ga504a3fbddba1266ce93d5aec6f8f9395">cusp::monitor::immediate_rate</a></div><div class="ttdeci">Real immediate_rate(void)</div><div class="ttdoc">Returns the immedidate convergence rate. </div></div>
+<div class="ttc" id="classcusp_1_1verbose__monitor_html"><div class="ttname"><a href="classcusp_1_1verbose__monitor.html">cusp::verbose_monitor</a></div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00325">monitor.h:325</a></div></div>
 <div class="ttc" id="group__monitors_html_ga9eaf5a92adf0de053e8a9e6bf2c7db33"><div class="ttname"><a href="group__monitors.html#ga9eaf5a92adf0de053e8a9e6bf2c7db33">cusp::monitor::converged</a></div><div class="ttdeci">bool converged(void) const </div><div class="ttdoc">Indicates whether the last tested residual satisfies the convergence tolerance. </div></div>
 <div class="ttc" id="group__monitors_html_ga39b99bc28bae084e265265a9e43225ef"><div class="ttname"><a href="group__monitors.html#ga39b99bc28bae084e265265a9e43225ef">cusp::monitor::print</a></div><div class="ttdeci">void print(void)</div><div class="ttdoc">Prints the number of iterations and convergence history information. </div></div>
 <div class="ttc" id="group__monitors_html_gab1bb157eed007bcf76f307dbadf96bbc"><div class="ttname"><a href="group__monitors.html#gab1bb157eed007bcf76f307dbadf96bbc">cusp::monitor::is_verbose</a></div><div class="ttdeci">bool is_verbose(void)</div><div class="ttdoc">Gets the verbosity level of the monitor. </div></div>
+<div class="ttc" id="group__monitors_html_ga15419168169c0505b86e92c847418904"><div class="ttname"><a href="group__monitors.html#ga15419168169c0505b86e92c847418904">cusp::convergence_monitor::convergence_monitor</a></div><div class="ttdeci">CUSP_DEPRECATED convergence_monitor(const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0)</div><div class="ttdoc">Constructs a convergence_monitor for a given right-hand-side b. </div><div class="ttdef"><b>Definition:</b> <a href="monitor_8h_source.html#l00283">monitor.h:283</a></div></div>
 <div class="ttc" id="group__monitors_html_ga36a15de4d180e78abcb85fc9686b20cf"><div class="ttname"><a href="group__monitors.html#ga36a15de4d180e78abcb85fc9686b20cf">cusp::monitor::relative_tolerance</a></div><div class="ttdeci">Real relative_tolerance(void) const </div><div class="ttdoc">Returns the relative tolerance. </div></div>
 <div class="ttc" id="group__monitors_html_gad6b674f448c486367fe3213c1f665782"><div class="ttname"><a href="group__monitors.html#gad6b674f448c486367fe3213c1f665782">cusp::monitor::operator++</a></div><div class="ttdeci">void operator++(void)</div><div class="ttdoc">Increments the iteration count. </div></div>
 <div class="ttc" id="group__monitors_html_ga08108ab7d3f4d1336cea4af0f7a12352"><div class="ttname"><a href="group__monitors.html#ga08108ab7d3f4d1336cea4af0f7a12352">cusp::monitor::monitor</a></div><div class="ttdeci">monitor(const VectorType &amp;b, const size_t iteration_limit=500, const Real relative_tolerance=1e-5, const Real absolute_tolerance=0, const bool verbose=false)</div><div class="ttdoc">Constructs a monitor for a given right-hand-side b. </div></div>

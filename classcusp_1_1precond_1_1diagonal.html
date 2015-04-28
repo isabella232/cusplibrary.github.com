@@ -49,7 +49,7 @@
       <li><a title="Quick Start Guide" href="md_quickstart.html">Get Started</a></li>
       <li><a title="Examples" href="examples.html">Examples</a></li>
       <li><a title="Join the cusp-users mailing list" href="http://groups.google.com/group/cusp-users">Mailing List</a></li>
-      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.0.zip">Get Cusp</a></li>
+      <li><a title="Download latest Cusp source code" href="https://github.com/cusplibrary/cusplibrary/archive/v0.5.1.zip">Get Cusp</a></li>
 </ul>
    </div>
   </td>
@@ -142,7 +142,7 @@ class cusp::precond::diagonal&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
 <div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> b(A.num_rows, 1);</div>
 <div class="line"></div>
-<div class="line">  cusp::default_monitor&lt;float&gt; monitor(b, 100, 1e-6);</div>
+<div class="line">  <a class="code" href="classcusp_1_1default__monitor.html">cusp::default_monitor&lt;float&gt;</a> monitor(b, 100, 1e-6);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// setup preconditioner</span></div>
 <div class="line">  <a class="code" href="classcusp_1_1precond_1_1diagonal.html">cusp::precond::diagonal&lt;float, cusp::device_memory&gt;</a> M(A);</div>
