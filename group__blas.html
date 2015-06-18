@@ -114,9 +114,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae9ff482c86d4ce3cf70d0847c4c28175"><td class="memTemplParams" colspan="2">template&lt;typename Array1 , typename Array2 , typename ScalarType &gt; </td></tr>
-<tr class="memitem:gae9ff482c86d4ce3cf70d0847c4c28175"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a> (const Array1 &amp;x, Array2 &amp;y, ScalarType alpha)</td></tr>
-<tr class="separator:gae9ff482c86d4ce3cf70d0847c4c28175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43147c006127530f7d089c8d5ccd4753"><td class="memTemplParams" colspan="2">template&lt;typename Array &gt; </td></tr>
+<tr class="memitem:ga43147c006127530f7d089c8d5ccd4753"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga43147c006127530f7d089c8d5ccd4753">cusp::blas::amax</a> (const Array &amp;x)</td></tr>
+<tr class="separator:ga43147c006127530f7d089c8d5ccd4753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga246759273bd5a76f55b6df44f3a397d0"><td class="memTemplParams" colspan="2">template&lt;typename Array &gt; </td></tr>
+<tr class="memitem:ga246759273bd5a76f55b6df44f3a397d0"><td class="memTemplItemLeft" align="right" valign="top">cusp::detail::norm_type<br class="typebreak"/>
+&lt; typename Array::value_type &gt;<br class="typebreak"/>
+::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga246759273bd5a76f55b6df44f3a397d0">cusp::blas::asum</a> (const Array &amp;x)</td></tr>
+<tr class="separator:ga246759273bd5a76f55b6df44f3a397d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05082769094c21ac8948da6bb6dc3a9a"><td class="memTemplParams" colspan="2">template&lt;typename Array1 , typename Array2 , typename ScalarType &gt; </td></tr>
+<tr class="memitem:ga05082769094c21ac8948da6bb6dc3a9a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga05082769094c21ac8948da6bb6dc3a9a">cusp::blas::axpy</a> (const Array1 &amp;x, Array2 &amp;y, const ScalarType alpha)</td></tr>
+<tr class="separator:ga05082769094c21ac8948da6bb6dc3a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9ff94ad4317968a65775bc2911c456c"><td class="memTemplParams" colspan="2">template&lt;typename Array1 , typename Array2 , typename Array3 , typename ScalarType1 , typename ScalarType2 &gt; </td></tr>
 <tr class="memitem:gac9ff94ad4317968a65775bc2911c456c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gac9ff94ad4317968a65775bc2911c456c">cusp::blas::axpby</a> (const Array1 &amp;x, const Array2 &amp;y, Array3 &amp;output, ScalarType1 alpha, ScalarType2 beta)</td></tr>
 <tr class="separator:gac9ff94ad4317968a65775bc2911c456c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,11 +143,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9e5c84bb2b77f5fce3698ab6ad1401a6"><td class="memTemplParams" colspan="2">template&lt;typename Array1 , typename Array2 &gt; </td></tr>
 <tr class="memitem:ga9e5c84bb2b77f5fce3698ab6ad1401a6"><td class="memTemplItemLeft" align="right" valign="top">Array1::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6">cusp::blas::dotc</a> (const Array1 &amp;x, const Array2 &amp;y)</td></tr>
 <tr class="separator:ga9e5c84bb2b77f5fce3698ab6ad1401a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c9598eeed4b41ce91040f8a13ae3bb9"><td class="memTemplParams" colspan="2">template&lt;typename Array , typename ScalarType &gt; </td></tr>
-<tr class="memitem:ga9c9598eeed4b41ce91040f8a13ae3bb9"><td class="memTemplItemLeft" align="right" valign="top">thrust::detail::enable_if_convertible<br class="typebreak"/>
-&lt; typename Array::format, <br class="typebreak"/>
-cusp::array1d_format &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga9c9598eeed4b41ce91040f8a13ae3bb9">cusp::blas::fill</a> (Array &amp;array, ScalarType alpha)</td></tr>
-<tr class="separator:ga9c9598eeed4b41ce91040f8a13ae3bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b96ba4751ca0da7cb9d34ed27d129dd"><td class="memTemplParams" colspan="2">template&lt;typename Array , typename ScalarType &gt; </td></tr>
+<tr class="memitem:ga4b96ba4751ca0da7cb9d34ed27d129dd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga4b96ba4751ca0da7cb9d34ed27d129dd">cusp::blas::fill</a> (Array &amp;array, const ScalarType alpha)</td></tr>
+<tr class="separator:ga4b96ba4751ca0da7cb9d34ed27d129dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga43e0b5dbafde20633e1d64bec0e35456"><td class="memTemplParams" colspan="2">template&lt;typename Array &gt; </td></tr>
 <tr class="memitem:ga43e0b5dbafde20633e1d64bec0e35456"><td class="memTemplItemLeft" align="right" valign="top">cusp::detail::norm_type<br class="typebreak"/>
 &lt; typename Array::value_type &gt;<br class="typebreak"/>
@@ -153,19 +159,97 @@ cusp::array1d_format &gt;::type&#160;</td><td class="memTemplItemRight" valign="
 <tr class="memitem:ga12bd66a5917011a1e787f731c15343b7"><td class="memTemplParams" colspan="2">template&lt;typename Array &gt; </td></tr>
 <tr class="memitem:ga12bd66a5917011a1e787f731c15343b7"><td class="memTemplItemLeft" align="right" valign="top">Array::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga12bd66a5917011a1e787f731c15343b7">cusp::blas::nrmmax</a> (const Array &amp;array)</td></tr>
 <tr class="separator:ga12bd66a5917011a1e787f731c15343b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab41993e05439ed9503664b5ec1403fae"><td class="memTemplParams" colspan="2">template&lt;typename Array , typename ScalarType &gt; </td></tr>
-<tr class="memitem:gab41993e05439ed9503664b5ec1403fae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gab41993e05439ed9503664b5ec1403fae">cusp::blas::scal</a> (Array &amp;x, ScalarType alpha)</td></tr>
-<tr class="separator:gab41993e05439ed9503664b5ec1403fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9faff29185bab97bc1a031a0c79656ed"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga9faff29185bab97bc1a031a0c79656ed"></a>
-template&lt;typename Array2d , typename Array1 , typename Array2 &gt; </td></tr>
-<tr class="memitem:ga9faff29185bab97bc1a031a0c79656ed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::gemv</b> (const Array2d &amp;A, const Array1 &amp;x, Array2 &amp;y)</td></tr>
-<tr class="separator:ga9faff29185bab97bc1a031a0c79656ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4e4073e93138f186114da99d4ca9ffc"><td class="memTemplParams" colspan="2">template&lt;typename Array , typename ScalarType &gt; </td></tr>
+<tr class="memitem:gad4e4073e93138f186114da99d4ca9ffc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gad4e4073e93138f186114da99d4ca9ffc">cusp::blas::scal</a> (Array &amp;x, const ScalarType alpha)</td></tr>
+<tr class="separator:gad4e4073e93138f186114da99d4ca9ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga771915c3121de33775e48eeb567b5efd"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga771915c3121de33775e48eeb567b5efd"></a>
+template&lt;typename Array2d1 , typename Array1d1 , typename Array1d2 &gt; </td></tr>
+<tr class="memitem:ga771915c3121de33775e48eeb567b5efd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::gemv</b> (const Array2d1 &amp;A, const Array1d1 &amp;x, Array1d2 &amp;y)</td></tr>
+<tr class="separator:ga771915c3121de33775e48eeb567b5efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad37b9090248e73cae1668b405483cc65"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad37b9090248e73cae1668b405483cc65"></a>
+template&lt;typename Array1d1 , typename Array1d2 , typename Array2d1 &gt; </td></tr>
+<tr class="memitem:gad37b9090248e73cae1668b405483cc65"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::ger</b> (const Array1d1 &amp;x, const Array1d2 &amp;y, Array2d1 &amp;A)</td></tr>
+<tr class="separator:gad37b9090248e73cae1668b405483cc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa38a9835b958deeb4a0b0e6a7803fcfc"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaa38a9835b958deeb4a0b0e6a7803fcfc"></a>
+template&lt;typename Array2d1 , typename Array1d1 , typename Array1d2 &gt; </td></tr>
+<tr class="memitem:gaa38a9835b958deeb4a0b0e6a7803fcfc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::symv</b> (const Array2d1 &amp;A, const Array1d1 &amp;x, Array1d2 &amp;y)</td></tr>
+<tr class="separator:gaa38a9835b958deeb4a0b0e6a7803fcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9f0a187da2e81e6cad578bd4ddef3b3"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad9f0a187da2e81e6cad578bd4ddef3b3"></a>
+template&lt;typename Array1d , typename Array2d &gt; </td></tr>
+<tr class="memitem:gad9f0a187da2e81e6cad578bd4ddef3b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::syr</b> (const Array1d &amp;x, Array2d &amp;A)</td></tr>
+<tr class="separator:gad9f0a187da2e81e6cad578bd4ddef3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39ac5299ff916b13361a333b4a428894"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga39ac5299ff916b13361a333b4a428894"></a>
+template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:ga39ac5299ff916b13361a333b4a428894"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::trmv</b> (const Array2d &amp;A, Array1d &amp;x)</td></tr>
+<tr class="separator:ga39ac5299ff916b13361a333b4a428894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01a8744d27826a5859ce532ca166bd81"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga01a8744d27826a5859ce532ca166bd81"></a>
+template&lt;typename Array2d , typename Array1d &gt; </td></tr>
+<tr class="memitem:ga01a8744d27826a5859ce532ca166bd81"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::trsv</b> (const Array2d &amp;A, Array1d &amp;x)</td></tr>
+<tr class="separator:ga01a8744d27826a5859ce532ca166bd81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafdc42a1d0ef52ae84860eec09d11fdd6"><td class="memTemplParams" colspan="2"><a class="anchor" id="gafdc42a1d0ef52ae84860eec09d11fdd6"></a>
 template&lt;typename Array2d1 , typename Array2d2 , typename Array2d3 &gt; </td></tr>
 <tr class="memitem:gafdc42a1d0ef52ae84860eec09d11fdd6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::gemm</b> (const Array2d1 &amp;A, const Array2d2 &amp;B, Array2d3 &amp;C)</td></tr>
 <tr class="separator:gafdc42a1d0ef52ae84860eec09d11fdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8b2d2a5479b8e621f59b6d50c064f2d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad8b2d2a5479b8e621f59b6d50c064f2d"></a>
+template&lt;typename Array2d1 , typename Array2d2 , typename Array2d3 &gt; </td></tr>
+<tr class="memitem:gad8b2d2a5479b8e621f59b6d50c064f2d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::symm</b> (const Array2d1 &amp;A, const Array2d2 &amp;B, Array2d3 &amp;C)</td></tr>
+<tr class="separator:gad8b2d2a5479b8e621f59b6d50c064f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29b6897c41172c3862bc5b8d1e69258d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga29b6897c41172c3862bc5b8d1e69258d"></a>
+template&lt;typename Array2d1 , typename Array2d2 &gt; </td></tr>
+<tr class="memitem:ga29b6897c41172c3862bc5b8d1e69258d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::syrk</b> (const Array2d1 &amp;A, Array2d2 &amp;B)</td></tr>
+<tr class="separator:ga29b6897c41172c3862bc5b8d1e69258d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae917e34e02a69811a3ed91767d51114d"><td class="memTemplParams" colspan="2"><a class="anchor" id="gae917e34e02a69811a3ed91767d51114d"></a>
+template&lt;typename Array2d1 , typename Array2d2 , typename Array2d3 &gt; </td></tr>
+<tr class="memitem:gae917e34e02a69811a3ed91767d51114d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::syr2k</b> (const Array2d1 &amp;A, const Array2d2 &amp;B, Array2d3 &amp;C)</td></tr>
+<tr class="separator:gae917e34e02a69811a3ed91767d51114d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ca1f3778e4cc6c4de606be4a9fd3ecc"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1ca1f3778e4cc6c4de606be4a9fd3ecc"></a>
+template&lt;typename Array2d1 , typename Array2d2 , typename Array2d3 &gt; </td></tr>
+<tr class="memitem:ga1ca1f3778e4cc6c4de606be4a9fd3ecc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::trmm</b> (const Array2d1 &amp;A, const Array2d2 &amp;B, Array2d3 &amp;C)</td></tr>
+<tr class="separator:ga1ca1f3778e4cc6c4de606be4a9fd3ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b2e16dce739386c14e4c27ecc9d798d"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga8b2e16dce739386c14e4c27ecc9d798d"></a>
+template&lt;typename Array2d1 , typename Array2d2 , typename Array2d3 &gt; </td></tr>
+<tr class="memitem:ga8b2e16dce739386c14e4c27ecc9d798d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::blas::trsm</b> (const Array2d1 &amp;A, const Array2d2 &amp;B, Array2d3 &amp;C)</td></tr>
+<tr class="separator:ga8b2e16dce739386c14e4c27ecc9d798d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga43147c006127530f7d089c8d5ccd4753"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int cusp::blas::amax </td>
+          <td>(</td>
+          <td class="paramtype">const Array &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>amax</code> : index of the largest element in a array </p>
+
+</div>
+</div>
+<a class="anchor" id="ga246759273bd5a76f55b6df44f3a397d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Array &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">cusp::detail::norm_type&lt;typename Array::value_type&gt;::type cusp::blas::asum </td>
+          <td>(</td>
+          <td class="paramtype">const Array &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><code>asum</code> : sum of absolute value of all entries in array </p>
+
+</div>
+</div>
 <a class="anchor" id="gac9ff94ad4317968a65775bc2911c456c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +356,7 @@ template&lt;typename Array1 , typename Array2 , typename Array3 , typename Array
 
 </div>
 </div>
-<a class="anchor" id="gae9ff482c86d4ce3cf70d0847c4c28175"></a>
+<a class="anchor" id="ga05082769094c21ac8948da6bb6dc3a9a"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -293,7 +377,7 @@ template&lt;typename Array1 , typename Array2 , typename ScalarType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ScalarType&#160;</td>
+          <td class="paramtype">const ScalarType&#160;</td>
           <td class="paramname"><em>alpha</em>&#160;</td>
         </tr>
         <tr>
@@ -396,14 +480,14 @@ template&lt;typename Array1 , typename Array2 &gt; </div>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ga9c9598eeed4b41ce91040f8a13ae3bb9"></a>
+<a class="anchor" id="ga4b96ba4751ca0da7cb9d34ed27d129dd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename Array , typename ScalarType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">thrust::detail::enable_if_convertible&lt;typename Array::format,cusp::array1d_format&gt;::type cusp::blas::fill </td>
+          <td class="memname">void cusp::blas::fill </td>
           <td>(</td>
           <td class="paramtype">Array &amp;&#160;</td>
           <td class="paramname"><em>array</em>, </td>
@@ -411,7 +495,7 @@ template&lt;typename Array , typename ScalarType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ScalarType&#160;</td>
+          <td class="paramtype">const ScalarType&#160;</td>
           <td class="paramname"><em>alpha</em>&#160;</td>
         </tr>
         <tr>
@@ -486,7 +570,7 @@ template&lt;typename Array &gt; </div>
 </dl>
 </div>
 </div>
-<a class="anchor" id="gab41993e05439ed9503664b5ec1403fae"></a>
+<a class="anchor" id="gad4e4073e93138f186114da99d4ca9ffc"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -501,7 +585,7 @@ template&lt;typename Array , typename ScalarType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ScalarType&#160;</td>
+          <td class="paramtype">const ScalarType&#160;</td>
           <td class="paramname"><em>alpha</em>&#160;</td>
         </tr>
         <tr>

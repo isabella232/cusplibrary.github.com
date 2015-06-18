@@ -293,7 +293,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">   <span class="keyword">const</span> <span class="keywordtype">int</span> X = <a class="code" href="classcusp_1_1ell__matrix.html">cusp::ell_matrix&lt;int,float,cusp::host_memory&gt;::invalid_index</a>;</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Disconnect vertex 0</span></div>
-<div class="line">   <a class="code" href="group__blas.html#ga9c9598eeed4b41ce91040f8a13ae3bb9">thrust::fill</a>(G.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>.begin() + G.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>[0],</div>
+<div class="line">   <a class="code" href="group__blas.html#ga4b96ba4751ca0da7cb9d34ed27d129dd">thrust::fill</a>(G.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>.begin() + G.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>[0],</div>
 <div class="line">                G.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>.begin() + G.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>[1],</div>
 <div class="line">                X);</div>
 <div class="line">   thrust::replace(G.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>.begin(), G.<a class="code" href="classcusp_1_1csr__matrix.html#aa28f949aae582f3d471646c5aa2bcb7e">column_indices</a>.end(), 0, X);</div>

@@ -166,7 +166,7 @@ class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Compute initial residual</span></div>
 <div class="line">   <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
-<div class="line">   <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">   <a class="code" href="group__blas.html#ga05082769094c21ac8948da6bb6dc3a9a">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Construct monitor with stopping criteria of 100 iterations or 1e-4 residual error</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-4, 0, <span class="keyword">true</span>);</div>
@@ -176,7 +176,7 @@ class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line">   {</div>
 <div class="line">       M(A, b, x);</div>
 <div class="line">       <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, r);</div>
-<div class="line">       <a class="code" href="group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
+<div class="line">       <a class="code" href="group__blas.html#ga05082769094c21ac8948da6bb6dc3a9a">cusp::blas::axpy</a>(b, r, <span class="keywordtype">float</span>(-1));</div>
 <div class="line">       ++monitor;</div>
 <div class="line">   }</div>
 <div class="line"> }</div>

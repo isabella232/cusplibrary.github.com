@@ -113,10 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="#pub-attribs">Public Members</a> &#124;
-<a href="#pro-methods">Proteced Methods</a> &#124;
 <a href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cusp::precond::aggregation::smoothed_aggregation&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__preconditioners.html">Preconditioners</a></div></div>  </div>
@@ -199,54 +197,47 @@ Inheritance diagram for cusp::precond::aggregation::smoothed_aggregation&lt; Ind
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a0c6a194a31d1a15cf103b2dd25140a9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c6a194a31d1a15cf103b2dd25140a9a"></a>
-typedef <br class="typebreak"/>
-smoothed_aggregation_options<br class="typebreak"/>
-&lt; IndexType, ValueType, <br class="typebreak"/>
-MemorySpace &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SAOptionsType</b></td></tr>
-<tr class="separator:a0c6a194a31d1a15cf103b2dd25140a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:af286443e565c39e98b1fd30ac3d8eed2"><td class="memTemplParams" colspan="2"><a class="anchor" id="af286443e565c39e98b1fd30ac3d8eed2"></a>
+<tr class="memitem:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a946ab9dc08a7b154d0c6b41e57e0bfc1"></a>
 template&lt;typename MatrixType &gt; </td></tr>
-<tr class="memitem:af286443e565c39e98b1fd30ac3d8eed2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const MatrixType &amp;A, const SAOptionsType &amp;sa_options=SAOptionsType())</td></tr>
-<tr class="separator:af286443e565c39e98b1fd30ac3d8eed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab01e6c8463eae38ec8c4f5e3f4cd2aed"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab01e6c8463eae38ec8c4f5e3f4cd2aed"></a>
+<tr class="memitem:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const MatrixType &amp;A)</td></tr>
+<tr class="separator:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d5d5598f50140091353f4736dbacca"><td class="memTemplParams" colspan="2"><a class="anchor" id="a19d5d5598f50140091353f4736dbacca"></a>
 template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
-<tr class="memitem:ab01e6c8463eae38ec8c4f5e3f4cd2aed"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const MatrixType &amp;A, const ArrayType &amp;B, const SAOptionsType &amp;sa_options=SAOptionsType(), typename thrust::detail::enable_if_convertible&lt; typename ArrayType::format, cusp::array1d_format &gt;::type *=0)</td></tr>
-<tr class="separator:ab01e6c8463eae38ec8c4f5e3f4cd2aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d5d5598f50140091353f4736dbacca"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const MatrixType &amp;A, const ArrayType &amp;B, typename thrust::detail::enable_if_convertible&lt; typename ArrayType::format, cusp::array1d_format &gt;::type *=0)</td></tr>
+<tr class="separator:a19d5d5598f50140091353f4736dbacca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a755da6b9b84fbe432cfc8fd5ebe25b2a"></a>
 template&lt;typename MemorySpace2 , typename SmootherType2 , typename SolverType2 , typename Format2 &gt; </td></tr>
 <tr class="memitem:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace2, SmootherType2, SolverType2, Format2 &gt; &amp;M)</td></tr>
 <tr class="separator:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996b1ce214607af6be6c6ea4c4a1202f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a996b1ce214607af6be6c6ea4c4a1202f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_min_level_size</b> (size_t min_size)</td></tr>
+<tr class="separator:a996b1ce214607af6be6c6ea4c4a1202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e00feb658ec54644a5751caba41a4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29e00feb658ec54644a5751caba41a4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_max_levels</b> (size_t max_depth)</td></tr>
+<tr class="separator:a29e00feb658ec54644a5751caba41a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ada90beb6ec7722771cc65dcca343ad"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1ada90beb6ec7722771cc65dcca343ad"></a>
 template&lt;typename MatrixType &gt; </td></tr>
 <tr class="memitem:a1ada90beb6ec7722771cc65dcca343ad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sa_initialize</b> (const MatrixType &amp;A)</td></tr>
 <tr class="separator:a1ada90beb6ec7722771cc65dcca343ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a294d749e4fbc2a103e8f9344d58ef118"><td class="memTemplParams" colspan="2"><a class="anchor" id="a294d749e4fbc2a103e8f9344d58ef118"></a>
+<tr class="memitem:ace2289c6c54a0dc62cd0dfe5ee11b444"><td class="memTemplParams" colspan="2"><a class="anchor" id="ace2289c6c54a0dc62cd0dfe5ee11b444"></a>
 template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
-<tr class="memitem:a294d749e4fbc2a103e8f9344d58ef118"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sa_initialize</b> (const MatrixType &amp;A, const ArrayType &amp;B)</td></tr>
-<tr class="separator:a294d749e4fbc2a103e8f9344d58ef118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2289c6c54a0dc62cd0dfe5ee11b444"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sa_initialize</b> (const MatrixType &amp;A, const ArrayType &amp;B, typename thrust::detail::enable_if_convertible&lt; typename MatrixType::format, cusp::known_format &gt;::type *=0)</td></tr>
+<tr class="separator:ace2289c6c54a0dc62cd0dfe5ee11b444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Members</h2></td></tr>
-<tr class="memitem:ad7a89e9cf71fa332775c7a318e35b217"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7a89e9cf71fa332775c7a318e35b217"></a>
-const SAOptionsType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sa_options</b></td></tr>
-<tr class="separator:ad7a89e9cf71fa332775c7a318e35b217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775f8e8d541e59bb99c67ab9b261d904"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a775f8e8d541e59bb99c67ab9b261d904"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>min_level_size</b></td></tr>
+<tr class="separator:a775f8e8d541e59bb99c67ab9b261d904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a88cfb805f61b0330d08ad6e597aeee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a88cfb805f61b0330d08ad6e597aeee"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_levels</b></td></tr>
+<tr class="separator:a3a88cfb805f61b0330d08ad6e597aeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b88234ab0a79306a8937cc26e2ee34a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b88234ab0a79306a8937cc26e2ee34a"></a>
 std::vector&lt; sa_level<br class="typebreak"/>
 &lt; SetupMatrixType &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sa_levels</b></td></tr>
 <tr class="separator:a7b88234ab0a79306a8937cc26e2ee34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Proteced Methods</h2></td></tr>
-<tr class="memitem:aa154e7c67fa44a635c22caed07ff76c0"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa154e7c67fa44a635c22caed07ff76c0"></a>
-template&lt;typename MatrixType &gt; </td></tr>
-<tr class="memitem:aa154e7c67fa44a635c22caed07ff76c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>extend_hierarchy</b> (const MatrixType &amp;A)</td></tr>
-<tr class="separator:aa154e7c67fa44a635c22caed07ff76c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

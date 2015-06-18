@@ -4,9 +4,10 @@ var searchData=
   ['add',['add',['../group__matrix__algorithms.html#gab7946563b534d328fa38cf401b8e0779',1,'cusp']]],
   ['ainv_2eh',['ainv.h',['../ainv_8h.html',1,'']]],
   ['algorithms',['Algorithms',['../group__algorithms.html',1,'']]],
+  ['amax',['amax',['../group__blas.html#ga43147c006127530f7d089c8d5ccd4753',1,'cusp::blas']]],
   ['arnoldi_2eh',['arnoldi.h',['../arnoldi_8h.html',1,'']]],
-  ['array1d',['array1d',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d',['array1d',['../classcusp_1_1array1d.html#aa52b2970fffa0003e6bd98077b36f2db',1,'cusp::array1d::array1d(void)'],['../classcusp_1_1array1d.html#a0de5a681631ecaddb5f72122cace589f',1,'cusp::array1d::array1d(size_type n)'],['../classcusp_1_1array1d.html#ac7a570b6a4260056e036701c9bb86779',1,'cusp::array1d::array1d(size_type n, const value_type &amp;value)'],['../classcusp_1_1array1d.html#a189f0b3ba5a7353e1e9b265690ffb37c',1,'cusp::array1d::array1d(const array1d &amp;v)'],['../classcusp_1_1array1d.html#ac7b42e39a96b135ef884586c56cdf4c4',1,'cusp::array1d::array1d(const array1d&lt; OtherT, OtherMem &gt; &amp;v)'],['../classcusp_1_1array1d.html#a2a0bbc06675145f11e9dba5c2c681598',1,'cusp::array1d::array1d(const std::vector&lt; OtherT, OtherAlloc &gt; &amp;v)'],['../classcusp_1_1array1d.html#acb9b42afbafeab44031e6d45b55cec5f',1,'cusp::array1d::array1d(const thrust::host_vector&lt; OtherT, OtherAlloc &gt; &amp;v)'],['../classcusp_1_1array1d.html#a14dd5afd8d7a6f5aea6e6ef2a8cc0fac',1,'cusp::array1d::array1d(const thrust::device_vector&lt; OtherT, OtherAlloc &gt; &amp;v)'],['../classcusp_1_1array1d.html#a70842a5e865cdd5477eb9fe9603b6841',1,'cusp::array1d::array1d(InputIterator first, InputIterator last)'],['../classcusp_1_1array1d.html#a8ce49f0b9c16f9c26bc88749b74f7b51',1,'cusp::array1d::array1d(const array1d_view&lt; InputIterator &gt; &amp;v)']]],
+  ['array1d',['array1d',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_2eh',['array1d.h',['../array1d_8h.html',1,'']]],
   ['array1d_3c_20real_2c_20cusp_3a_3ahost_5fmemory_20_3e',['array1d&lt; Real, cusp::host_memory &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_3c_20typename_20thrust_3a_3adetail_3a_3aremove_5fconst_3c_20indextype_20_3e_3a_3atype_2c_20memoryspace_20_3e',['array1d&lt; typename thrust::detail::remove_const&lt; IndexType &gt;::type, MemorySpace &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
@@ -26,8 +27,9 @@ var searchData=
   ['arrays',['Arrays',['../group__arrays.html',1,'']]],
   ['assert_5fis_5fvalid_5fmatrix',['assert_is_valid_matrix',['../group__matrix__algorithms.html#ga2a1955e627ed8b7c5c08dc2a4360dbe9',1,'cusp']]],
   ['assert_5fsame_5fdimensions',['assert_same_dimensions',['../group__matrix__algorithms.html#ga659761c387bb1f4a82a46da836ba6a66',1,'cusp::assert_same_dimensions(const Array1 &amp;array1, const Array2 &amp;array2)'],['../group__matrix__algorithms.html#gabf4f58639d98f2cadb39aea804365a85',1,'cusp::assert_same_dimensions(const Array1 &amp;array1, const Array2 &amp;array2, const Array3 &amp;array3)'],['../group__matrix__algorithms.html#gaa3b0e452e1dcbb9bdb260ac883521afe',1,'cusp::assert_same_dimensions(const Array1 &amp;array1, const Array2 &amp;array2, const Array3 &amp;array3, const Array4 &amp;array4)']]],
+  ['asum',['asum',['../group__blas.html#ga246759273bd5a76f55b6df44f3a397d0',1,'cusp::blas']]],
   ['average_5frate',['average_rate',['../group__monitors.html#gae6c5cfcdad375e49e43dfc88156c6896',1,'cusp::monitor']]],
   ['axpby',['axpby',['../group__blas.html#gac9ff94ad4317968a65775bc2911c456c',1,'cusp::blas']]],
   ['axpbypcz',['axpbypcz',['../group__blas.html#ga047e4a02024cdffcaa4268324072a220',1,'cusp::blas']]],
-  ['axpy',['axpy',['../group__blas.html#gae9ff482c86d4ce3cf70d0847c4c28175',1,'cusp::blas']]]
+  ['axpy',['axpy',['../group__blas.html#ga05082769094c21ac8948da6bb6dc3a9a',1,'cusp::blas']]]
 ];

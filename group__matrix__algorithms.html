@@ -1168,6 +1168,10 @@ template&lt;typename LinearOperator , typename Vector1 , typename Vector2 , type
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
+<div class="line">    <span class="comment">// define multiply functors</span></div>
+<div class="line">    thrust::multiplies&lt;float&gt;          combine;</div>
+<div class="line">    thrust::plus&lt;float&gt;                reduce;</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> A(2,2);</div>
 <div class="line">    A(0,0) = 10;  A(0,1) = 20;</div>
@@ -1185,9 +1189,7 @@ template&lt;typename LinearOperator , typename Vector1 , typename Vector2 , type
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> z(2);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute z = y + (A * x)</span></div>
-<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764">cusp::generalized_spmv</a>(A, x, y, z);</div>
-<div class="line">    thrust::multiplies&lt;float&gt;(),</div>
-<div class="line">    thrust::plus&lt;float&gt;());</div>
+<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764">cusp::generalized_spmv</a>(A, x, y, z, combine, reduce);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// print z</span></div>
 <div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(z);</div>
@@ -1485,9 +1487,10 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">typedef</span> cusp::detail::zero_function&lt;float&gt; initialize;</div>
-<div class="line">    <span class="keyword">typedef</span> thrust::multiplies&lt;float&gt;          combine;</div>
-<div class="line">    <span class="keyword">typedef</span> thrust::plus&lt;float&gt;                reduce;</div>
+<div class="line">    <span class="comment">// define multiply functors</span></div>
+<div class="line">    cusp::detail::zero_function&lt;float&gt; initialize;</div>
+<div class="line">    thrust::multiplies&lt;float&gt;          combine;</div>
+<div class="line">    thrust::plus&lt;float&gt;                reduce;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::host_memory&gt;</a> A(2,2);</div>

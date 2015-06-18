@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['scal',['scal',['../group__blas.html#gab41993e05439ed9503664b5ec1403fae',1,'cusp::blas']]],
+  ['scal',['scal',['../group__blas.html#gad4e4073e93138f186114da99d4ca9ffc',1,'cusp::blas']]],
   ['scaled_5fbridson_5fainv',['scaled_bridson_ainv',['../classcusp_1_1precond_1_1scaled__bridson__ainv.html',1,'cusp::precond']]],
   ['scaled_5fbridson_5fainv',['scaled_bridson_ainv',['../classcusp_1_1precond_1_1scaled__bridson__ainv.html#a0cf1d3edc9ac770a08f567fc349f741f',1,'cusp::precond::scaled_bridson_ainv']]],
   ['set_5fverbose',['set_verbose',['../group__monitors.html#gacdc4e1aa1342c847b3acea8384b49211',1,'cusp::monitor']]],
