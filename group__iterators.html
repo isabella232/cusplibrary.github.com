@@ -103,7 +103,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Iterators</div>  </div>
 </div><!--header-->
@@ -114,12 +115,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcusp_1_1constant__tuple.html">cusp::constant_tuple&lt; size, T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RandomAccessIterator for access to array entries from two concatenated iterators.  <a href="structcusp_1_1constant__tuple.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcusp_1_1join__search.html">cusp::join_search&lt; T, V, SIZE &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcusp_1_1join__search_3_01T_00_01V_00_012_01_4.html">cusp::join_search&lt; T, V, 2 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1join__iterator.html">cusp::join_iterator&lt; Tuple &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1random__iterator.html">cusp::random_iterator&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator for generating random values.  <a href="classcusp_1_1random__iterator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1strided__iterator.html">cusp::strided_iterator&lt; RandomAccessIterator &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RandomAccessIterator for strided access to array entries.  <a href="classcusp_1_1strided__iterator.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga0a9545adfa775935500cfbfa5ab0f656"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga0a9545adfa775935500cfbfa5ab0f656"></a>
+template&lt;typename T1 , typename T2 , typename T3 &gt; </td></tr>
+<tr class="memitem:ga0a9545adfa775935500cfbfa5ab0f656"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3 &gt; &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3)</td></tr>
+<tr class="separator:ga0a9545adfa775935500cfbfa5ab0f656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ff85eb2f4135cd01b71d82bf3d8cfb5"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga1ff85eb2f4135cd01b71d82bf3d8cfb5"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 &gt; </td></tr>
+<tr class="memitem:ga1ff85eb2f4135cd01b71d82bf3d8cfb5"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4 &gt; &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4)</td></tr>
+<tr class="separator:ga1ff85eb2f4135cd01b71d82bf3d8cfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56a6e29006dc8f78596a8a78c758685c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga56a6e29006dc8f78596a8a78c758685c"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 &gt; </td></tr>
+<tr class="memitem:ga56a6e29006dc8f78596a8a78c758685c"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4, T5 &gt;<br class="typebreak"/>
+ &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const size_t s4, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4, const T5 &amp;t5)</td></tr>
+<tr class="separator:ga56a6e29006dc8f78596a8a78c758685c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52f366ab6e630626e5bdc30c40956c70"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga52f366ab6e630626e5bdc30c40956c70"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 &gt; </td></tr>
+<tr class="memitem:ga52f366ab6e630626e5bdc30c40956c70"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4, T5, T6 &gt;<br class="typebreak"/>
+ &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const size_t s4, const size_t s5, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4, const T5 &amp;t5, const T6 &amp;t6)</td></tr>
+<tr class="separator:ga52f366ab6e630626e5bdc30c40956c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga154a6be23880d639344e79d5100914cb"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga154a6be23880d639344e79d5100914cb"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 &gt; </td></tr>
+<tr class="memitem:ga154a6be23880d639344e79d5100914cb"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4, T5, T6, T7 &gt;<br class="typebreak"/>
+ &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const size_t s4, const size_t s5, const size_t s6, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4, const T5 &amp;t5, const T6 &amp;t6, const T7 &amp;t7)</td></tr>
+<tr class="separator:ga154a6be23880d639344e79d5100914cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21268f3bb4f8fe933122506a8bf3530e"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga21268f3bb4f8fe933122506a8bf3530e"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 &gt; </td></tr>
+<tr class="memitem:ga21268f3bb4f8fe933122506a8bf3530e"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4, T5, T6, T7, <br class="typebreak"/>
+T8 &gt; &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const size_t s4, const size_t s5, const size_t s6, const size_t s7, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4, const T5 &amp;t5, const T6 &amp;t6, const T7 &amp;t7, const T8 &amp;t8)</td></tr>
+<tr class="separator:ga21268f3bb4f8fe933122506a8bf3530e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad27473d526249e204c5182dff6250ba0"><td class="memTemplParams" colspan="2"><a class="anchor" id="gad27473d526249e204c5182dff6250ba0"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 , typename T9 &gt; </td></tr>
+<tr class="memitem:gad27473d526249e204c5182dff6250ba0"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4, T5, T6, T7, <br class="typebreak"/>
+T8, T9 &gt; &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const size_t s4, const size_t s5, const size_t s6, const size_t s7, const size_t s8, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4, const T5 &amp;t5, const T6 &amp;t6, const T7 &amp;t7, const T8 &amp;t8, const T9 &amp;t9)</td></tr>
+<tr class="separator:gad27473d526249e204c5182dff6250ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga820089581d3378fd2bdc2070ab83729a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga820089581d3378fd2bdc2070ab83729a"></a>
+template&lt;typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 , typename T9 , typename T10 &gt; </td></tr>
+<tr class="memitem:ga820089581d3378fd2bdc2070ab83729a"><td class="memTemplItemLeft" align="right" valign="top">join_iterator&lt; thrust::tuple<br class="typebreak"/>
+&lt; T1, T2, T3, T4, T5, T6, T7, <br class="typebreak"/>
+T8, T9, T10 &gt; &gt;::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::make_join_iterator</b> (const size_t s1, const size_t s2, const size_t s3, const size_t s4, const size_t s5, const size_t s6, const size_t s7, const size_t s8, const size_t s9, const T1 &amp;t1, const T2 &amp;t2, const T3 &amp;t3, const T4 &amp;t4, const T5 &amp;t5, const T6 &amp;t6, const T7 &amp;t7, const T8 &amp;t8, const T9 &amp;t9, const T10 &amp;t10)</td></tr>
+<tr class="separator:ga820089581d3378fd2bdc2070ab83729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->

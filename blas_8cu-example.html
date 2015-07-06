@@ -124,24 +124,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    y[1] = 2;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute y = alpha * x + y</span></div>
-<div class="line">    <a name="a1"></a><a class="code" href="group__blas.html#ga05082769094c21ac8948da6bb6dc3a9a">cusp::blas::axpy</a>(x,y,2);</div>
+<div class="line">    <a name="a1"></a><a class="code" href="group__blas.html#ga1b31bbaeae6829108b5125602c0bf93e">cusp::blas::axpy</a>(x,y,2);</div>
 <div class="line">    <span class="comment">// print y</span></div>
 <div class="line">    <a name="a2"></a><a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate output vector</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> z(2);</div>
 <div class="line">    <span class="comment">// compute z = x .* y (element-wise multiplication)</span></div>
-<div class="line">    <a name="a3"></a><a class="code" href="group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d">cusp::blas::xmy</a>(x,y,z);</div>
+<div class="line">    <a name="a3"></a><a class="code" href="group__blas.html#ga4042cd78e3ce359067177414966d97dc">cusp::blas::xmy</a>(x,y,z);</div>
 <div class="line">    <span class="comment">// print z</span></div>
 <div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(z);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the l_2 norm of z in 2 different ways</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;|z| = &quot;</span> &lt;&lt; <a name="a4"></a><a class="code" href="group__blas.html#gaea18664c8e8d833b4a1fc7791530e955">cusp::blas::nrm2</a>(z) &lt;&lt; std::endl;</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;sqrt(z&#39;z) = &quot;</span> &lt;&lt; sqrt(<a name="a5"></a><a class="code" href="group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6">cusp::blas::dotc</a>(z,z)) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;|z| = &quot;</span> &lt;&lt; <a name="a4"></a><a class="code" href="group__blas.html#gaf98e7ba246e181c7099db364ccacbe16">cusp::blas::nrm2</a>(z) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;sqrt(z&#39;z) = &quot;</span> &lt;&lt; sqrt(<a name="a5"></a><a class="code" href="group__blas.html#ga3b8590b676b70d1cb0de69e949acfca1">cusp::blas::dotc</a>(z,z)) &lt;&lt; std::endl;</div>
 <div class="line">    <span class="comment">// compute the l_1 norm of z (manhattan distance)</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;|z|_1 = &quot;</span> &lt;&lt; <a name="a6"></a><a class="code" href="group__blas.html#ga43e0b5dbafde20633e1d64bec0e35456">cusp::blas::nrm1</a>(z) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;|z|_1 = &quot;</span> &lt;&lt; <a name="a6"></a><a class="code" href="group__blas.html#ga4214f65c866ea2db0a60ecb7c4607246">cusp::blas::nrm1</a>(z) &lt;&lt; std::endl;</div>
 <div class="line">    <span class="comment">// compute the largest component of a vector in absolute value</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;max(|z_i|) = &quot;</span> &lt;&lt; <a name="a7"></a><a class="code" href="group__blas.html#ga12bd66a5917011a1e787f731c15343b7">cusp::blas::nrmmax</a>(z) &lt;&lt; std::endl;</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;max(|z_i|) = &quot;</span> &lt;&lt; <a name="a7"></a><a class="code" href="group__blas.html#gaae639bf2ddaf041fc8030e55ff887e62">cusp::blas::nrmmax</a>(z) &lt;&lt; std::endl;</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

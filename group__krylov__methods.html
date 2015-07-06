@@ -122,18 +122,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ga23cfa8325966505d6580151f91525887"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#ga23cfa8325966505d6580151f91525887">cusp::krylov::bicgstab</a> (LinearOperator &amp;A, Vector &amp;x, Vector &amp;b, Monitor &amp;monitor, Preconditioner &amp;M)</td></tr>
 <tr class="memdesc:ga23cfa8325966505d6580151f91525887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Biconjugate Gradient Stabilized method.  <a href="#ga23cfa8325966505d6580151f91525887">More...</a><br/></td></tr>
 <tr class="separator:ga23cfa8325966505d6580151f91525887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae9649279f0fb30cbc6a48c9f912a5f87"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class VectorType3 , class Monitor &gt; </td></tr>
-<tr class="memitem:gae9649279f0fb30cbc6a48c9f912a5f87"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#gae9649279f0fb30cbc6a48c9f912a5f87">cusp::krylov::bicgstab_m</a> (LinearOperator &amp;A, VectorType1 &amp;x, VectorType2 &amp;b, VectorType3 &amp;sigma, Monitor &amp;monitor)</td></tr>
-<tr class="memdesc:gae9649279f0fb30cbc6a48c9f912a5f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-mass Biconjugate Gradient stabilized method.  <a href="#gae9649279f0fb30cbc6a48c9f912a5f87">More...</a><br/></td></tr>
-<tr class="separator:gae9649279f0fb30cbc6a48c9f912a5f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33eedd31142118e841376bb81e0929e7"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class VectorType3 , class Monitor &gt; </td></tr>
+<tr class="memitem:ga33eedd31142118e841376bb81e0929e7"><td class="memTemplItemLeft" align="right" valign="top">thrust::detail::enable_if_convertible<br class="typebreak"/>
+&lt; typename <br class="typebreak"/>
+LinearOperator::format, <br class="typebreak"/>
+cusp::known_format &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#ga33eedd31142118e841376bb81e0929e7">cusp::krylov::bicgstab_m</a> (LinearOperator &amp;A, VectorType1 &amp;x, VectorType2 &amp;b, VectorType3 &amp;sigma, Monitor &amp;monitor)</td></tr>
+<tr class="memdesc:ga33eedd31142118e841376bb81e0929e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-mass Biconjugate Gradient stabilized method.  <a href="#ga33eedd31142118e841376bb81e0929e7">More...</a><br/></td></tr>
+<tr class="separator:ga33eedd31142118e841376bb81e0929e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6aa97799b77e1de21fc88be236c6e4a8"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class Vector , class Monitor , class Preconditioner &gt; </td></tr>
 <tr class="memitem:ga6aa97799b77e1de21fc88be236c6e4a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#ga6aa97799b77e1de21fc88be236c6e4a8">cusp::krylov::cg</a> (LinearOperator &amp;A, Vector &amp;x, Vector &amp;b, Monitor &amp;monitor, Preconditioner &amp;M)</td></tr>
 <tr class="memdesc:ga6aa97799b77e1de21fc88be236c6e4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conjugate Gradient method.  <a href="#ga6aa97799b77e1de21fc88be236c6e4a8">More...</a><br/></td></tr>
 <tr class="separator:ga6aa97799b77e1de21fc88be236c6e4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae25c1e3e77e92709bfa9f3726328e421"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class VectorType3 , class Monitor &gt; </td></tr>
-<tr class="memitem:gae25c1e3e77e92709bfa9f3726328e421"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#gae25c1e3e77e92709bfa9f3726328e421">cusp::krylov::cg_m</a> (LinearOperator &amp;A, VectorType1 &amp;x, VectorType2 &amp;b, VectorType3 &amp;sigma, Monitor &amp;monitor)</td></tr>
-<tr class="memdesc:gae25c1e3e77e92709bfa9f3726328e421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-mass Conjugate Gradient method.  <a href="#gae25c1e3e77e92709bfa9f3726328e421">More...</a><br/></td></tr>
-<tr class="separator:gae25c1e3e77e92709bfa9f3726328e421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6e8cdc4593f3df76260f503b4c44416"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class VectorType3 , class Monitor &gt; </td></tr>
+<tr class="memitem:gac6e8cdc4593f3df76260f503b4c44416"><td class="memTemplItemLeft" align="right" valign="top">thrust::detail::enable_if_convertible<br class="typebreak"/>
+&lt; typename <br class="typebreak"/>
+LinearOperator::format, <br class="typebreak"/>
+cusp::known_format &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#gac6e8cdc4593f3df76260f503b4c44416">cusp::krylov::cg_m</a> (LinearOperator &amp;A, VectorType1 &amp;x, VectorType2 &amp;b, VectorType3 &amp;sigma, Monitor &amp;monitor)</td></tr>
+<tr class="memdesc:gac6e8cdc4593f3df76260f503b4c44416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-mass Conjugate Gradient method.  <a href="#gac6e8cdc4593f3df76260f503b4c44416">More...</a><br/></td></tr>
+<tr class="separator:gac6e8cdc4593f3df76260f503b4c44416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae73aeb8fd04ee86a128240ac62c20e33"><td class="memTemplParams" colspan="2">template&lt;class LinearOperator , class Vector , class Monitor , class Preconditioner &gt; </td></tr>
 <tr class="memitem:gae73aeb8fd04ee86a128240ac62c20e33"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__krylov__methods.html#gae73aeb8fd04ee86a128240ac62c20e33">cusp::krylov::cr</a> (LinearOperator &amp;A, Vector &amp;x, Vector &amp;b, Monitor &amp;monitor, Preconditioner &amp;M)</td></tr>
 <tr class="memdesc:gae73aeb8fd04ee86a128240ac62c20e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conjugate Residual method.  <a href="#gae73aeb8fd04ee86a128240ac62c20e33">More...</a><br/></td></tr>
@@ -368,14 +374,14 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 </dl>
 </div>
 </div>
-<a class="anchor" id="gae9649279f0fb30cbc6a48c9f912a5f87"></a>
+<a class="anchor" id="ga33eedd31142118e841376bb81e0929e7"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class VectorType3 , class Monitor &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void cusp::krylov::bicgstab_m </td>
+          <td class="memname">thrust::detail::enable_if_convertible&lt;typename LinearOperator::format,cusp::known_format&gt;::type cusp::krylov::bicgstab_m </td>
           <td>(</td>
           <td class="paramtype">LinearOperator &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -472,7 +478,7 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 <div class="line">    <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// solve the linear system A x = b</span></div>
-<div class="line">    <a class="code" href="group__krylov__methods.html#gae9649279f0fb30cbc6a48c9f912a5f87">cusp::krylov::bicgstab_m</a>(A, x, b, sigma, monitor);</div>
+<div class="line">    <a class="code" href="group__krylov__methods.html#ga33eedd31142118e841376bb81e0929e7">cusp::krylov::bicgstab_m</a>(A, x, b, sigma, monitor);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -580,18 +586,18 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="ainv_8cu-example.html#a4">ainv.cu</a>, <a class="el" href="cg_8cu-example.html#a5">cg.cu</a>, <a class="el" href="cg_raw_8cu-example.html#a3">cg_raw.cu</a>, <a class="el" href="diagonal_8cu-example.html#a4">diagonal.cu</a>, <a class="el" href="monitor_8cu-example.html#a4">monitor.cu</a>, <a class="el" href="smoothed_aggregation_8cu-example.html#a4">smoothed_aggregation.cu</a>, <a class="el" href="stencil_8cu-example.html#a3">stencil.cu</a>, and <a class="el" href="verbose_monitor_8cu-example.html#a4">verbose_monitor.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="ainv_8cu-example.html#a4">ainv.cu</a>, <a class="el" href="cg_8cu-example.html#a5">cg.cu</a>, <a class="el" href="cg_raw_8cu-example.html#a3">cg_raw.cu</a>, <a class="el" href="custom_amg_8cu-example.html#a5">custom_amg.cu</a>, <a class="el" href="diagonal_8cu-example.html#a4">diagonal.cu</a>, <a class="el" href="monitor_8cu-example.html#a4">monitor.cu</a>, <a class="el" href="smoothed_aggregation_8cu-example.html#a4">smoothed_aggregation.cu</a>, <a class="el" href="stencil_8cu-example.html#a3">stencil.cu</a>, and <a class="el" href="verbose_monitor_8cu-example.html#a4">verbose_monitor.cu</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="gae25c1e3e77e92709bfa9f3726328e421"></a>
+<a class="anchor" id="gac6e8cdc4593f3df76260f503b4c44416"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class VectorType3 , class Monitor &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void cusp::krylov::cg_m </td>
+          <td class="memname">thrust::detail::enable_if_convertible&lt;typename LinearOperator::format,cusp::known_format&gt;::type cusp::krylov::cg_m </td>
           <td>(</td>
           <td class="paramtype">LinearOperator &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -677,7 +683,7 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 <div class="line">    <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;float&gt;</a> monitor(b, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// solve the linear system A x = b</span></div>
-<div class="line">    <a class="code" href="group__krylov__methods.html#gae25c1e3e77e92709bfa9f3726328e421">cusp::krylov::cg_m</a>(A, x, b, sigma, monitor);</div>
+<div class="line">    <a class="code" href="group__krylov__methods.html#gac6e8cdc4593f3df76260f503b4c44416">cusp::krylov::cg_m</a>(A, x, b, sigma, monitor);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

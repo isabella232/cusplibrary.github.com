@@ -16,6 +16,6 @@ var searchData=
   ['diffusion',['diffusion',['../group__gallery.html#ga5e9190e0334f037611512c028e938b49',1,'cusp::gallery']]],
   ['diffusion_2eh',['diffusion.h',['../diffusion_8h.html',1,'']]],
   ['dimacs_2eh',['dimacs.h',['../dimacs_8h.html',1,'']]],
-  ['dot',['dot',['../group__blas.html#ga0db31791561bd2fb20093cf5e63a1668',1,'cusp::blas']]],
-  ['dotc',['dotc',['../group__blas.html#ga9e5c84bb2b77f5fce3698ab6ad1401a6',1,'cusp::blas']]]
+  ['dot',['dot',['../group__blas.html#ga46de777e1c166036c45c16885e835a9d',1,'cusp::blas']]],
+  ['dotc',['dotc',['../group__blas.html#ga3b8590b676b70d1cb0de69e949acfca1',1,'cusp::blas']]]
 ];

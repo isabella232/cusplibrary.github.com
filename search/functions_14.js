@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xmy',['xmy',['../group__blas.html#gab7c9f73e38c591dba1eb50ffb5d6a76d',1,'cusp::blas']]]
+  ['xmy',['xmy',['../group__blas.html#ga4042cd78e3ce359067177414966d97dc',1,'cusp::blas']]]
 ];
