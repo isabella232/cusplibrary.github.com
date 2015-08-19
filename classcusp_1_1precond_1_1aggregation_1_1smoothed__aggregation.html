@@ -114,7 +114,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Methods</a> &#124;
-<a href="#pub-attribs">Public Members</a> &#124;
 <a href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cusp::precond::aggregation::smoothed_aggregation&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__preconditioners.html">Preconditioners</a></div></div>  </div>
@@ -185,7 +184,7 @@ class cusp::precond::aggregation::smoothed_aggregation&lt; IndexType, ValueType,
 <div class="line">}</div>
 </div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="custom_amg_8cu-example.html#_a3">custom_amg.cu</a>, and <a class="el" href="smoothed_aggregation_8cu-example.html#_a5">smoothed_aggregation.cu</a>.</dd>
 </dl>
-<p>Definition at line <a class="el" href="smoothed__aggregation_8h_source.html#l00126">126</a> of file <a class="el" href="smoothed__aggregation_8h_source.html">smoothed_aggregation.h</a>.</p>
+<p>Definition at line <a class="el" href="smoothed__aggregation_8h_source.html#l00160">160</a> of file <a class="el" href="smoothed__aggregation_8h_source.html">smoothed_aggregation.h</a>.</p>
 </div>
 <p><code>#include &lt;<a class="el" href="smoothed__aggregation_8h_source.html">smoothed_aggregation.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -199,46 +198,224 @@ Inheritance diagram for cusp::precond::aggregation::smoothed_aggregation&lt; Ind
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
-<tr class="memitem:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memTemplParams" colspan="2"><a class="anchor" id="a946ab9dc08a7b154d0c6b41e57e0bfc1"></a>
-template&lt;typename MatrixType &gt; </td></tr>
-<tr class="memitem:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const MatrixType &amp;A)</td></tr>
+<tr class="memitem:ab128ef4cb722a5bcb2191baa1ebd077f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html#ab128ef4cb722a5bcb2191baa1ebd077f">smoothed_aggregation</a> (void)</td></tr>
+<tr class="separator:ab128ef4cb722a5bcb2191baa1ebd077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html#a946ab9dc08a7b154d0c6b41e57e0bfc1">smoothed_aggregation</a> (const MatrixType &amp;A)</td></tr>
 <tr class="separator:a946ab9dc08a7b154d0c6b41e57e0bfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d5d5598f50140091353f4736dbacca"><td class="memTemplParams" colspan="2"><a class="anchor" id="a19d5d5598f50140091353f4736dbacca"></a>
-template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
-<tr class="memitem:a19d5d5598f50140091353f4736dbacca"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const MatrixType &amp;A, const ArrayType &amp;B, typename thrust::detail::enable_if_convertible&lt; typename ArrayType::format, cusp::array1d_format &gt;::type *=0)</td></tr>
+<tr class="memitem:a19d5d5598f50140091353f4736dbacca"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
+<tr class="memitem:a19d5d5598f50140091353f4736dbacca"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html#a19d5d5598f50140091353f4736dbacca">smoothed_aggregation</a> (const MatrixType &amp;A, const ArrayType &amp;B, typename thrust::detail::enable_if_convertible&lt; typename ArrayType::format, cusp::array1d_format &gt;::type *=0)</td></tr>
 <tr class="separator:a19d5d5598f50140091353f4736dbacca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memTemplParams" colspan="2"><a class="anchor" id="a755da6b9b84fbe432cfc8fd5ebe25b2a"></a>
-template&lt;typename MemorySpace2 , typename SmootherType2 , typename SolverType2 , typename Format2 &gt; </td></tr>
-<tr class="memitem:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>smoothed_aggregation</b> (const <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace2, SmootherType2, SolverType2, Format2 &gt; &amp;M)</td></tr>
+<tr class="memitem:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memTemplParams" colspan="2">template&lt;typename MemorySpace2 , typename SmootherType2 , typename SolverType2 , typename Format2 &gt; </td></tr>
+<tr class="memitem:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html#a755da6b9b84fbe432cfc8fd5ebe25b2a">smoothed_aggregation</a> (const <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace2, SmootherType2, SolverType2, Format2 &gt; &amp;M)</td></tr>
 <tr class="separator:a755da6b9b84fbe432cfc8fd5ebe25b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a996b1ce214607af6be6c6ea4c4a1202f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a996b1ce214607af6be6c6ea4c4a1202f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_min_level_size</b> (size_t min_size)</td></tr>
-<tr class="separator:a996b1ce214607af6be6c6ea4c4a1202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e00feb658ec54644a5751caba41a4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29e00feb658ec54644a5751caba41a4a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_max_levels</b> (size_t max_depth)</td></tr>
-<tr class="separator:a29e00feb658ec54644a5751caba41a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ada90beb6ec7722771cc65dcca343ad"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1ada90beb6ec7722771cc65dcca343ad"></a>
-template&lt;typename MatrixType &gt; </td></tr>
-<tr class="memitem:a1ada90beb6ec7722771cc65dcca343ad"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sa_initialize</b> (const MatrixType &amp;A)</td></tr>
-<tr class="separator:a1ada90beb6ec7722771cc65dcca343ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace2289c6c54a0dc62cd0dfe5ee11b444"><td class="memTemplParams" colspan="2"><a class="anchor" id="ace2289c6c54a0dc62cd0dfe5ee11b444"></a>
-template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
-<tr class="memitem:ace2289c6c54a0dc62cd0dfe5ee11b444"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sa_initialize</b> (const MatrixType &amp;A, const ArrayType &amp;B, typename thrust::detail::enable_if_convertible&lt; typename MatrixType::format, cusp::known_format &gt;::type *=0)</td></tr>
-<tr class="separator:ace2289c6c54a0dc62cd0dfe5ee11b444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Members</h2></td></tr>
-<tr class="memitem:a775f8e8d541e59bb99c67ab9b261d904"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a775f8e8d541e59bb99c67ab9b261d904"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>min_level_size</b></td></tr>
-<tr class="separator:a775f8e8d541e59bb99c67ab9b261d904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a88cfb805f61b0330d08ad6e597aeee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a88cfb805f61b0330d08ad6e597aeee"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_levels</b></td></tr>
-<tr class="separator:a3a88cfb805f61b0330d08ad6e597aeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b88234ab0a79306a8937cc26e2ee34a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b88234ab0a79306a8937cc26e2ee34a"></a>
-std::vector&lt; sa_level<br class="typebreak"/>
-&lt; SetupMatrixType &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sa_levels</b></td></tr>
-<tr class="separator:a7b88234ab0a79306a8937cc26e2ee34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7658cda6bf4f11066542c7e6772f68d"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:ad7658cda6bf4f11066542c7e6772f68d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html#ad7658cda6bf4f11066542c7e6772f68d">initialize</a> (const MatrixType &amp;A)</td></tr>
+<tr class="separator:ad7658cda6bf4f11066542c7e6772f68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0cc49afee8693d42d0706b0c0f45d2"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ArrayType &gt; </td></tr>
+<tr class="memitem:aba0cc49afee8693d42d0706b0c0f45d2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html#aba0cc49afee8693d42d0706b0c0f45d2">initialize</a> (const MatrixType &amp;A, const ArrayType &amp;B, typename thrust::detail::enable_if_convertible&lt; typename MatrixType::format, cusp::known_format &gt;::type *=0)</td></tr>
+<tr class="separator:aba0cc49afee8693d42d0706b0c0f45d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ab128ef4cb722a5bcb2191baa1ebd077f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default, typename Format = thrust::use_default&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt;::<a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct an empty <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner. </p>
+
+<p>Definition at line <a class="el" href="smoothed__aggregation_8h_source.html#l00177">177</a> of file <a class="el" href="smoothed__aggregation_8h_source.html">smoothed_aggregation.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a946ab9dc08a7b154d0c6b41e57e0bfc1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default, typename Format = thrust::use_default&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt;::<a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner from a matrix.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix used to create the AMG hierarchy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a19d5d5598f50140091353f4736dbacca"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default, typename Format = thrust::use_default&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType , typename ArrayType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt;::<a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ArrayType &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename thrust::detail::enable_if_convertible&lt; typename ArrayType::format, cusp::array1d_format &gt;::type *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner from a matrix and specified near nullspace vector.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix used to create the AMG hierarchy. </td></tr>
+    <tr><td class="paramname">B</td><td>candidate near nullspace vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a755da6b9b84fbe432cfc8fd5ebe25b2a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default, typename Format = thrust::use_default&gt; </div>
+<div class="memtemplate">
+template&lt;typename MemorySpace2 , typename SmootherType2 , typename SolverType2 , typename Format2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt;::<a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace2, SmootherType2, SolverType2, Format2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>M</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner from a existing SA <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">M</td><td>other <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a> preconditioner. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad7658cda6bf4f11066542c7e6772f68d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default, typename Format = thrust::use_default&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt;::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner from a matrix. Used to initialize a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner constructed with no input matrix specified.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix used to create the AMG hierarchy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aba0cc49afee8693d42d0706b0c0f45d2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename IndexType, typename ValueType, typename MemorySpace, typename SmootherType = thrust::use_default, typename SolverType = thrust::use_default, typename Format = thrust::use_default&gt; </div>
+<div class="memtemplate">
+template&lt;typename MatrixType , typename ArrayType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html">cusp::precond::aggregation::smoothed_aggregation</a>&lt; IndexType, ValueType, MemorySpace, SmootherType, SolverType, Format &gt;::initialize </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ArrayType &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename thrust::detail::enable_if_convertible&lt; typename MatrixType::format, cusp::known_format &gt;::type *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner from a matrix and initial near nullspace vector. Used to initialize a <code><a class="el" href="classcusp_1_1precond_1_1aggregation_1_1smoothed__aggregation.html" title="Algebraic multigrid preconditoner based on smoothed aggregation. ">smoothed_aggregation</a></code> preconditioner constructed with no input matrix specified.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix used to create the AMG hierarchy. </td></tr>
+    <tr><td class="paramname">B</td><td>candidate near nullspace vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

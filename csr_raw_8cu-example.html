@@ -107,8 +107,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="multiply_8h.html">cusp/multiply.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// This example shows how to wrap &quot;raw&quot; host and device memory</span></div>
 <div class="line"><span class="comment">// with a csr_matrix_view.  This situation arises when interfacing</span></div>
@@ -125,117 +125,122 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
-<div class="line">  <span class="comment">// CSR format in raw host memory</span></div>
-<div class="line">  <span class="keywordtype">int</span>   host_Ap[5] = {0,2,2,3,6};            <span class="comment">// CSR row pointer</span></div>
-<div class="line">  <span class="keywordtype">int</span>   host_Aj[6] = {0,2,2,0,1,2};          <span class="comment">// CSR column indices</span></div>
-<div class="line">  <span class="keywordtype">float</span> host_Ax[6] = {10,20,30,40,50,60};    <span class="comment">// CSR values</span></div>
+<div class="line">    <span class="comment">// CSR format in raw host memory</span></div>
+<div class="line">    <span class="keywordtype">int</span>   host_Ap[5] = {0,2,2,3,6};            <span class="comment">// CSR row pointer</span></div>
+<div class="line">    <span class="keywordtype">int</span>   host_Aj[6] = {0,2,2,0,1,2};          <span class="comment">// CSR column indices</span></div>
+<div class="line">    <span class="keywordtype">float</span> host_Ax[6] = {10,20,30,40,50,60};    <span class="comment">// CSR values</span></div>
 <div class="line"></div>
-<div class="line">  <span class="comment">// x and y arrays in host memory</span></div>
-<div class="line">  <span class="keywordtype">float</span> host_x[3] = {1,1,1};</div>
-<div class="line">  <span class="keywordtype">float</span> host_y[4] = {0,0,0,0};</div>
+<div class="line">    <span class="comment">// x and y arrays in host memory</span></div>
+<div class="line">    <span class="keywordtype">float</span> host_x[3] = {1,1,1};</div>
+<div class="line">    <span class="keywordtype">float</span> host_y[4] = {0,0,0,0};</div>
 <div class="line"></div>
-<div class="line">  <span class="comment">// allocate device memory for CSR format</span></div>
-<div class="line">  <span class="keywordtype">int</span>   * device_Ap;  cudaMalloc(&amp;device_Ap, 5 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line">  <span class="keywordtype">int</span>   * device_Aj;  cudaMalloc(&amp;device_Aj, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line">  <span class="keywordtype">float</span> * device_Ax;  cudaMalloc(&amp;device_Ax, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
-<div class="line">  </div>
-<div class="line">  <span class="comment">// allocate device memory for x and y arrays</span></div>
-<div class="line">  <span class="keywordtype">float</span> * device_x;   cudaMalloc(&amp;device_x, 3 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
-<div class="line">  <span class="keywordtype">float</span> * device_y;   cudaMalloc(&amp;device_y, 4 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
+<div class="line">    <span class="comment">// allocate device memory for CSR format</span></div>
+<div class="line">    <span class="keywordtype">int</span>   * device_Ap;</div>
+<div class="line">    cudaMalloc(&amp;device_Ap, 5 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line">    <span class="keywordtype">int</span>   * device_Aj;</div>
+<div class="line">    cudaMalloc(&amp;device_Aj, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line">    <span class="keywordtype">float</span> * device_Ax;</div>
+<div class="line">    cudaMalloc(&amp;device_Ax, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
 <div class="line"></div>
-<div class="line">  <span class="comment">// copy raw data from host to device</span></div>
-<div class="line">  cudaMemcpy(device_Ap, host_Ap, 5 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>),   cudaMemcpyHostToDevice);</div>
-<div class="line">  cudaMemcpy(device_Aj, host_Aj, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>),   cudaMemcpyHostToDevice);</div>
-<div class="line">  cudaMemcpy(device_Ax, host_Ax, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), cudaMemcpyHostToDevice);</div>
-<div class="line">  cudaMemcpy(device_x,  host_x,  3 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), cudaMemcpyHostToDevice);</div>
-<div class="line">  cudaMemcpy(device_y,  host_y,  4 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), cudaMemcpyHostToDevice);</div>
+<div class="line">    <span class="comment">// allocate device memory for x and y arrays</span></div>
+<div class="line">    <span class="keywordtype">float</span> * device_x;</div>
+<div class="line">    cudaMalloc(&amp;device_x, 3 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
+<div class="line">    <span class="keywordtype">float</span> * device_y;</div>
+<div class="line">    cudaMalloc(&amp;device_y, 4 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>));</div>
 <div class="line"></div>
-<div class="line">  <span class="comment">// wrap the host memory with a csr_matrix_view</span></div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">// use array1d_view to wrap the individual arrays</span></div>
-<div class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a name="_a0"></a><a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;int   *&gt;</a> HostIndexArrayView;</div>
-<div class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;float *&gt;</a> HostValueArrayView;</div>
+<div class="line">    <span class="comment">// copy raw data from host to device</span></div>
+<div class="line">    cudaMemcpy(device_Ap, host_Ap, 5 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>),   cudaMemcpyHostToDevice);</div>
+<div class="line">    cudaMemcpy(device_Aj, host_Aj, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>),   cudaMemcpyHostToDevice);</div>
+<div class="line">    cudaMemcpy(device_Ax, host_Ax, 6 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), cudaMemcpyHostToDevice);</div>
+<div class="line">    cudaMemcpy(device_x,  host_x,  3 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), cudaMemcpyHostToDevice);</div>
+<div class="line">    cudaMemcpy(device_y,  host_y,  4 * <span class="keyword">sizeof</span>(<span class="keywordtype">float</span>), cudaMemcpyHostToDevice);</div>
 <div class="line"></div>
-<div class="line">    HostIndexArrayView row_offsets   (host_Ap, host_Ap + 5);</div>
-<div class="line">    HostIndexArrayView column_indices(host_Aj, host_Aj + 6);</div>
-<div class="line">    HostValueArrayView values        (host_Ax, host_Ax + 6);</div>
-<div class="line">    </div>
-<div class="line">    HostValueArrayView x (host_x, host_x + 3);</div>
-<div class="line">    HostValueArrayView y (host_y, host_y + 4);</div>
+<div class="line">    <span class="comment">// wrap the host memory with a csr_matrix_view</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// use array1d_view to wrap the individual arrays</span></div>
+<div class="line">        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a name="_a0"></a><a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;int   *&gt;</a> HostIndexArrayView;</div>
+<div class="line">        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt;float *&gt;</a> HostValueArrayView;</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// combine the three array1d_views into a csr_matrix_view</span></div>
-<div class="line">    <span class="keyword">typedef</span> <a name="_a1"></a><a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;HostIndexArrayView,</div>
-<div class="line">                                  HostIndexArrayView,</div>
-<div class="line">                                  HostValueArrayView&gt; HostView;</div>
+<div class="line">        HostIndexArrayView row_offsets   (host_Ap, host_Ap + 5);</div>
+<div class="line">        HostIndexArrayView column_indices(host_Aj, host_Aj + 6);</div>
+<div class="line">        HostValueArrayView values        (host_Ax, host_Ax + 6);</div>
 <div class="line"></div>
-<div class="line">    HostView A(4, 3, 6, row_offsets, column_indices, values);</div>
+<div class="line">        HostValueArrayView x (host_x, host_x + 3);</div>
+<div class="line">        HostValueArrayView y (host_y, host_y + 4);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// print view</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\nhost csr_matrix_view&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <a name="a2"></a><a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
+<div class="line">        <span class="comment">// combine the three array1d_views into a csr_matrix_view</span></div>
+<div class="line">        <span class="keyword">typedef</span> <a name="_a1"></a><a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;HostIndexArrayView,</div>
+<div class="line">                HostIndexArrayView,</div>
+<div class="line">                HostValueArrayView&gt; HostView;</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// compute y = A* x </span></div>
-<div class="line">    <a name="a3"></a><a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, y);</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// print x</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\nx array&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(x);</div>
+<div class="line">        HostView A(4, 3, 6, row_offsets, column_indices, values);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// print y</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n y array, y = A * x&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
-<div class="line">  }</div>
+<div class="line">        <span class="comment">// print view</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nhost csr_matrix_view&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <a name="a2"></a><a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
 <div class="line"></div>
-<div class="line">  <span class="comment">// wrap the device memory with a csr_matrix_view</span></div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">// *NOTE* raw pointers must be wrapped with thrust::device_ptr!</span></div>
-<div class="line">    thrust::device_ptr&lt;int&gt;   wrapped_device_Ap(device_Ap);</div>
-<div class="line">    thrust::device_ptr&lt;int&gt;   wrapped_device_Aj(device_Aj);</div>
-<div class="line">    thrust::device_ptr&lt;float&gt; wrapped_device_Ax(device_Ax);</div>
-<div class="line">    thrust::device_ptr&lt;float&gt; wrapped_device_x(device_x);</div>
-<div class="line">    thrust::device_ptr&lt;float&gt; wrapped_device_y(device_y);</div>
+<div class="line">        <span class="comment">// compute y = A* x</span></div>
+<div class="line">        <a name="a3"></a><a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, y);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// use array1d_view to wrap the individual arrays</span></div>
-<div class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::device_ptr&lt;int&gt;</a>   &gt; DeviceIndexArrayView;</div>
-<div class="line">    <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::device_ptr&lt;float&gt;</a> &gt; DeviceValueArrayView;</div>
+<div class="line">        <span class="comment">// print x</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nx array&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(x);</div>
 <div class="line"></div>
-<div class="line">    DeviceIndexArrayView row_offsets   (wrapped_device_Ap, wrapped_device_Ap + 5);</div>
-<div class="line">    DeviceIndexArrayView column_indices(wrapped_device_Aj, wrapped_device_Aj + 6);</div>
-<div class="line">    DeviceValueArrayView values        (wrapped_device_Ax, wrapped_device_Ax + 6);</div>
-<div class="line">    DeviceValueArrayView x (wrapped_device_x, wrapped_device_x + 3);</div>
-<div class="line">    DeviceValueArrayView y (wrapped_device_y, wrapped_device_y + 4);</div>
+<div class="line">        <span class="comment">// print y</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n y array, y = A * x&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
+<div class="line">    }</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// combine the three array1d_views into a csr_matrix_view</span></div>
-<div class="line">    <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;DeviceIndexArrayView,</div>
-<div class="line">                                  DeviceIndexArrayView,</div>
-<div class="line">                                  DeviceValueArrayView&gt; DeviceView;</div>
+<div class="line">    <span class="comment">// wrap the device memory with a csr_matrix_view</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// *NOTE* raw pointers must be wrapped with thrust::device_ptr!</span></div>
+<div class="line">        thrust::device_ptr&lt;int&gt;   wrapped_device_Ap(device_Ap);</div>
+<div class="line">        thrust::device_ptr&lt;int&gt;   wrapped_device_Aj(device_Aj);</div>
+<div class="line">        thrust::device_ptr&lt;float&gt; wrapped_device_Ax(device_Ax);</div>
+<div class="line">        thrust::device_ptr&lt;float&gt; wrapped_device_x(device_x);</div>
+<div class="line">        thrust::device_ptr&lt;float&gt; wrapped_device_y(device_y);</div>
 <div class="line"></div>
-<div class="line">    DeviceView A(4, 3, 6, row_offsets, column_indices, values);</div>
+<div class="line">        <span class="comment">// use array1d_view to wrap the individual arrays</span></div>
+<div class="line">        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::device_ptr&lt;int&gt;</a>   &gt; DeviceIndexArrayView;</div>
+<div class="line">        <span class="keyword">typedef</span> <span class="keyword">typename</span> <a class="code" href="classcusp_1_1array1d__view.html">cusp::array1d_view&lt; thrust::device_ptr&lt;float&gt;</a> &gt; DeviceValueArrayView;</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// print view</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\ndevice csr_matrix_view&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
+<div class="line">        DeviceIndexArrayView row_offsets   (wrapped_device_Ap, wrapped_device_Ap + 5);</div>
+<div class="line">        DeviceIndexArrayView column_indices(wrapped_device_Aj, wrapped_device_Aj + 6);</div>
+<div class="line">        DeviceValueArrayView values        (wrapped_device_Ax, wrapped_device_Ax + 6);</div>
+<div class="line">        DeviceValueArrayView x (wrapped_device_x, wrapped_device_x + 3);</div>
+<div class="line">        DeviceValueArrayView y (wrapped_device_y, wrapped_device_y + 4);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// compute y = A* x </span></div>
-<div class="line">    <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, y);</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// print x</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\nx array&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(x);</div>
+<div class="line">        <span class="comment">// combine the three array1d_views into a csr_matrix_view</span></div>
+<div class="line">        <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1csr__matrix__view.html">cusp::csr_matrix_view</a>&lt;DeviceIndexArrayView,</div>
+<div class="line">                DeviceIndexArrayView,</div>
+<div class="line">                DeviceValueArrayView&gt; DeviceView;</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// print y</span></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;\n y array, y = A * x&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line">    <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
-<div class="line">  }</div>
-<div class="line">  </div>
-<div class="line">  <span class="comment">// free device arrays</span></div>
-<div class="line">  cudaFree(device_Ap);</div>
-<div class="line">  cudaFree(device_Aj);</div>
-<div class="line">  cudaFree(device_Ax);</div>
-<div class="line">  cudaFree(device_x);</div>
-<div class="line">  cudaFree(device_y);</div>
+<div class="line">        DeviceView A(4, 3, 6, row_offsets, column_indices, values);</div>
 <div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">        <span class="comment">// print view</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\ndevice csr_matrix_view&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(A);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// compute y = A* x</span></div>
+<div class="line">        <a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A, x, y);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// print x</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\nx array&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(x);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// print y</span></div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;\n y array, y = A * x&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line">        <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(y);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// free device arrays</span></div>
+<div class="line">    cudaFree(device_Ap);</div>
+<div class="line">    cudaFree(device_Aj);</div>
+<div class="line">    cudaFree(device_Ax);</div>
+<div class="line">    cudaFree(device_x);</div>
+<div class="line">    cudaFree(device_y);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="line"></div>
 </div><!-- fragment --> </div><!-- contents -->

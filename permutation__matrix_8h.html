@@ -126,13 +126,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1permutation__matrix__view.html">cusp::permutation_matrix_view&lt; ArrayType, ValueType, MemorySpace, IndexType &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1permutation__matrix__view.html">cusp::permutation_matrix_view&lt; ArrayType, IndexType, MemorySpace &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">View of a <code><a class="el" href="classcusp_1_1permutation__matrix.html" title="Simple representation a permutation matrix. ">permutation_matrix</a></code>.  <a href="classcusp_1_1permutation__matrix__view.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; ValueType, MemorySpace, IndexType &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt; IndexType, MemorySpace &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple representation a permutation matrix.  <a href="classcusp_1_1permutation__matrix.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1permutation__matrix__view.html">cusp::permutation_matrix_view&lt; ArrayType, ValueType, MemorySpace, IndexType &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1permutation__matrix__view.html">cusp::permutation_matrix_view&lt; ArrayType, IndexType, MemorySpace &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">View of a <code><a class="el" href="classcusp_1_1permutation__matrix.html" title="Simple representation a permutation matrix. ">permutation_matrix</a></code>.  <a href="classcusp_1_1permutation__matrix__view.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -142,19 +142,19 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf7926ee72185e983af6ba59f7ea46de6"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix_view<br class="typebreak"/>
 &lt; ArrayType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#gaf7926ee72185e983af6ba59f7ea46de6">cusp::make_permutation_matrix_view</a> (size_t num_rows, ArrayType permutation)</td></tr>
 <tr class="separator:gaf7926ee72185e983af6ba59f7ea46de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7eb95a84929779a53b24cb64f3ca2eef"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType , typename ValueType , typename MemorySpace &gt; </td></tr>
-<tr class="memitem:ga7eb95a84929779a53b24cb64f3ca2eef"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix_view<br class="typebreak"/>
-&lt; ArrayType, ValueType, <br class="typebreak"/>
-MemorySpace &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#ga7eb95a84929779a53b24cb64f3ca2eef">cusp::make_permutation_matrix_view</a> (const permutation_matrix_view&lt; ArrayType, ValueType, MemorySpace &gt; &amp;m)</td></tr>
-<tr class="separator:ga7eb95a84929779a53b24cb64f3ca2eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab5971d4af041e60e4de416d7d74933d7"><td class="memTemplParams" colspan="2">template&lt;typename ValueType , class MemorySpace &gt; </td></tr>
-<tr class="memitem:gab5971d4af041e60e4de416d7d74933d7"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix&lt; ValueType, <br class="typebreak"/>
-MemorySpace &gt;::view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#gab5971d4af041e60e4de416d7d74933d7">cusp::make_permutation_matrix_view</a> (permutation_matrix&lt; ValueType, MemorySpace &gt; &amp;m)</td></tr>
-<tr class="separator:gab5971d4af041e60e4de416d7d74933d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a5eac5771ac051153b8ffd85922dab4"><td class="memTemplParams" colspan="2">template&lt;typename ValueType , class MemorySpace &gt; </td></tr>
-<tr class="memitem:ga9a5eac5771ac051153b8ffd85922dab4"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix&lt; ValueType, <br class="typebreak"/>
-MemorySpace &gt;::const_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#ga9a5eac5771ac051153b8ffd85922dab4">cusp::make_permutation_matrix_view</a> (const permutation_matrix&lt; ValueType, MemorySpace &gt; &amp;m)</td></tr>
-<tr class="separator:ga9a5eac5771ac051153b8ffd85922dab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15a9d8052f4dc987436afdb093b10d73"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType , typename IndexType , typename MemorySpace &gt; </td></tr>
+<tr class="memitem:ga15a9d8052f4dc987436afdb093b10d73"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix_view<br class="typebreak"/>
+&lt; ArrayType, IndexType, <br class="typebreak"/>
+MemorySpace &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#ga15a9d8052f4dc987436afdb093b10d73">cusp::make_permutation_matrix_view</a> (const permutation_matrix_view&lt; ArrayType, IndexType, MemorySpace &gt; &amp;m)</td></tr>
+<tr class="separator:ga15a9d8052f4dc987436afdb093b10d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67ddd9190b93676576eff5741bf99dec"><td class="memTemplParams" colspan="2">template&lt;typename IndexType , class MemorySpace &gt; </td></tr>
+<tr class="memitem:ga67ddd9190b93676576eff5741bf99dec"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix&lt; IndexType, <br class="typebreak"/>
+MemorySpace &gt;::view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#ga67ddd9190b93676576eff5741bf99dec">cusp::make_permutation_matrix_view</a> (permutation_matrix&lt; IndexType, MemorySpace &gt; &amp;m)</td></tr>
+<tr class="separator:ga67ddd9190b93676576eff5741bf99dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga416858f413e667864aa1ed9b9287603b"><td class="memTemplParams" colspan="2">template&lt;typename IndexType , class MemorySpace &gt; </td></tr>
+<tr class="memitem:ga416858f413e667864aa1ed9b9287603b"><td class="memTemplItemLeft" align="right" valign="top">permutation_matrix&lt; IndexType, <br class="typebreak"/>
+MemorySpace &gt;::const_view&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sparse__matrix__views.html#ga416858f413e667864aa1ed9b9287603b">cusp::make_permutation_matrix_view</a> (const permutation_matrix&lt; IndexType, MemorySpace &gt; &amp;m)</td></tr>
+<tr class="separator:ga416858f413e667864aa1ed9b9287603b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A permutation matrix. </p>

@@ -129,12 +129,11 @@ Functions</h2></td></tr>
 <tr class="memitem:gae9b1cbd1a0ef139ebc6c18040ac66541"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gae9b1cbd1a0ef139ebc6c18040ac66541">cusp::blas::amax</a> (const ArrayType &amp;x)</td></tr>
 <tr class="memdesc:gae9b1cbd1a0ef139ebc6c18040ac66541"><td class="mdescLeft">&#160;</td><td class="mdescRight">index of the largest element in a array  <a href="group__blas.html#gae9b1cbd1a0ef139ebc6c18040ac66541">More...</a><br/></td></tr>
 <tr class="separator:gae9b1cbd1a0ef139ebc6c18040ac66541"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ca784fc379c8487bc767345494071c1"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
-<tr class="memitem:ga2ca784fc379c8487bc767345494071c1"><td class="memTemplItemLeft" align="right" valign="top">cusp::detail::norm_type<br class="typebreak"/>
-&lt; typename <br class="typebreak"/>
-ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga2ca784fc379c8487bc767345494071c1">cusp::blas::asum</a> (const ArrayType &amp;x)</td></tr>
-<tr class="memdesc:ga2ca784fc379c8487bc767345494071c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">sum of absolute value of all entries in array  <a href="group__blas.html#ga2ca784fc379c8487bc767345494071c1">More...</a><br/></td></tr>
-<tr class="separator:ga2ca784fc379c8487bc767345494071c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace8c2854d1d0b82753774f08c4fe252a"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:gace8c2854d1d0b82753774f08c4fe252a"><td class="memTemplItemLeft" align="right" valign="top">cusp::norm_type&lt; typename <br class="typebreak"/>
+ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gace8c2854d1d0b82753774f08c4fe252a">cusp::blas::asum</a> (const ArrayType &amp;x)</td></tr>
+<tr class="memdesc:gace8c2854d1d0b82753774f08c4fe252a"><td class="mdescLeft">&#160;</td><td class="mdescRight">sum of absolute value of all entries in array  <a href="group__blas.html#gace8c2854d1d0b82753774f08c4fe252a">More...</a><br/></td></tr>
+<tr class="separator:gace8c2854d1d0b82753774f08c4fe252a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1b31bbaeae6829108b5125602c0bf93e"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType1 , typename ArrayType2 , typename ScalarType &gt; </td></tr>
 <tr class="memitem:ga1b31bbaeae6829108b5125602c0bf93e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga1b31bbaeae6829108b5125602c0bf93e">cusp::blas::axpy</a> (const ArrayType1 &amp;x, ArrayType2 &amp;y, const ScalarType alpha)</td></tr>
 <tr class="memdesc:ga1b31bbaeae6829108b5125602c0bf93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">scaled vector addition (y = alpha * x + y)  <a href="group__blas.html#ga1b31bbaeae6829108b5125602c0bf93e">More...</a><br/></td></tr>
@@ -167,22 +166,21 @@ ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign=
 <tr class="memitem:ga90e8a781b3c33d15f3493fb256f1d063"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga90e8a781b3c33d15f3493fb256f1d063">cusp::blas::fill</a> (ArrayType &amp;x, const ScalarType alpha)</td></tr>
 <tr class="memdesc:ga90e8a781b3c33d15f3493fb256f1d063"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector fill (x[i] = alpha)  <a href="group__blas.html#ga90e8a781b3c33d15f3493fb256f1d063">More...</a><br/></td></tr>
 <tr class="separator:ga90e8a781b3c33d15f3493fb256f1d063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4214f65c866ea2db0a60ecb7c4607246"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
-<tr class="memitem:ga4214f65c866ea2db0a60ecb7c4607246"><td class="memTemplItemLeft" align="right" valign="top">cusp::detail::norm_type<br class="typebreak"/>
-&lt; typename <br class="typebreak"/>
-ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga4214f65c866ea2db0a60ecb7c4607246">cusp::blas::nrm1</a> (const ArrayType &amp;x)</td></tr>
-<tr class="memdesc:ga4214f65c866ea2db0a60ecb7c4607246"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector 1-norm (sum abs(x[i]))  <a href="group__blas.html#ga4214f65c866ea2db0a60ecb7c4607246">More...</a><br/></td></tr>
-<tr class="separator:ga4214f65c866ea2db0a60ecb7c4607246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf98e7ba246e181c7099db364ccacbe16"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
-<tr class="memitem:gaf98e7ba246e181c7099db364ccacbe16"><td class="memTemplItemLeft" align="right" valign="top">cusp::detail::norm_type<br class="typebreak"/>
-&lt; typename <br class="typebreak"/>
-ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gaf98e7ba246e181c7099db364ccacbe16">cusp::blas::nrm2</a> (const ArrayType &amp;x)</td></tr>
-<tr class="memdesc:gaf98e7ba246e181c7099db364ccacbe16"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector 2-norm (sqrt(sum x[i] * x[i] )  <a href="group__blas.html#gaf98e7ba246e181c7099db364ccacbe16">More...</a><br/></td></tr>
-<tr class="separator:gaf98e7ba246e181c7099db364ccacbe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaae639bf2ddaf041fc8030e55ff887e62"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
-<tr class="memitem:gaae639bf2ddaf041fc8030e55ff887e62"><td class="memTemplItemLeft" align="right" valign="top">ArrayType::value_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gaae639bf2ddaf041fc8030e55ff887e62">cusp::blas::nrmmax</a> (const ArrayType &amp;x)</td></tr>
-<tr class="memdesc:gaae639bf2ddaf041fc8030e55ff887e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector infinity norm  <a href="group__blas.html#gaae639bf2ddaf041fc8030e55ff887e62">More...</a><br/></td></tr>
-<tr class="separator:gaae639bf2ddaf041fc8030e55ff887e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2142c529b4c1e7864ecf8b152e9f6dac"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga2142c529b4c1e7864ecf8b152e9f6dac"><td class="memTemplItemLeft" align="right" valign="top">cusp::norm_type&lt; typename <br class="typebreak"/>
+ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga2142c529b4c1e7864ecf8b152e9f6dac">cusp::blas::nrm1</a> (const ArrayType &amp;x)</td></tr>
+<tr class="memdesc:ga2142c529b4c1e7864ecf8b152e9f6dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector 1-norm (sum abs(x[i]))  <a href="group__blas.html#ga2142c529b4c1e7864ecf8b152e9f6dac">More...</a><br/></td></tr>
+<tr class="separator:ga2142c529b4c1e7864ecf8b152e9f6dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0445a0fc9cfe0a155f896099c7bbc8e5"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:ga0445a0fc9cfe0a155f896099c7bbc8e5"><td class="memTemplItemLeft" align="right" valign="top">cusp::norm_type&lt; typename <br class="typebreak"/>
+ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga0445a0fc9cfe0a155f896099c7bbc8e5">cusp::blas::nrm2</a> (const ArrayType &amp;x)</td></tr>
+<tr class="memdesc:ga0445a0fc9cfe0a155f896099c7bbc8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector 2-norm (sqrt(sum x[i] * x[i] )  <a href="group__blas.html#ga0445a0fc9cfe0a155f896099c7bbc8e5">More...</a><br/></td></tr>
+<tr class="separator:ga0445a0fc9cfe0a155f896099c7bbc8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf388741ef791e4d0134d018ece1320ce"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType &gt; </td></tr>
+<tr class="memitem:gaf388741ef791e4d0134d018ece1320ce"><td class="memTemplItemLeft" align="right" valign="top">cusp::norm_type&lt; typename <br class="typebreak"/>
+ArrayType::value_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#gaf388741ef791e4d0134d018ece1320ce">cusp::blas::nrmmax</a> (const ArrayType &amp;x)</td></tr>
+<tr class="memdesc:gaf388741ef791e4d0134d018ece1320ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector infinity norm  <a href="group__blas.html#gaf388741ef791e4d0134d018ece1320ce">More...</a><br/></td></tr>
+<tr class="separator:gaf388741ef791e4d0134d018ece1320ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3d4e2ffc57ee3698e05e51d603225ffd"><td class="memTemplParams" colspan="2">template&lt;typename ArrayType , typename ScalarType &gt; </td></tr>
 <tr class="memitem:ga3d4e2ffc57ee3698e05e51d603225ffd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__blas.html#ga3d4e2ffc57ee3698e05e51d603225ffd">cusp::blas::scal</a> (ArrayType &amp;x, const ScalarType alpha)</td></tr>
 <tr class="memdesc:ga3d4e2ffc57ee3698e05e51d603225ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">scale vector (x[i] = alpha * x[i])  <a href="group__blas.html#ga3d4e2ffc57ee3698e05e51d603225ffd">More...</a><br/></td></tr>

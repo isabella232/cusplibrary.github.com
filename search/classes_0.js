@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['abs_5ffunctor',['abs_functor',['../structcusp_1_1abs__functor.html',1,'cusp']]],
+  ['abs_5fsquared_5ffunctor',['abs_squared_functor',['../structcusp_1_1abs__squared__functor.html',1,'cusp']]],
   ['array1d',['array1d',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_3c_20real_2c_20cusp_3a_3ahost_5fmemory_20_3e',['array1d&lt; Real, cusp::host_memory &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],
   ['array1d_3c_20typename_20thrust_3a_3adetail_3a_3aremove_5fconst_3c_20indextype_20_3e_3a_3atype_2c_20memoryspace_20_3e',['array1d&lt; typename thrust::detail::remove_const&lt; IndexType &gt;::type, MemorySpace &gt;',['../classcusp_1_1array1d.html',1,'cusp']]],

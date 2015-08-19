@@ -124,9 +124,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h3>template&lt;typename Tuple&gt;<br/>
 class cusp::join_iterator&lt; Tuple &gt;</h3>
 
-
-<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00140">140</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
-</div><table class="memberdecls">
+<p>RandomAccessIterator for access to array entries from two concatenated iterators. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterator1</td><td>The iterator type used to encapsulate the first set of entries. </td></tr>
+    <tr><td class="paramname">Iterator2</td><td>The iterator type used to encapsulate the second set of entries. </td></tr>
+    <tr><td class="paramname">Iterator3</td><td>The iterator type used to order concatenated entries from two separate iterators.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd><code><a class="el" href="classcusp_1_1join__iterator.html" title="RandomAccessIterator for access to array entries from two concatenated iterators. ...">join_iterator</a></code> is an iterator which represents a pointer into a concatenated range of entries from two underlying arrays. This iterator is useful for creating a single range of permuted entries from two different iterators.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to create a <code><a class="el" href="classcusp_1_1join__iterator.html" title="RandomAccessIterator for access to array entries from two concatenated iterators. ...">join_iterator</a></code> whose <code>value_type</code> is <code>int</code> and whose values are gather from a <code>counting_iterator</code> and a <code>constant_iterator</code>.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="join__iterator_8h.html">cusp/iterator/join_iterator.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;thrust/sequence.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1counting__array.html">cusp::counting_array&lt;int&gt;</a>                                              CountingArray;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1constant__array.html">cusp::constant_array&lt;int&gt;</a>                                              ConstantArray;</div>
+<div class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> CountingArray::iterator                                       CountingIterator;</div>
+<div class="line">  <span class="keyword">typedef</span> <span class="keyword">typename</span> ConstantArray::iterator                                       ConstantIterator;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;::iterator</a>                       ArrayIterator;</div>
+<div class="line">  <span class="keyword">typedef</span> <a class="code" href="classcusp_1_1join__iterator.html">cusp::join_iterator&lt;CountingIterator,ConstantIterator,ArrayIterator&gt;</a>   JoinIterator;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// a = [0, 1, 2, 3]</span></div>
+<div class="line">  CountingArray a(4);</div>
+<div class="line">  <span class="comment">// b = [10, 10, 10, 10, 10]</span></div>
+<div class="line">  ConstantArray b(5, 10);</div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> indices(a.size() + b.size());</div>
+<div class="line">  <span class="comment">// set indices to a sequence for simple in order access</span></div>
+<div class="line">  thrust::sequence(indices.begin(), indices.end());</div>
+<div class="line">  <span class="comment">// iter = [0, 1, 2, 3, 10, 10, 10, 10, 10]</span></div>
+<div class="line">  JoinIterator iter(a.begin(), a.end(), b.begin(), b.end(), indices.begin());</div>
+<div class="line"></div>
+<div class="line">  std::cout &lt;&lt; iter[0] &lt;&lt; std::endl;   <span class="comment">// returns 0</span></div>
+<div class="line">  std::cout &lt;&lt; iter[3] &lt;&lt; std::endl;   <span class="comment">// returns 3</span></div>
+<div class="line">  std::cout &lt;&lt; iter[4] &lt;&lt; std::endl;   <span class="comment">// returns 10</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00142">142</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>&gt;</code></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a21e84becd6d681e40506a663f33e9b2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21e84becd6d681e40506a663f33e9b2d"></a>
@@ -136,7 +181,7 @@ typedef TransformIterator&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Methods</h2></td></tr>
 <tr class="memitem:aa763b399417f3cb3fb389d821dd50b80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1join__iterator.html#aa763b399417f3cb3fb389d821dd50b80">join_iterator</a> (const SizesTuple &amp;t1, const Tuple &amp;t2)</td></tr>
-<tr class="memdesc:aa763b399417f3cb3fb389d821dd50b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor builds a <code><a class="el" href="classcusp_1_1join__iterator.html">join_iterator</a></code> from two iterators.  <a href="#aa763b399417f3cb3fb389d821dd50b80">More...</a><br/></td></tr>
+<tr class="memdesc:aa763b399417f3cb3fb389d821dd50b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">This constructor builds a <code><a class="el" href="classcusp_1_1join__iterator.html" title="RandomAccessIterator for access to array entries from two concatenated iterators. ...">join_iterator</a></code> from two iterators.  <a href="#aa763b399417f3cb3fb389d821dd50b80">More...</a><br/></td></tr>
 <tr class="separator:aa763b399417f3cb3fb389d821dd50b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc5c4dc3c336f039098711dacf6ac7ed"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcusp_1_1join__iterator.html#afc5c4dc3c336f039098711dacf6ac7ed">begin</a> (void) const </td></tr>
 <tr class="memdesc:afc5c4dc3c336f039098711dacf6ac7ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns an iterator pointing to the beginning of this joined sequence of permuted entries.  <a href="#afc5c4dc3c336f039098711dacf6ac7ed">More...</a><br/></td></tr>
@@ -183,7 +228,7 @@ template&lt;typename Tuple &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This constructor builds a <code><a class="el" href="classcusp_1_1join__iterator.html">join_iterator</a></code> from two iterators. </p>
+<p>This constructor builds a <code><a class="el" href="classcusp_1_1join__iterator.html" title="RandomAccessIterator for access to array entries from two concatenated iterators. ...">join_iterator</a></code> from two iterators. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">first_begin</td><td>The beginning of the first range. </td></tr>
@@ -195,7 +240,7 @@ template&lt;typename Tuple &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00193">193</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00195">195</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +272,7 @@ template&lt;typename Tuple &gt; </div>
 <p>This method returns an iterator pointing to the beginning of this joined sequence of permuted entries. </p>
 <dl class="section return"><dt>Returns</dt><dd>mStart </dd></dl>
 
-<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00199">199</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00201">201</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -258,7 +303,7 @@ template&lt;typename Tuple &gt; </div>
 <p>This method returns an iterator pointing to one element past the last of this joined sequence of permuted entries. </p>
 <dl class="section return"><dt>Returns</dt><dd>mEnd </dd></dl>
 
-<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00208">208</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00210">210</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
 
 </div>
 </div>
@@ -296,7 +341,7 @@ template&lt;typename Tuple &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Read/write reference to data.</dd></dl>
 <p>This operator allows for easy, array-style, data access. Note that data access with this operator is unchecked and out_of_range lookups are not defined. </p>
 
-<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00221">221</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
+<p>Definition at line <a class="el" href="join__iterator_8h_source.html#l00223">223</a> of file <a class="el" href="join__iterator_8h_source.html">join_iterator.h</a>.</p>
 
 </div>
 </div>

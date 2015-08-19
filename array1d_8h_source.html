@@ -365,9 +365,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00693"></a><span class="lineno"><a class="line" href="group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12">  693</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator&gt;</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a> <a class="code" href="group__array__views.html#gab1202e949ef966c933bccd15c7937d40">make_array1d_view</a>(Iterator first, Iterator last)</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;{</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a> ret(first, last);</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <a class="code" href="classcusp_1_1array1d__view.html">array1d_view&lt;Iterator&gt;</a> view(first, last);</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordflow">return</span> view;</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;}</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;</div>
 <div class="line"><a name="l00709"></a><span class="lineno"><a class="line" href="group__array__views.html#ga0f608c549666895b298fd74e3726fe79">  709</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> MemorySpace&gt;</div>

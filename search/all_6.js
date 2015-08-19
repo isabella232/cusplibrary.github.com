@@ -5,6 +5,7 @@ var searchData=
   ['gauss_5fseidel_2eh',['gauss_seidel.h',['../gauss__seidel_8h.html',1,'']]],
   ['gemm',['gemm',['../group__blas.html#gafdc42a1d0ef52ae84860eec09d11fdd6',1,'cusp::blas']]],
   ['gemv',['gemv',['../group__blas.html#ga771915c3121de33775e48eeb567b5efd',1,'cusp::blas']]],
+  ['generalized_5fspgemm',['generalized_spgemm',['../group__matrix__algorithms.html#gafc7e7d80ae5f5f3fcd696f89074aa0b2',1,'cusp']]],
   ['generalized_5fspmv',['generalized_spmv',['../group__matrix__algorithms.html#ga88ab6d9cbb477b68cf658cea5e27c764',1,'cusp']]],
   ['geometric_5frate',['geometric_rate',['../group__monitors.html#ga088a9e36c49ab23555ec59666efb916f',1,'cusp::monitor']]],
   ['ger',['ger',['../group__blas.html#gad37b9090248e73cae1668b405483cc65',1,'cusp::blas']]],
@@ -14,6 +15,8 @@ var searchData=
   ['gmres',['gmres',['../group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46',1,'cusp::krylov']]],
   ['gmres_2eh',['gmres.h',['../gmres_8h.html',1,'']]],
   ['graph_20algorithms',['Graph Algorithms',['../group__graph__algorithms.html',1,'']]],
+  ['greater_5fequal_5fvalue',['greater_equal_value',['../structcusp_1_1greater__equal__value.html',1,'cusp']]],
+  ['greater_5fvalue',['greater_value',['../structcusp_1_1greater__value.html',1,'cusp']]],
   ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]],
   ['grid2d',['grid2d',['../group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7',1,'cusp::gallery']]],
   ['grid3d',['grid3d',['../group__gallery.html#gacbb9c1578c6e185b5996bc682e9b8495',1,'cusp::gallery']]]

@@ -16,6 +16,8 @@ var searchData=
   ['diffusion',['diffusion',['../group__gallery.html#ga5e9190e0334f037611512c028e938b49',1,'cusp::gallery']]],
   ['diffusion_2eh',['diffusion.h',['../diffusion_8h.html',1,'']]],
   ['dimacs_2eh',['dimacs.h',['../dimacs_8h.html',1,'']]],
+  ['divide_5ftuple_5ffunctor',['divide_tuple_functor',['../structcusp_1_1divide__tuple__functor.html',1,'cusp']]],
+  ['divide_5fvalue',['divide_value',['../structcusp_1_1divide__value.html',1,'cusp']]],
   ['dot',['dot',['../group__blas.html#ga46de777e1c166036c45c16885e835a9d',1,'cusp::blas']]],
   ['dotc',['dotc',['../group__blas.html#ga3b8590b676b70d1cb0de69e949acfca1',1,'cusp::blas']]]
 ];
