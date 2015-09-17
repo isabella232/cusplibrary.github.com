@@ -1,15 +1,6 @@
 var searchData=
 [
   ['back',['back',['../classcusp_1_1array1d__view.html#ac29be29da5eebec990499dc84b446c17',1,'cusp::array1d_view']]],
-  ['base_5ffunctor',['base_functor',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3adivides_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::divides&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3agreater_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::greater&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3agreater_5fequal_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::greater_equal&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3aless_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::less&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3aless_5fequal_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::less_equal&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3amodulus_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::modulus&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3amultiplies_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::multiplies&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
-  ['base_5ffunctor_3c_20thrust_3a_3aplus_3c_20t_20_3e_20_3e',['base_functor&lt; thrust::plus&lt; T &gt; &gt;',['../structcusp_1_1detail_1_1base__functor.html',1,'cusp::detail']]],
   ['begin',['begin',['../classcusp_1_1array1d__view.html#ab8fb0d597491bd8a7bdf83381b9ef057',1,'cusp::array1d_view::begin()'],['../classcusp_1_1join__iterator.html#afc5c4dc3c336f039098711dacf6ac7ed',1,'cusp::join_iterator::begin()'],['../classcusp_1_1random__iterator.html#a06568cde3e05186f78e1a4c8183df988',1,'cusp::random_iterator::begin()'],['../classcusp_1_1strided__iterator.html#a95bdb14bd9422c6c93405a02d808f91c',1,'cusp::strided_iterator::begin()']]],
   ['bicg',['bicg',['../group__krylov__methods.html#gad82e975fa15cb096d13507163325c2b5',1,'cusp::krylov']]],
   ['bicg_2eh',['bicg.h',['../bicg_8h.html',1,'']]],

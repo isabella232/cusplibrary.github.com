@@ -114,9 +114,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga021923f31e0359343690354fddb83742"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga021923f31e0359343690354fddb83742"></a>
-template&lt;typename Matrix , typename Array2d &gt; </td></tr>
-<tr class="memitem:ga021923f31e0359343690354fddb83742"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::arnoldi</b> (const Matrix &amp;A, Array2d &amp;H, size_t k=10)</td></tr>
+<tr class="memitem:ga021923f31e0359343690354fddb83742"><td class="memTemplParams" colspan="2">template&lt;typename Matrix , typename Array2d &gt; </td></tr>
+<tr class="memitem:ga021923f31e0359343690354fddb83742"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga021923f31e0359343690354fddb83742">cusp::eigen::arnoldi</a> (const Matrix &amp;A, Array2d &amp;H, size_t k=10)</td></tr>
+<tr class="memdesc:ga021923f31e0359343690354fddb83742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate spectral radius of A using Arnoldi.  <a href="#ga021923f31e0359343690354fddb83742">More...</a><br/></td></tr>
 <tr class="separator:ga021923f31e0359343690354fddb83742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9398de95b6bc3dd6db43c03c37d0baac"><td class="memTemplParams" colspan="2">template&lt;typename Matrix , typename Array1d1 , typename Array2d1 , typename Array1d2 , typename Array2d2 , typename LanczosOptions &gt; </td></tr>
 <tr class="memitem:ga9398de95b6bc3dd6db43c03c37d0baac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga9398de95b6bc3dd6db43c03c37d0baac">cusp::eigen::lanczos</a> (const Matrix &amp;A, Array1d1 &amp;eigVals, Array2d1 &amp;eigVecs, LanczosOptions &amp;options)</td></tr>
@@ -126,24 +126,269 @@ template&lt;typename Matrix , typename Array2d &gt; </td></tr>
 <tr class="memitem:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga1fa0efeaca1603b27f6f0f7dbf3de725">cusp::eigen::lobpcg</a> (LinearOperator &amp;A, Vector &amp;S, Vector &amp;X, Monitor &amp;monitor, Preconditioner &amp;M, bool largest=true)</td></tr>
 <tr class="memdesc:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="mdescLeft">&#160;</td><td class="mdescRight">LOBPCG method.  <a href="#ga1fa0efeaca1603b27f6f0f7dbf3de725">More...</a><br/></td></tr>
 <tr class="separator:ga1fa0efeaca1603b27f6f0f7dbf3de725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaffcd580d4693cde82f9743b1c29ed723"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaffcd580d4693cde82f9743b1c29ed723"></a>
-template&lt;typename Matrix &gt; </td></tr>
-<tr class="memitem:gaffcd580d4693cde82f9743b1c29ed723"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::disks_spectral_radius</b> (const Matrix &amp;A)</td></tr>
-<tr class="separator:gaffcd580d4693cde82f9743b1c29ed723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga85e231bb43d949526e19c4a90ccafc3a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga85e231bb43d949526e19c4a90ccafc3a"></a>
-template&lt;typename MatrixType &gt; </td></tr>
-<tr class="memitem:ga85e231bb43d949526e19c4a90ccafc3a"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::estimate_rho_Dinv_A</b> (const MatrixType &amp;A)</td></tr>
+<tr class="memitem:ga75bdf877b18dd198536700bbf2f915b8"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:ga75bdf877b18dd198536700bbf2f915b8"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga75bdf877b18dd198536700bbf2f915b8">cusp::eigen::disks_spectral_radius</a> (const MatrixType &amp;A)</td></tr>
+<tr class="memdesc:ga75bdf877b18dd198536700bbf2f915b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses Gershgorin disks to approximate spectral radius.  <a href="#ga75bdf877b18dd198536700bbf2f915b8">More...</a><br/></td></tr>
+<tr class="separator:ga75bdf877b18dd198536700bbf2f915b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85e231bb43d949526e19c4a90ccafc3a"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:ga85e231bb43d949526e19c4a90ccafc3a"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga85e231bb43d949526e19c4a90ccafc3a">cusp::eigen::estimate_rho_Dinv_A</a> (const MatrixType &amp;A)</td></tr>
+<tr class="memdesc:ga85e231bb43d949526e19c4a90ccafc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate spectral radius of (D^-1)A.  <a href="#ga85e231bb43d949526e19c4a90ccafc3a">More...</a><br/></td></tr>
 <tr class="separator:ga85e231bb43d949526e19c4a90ccafc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga14abd6a5b891a6d13e7df67b19722857"><td class="memTemplParams" colspan="2"><a class="anchor" id="ga14abd6a5b891a6d13e7df67b19722857"></a>
-template&lt;typename Matrix &gt; </td></tr>
-<tr class="memitem:ga14abd6a5b891a6d13e7df67b19722857"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::estimate_spectral_radius</b> (const Matrix &amp;A, size_t k=20)</td></tr>
-<tr class="separator:ga14abd6a5b891a6d13e7df67b19722857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaebec75b787ae5522a9b281e6e6a3b14c"><td class="memTemplParams" colspan="2"><a class="anchor" id="gaebec75b787ae5522a9b281e6e6a3b14c"></a>
-template&lt;typename Matrix &gt; </td></tr>
-<tr class="memitem:gaebec75b787ae5522a9b281e6e6a3b14c"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cusp::eigen::ritz_spectral_radius</b> (const Matrix &amp;A, size_t k=10, bool symmetric=false)</td></tr>
-<tr class="separator:gaebec75b787ae5522a9b281e6e6a3b14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga279bf4dd19e3e799c79a0b502c307a92"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:ga279bf4dd19e3e799c79a0b502c307a92"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga279bf4dd19e3e799c79a0b502c307a92">cusp::eigen::estimate_spectral_radius</a> (const MatrixType &amp;A, size_t k=20)</td></tr>
+<tr class="memdesc:ga279bf4dd19e3e799c79a0b502c307a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate spectral radius of A using Lanczos.  <a href="#ga279bf4dd19e3e799c79a0b502c307a92">More...</a><br/></td></tr>
+<tr class="separator:ga279bf4dd19e3e799c79a0b502c307a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3920eb003a6350a1717194238d010859"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:ga3920eb003a6350a1717194238d010859"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__eigensolvers.html#ga3920eb003a6350a1717194238d010859">cusp::eigen::ritz_spectral_radius</a> (const MatrixType &amp;A, size_t k=10, bool symmetric=false)</td></tr>
+<tr class="memdesc:ga3920eb003a6350a1717194238d010859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximate spectral radius of A using Lanczos or Arnoldi.  <a href="#ga3920eb003a6350a1717194238d010859">More...</a><br/></td></tr>
+<tr class="separator:ga3920eb003a6350a1717194238d010859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga021923f31e0359343690354fddb83742"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Matrix , typename Array2d &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cusp::eigen::arnoldi </td>
+          <td>(</td>
+          <td class="paramtype">const Matrix &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Array2d &amp;&#160;</td>
+          <td class="paramname"><em>H</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>k</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximate spectral radius of A using Arnoldi. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Matrix</td><td>type of a sparse or dense matrix </td></tr>
+    <tr><td class="paramname">Array2d</td><td>type of dense matrix of partials</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix of the linear system </td></tr>
+    <tr><td class="paramname">H</td><td>dense matrix of ritz values </td></tr>
+    <tr><td class="paramname">k</td><td>maximum number of outer Arnoldi iterations</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>spectral radius approximation</dd></dl>
+<dl class="section user"><dt>Overview</dt><dd>Approximates the spectral radius A using a specified number of Arnoldi iterations.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>arnoldi</code> to compute the spectral radius of a 16x16 Laplacian matrix.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="arnoldi_8h.html">cusp/eigen/arnoldi.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute the largest eigenpair of A using 20 Arnoldi iterations</span></div>
+<div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga021923f31e0359343690354fddb83742">cusp::eigen::arnoldi</a>(A, 20);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Spectral radius of A : &quot;</span> &lt;&lt; rho &lt;&lt; std::endl;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga75bdf877b18dd198536700bbf2f915b8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double cusp::eigen::disks_spectral_radius </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uses Gershgorin disks to approximate spectral radius. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType</td><td>type of a sparse or dense matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix of the linear system</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>spectral radius approximation</dd></dl>
+<dl class="section user"><dt>Overview</dt><dd>Approximates the spectral radius of a matrix using Gershgorin disks.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://en.wikipedia.org/wiki/Gershgorin_circle_theorem">https://en.wikipedia.org/wiki/Gershgorin_circle_theorem</a></dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>disks_spectral_radius</code> to compute the spectral radius of a 16x16 Laplacian matrix.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="spectral__radius_8h.html">cusp/eigen/spectral_radius.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute the largest eigenpair of A</span></div>
+<div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga75bdf877b18dd198536700bbf2f915b8">cusp::eigen::disks_spectral_radius</a>(A);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Spectral radius of A : &quot;</span> &lt;&lt; rho &lt;&lt; std::endl;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga85e231bb43d949526e19c4a90ccafc3a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double cusp::eigen::estimate_rho_Dinv_A </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximate spectral radius of (D^-1)A. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType</td><td>type of a sparse or dense matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix of the linear system</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>spectral radius approximation</dd></dl>
+<dl class="section user"><dt>Overview</dt><dd>Approximates the spectral radius (D^-1)A, where D is a diagonal matrix containing the diagonal entries of A. The spectral radius of (D^-1)A is computed using either Lanczos or Arnoldi.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>estimate_rho_Dinv_A</code> to compute the spectral radius of a 16x16 Laplacian matrix.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="spectral__radius_8h.html">cusp/eigen/spectral_radius.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute the largest eigenpair of A</span></div>
+<div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga85e231bb43d949526e19c4a90ccafc3a">cusp::eigen::estimate_rho_Dinv_A</a>(A);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Spectral radius of (D^-1)A : &quot;</span> &lt;&lt; rho &lt;&lt; std::endl;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga279bf4dd19e3e799c79a0b502c307a92"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double cusp::eigen::estimate_spectral_radius </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>k</em> = <code>20</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximate spectral radius of A using Lanczos. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType</td><td>type of a sparse or dense matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix of the linear system</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>spectral radius approximation</dd></dl>
+<dl class="section user"><dt>Overview</dt><dd>Approximates the spectral radius A using a specified number of Lanczos iterations.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>estimate_spectral_radius</code> to compute the spectral radius of a 16x16 Laplacian matrix.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="spectral__radius_8h.html">cusp/eigen/spectral_radius.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute the largest eigenpair of A using 20 Lanczos iterations</span></div>
+<div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga279bf4dd19e3e799c79a0b502c307a92">cusp::eigen::estimate_spectral_radius</a>(A, 20);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Spectral radius of A : &quot;</span> &lt;&lt; rho &lt;&lt; std::endl;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a class="anchor" id="ga9398de95b6bc3dd6db43c03c37d0baac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -206,43 +451,37 @@ template&lt;typename Matrix , typename Array1d1 , typename Array2d1 , typename A
 <dl class="section user"><dt>Overview</dt><dd>Computes the extreme eigenpairs of hermitian linear systems A x = s x with preconditioner <code>M</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd><code>A</code> and <code>M</code> must be symmetric.</dd></dl>
 <dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>lobpcg</code> to solve a 10x10 Poisson problem.</dd></dl>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="lobpcg_8h.html">cusp/eigen/lobpcg.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
-<div class="line">{</div>
-<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, double, cusp::device_memory&gt;</a> A;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// allocate storage and initialize eigenpairs</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;double&gt;</a> randx(A.num_rows);</div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;double, cusp::device_memory&gt;</a> X(randx);</div>
-<div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;double, cusp::device_memory&gt;</a> S(1,0);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// set stopping criteria:</span></div>
-<div class="line">    <span class="comment">//  iteration_limit    = 100</span></div>
-<div class="line">    <span class="comment">//  relative_tolerance = 1e-6</span></div>
-<div class="line">    <span class="comment">//  absolute_tolerance = 0</span></div>
-<div class="line">    <span class="comment">//  verbose            = true</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;double&gt;</a> monitor(X, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// set preconditioner (identity)</span></div>
-<div class="line">    <a class="code" href="classcusp_1_1identity__operator.html">cusp::identity_operator&lt;double, cusp::device_memory&gt;</a> M(A.num_rows, A.num_rows);</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// Compute the largest eigenpair of A</span></div>
-<div class="line">    <a class="code" href="group__eigensolvers.html#ga1fa0efeaca1603b27f6f0f7dbf3de725">cusp::eigen::lobpcg</a>(A, S, X, monitor, M, <span class="keyword">true</span>);</div>
-<div class="line"></div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Largest eigenvalue : &quot;</span> &lt;&lt; S[0] &lt;&lt; std::endl;</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-
+<div class="fragment"><div class="line"><span class="preprocessor">   #include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">   #include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">   #include &lt;<a class="code" href="lobpcg_8h.html">cusp/eigen/lobpcg.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">   #include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">   {</div>
+<div class="line">       <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">       <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line">       <span class="comment">// initialize matrix</span></div>
+<div class="line">       cusp::gallery::poisson5pt(A, 1024, 1024);</div>
+<div class="line">       <span class="comment">// allocate storage and initialize eigenpairs</span></div>
+<div class="line">       <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> S(5,0);</div>
+<div class="line">       <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::device_memory, cusp::column_major&gt;</a> V;</div>
+<div class="line">  </div>
+<div class="line">       <span class="comment">// initialize Lanzcos option</span></div>
+<div class="line">       cusp::eigen::lanczos_options&lt;float&gt; options;</div>
+<div class="line">s</div>
+<div class="line">       options.tol = 1e-6;</div>
+<div class="line">       options.maxIter = 100;</div>
+<div class="line">       options.verbose = <span class="keyword">true</span>;</div>
+<div class="line">       options.computeEigVecs = <span class="keyword">false</span>;</div>
+<div class="line">       options.reorth = cusp::eigen::Full;</div>
+<div class="line"> </div>
+<div class="line">       <span class="comment">// compute the largest eigenpair of A</span></div>
+<div class="line">       <a class="code" href="group__eigensolvers.html#ga9398de95b6bc3dd6db43c03c37d0baac">cusp::eigen::lanczos</a>(A, S, V, options);</div>
+<div class="line">       std::cout &lt;&lt; <span class="stringliteral">&quot;Largest eigenvalue : &quot;</span> &lt;&lt; S[4] &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">       <span class="keywordflow">return</span> 0;</div>
+<div class="line">   }</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga1fa0efeaca1603b27f6f0f7dbf3de725"></a>
@@ -316,8 +555,9 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Overview</dt><dd>Computes the extreme eigenpairs of hermitian linear systems A x = s x with preconditioner <code>M</code>.</dd></dl>
+<dl class="section user"><dt>Overview</dt><dd>Computes the extreme eigenpairs of hermitian linear systems A x = s x using LOBPCG.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd><code>A</code> and <code>M</code> must be symmetric.</dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://en.wikipedia.org/wiki/LOBPCG">https://en.wikipedia.org/wiki/LOBPCG</a></dd></dl>
 <dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>lobpcg</code> to solve a 10x10 Poisson problem.</dd></dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
@@ -330,7 +570,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, double, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
+<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage and initialize eigenpairs</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;double&gt;</a> randx(A.num_rows);</div>
@@ -356,6 +596,76 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
 
+</div>
+</div>
+<a class="anchor" id="ga3920eb003a6350a1717194238d010859"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double cusp::eigen::ritz_spectral_radius </td>
+          <td>(</td>
+          <td class="paramtype">const MatrixType &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>k</em> = <code>10</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>symmetric</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximate spectral radius of A using Lanczos or Arnoldi. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MatrixType</td><td>type of a sparse or dense matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>matrix of the linear system</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>spectral radius approximation</dd></dl>
+<dl class="section user"><dt>Overview</dt><dd>Approximates the spectral radius A using a specified number of Lanczos or Arnoldi iterations.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd>The following code snippet demonstrates how to use <code>ritz_spectral_radius</code> to compute the spectral radius of a 16x16 Laplacian matrix.</dd></dl>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="monitor_8h.html">cusp/monitor.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="spectral__radius_8h.html">cusp/eigen/spectral_radius.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="poisson_8h.html">cusp/gallery/poisson.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
+<div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// initialize matrix</span></div>
+<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// compute the largest eigenpair of A using 20 Arnoldi iterations</span></div>
+<div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga3920eb003a6350a1717194238d010859">cusp::eigen::ritz_spectral_radius</a>(A, 20, <span class="keyword">false</span>);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Spectral radius of A : &quot;</span> &lt;&lt; rho &lt;&lt; std::endl;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

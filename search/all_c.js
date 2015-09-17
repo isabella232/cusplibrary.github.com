@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['matrix_20gallery',['Matrix Gallery',['../group__gallery.html',1,'']]],
   ['m_5fcapacity',['m_capacity',['../classcusp_1_1array1d__view.html#a41a9a0d77790862913a5f861d3c15b22',1,'cusp::array1d_view']]],
   ['m_5fsize',['m_size',['../classcusp_1_1array1d__view.html#a2ecf5481bdae0d1525644d5dff11741c',1,'cusp::array1d_view']]],
   ['make_5farray1d_5fview',['make_array1d_view',['../group__array__views.html#ga78ca0eb27a0b8190613393634bfbfa12',1,'cusp::make_array1d_view(Iterator first, Iterator last)'],['../group__array__views.html#ga0f608c549666895b298fd74e3726fe79',1,'cusp::make_array1d_view(array1d&lt; T, MemorySpace &gt; &amp;v)'],['../group__array__views.html#gaf68ae21d7e5d4a7b268184a9f769cfaa',1,'cusp::make_array1d_view(array1d_view&lt; Iterator &gt; &amp;v)'],['../group__array__views.html#gad439867507906b8c80addabe5c0379eb',1,'cusp::make_array1d_view(const array1d_view&lt; Iterator &gt; &amp;v)'],['../group__array__views.html#gab1202e949ef966c933bccd15c7937d40',1,'cusp::make_array1d_view(const array1d&lt; T, MemorySpace &gt; &amp;v)']]],

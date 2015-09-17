@@ -147,7 +147,7 @@ class cusp::relaxation::polynomial&lt; ValueType, MemorySpace &gt;</h3>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Construct 5-pt Poisson example</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
-<div class="line">   <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line">   cusp::gallery::poisson5pt(A, 5, 5);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Initialize data</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>

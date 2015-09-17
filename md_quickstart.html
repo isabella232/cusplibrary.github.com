@@ -230,7 +230,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, ValueType, MemorySpace&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create a 2d Poisson problem on a 10x10 mesh</span></div>
-<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
+<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(A.num_rows, 0);</div>
@@ -293,7 +293,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;IndexType, ValueType, MemorySpace&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create 2D Poisson problem</span></div>
-<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 256, 256);</div>
+<div class="line">    cusp::gallery::poisson5pt(A, 256, 256);</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x0(A.num_rows, 0);</div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> b(A.num_rows, 1);</div>

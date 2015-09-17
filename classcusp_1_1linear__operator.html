@@ -176,7 +176,7 @@ class cusp::linear_operator&lt; ValueType, MemorySpace, IndexType &gt;</h3>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">int</span> N = 4;</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// construct Poisson example matrix</span></div>
-<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, N, N);</div>
+<div class="line">  cusp::gallery::poisson5pt(A, N, N);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// construct instance of custom operator perform D^{-1}A</span></div>
 <div class="line">  Dinv_A&lt;CsrMatrix&gt; M(A);</div>

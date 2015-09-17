@@ -633,7 +633,7 @@ template&lt;typename SourceType , typename DestinationType &gt; </div>
 <div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// create 2D Poisson problem</span></div>
-<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
+<div class="line">  cusp::gallery::poisson5pt(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// create an empty array2d structure</span></div>
 <div class="line">  <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float,cusp::host_memory&gt;</a> B;</div>
@@ -1177,13 +1177,13 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line">{</div>
 <div class="line">    <span class="comment">// define multiply functors</span></div>
 <div class="line">    thrust::identity&lt;float&gt;   identity;</div>
-<div class="line">    <a class="code" href="structcusp_1_1zero__functor.html">cusp::zero_functor&lt;float&gt;</a> zero;</div>
+<div class="line">    cusp::zero_functor&lt;float&gt; zero;</div>
 <div class="line">    thrust::multiplies&lt;float&gt; combine;</div>
 <div class="line">    thrust::plus&lt;float&gt;       reduce;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
-<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 3, 3);</div>
+<div class="line">    cusp::gallery::poisson5pt(A, 3, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate output matrices and initialize output nonzeros</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int, float, cusp::host_memory&gt;</a> B(A);</div>
@@ -1517,7 +1517,7 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="csr_raw_8cu-example.html#a3">csr_raw.cu</a>, <a class="el" href="gmres_8cu-example.html#a3">gmres.cu</a>, and <a class="el" href="multiply_8cu-example.html#a2">multiply.cu</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="csr_raw_8cu-example.html#a3">csr_raw.cu</a>, <a class="el" href="gmres_8cu-example.html#a2">gmres.cu</a>, and <a class="el" href="multiply_8cu-example.html#a2">multiply.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1604,7 +1604,7 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// define multiply functors</span></div>
-<div class="line">    <a class="code" href="structcusp_1_1zero__functor.html">cusp::zero_functor&lt;float&gt;</a> initialize;</div>
+<div class="line">    cusp::zero_functor&lt;float&gt; initialize;</div>
 <div class="line">    thrust::multiplies&lt;float&gt; combine;</div>
 <div class="line">    thrust::plus&lt;float&gt;       reduce;</div>
 <div class="line"></div>

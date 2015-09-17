@@ -116,16 +116,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Methods</a> &#124;
 <a href="structcusp_1_1square__functor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cusp::square_functor&lt; T &gt; Struct Template Reference</div>  </div>
+<div class="title">cusp::square_functor&lt; T &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__functional.html">Functional</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
 struct cusp::square_functor&lt; T &gt;</h3>
 
+<p><code><a class="el" href="structcusp_1_1square__functor.html" title="square_functor is a function object that computes the square (x*x) of a given element. ">square_functor</a></code> is a function object that computes the square (x*x) of a given element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>is a model of <a href="http://www.sgi.com/tech/stl/Assignable.html">Assignable</a>, and if <code>x</code> is an object of type <code>T</code>, then <code>x*c</code> must be defined and must have a return type that is convertible to <code>T</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Overview</dt><dd><code><a class="el" href="structcusp_1_1square__functor.html" title="square_functor is a function object that computes the square (x*x) of a given element. ">square_functor</a></code> is a function object. Specifically, it is an Adaptable Unary Function. If <code>f(c)</code> is an object of class <code>square_functor&lt;T&gt;</code>, and <code>x</code> is an object of class <code>T</code>, then <code>f(x)</code> returns <code>x*x</code>.</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="functional_8h.html">cusp/functional.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">   <span class="comment">// create an array with 5 entries from 0 to 4</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1counting__array.html">cusp::counting_array&lt;int&gt;</a> count(5);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// allocate size of transformed output array</span></div>
+<div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> v(5, 0);</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// compute output vector as transform of tens</span></div>
+<div class="line">   thrust::transform(count.begin(), count.end(), v.begin(), <a class="code" href="structcusp_1_1square__functor.html">cusp::square_functor&lt;int&gt;</a>());</div>
+<div class="line"></div>
+<div class="line">   <span class="comment">// v = [0, 1, 4, 9, 16]</span></div>
+<div class="line">   <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(v);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
-<p>Definition at line <a class="el" href="functional_8h_source.html#l00356">356</a> of file <a class="el" href="functional_8h_source.html">functional.h</a>.</p>
-</div><div class="dynheader">
+<p>Definition at line <a class="el" href="functional_8h_source.html#l00476">476</a> of file <a class="el" href="functional_8h_source.html">functional.h</a>.</p>
+</div>
+<p><code>#include &lt;<a class="el" href="functional_8h_source.html">functional.h</a>&gt;</code></p>
+<div class="dynheader">
 Inheritance diagram for cusp::square_functor&lt; T &gt;:</div>
 <div class="dyncontent">
  <div class="center">

@@ -123,24 +123,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="_a0"></a><a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, ValueType, MemorySpace&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create a 2d Poisson problem on a 10x10 mesh</span></div>
-<div class="line">    <a name="a1"></a><a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
+<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(A.num_rows, ValueType(1));</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(A.num_rows, ValueType(1));</div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> b(A.num_rows);</div>
 <div class="line"></div>
-<div class="line">    <a name="a3"></a><a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A,x,b);</div>
+<div class="line">    <a name="a2"></a><a class="code" href="group__matrix__algorithms.html#ga64aac53ca20d88d71aadc7e8b3317788">cusp::multiply</a>(A,x,b);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set initial guess</span></div>
-<div class="line">    <a name="a4"></a><a class="code" href="group__blas.html#ga90e8a781b3c33d15f3493fb256f1d063">thrust::fill</a>( x.begin(), x.end(), ValueType(0) );</div>
+<div class="line">    <a name="a3"></a><a class="code" href="group__blas.html#ga90e8a781b3c33d15f3493fb256f1d063">thrust::fill</a>( x.begin(), x.end(), ValueType(0) );</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set stopping criteria:</span></div>
 <div class="line">    <span class="comment">//  iteration_limit    = 100</span></div>
 <div class="line">    <span class="comment">//  relative_tolerance = 1e-6</span></div>
-<div class="line">    <a name="_a5"></a><a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;ValueType&gt;</a> monitor(b, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
+<div class="line">    <a name="_a4"></a><a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;ValueType&gt;</a> monitor(b, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
 <div class="line">    <span class="keywordtype">int</span> restart = 50;</div>
 <div class="line">    <span class="comment">// solve the linear system A * x = b with the GMRES</span></div>
-<div class="line">    <a name="a6"></a><a class="code" href="group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46">cusp::krylov::gmres</a>(A, x, b,restart, monitor);</div>
+<div class="line">    <a name="a5"></a><a class="code" href="group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46">cusp::krylov::gmres</a>(A, x, b,restart, monitor);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

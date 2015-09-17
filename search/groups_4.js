@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_20algorithms',['Graph Algorithms',['../group__graph__algorithms.html',1,'']]]
+  ['functional',['Functional',['../group__functional.html',1,'']]]
 ];

@@ -13,10 +13,10 @@ var searchData=
   ['diagonal',['diagonal',['../classcusp_1_1precond_1_1diagonal.html#ad8dbabe36c68d52204407cb4199e2fff',1,'cusp::precond::diagonal']]],
   ['diagonal_2eh',['diagonal.h',['../diagonal_8h.html',1,'']]],
   ['diagonal_5foffsets',['diagonal_offsets',['../classcusp_1_1dia__matrix.html#aa7651ee48b321e075ca07dd7b5ca383b',1,'cusp::dia_matrix::diagonal_offsets()'],['../classcusp_1_1dia__matrix__view.html#af811ed2558af960000874abf86b75a01',1,'cusp::dia_matrix_view::diagonal_offsets()']]],
-  ['diffusion',['diffusion',['../group__gallery.html#ga5e9190e0334f037611512c028e938b49',1,'cusp::gallery']]],
   ['diffusion_2eh',['diffusion.h',['../diffusion_8h.html',1,'']]],
   ['dimacs_2eh',['dimacs.h',['../dimacs_8h.html',1,'']]],
-  ['divide_5ftuple_5ffunctor',['divide_tuple_functor',['../structcusp_1_1divide__tuple__functor.html',1,'cusp']]],
+  ['disks_5fspectral_5fradius',['disks_spectral_radius',['../group__eigensolvers.html#ga75bdf877b18dd198536700bbf2f915b8',1,'cusp::eigen']]],
+  ['divide_5fpair_5ffunctor',['divide_pair_functor',['../structcusp_1_1divide__pair__functor.html',1,'cusp']]],
   ['divide_5fvalue',['divide_value',['../structcusp_1_1divide__value.html',1,'cusp']]],
   ['dot',['dot',['../group__blas.html#ga46de777e1c166036c45c16885e835a9d',1,'cusp::blas']]],
   ['dotc',['dotc',['../group__blas.html#ga3b8590b676b70d1cb0de69e949acfca1',1,'cusp::blas']]]

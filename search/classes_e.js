@@ -6,5 +6,5 @@ var searchData=
   ['sqrt_5ffunctor',['sqrt_functor',['../structcusp_1_1sqrt__functor.html',1,'cusp']]],
   ['square_5ffunctor',['square_functor',['../structcusp_1_1square__functor.html',1,'cusp']]],
   ['strided_5fiterator',['strided_iterator',['../classcusp_1_1strided__iterator.html',1,'cusp']]],
-  ['sum_5ftuple_5ffunctor',['sum_tuple_functor',['../structcusp_1_1sum__tuple__functor.html',1,'cusp']]]
+  ['sum_5fpair_5ffunctor',['sum_pair_functor',['../structcusp_1_1sum__pair__functor.html',1,'cusp']]]
 ];

@@ -17,7 +17,5 @@ var searchData=
   ['graph_20algorithms',['Graph Algorithms',['../group__graph__algorithms.html',1,'']]],
   ['greater_5fequal_5fvalue',['greater_equal_value',['../structcusp_1_1greater__equal__value.html',1,'cusp']]],
   ['greater_5fvalue',['greater_value',['../structcusp_1_1greater__value.html',1,'cusp']]],
-  ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]],
-  ['grid2d',['grid2d',['../group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7',1,'cusp::gallery']]],
-  ['grid3d',['grid3d',['../group__gallery.html#gacbb9c1578c6e185b5996bc682e9b8495',1,'cusp::gallery']]]
+  ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]]
 ];

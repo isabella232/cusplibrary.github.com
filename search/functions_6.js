@@ -10,7 +10,5 @@ var searchData=
   ['gesv',['gesv',['../group__lapack.html#ga9f7e30217398c4532f7d3c1b606b5bf7',1,'cusp::lapack']]],
   ['getrf',['getrf',['../group__lapack.html#gadaf2a61fbc250c2f96cefdc406a2210b',1,'cusp::lapack']]],
   ['getrs',['getrs',['../group__lapack.html#ga11efae6fef75c3a42448e21c0b824305',1,'cusp::lapack']]],
-  ['gmres',['gmres',['../group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46',1,'cusp::krylov']]],
-  ['grid2d',['grid2d',['../group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7',1,'cusp::gallery']]],
-  ['grid3d',['grid3d',['../group__gallery.html#gacbb9c1578c6e185b5996bc682e9b8495',1,'cusp::gallery']]]
+  ['gmres',['gmres',['../group__krylov__methods.html#ga691b2d4d03fd7b23e674f9f046691b46',1,'cusp::krylov']]]
 ];

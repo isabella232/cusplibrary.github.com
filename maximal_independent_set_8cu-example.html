@@ -126,13 +126,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix representing 10x10 grid</span></div>
 <div class="line">    <a name="_a0"></a><a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int, float, cusp::device_memory&gt;</a> G;</div>
-<div class="line">    <a name="a1"></a><a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(G, N, N);</div>
+<div class="line">    cusp::gallery::poisson5pt(G, N, N);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for the MIS</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int, cusp::device_memory&gt;</a> stencil(G.num_rows);</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int, cusp::device_memory&gt;</a> stencil(G.num_rows);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the MIS</span></div>
-<div class="line">    <a name="a3"></a><a class="code" href="group__graph__algorithms.html#ga477bb37ee83cb121c5eb291a3004d847">cusp::graph::maximal_independent_set</a>(G, stencil);</div>
+<div class="line">    <a name="a2"></a><a class="code" href="group__graph__algorithms.html#ga477bb37ee83cb121c5eb291a3004d847">cusp::graph::maximal_independent_set</a>(G, stencil);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// print MIS as a 2d grid</span></div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;maximal independent set (marked with Xs)\n&quot;</span>;</div>

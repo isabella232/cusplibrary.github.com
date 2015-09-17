@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lapack',['LAPACK',['../group__lapack.html',1,'']]]
+  ['krylov_20methods',['Krylov Methods',['../group__krylov__methods.html',1,'']]]
 ];
