@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CUSP: Matrix Gallery</title>
+<title>CUSP: Gallery</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,22 +105,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Matrix Gallery</div>  </div>
+<div class="title">Gallery<div class="ingroups"><a class="el" href="group__utilities.html">Utilities</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Collection of example matrices.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga5e9190e0334f037611512c028e938b49"><td class="memTemplParams" colspan="2">template&lt;typename Method , typename MatrixType &gt; </td></tr>
+<tr class="memitem:ga5e9190e0334f037611512c028e938b49"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">cusp::gallery::diffusion</a> (MatrixType &amp;matrix, size_t m, size_t n, const double eps=1e-5, const double theta=M_PI/4.0)</td></tr>
+<tr class="separator:ga5e9190e0334f037611512c028e938b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga54b2b9e9c00bbf3d50fdf2ea2065c8f7"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
 <tr class="memitem:ga54b2b9e9c00bbf3d50fdf2ea2065c8f7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a> (MatrixType &amp;matrix, size_t m, size_t n)</td></tr>
 <tr class="separator:ga54b2b9e9c00bbf3d50fdf2ea2065c8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacbb9c1578c6e185b5996bc682e9b8495"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
 <tr class="memitem:gacbb9c1578c6e185b5996bc682e9b8495"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__gallery.html#gacbb9c1578c6e185b5996bc682e9b8495">cusp::gallery::grid3d</a> (MatrixType &amp;matrix, size_t m, size_t n, size_t l)</td></tr>
 <tr class="separator:gacbb9c1578c6e185b5996bc682e9b8495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5e9190e0334f037611512c028e938b49"><td class="memTemplParams" colspan="2">template&lt;typename Method , typename MatrixType &gt; </td></tr>
-<tr class="memitem:ga5e9190e0334f037611512c028e938b49"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__gallery.html#ga5e9190e0334f037611512c028e938b49">cusp::gallery::diffusion</a> (MatrixType &amp;matrix, size_t m, size_t n, const double eps=1e-5, const double theta=M_PI/4.0)</td></tr>
-<tr class="memdesc:ga5e9190e0334f037611512c028e938b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of example matrices.  <a href="#ga5e9190e0334f037611512c028e938b49">More...</a><br/></td></tr>
-<tr class="separator:ga5e9190e0334f037611512c028e938b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4369f22c9caff12729026e5ce79ef281"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
 <tr class="memitem:ga4369f22c9caff12729026e5ce79ef281"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a> (MatrixType &amp;matrix, size_t m, size_t n)</td></tr>
 <tr class="separator:ga4369f22c9caff12729026e5ce79ef281"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,8 +183,6 @@ template&lt;typename Method , typename MatrixType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Collection of example matrices. </p>
 <p><code>diffusion:</code> Create a matrix representing an anisotropic Poisson problem discretized on an <code>m</code> by <code>n</code> grid with the a given direction.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

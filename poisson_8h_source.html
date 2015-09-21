@@ -141,22 +141,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>gallery</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> poisson5pt(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> poisson9pt(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordtype">void</span> poisson7pt(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> k);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordtype">void</span> poisson27pt(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> l);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;} <span class="comment">// end namespace gallery</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;} <span class="comment">// end namespace cusp</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#include &lt;cusp/gallery/detail/poisson.inl&gt;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">poisson5pt</a>(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gallery.html#gac4e945500c1e5ce041a451024ddf1f2a">poisson9pt</a>(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gallery.html#ga19c2f586db3dd723a2352719a3ad49b2">poisson7pt</a>(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> k);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MatrixType&gt;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__gallery.html#gaecb18e75c32a758166d377311956eacd">poisson27pt</a>(MatrixType&amp; matrix, <span class="keywordtype">size_t</span> m, <span class="keywordtype">size_t</span> n, <span class="keywordtype">size_t</span> l);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;} <span class="comment">// end namespace gallery</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;} <span class="comment">// end namespace cusp</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#include &lt;cusp/gallery/detail/poisson.inl&gt;</span></div>
+<div class="ttc" id="group__gallery_html_gaecb18e75c32a758166d377311956eacd"><div class="ttname"><a href="group__gallery.html#gaecb18e75c32a758166d377311956eacd">cusp::gallery::poisson27pt</a></div><div class="ttdeci">void poisson27pt(MatrixType &amp;matrix, size_t m, size_t n, size_t l)</div></div>
+<div class="ttc" id="group__gallery_html_gac4e945500c1e5ce041a451024ddf1f2a"><div class="ttname"><a href="group__gallery.html#gac4e945500c1e5ce041a451024ddf1f2a">cusp::gallery::poisson9pt</a></div><div class="ttdeci">void poisson9pt(MatrixType &amp;matrix, size_t m, size_t n)</div></div>
+<div class="ttc" id="group__gallery_html_ga4369f22c9caff12729026e5ce79ef281"><div class="ttname"><a href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a></div><div class="ttdeci">void poisson5pt(MatrixType &amp;matrix, size_t m, size_t n)</div></div>
+<div class="ttc" id="group__gallery_html_ga19c2f586db3dd723a2352719a3ad49b2"><div class="ttname"><a href="group__gallery.html#ga19c2f586db3dd723a2352719a3ad49b2">cusp::gallery::poisson7pt</a></div><div class="ttdeci">void poisson7pt(MatrixType &amp;matrix, size_t m, size_t n, size_t k)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.3.1-->
 <!-- start footer part -->

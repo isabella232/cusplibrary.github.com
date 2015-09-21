@@ -242,7 +242,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
@@ -348,7 +348,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
@@ -370,7 +370,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="bicgstab_8cu-example.html#a4">bicgstab.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="bicgstab_8cu-example.html#a5">bicgstab.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -456,7 +456,7 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> N_s = 4;</div>
@@ -564,7 +564,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
@@ -586,7 +586,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="ainv_8cu-example.html#a3">ainv.cu</a>, <a class="el" href="cg_8cu-example.html#a4">cg.cu</a>, <a class="el" href="cg_raw_8cu-example.html#a3">cg_raw.cu</a>, <a class="el" href="custom_amg_8cu-example.html#a5">custom_amg.cu</a>, <a class="el" href="diagonal_8cu-example.html#a4">diagonal.cu</a>, <a class="el" href="monitor_8cu-example.html#a3">monitor.cu</a>, <a class="el" href="smoothed_aggregation_8cu-example.html#a3">smoothed_aggregation.cu</a>, <a class="el" href="stencil_8cu-example.html#a3">stencil.cu</a>, and <a class="el" href="verbose_monitor_8cu-example.html#a3">verbose_monitor.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="ainv_8cu-example.html#a4">ainv.cu</a>, <a class="el" href="cg_8cu-example.html#a5">cg.cu</a>, <a class="el" href="cg_raw_8cu-example.html#a3">cg_raw.cu</a>, <a class="el" href="custom_amg_8cu-example.html#a5">custom_amg.cu</a>, <a class="el" href="diagonal_8cu-example.html#a4">diagonal.cu</a>, <a class="el" href="monitor_8cu-example.html#a4">monitor.cu</a>, <a class="el" href="smoothed_aggregation_8cu-example.html#a4">smoothed_aggregation.cu</a>, <a class="el" href="stencil_8cu-example.html#a3">stencil.cu</a>, and <a class="el" href="verbose_monitor_8cu-example.html#a4">verbose_monitor.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -661,7 +661,7 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> N_s = 4;</div>
@@ -688,7 +688,7 @@ template&lt;class LinearOperator , class VectorType1 , class VectorType2 , class
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cg_m_8cu-example.html#a3">cg_m.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cg_m_8cu-example.html#a4">cg_m.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -770,7 +770,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
@@ -792,7 +792,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cr_8cu-example.html#a4">cr.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="cr_8cu-example.html#a5">cr.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -881,7 +881,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> x(A.num_rows, 0);</div>
@@ -904,7 +904,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See Also</dt><dd><code><a class="el" href="classcusp_1_1monitor.html" title="Implements standard convergence criteria and reporting for iterative solvers. ">monitor</a></code> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="gmres_8cu-example.html#a5">gmres.cu</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="gmres_8cu-example.html#a6">gmres.cu</a>.</dd>
 </dl>
 </div>
 </div>

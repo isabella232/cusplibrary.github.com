@@ -205,7 +205,7 @@ template&lt;typename Matrix , typename Array2d &gt; </div>
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the largest eigenpair of A using 20 Arnoldi iterations</span></div>
 <div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga021923f31e0359343690354fddb83742">cusp::eigen::arnoldi</a>(A, 20);</div>
@@ -260,7 +260,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the largest eigenpair of A</span></div>
 <div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga75bdf877b18dd198536700bbf2f915b8">cusp::eigen::disks_spectral_radius</a>(A);</div>
@@ -314,7 +314,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the largest eigenpair of A</span></div>
 <div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga85e231bb43d949526e19c4a90ccafc3a">cusp::eigen::estimate_rho_Dinv_A</a>(A);</div>
@@ -378,7 +378,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the largest eigenpair of A using 20 Lanczos iterations</span></div>
 <div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga279bf4dd19e3e799c79a0b502c307a92">cusp::eigen::estimate_spectral_radius</a>(A, 20);</div>
@@ -461,7 +461,7 @@ template&lt;typename Matrix , typename Array1d1 , typename Array2d1 , typename A
 <div class="line">       <span class="comment">// create an empty sparse matrix structure (CSR format)</span></div>
 <div class="line">       <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line">       <span class="comment">// initialize matrix</span></div>
-<div class="line">       cusp::gallery::poisson5pt(A, 1024, 1024);</div>
+<div class="line">       <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 1024, 1024);</div>
 <div class="line">       <span class="comment">// allocate storage and initialize eigenpairs</span></div>
 <div class="line">       <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::device_memory&gt;</a> S(5,0);</div>
 <div class="line">       <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float, cusp::device_memory, cusp::column_major&gt;</a> V;</div>
@@ -570,7 +570,7 @@ template&lt;class LinearOperator , class Vector , class Monitor , class Precondi
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, double, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage and initialize eigenpairs</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1random__array.html">cusp::random_array&lt;double&gt;</a> randx(A.num_rows);</div>
@@ -657,7 +657,7 @@ template&lt;typename MatrixType &gt; </div>
 <div class="line">    <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int, float, cusp::device_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// compute the largest eigenpair of A using 20 Arnoldi iterations</span></div>
 <div class="line">    <span class="keywordtype">float</span> rho = <a class="code" href="group__eigensolvers.html#ga3920eb003a6350a1717194238d010859">cusp::eigen::ritz_spectral_radius</a>(A, 20, <span class="keyword">false</span>);</div>

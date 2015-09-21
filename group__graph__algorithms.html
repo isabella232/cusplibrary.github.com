@@ -212,7 +212,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 4, 4);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> labels(G.num_rows);</div>
 <div class="line"></div>
@@ -287,7 +287,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 4, 4);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// X is used to fill invalid edges in the graph</span></div>
 <div class="line">   <span class="keyword">const</span> <span class="keywordtype">int</span> X = <a class="code" href="classcusp_1_1ell__matrix.html">cusp::ell_matrix&lt;int,float,cusp::host_memory&gt;::invalid_index</a>;</div>
@@ -378,7 +378,7 @@ template&lt;class Array2dType , class ArrayType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 4, 4);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Array that indicates partition each vertex belongs</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> parts(G.num_rows);</div>
@@ -471,7 +471,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 4, 4);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> stencil(G.num_rows);</div>
 <div class="line"></div>
@@ -485,7 +485,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line"></div>
 <div class="line">   <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="maximal_independent_set_8cu-example.html#a2">maximal_independent_set.cu</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="maximal_independent_set_8cu-example.html#a3">maximal_independent_set.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -547,7 +547,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 4, 4);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> levels(G.num_rows);</div>
 <div class="line"></div>
@@ -625,7 +625,7 @@ template&lt;typename MatrixType , typename PermutationType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 3, 3);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 3, 3);</div>
 <div class="line"></div>
 <div class="line">   <span class="comment">// Allocate permutation matrix P</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1permutation__matrix.html">cusp::permutation_matrix&lt;int,cusp::device_memory&gt;</a> P(G.num_rows);</div>
@@ -698,7 +698,7 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// Build a 2D grid on the device</span></div>
 <div class="line">   <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::device_memory&gt;</a> G;</div>
-<div class="line">   cusp::gallery::grid2d(G, 4, 4);</div>
+<div class="line">   <a class="code" href="group__gallery.html#ga54b2b9e9c00bbf3d50fdf2ea2065c8f7">cusp::gallery::grid2d</a>(G, 4, 4);</div>
 <div class="line"></div>
 <div class="line">   <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::device_memory&gt;</a> colors(G.num_rows);</div>
 <div class="line"></div>

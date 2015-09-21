@@ -123,11 +123,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <a name="_a0"></a><a class="code" href="classcusp_1_1hyb__matrix.html">cusp::hyb_matrix&lt;int, ValueType, MemorySpace&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create a 2d Poisson problem on a 10x10 mesh</span></div>
-<div class="line">    cusp::gallery::poisson5pt(A, 10, 10);</div>
+<div class="line">    <a name="a1"></a><a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 10, 10);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate storage for solution (x) and right hand side (b)</span></div>
 <div class="line">    <span class="keywordtype">size_t</span> N_s = 4;</div>
-<div class="line">    <a name="_a1"></a><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(A.num_rows*N_s, ValueType(0));  <span class="comment">// TODO replace with array2d when cg_m supports it</span></div>
+<div class="line">    <a name="_a2"></a><a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> x(A.num_rows*N_s, ValueType(0));  <span class="comment">// TODO replace with array2d when cg_m supports it</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;ValueType, MemorySpace&gt;</a> b(A.num_rows, ValueType(1));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// set sigma values</span></div>
@@ -140,11 +140,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">    <span class="comment">// set stopping criteria:</span></div>
 <div class="line">    <span class="comment">//  iteration_limit    = 100</span></div>
 <div class="line">    <span class="comment">//  relative_tolerance = 1e-6</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;ValueType&gt;</a> monitor(b, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
+<div class="line">    <a name="_a3"></a><a class="code" href="classcusp_1_1monitor.html">cusp::monitor&lt;ValueType&gt;</a> monitor(b, 100, 1e-6, 0, <span class="keyword">true</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// solve the linear systems (A + \sigma_i * I) * x = b for each </span></div>
 <div class="line">    <span class="comment">// sigma_i with the Conjugate Gradient method</span></div>
-<div class="line">    <a name="a3"></a><a class="code" href="group__krylov__methods.html#gac6e8cdc4593f3df76260f503b4c44416">cusp::krylov::cg_m</a>(A, x, b, sigma, monitor);</div>
+<div class="line">    <a name="a4"></a><a class="code" href="group__krylov__methods.html#gac6e8cdc4593f3df76260f503b4c44416">cusp::krylov::cg_m</a>(A, x, b, sigma, monitor);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

@@ -521,7 +521,24 @@ template&lt;typename ArrayType &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>maximum row length </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>maximum row length</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#incldue &lt;cusp/gallery/poisson.h&gt;</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="format__utils_8h.html">cusp/format_utils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// initialize 5x5 poisson matrix</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
+<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// count the number of occupied diagonals of A</span></div>
+<div class="line">  std::cout &lt;&lt; <a class="code" href="group__matrix__algorithms.html#gad7f17e3d9f791368ec554e89cffc722a">compute_max_entries_per_row</a>(A.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>) &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -572,7 +589,24 @@ template&lt;typename ArrayType &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>optimal number of columns to store in ELL matrix </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>optimal number of columns to store in ELL matrix</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="csr__matrix_8h.html">cusp/csr_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#incldue &lt;cusp/gallery/poisson.h&gt;</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="format__utils_8h.html">cusp/format_utils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// initialize 5x5 poisson matrix</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1csr__matrix.html">cusp::csr_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
+<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// count the number of occupied diagonals of A</span></div>
+<div class="line">  std::cout &lt;&lt; <a class="code" href="group__matrix__algorithms.html#gab896b38fa3a8382f789042e8c326fc10">compute_optimal_entries_per_row</a>(A.<a class="code" href="classcusp_1_1csr__matrix.html#a72820b70eebac25516658f5e13ba8036">row_offsets</a>) &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -633,7 +667,7 @@ template&lt;typename SourceType , typename DestinationType &gt; </div>
 <div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// create 2D Poisson problem</span></div>
-<div class="line">  cusp::gallery::poisson5pt(A, 4, 4);</div>
+<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 4, 4);</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// create an empty array2d structure</span></div>
 <div class="line">  <a class="code" href="classcusp_1_1array2d.html">cusp::array2d&lt;float,cusp::host_memory&gt;</a> B;</div>
@@ -774,7 +808,27 @@ template&lt;typename ArrayType1 , typename ArrayType2 &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>number of occupied diagonals </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>number of occupied diagonals</dd></dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="coo__matrix_8h.html">cusp/coo_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#incldue &lt;cusp/gallery/poisson.h&gt;</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="format__utils_8h.html">cusp/format_utils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// initialize 5x5 poisson matrix</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
+<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// count the number of occupied diagonals of A</span></div>
+<div class="line">  std::cout &lt;&lt; <a class="code" href="group__matrix__algorithms.html#ga84e80d469afffe98b1a22acfdcaa95ec">count_diagonals</a>(A.num_rows,</div>
+<div class="line">                               A.num_cols,</div>
+<div class="line">                               A.<a class="code" href="classcusp_1_1coo__matrix.html#ad084de2faddbdbf9bc459ed42be29e1f">row_indices</a>,</div>
+<div class="line">                               A.<a class="code" href="classcusp_1_1coo__matrix.html#ac6dc45bb2bce4415061ad8999c088405">column_indices</a>) &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -1085,10 +1139,34 @@ template&lt;typename MatrixType , typename ArrayType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">A</td><td>The input matrix </td></tr>
-    <tr><td class="paramname">output</td><td>On return contains the main diagonal of A with zeros inserted for missing entries. </td></tr>
+    <tr><td class="paramname">output</td><td>On return contains the main diagonal of A with zeros inserted for missing entries.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// include cusp array1d header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="coo__matrix_8h.html">cusp/coo_matrix.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#incldue &lt;cusp/gallery/poisson.h&gt;</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="format__utils_8h.html">cusp/format_utils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// initialize 5x5 poisson matrix</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
+<div class="line">  <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 5, 5);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// allocate array to hold diagonal entries</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;float, cusp::host_memory&gt;</a> diagonal(A.num_rows);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// extract diagonal of A</span></div>
+<div class="line">  <a class="code" href="group__matrix__algorithms.html#ga661696898ff9b89e39fad8d3c1582ad9">cusp::extract_diagonal</a>(A, diagonal);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// print diagonal entries</span></div>
+<div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(diagonal);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -1183,7 +1261,7 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line"></div>
 <div class="line">    <span class="comment">// initialize matrix</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int,float,cusp::host_memory&gt;</a> A;</div>
-<div class="line">    cusp::gallery::poisson5pt(A, 3, 3);</div>
+<div class="line">    <a class="code" href="group__gallery.html#ga4369f22c9caff12729026e5ce79ef281">cusp::gallery::poisson5pt</a>(A, 3, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// allocate output matrices and initialize output nonzeros</span></div>
 <div class="line">    <a class="code" href="classcusp_1_1coo__matrix.html">cusp::coo_matrix&lt;int, float, cusp::host_memory&gt;</a> B(A);</div>
@@ -1351,10 +1429,34 @@ template&lt;typename IndexArray , typename OffsetArray &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">indices</td><td>The input row indices </td></tr>
-    <tr><td class="paramname">offsets</td><td>The output row offsets </td></tr>
+    <tr><td class="paramname">offsets</td><td>The output row offsets</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// include cusp array1d header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="format__utils_8h.html">cusp/format_utils.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="print_8h.html">cusp/print.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// Allocate a array of size 5</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> a(5);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Set the elements to [0, 0, 1, 1, 1]</span></div>
+<div class="line">  a[0] = 0; a[1] = 0; a[2] = 1; a[3] = 1; a[4] = 1;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Allocate a seceond array equal to the last entry in</span></div>
+<div class="line">  <span class="comment">// a (number of rows) + 2 (zero entry + last entry)</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> b(a.back() + 2);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// compute the expanded entries</span></div>
+<div class="line">  <a class="code" href="group__matrix__algorithms.html#ga9c86a6daa0aff822eb1a2dd6ee6245d7">cusp::indices_to_offsets</a>(a, b);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// print [0, 2, 5]</span></div>
+<div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(b);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -1517,7 +1619,7 @@ template&lt;typename LinearOperator , typename MatrixOrVector1 , typename Matrix
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="csr_raw_8cu-example.html#a3">csr_raw.cu</a>, <a class="el" href="gmres_8cu-example.html#a2">gmres.cu</a>, and <a class="el" href="multiply_8cu-example.html#a2">multiply.cu</a>.</dd>
+</div><!-- fragment --> <dl><dt><b>Examples: </b></dt><dd><a class="el" href="csr_raw_8cu-example.html#a3">csr_raw.cu</a>, <a class="el" href="gmres_8cu-example.html#a3">gmres.cu</a>, and <a class="el" href="multiply_8cu-example.html#a2">multiply.cu</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1669,10 +1771,33 @@ template&lt;typename OffsetArray , typename IndexArray &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">offsets</td><td>The input row offsets </td></tr>
-    <tr><td class="paramname">indices</td><td>The output row indices </td></tr>
+    <tr><td class="paramname">indices</td><td>The output row indices</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section user"><dt>Example</dt><dd><div class="fragment"><div class="line"><span class="comment">// include cusp array1d header file</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="array1d_8h.html">cusp/array1d.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="format__utils_8h.html">cusp/format_utils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// Allocate a array of size 3</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> a(3);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Set the elements to [0, 2, 5]</span></div>
+<div class="line">  a[0] = 0; a[1] = 2; a[2] = 5;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Allocate a seceond array equal to the total number</span></div>
+<div class="line">  <span class="comment">// of expanded entries from vector a (last entry in the vector)</span></div>
+<div class="line">  <a class="code" href="classcusp_1_1array1d.html">cusp::array1d&lt;int,cusp::host_memory&gt;</a> b(a.back());</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// compute the expanded entries</span></div>
+<div class="line">  <a class="code" href="group__matrix__algorithms.html#ga31d6135026a0becf65e55446b18b96dc">cusp::offsets_to_indices</a>(a, b);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// print [0, 0, 1, 1, 1]</span></div>
+<div class="line">  <a class="code" href="group__io.html#gae830bdfc52775580d0cadee9ad8db187">cusp::print</a>(b);</div>
+<div class="line">}</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
